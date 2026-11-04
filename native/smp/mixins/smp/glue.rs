@@ -41,7 +41,7 @@ use std::{path::PathBuf, sync::Mutex};
 /// The mod's id, name and version.
 pub const ID: &str = "smp";
 pub const NAME: &str = "SMP";
-pub const VERSION: &str = "0.32.0";
+pub const VERSION: &str = "0.33.0";
 
 /// `config.json` in `world/horizon-smp/`, written with its defaults the
 /// first time, and again with the keys a newer version adds (values kept).
@@ -308,9 +308,6 @@ fn save(smp: &mut Smp) {
     if let Ok(e) = &mut smp.economy
         && let Err(err) = e.save()
     {
-        log::error!("[smp] {err}");
-    }
-    if let Err(err) = smp.market.save() {
         log::error!("[smp] {err}");
     }
     if let Ok(p) = &mut smp.places
@@ -598,20 +595,6 @@ const COMMANDS: [&str; 16] = [
     "balance", "bal", "pay", "baltop", "eco", "money", "worth", "sell", "buy", "shop", "market", "trade", "coinflip",
     "lottery", "ah", "casino",
 ];
-
-/// `/pay <player> <amount>`'s receiver (account, name) and amount, as
-/// `Economy::pay` reads them; None for another command.
-fn pay_target(e: &Economy, line: &str) -> Option<(u128, String, i64)> {
-    let [cmd, who, amount] = line.split_whitespace().collect::<Vec<_>>()[..] else {
-        return None;
-    };
-    if cmd != "pay" {
-        return None;
-    }
-    let amount = smp_economy::parse_amount(amount)?;
-    let (to, account) = e.find(who)?;
-    Some((to, account.name.clone(), amount))
-}
 
 /// The world border, from the Overworld's `world_border.dat` (the root's in
 /// older worlds), as the game last saved it; None without one (the default
@@ -949,27 +932,7 @@ pub(in crate::game) fn perform(
             let report = smp.report.as_ref();
             report
                 .and_then(|r| r.command(e, line))
-                .or_else(|| {
-                    // A payment counts toward the receiver's daily selling
-                    // limit (alts can't sell for a main past it).
-                    let paid = pay_target(e, line);
-                    if let Some((to, name, amount)) = &paid
-                        && let Err(left) = smp.market.may_receive(*to, *amount, now)
-                    {
-                        return Some(vec![Out::Error(format!(
-                            "{name} can only receive {} more today: payments count toward the same daily limit as selling to the market.",
-                            e.money(left)
-                        ))]);
-                    }
-                    let before = paid.as_ref().map(|(to, ..)| e.balance(*to));
-                    let out = e.command(&me, &on, line);
-                    if let (Some((to, _, amount)), Some(b)) = (paid, before)
-                        && e.balance(to) == b + amount
-                    {
-                        smp.market.count_received(to, now, amount);
-                    }
-                    out
-                })
+                .or_else(|| e.command(&me, &on, line))
                 .or_else(|| smp.market.command(e, &me, trades, &mut bag, line))
                 .or_else(|| {
                     let (out, a) = smp.trades.command(e, &me, trades, &online, now, line)?;
@@ -1608,10 +1571,6 @@ fn shop_items(smp: &Smp, uuid: u128) -> Vec<Option<ItemStack>> {
                     button("minecraft:gold_ingot", &format!("Balance: {}", money(b)), "gold")
                 }
                 C::SellAll => button("minecraft:hopper", "Sell everything the market buys", "green"),
-                C::Limits => {
-                    let line = economy.and_then(|e| smp.market.limits_line(e, uuid));
-                    button("minecraft:clock", &line.unwrap_or_else(|| "No selling limit".into()), "aqua")
-                }
                 C::Help => button("minecraft:book", smp_shop::HELP_TEXT, "white"),
                 C::Close => button("minecraft:barrier", "Close", "red"),
             })
@@ -1792,9 +1751,6 @@ fn market_items(smp: &Smp, uuid: u128, now: i64) -> Vec<Option<ItemStack>> {
                     let mut lines = price_lines(smp, &id, now);
                     let base = smp.market.base(&id);
                     lines.push((format!("Base price: {}", money(base.buy.max(base.sell))), "gray"));
-                    if let Some(left) = smp.market.items_left(uuid, now, &id) {
-                        lines.push((format!("You may still sell {left} today"), "gray"));
-                    }
                     with_lore(button(&id, &name(&id), "white"), &lines)
                 }
                 C::Buy(id, n) => {
