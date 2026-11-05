@@ -1,6 +1,6 @@
 [mod]
 id = "smp"
-version = "0.33.0"
+version = "0.34.0"
 priority = 100
 
 # The commit of horizon it was tested on: it needs native_hide_player (horizon#7003, API 314, stamped at 48c63bc),
@@ -169,6 +169,18 @@ id = "invsee_glue"
 file = "crates/horizon-client/src/game.rs"
 name = "smp_invsee_glue"
 source = "invsee_glue.rs"
+
+[[module]]
+id = "reports"
+file = "crates/horizon-client/src/game.rs"
+name = "smp_reports"
+source = "smp_reports.rs"
+
+[[module]]
+id = "ledger"
+file = "crates/horizon-client/src/game.rs"
+name = "smp_ledger"
+source = "smp_ledger.rs"
 
 [[module]]
 id = "switch"
