@@ -2,7 +2,7 @@
 // between the game's types and the rules (smp_economy, smp_market, smp_shop,
 // smp_trade, smp_games, smp_lottery, smp_places, smp_claims). Added to
 // the game as `game::smp_glue`; the helpers (register.rs, command.rs,
-// tick.rs, lifecycle.rs, menu_clicked.rs, menu_closed.rs, destroy_block.rs,
+// tick.rs, level_tick.rs, lifecycle.rs, menu_clicked.rs, menu_closed.rs, destroy_block.rs,
 // right_click_block.rs, block_spread.rs, piston_move.rs,
 // explosion_detonate.rs, fill_bucket.rs, attack_entity.rs) call it from the
 // hook points.
@@ -41,7 +41,7 @@ use std::{path::PathBuf, sync::Mutex};
 /// The mod's id, name and version.
 pub const ID: &str = "smp";
 pub const NAME: &str = "SMP";
-pub const VERSION: &str = "0.31.0";
+pub const VERSION: &str = "0.33.0";
 
 /// `config.json` in `world/horizon-smp/`, written with its defaults the
 /// first time, and again with the keys a newer version adds (values kept).
@@ -143,6 +143,11 @@ static BUSY: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(
 /// Sleep-count changes decided inside a player's command, for the next
 /// second's tick.
 static PENDING_SLEEP: Mutex<Vec<smp_presence::Act>> = Mutex::new(Vec::new());
+/// Whether an `/rtp` waits for its land: the Overworld's tick reads it then.
+static RTP: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
+/// What each `/rtp`'s reads cost the Overworld's tick, by player: reads,
+/// total and longest (µs), for the line logged when they land.
+static RTP_COST: Mutex<Vec<(u128, u32, u64, u64)>> = Mutex::new(Vec::new());
 
 fn open(dir: PathBuf) -> Smp {
     let config_path = dir.join("config.json");
@@ -305,9 +310,6 @@ fn save(smp: &mut Smp) {
     {
         log::error!("[smp] {err}");
     }
-    if let Err(err) = smp.market.save() {
-        log::error!("[smp] {err}");
-    }
     if let Ok(p) = &mut smp.places
         && let Err(err) = p.save(chrono::Utc::now().timestamp_millis())
     {
@@ -392,6 +394,8 @@ pub fn commands(commands: &mut Vec<NativeCommand>) {
         "tpdeny [player:word]",
         "rules",
         "back",
+        "rtp",
+        "wild",
         "playtime [player:word]",
         "claim",
         "claim info",
@@ -592,18 +596,91 @@ const COMMANDS: [&str; 16] = [
     "lottery", "ah", "casino",
 ];
 
-/// `/pay <player> <amount>`'s receiver (account, name) and amount, as
-/// `Economy::pay` reads them; None for another command.
-fn pay_target(e: &Economy, line: &str) -> Option<(u128, String, i64)> {
-    let [cmd, who, amount] = line.split_whitespace().collect::<Vec<_>>()[..] else {
-        return None;
+/// The world border, from the Overworld's `world_border.dat` (the root's in
+/// older worlds), as the game last saved it; None without one (the default
+/// border, 60 million blocks wide).
+fn world_border(world: &std::path::Path) -> Option<smp_places::Bounds> {
+    let files = [
+        world.join("dimensions/minecraft/overworld/data/minecraft/world_border.dat"),
+        world.join("data/minecraft/world_border.dat"),
+    ];
+    let root = files
+        .iter()
+        .find_map(|f| horizon_world::datafix::files::read_saved_dat(f).ok().flatten())?;
+    let border = horizon_client::worldborder::WorldBorder::unpack(root.get("data")?);
+    Some(border.bounds())
+}
+
+/// After a level's tick: in the Overworld, each `/rtp` that waits reads the
+/// chunk it loads (the game reads only the level it ticks), five times a
+/// second. Columns in another player's claim are never a spot.
+pub(in crate::game) fn level_ticked(game: &mut Game<'_>, dimension: &str) {
+    use std::sync::atomic::Ordering::Relaxed;
+    if dimension != smp_places::OVERWORLD
+        || !RTP.load(Relaxed)
+        || TICKS.load(Relaxed) % 4 != 0
+        || !game.native_on(ID)
+    {
+        return;
+    }
+    let Some(dir) = game.native_world_dir() else {
+        return;
     };
-    if cmd != "pay" {
+    let mut guard = state(dir.join(smp_store::DIR));
+    let Some(smp) = guard.as_mut() else {
+        return;
+    };
+    let (Ok(places), claims) = (&mut smp.places, &smp.claims) else {
+        return;
+    };
+    let game = &*game;
+    let mut cost = RTP_COST.lock().unwrap_or_else(|e| e.into_inner());
+    places.rtp_look(&mut |uuid, (cx, cz)| {
+        let started = std::time::Instant::now();
+        let ground = read_chunk(game, claims, uuid, (cx, cz));
+        let us = started.elapsed().as_micros() as u64;
+        match cost.iter_mut().find(|c| c.0 == uuid) {
+            Some(c) => *c = (uuid, c.1 + 1, c.2 + us, c.3.max(us)),
+            None => cost.push((uuid, 1, us, us)),
+        }
+        ground
+    });
+    RTP.store(places.rtp_searching(), Relaxed);
+}
+
+/// Chunk `(cx, cz)` of the Overworld as `/rtp` reads it, None while it isn't
+/// loaded; no columns when another player claimed it.
+fn read_chunk(
+    game: &Game<'_>,
+    claims: &Result<Claims, String>,
+    uuid: u128,
+    (cx, cz): (i32, i32),
+) -> Option<smp_places::Ground> {
+    let columns: Vec<(i32, i32)> = (0..256).map(|i| (cx * 16 + i / 16, cz * 16 + i % 16)).collect();
+    let read = game
+        .native_read_columns(
+            smp_places::OVERWORLD,
+            &columns,
+            crate::game::native_world_edit::NativeHeightmap::MotionBlockingNoLeaves,
+            (1, 2),
+        )
+        .ok()?;
+    if read.bases.iter().any(Option::is_none) {
         return None;
     }
-    let amount = smp_economy::parse_amount(amount)?;
-    let (to, account) = e.find(who)?;
-    Some((to, account.name.clone(), amount))
+    let mut ground = smp_places::Ground { palette: read.palette, columns: Vec::new() };
+    let claimed = claims
+        .as_ref()
+        .ok()
+        .and_then(|c| c.owner(smp_places::OVERWORLD, cx * 16, cz * 16))
+        .is_some_and(|owner| owner != uuid);
+    if !claimed {
+        for (i, (&(x, z), base)) in columns.iter().zip(&read.bases).enumerate() {
+            let b = &read.blocks[i * 3..i * 3 + 3];
+            ground.columns.push((x, z, base.unwrap_or_default(), [b[0], b[1], b[2]]));
+        }
+    }
+    Some(ground)
 }
 
 /// The players on, as the places see them.
@@ -820,6 +897,11 @@ pub(in crate::game) fn perform(
     } else if smp_places::COMMANDS.contains(&word) {
         match &mut smp.places {
             Ok(p) => {
+                if matches!(word, "rtp" | "wild") {
+                    p.border = world_border(&dir);
+                    RTP_COST.lock().unwrap_or_else(|e| e.into_inner()).retain(|c| c.0 != me.uuid);
+                    BUSY.store(true, std::sync::atomic::Ordering::Relaxed);
+                }
                 let seen: Vec<NativeServerPlayer> = players.iter().filter(|p| !hidden.contains(&p.uuid)).cloned().collect();
                 p.command(&me, &bodies(&seen), now, line).unwrap_or_default()
             }
@@ -850,27 +932,7 @@ pub(in crate::game) fn perform(
             let report = smp.report.as_ref();
             report
                 .and_then(|r| r.command(e, line))
-                .or_else(|| {
-                    // A payment counts toward the receiver's daily selling
-                    // limit (alts can't sell for a main past it).
-                    let paid = pay_target(e, line);
-                    if let Some((to, name, amount)) = &paid
-                        && let Err(left) = smp.market.may_receive(*to, *amount, now)
-                    {
-                        return Some(vec![Out::Error(format!(
-                            "{name} can only receive {} more today: payments count toward the same daily limit as selling to the market.",
-                            e.money(left)
-                        ))]);
-                    }
-                    let before = paid.as_ref().map(|(to, ..)| e.balance(*to));
-                    let out = e.command(&me, &on, line);
-                    if let (Some((to, _, amount)), Some(b)) = (paid, before)
-                        && e.balance(to) == b + amount
-                    {
-                        smp.market.count_received(to, now, amount);
-                    }
-                    out
-                })
+                .or_else(|| e.command(&me, &on, line))
                 .or_else(|| smp.market.command(e, &me, trades, &mut bag, line))
                 .or_else(|| {
                     let (out, a) = smp.trades.command(e, &me, trades, &online, now, line)?;
@@ -1509,10 +1571,6 @@ fn shop_items(smp: &Smp, uuid: u128) -> Vec<Option<ItemStack>> {
                     button("minecraft:gold_ingot", &format!("Balance: {}", money(b)), "gold")
                 }
                 C::SellAll => button("minecraft:hopper", "Sell everything the market buys", "green"),
-                C::Limits => {
-                    let line = economy.and_then(|e| smp.market.limits_line(e, uuid));
-                    button("minecraft:clock", &line.unwrap_or_else(|| "No selling limit".into()), "aqua")
-                }
                 C::Help => button("minecraft:book", smp_shop::HELP_TEXT, "white"),
                 C::Close => button("minecraft:barrier", "Close", "red"),
             })
@@ -1693,9 +1751,6 @@ fn market_items(smp: &Smp, uuid: u128, now: i64) -> Vec<Option<ItemStack>> {
                     let mut lines = price_lines(smp, &id, now);
                     let base = smp.market.base(&id);
                     lines.push((format!("Base price: {}", money(base.buy.max(base.sell))), "gray"));
-                    if let Some(left) = smp.market.items_left(uuid, now, &id) {
-                        lines.push((format!("You may still sell {left} today"), "gray"));
-                    }
                     with_lore(button(&id, &name(&id), "white"), &lines)
                 }
                 C::Buy(id, n) => {
@@ -2293,8 +2348,20 @@ pub(in crate::game) fn tick(game: &mut Game<'_>) {
             {
                 log::warn!("[smp] no safe spot near the spawn: {spread}");
             }
+            if t.what == "a random spot" {
+                let mut cost = RTP_COST.lock().unwrap_or_else(|e| e.into_inner());
+                let (_, n, total, max) = cost.iter().find(|c| c.0 == t.uuid).copied().unwrap_or_default();
+                cost.retain(|c| c.0 != t.uuid);
+                log::info!(
+                    "[smp] /rtp: {} to {:.1} {:.1} {:.1} ({n} chunk reads on the tick: {total} µs, longest {max} µs)",
+                    t.name, t.to.x, t.to.y, t.to.z
+                );
+            }
             out.push(Out::Tell(t.uuid, t.done.clone()));
         }
+        // `/rtp`'s chunks: held loaded while it looks, let go after.
+        p.force(now, &mut |line| game.native_run_command(line));
+        RTP.store(p.rtp_searching(), Relaxed);
     }
     if let Ok(e) = &mut smp.economy
         && n % 20 == 0

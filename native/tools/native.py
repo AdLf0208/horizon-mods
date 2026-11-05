@@ -71,9 +71,24 @@ def get(url):
 
 
 def latest_nightly():
-    """The commit of the newest Nightly: its permanent nightly-source/<date>-<short> tag."""
+    """The commit of the newest Nightly: its permanent nightly-source/<date>-<short> tag.
+
+    The newest is picked by the tag's date, and a same-date tie by the tagged commit's own
+    date: comparing the ref name alone breaks a tie by the short SHA, which can be an earlier
+    build than the day's latest nightly.
+    """
     refs = json.loads(get(f"https://api.github.com/repos/{REPO}/git/matching-refs/tags/nightly-source/"))
-    newest = max(refs, key=lambda r: r["ref"])
+    def nightly_date(ref):
+        return ref.split("nightly-source/")[1][:10]
+    newest_day = max(nightly_date(r["ref"]) for r in refs)
+    same_day = [r for r in refs if nightly_date(r["ref"]) == newest_day]
+    if len(same_day) == 1:
+        newest = same_day[0]
+    else:
+        def commit_time(r):
+            commit = json.loads(get(f"https://api.github.com/repos/{REPO}/commits/{r['object']['sha']}"))
+            return commit["commit"]["committer"]["date"]
+        newest = max(same_day, key=commit_time)
     return get_commit(newest["ref"].removeprefix("refs/tags/"))
 
 
