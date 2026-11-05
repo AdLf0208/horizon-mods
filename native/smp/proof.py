@@ -34,8 +34,10 @@ Steve, `horizon-ctl --offscreen`) join it. Checked from the clients' own chat an
 - nicknames, for operators only: a player can't pick one; an operator's refused ones (a player's name, too short, a
   bad character), the one given in the other's chat and Tab list, /realname, someone else's taken, the player taking
   it off;
-- /rtp: refused in the Nether; in the Overworld the player lands 500 to 5,000 blocks from the spawn on solid ground
-  (and stays there), a second /rtp is refused with the time left, and the chunk it held loaded is let go.
+- /rtp: refused in the Nether; in the Overworld the player lands 500 to 10,000 blocks from the spawn on solid ground
+  (and stays there), a second /rtp is refused with the time left (5 minutes), and the chunk it held loaded is let go;
+- /report: a reason is needed; the report reaches the operator on and reports.log, a second one within two minutes is
+  refused; /reports and /ledger (one player's coin movements, the server's coins by hour) answer the operator only.
 
 `SMP_PROOF=rtp` runs one /rtp alone on a normal (not flat) world's fresh land instead, and what it cost the server's
 ticks: a performance report (`horizon-report`) over the search and landing against one over the same time before it.
