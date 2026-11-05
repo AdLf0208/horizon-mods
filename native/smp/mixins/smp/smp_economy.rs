@@ -752,6 +752,10 @@ impl Economy {
         if !reason.is_empty() {
             entry["reason"] = reason.into();
         }
+        // Money the server made or destroyed, for `/ledger minted`.
+        if delta != 0 {
+            entry["flow"] = if delta > 0 { "minted" } else { "burned" }.into();
+        }
         self.audit.append(&entry)?;
         self.accounts
             .accounts
