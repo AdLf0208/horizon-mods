@@ -52,7 +52,13 @@ pub fn command(
         .filter_map(|l| serde_json::from_str::<Value>(l).ok());
     let page = |w: Option<&&str>| w.and_then(|p| p.parse::<usize>().ok()).unwrap_or(1).max(1);
     let (who, page) = match words[1..] {
-        ["minted"] => return Some(minted(newest, money, now)),
+        ["minted"] => {
+            let mut out = minted(newest, money, now);
+            if audit.metadata().is_ok_and(|m| m.len() > TAIL) {
+                out.insert(1, Out::Reply("Partial totals: only the newest 1 MiB of the ledger was read; older movements may be missing.".into()));
+            }
+            return Some(out);
+        }
         [] => (None, 1),
         [w] if w.parse::<usize>().is_ok() && find(w).is_none() => (None, page(Some(&w))),
         [w, ..] => match find(w) {
@@ -283,6 +289,54 @@ mod tests {
             Some(vec![Out::Error(
                 "Only operators can read the ledger.".into()
             )])
+        );
+        let _ = std::fs::remove_dir_all(d);
+    }
+
+    #[test]
+    fn minted_includes_pool_funding_and_starting_balances() {
+        use super::super::smp_economy::{Config, Economy};
+        let d = dir();
+        let mut e = Economy::open(
+            &d,
+            Config {
+                starting_balance: 50,
+                ..Config::default()
+            },
+        )
+        .unwrap();
+        e.now = 1_793_880_000_000;
+        e.seen(ALEX, "Alex");
+        e.mint_pool("casino_float", "casino", 100, "the casino's float")
+            .unwrap();
+        e.save().unwrap();
+        let run = || {
+            command(
+                &op(),
+                &d.join("audit.log"),
+                &find,
+                &name_of,
+                &money,
+                e.now,
+                "ledger minted",
+            )
+            .unwrap()
+        };
+        assert!(
+            run()
+                .iter()
+                .any(|o| matches!(o, Out::Reply(s) if s.contains("made 150 coins")))
+        );
+        use std::io::Write;
+        let mut file = std::fs::OpenOptions::new()
+            .append(true)
+            .open(d.join("audit.log"))
+            .unwrap();
+        file.write_all(&vec![b'\n'; TAIL as usize]).unwrap();
+        assert!(
+            run()
+                .iter()
+                .any(|o| matches!(o, Out::Reply(s) if s.starts_with("Partial totals:")))
         );
         let _ = std::fs::remove_dir_all(d);
     }
