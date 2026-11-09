@@ -27,7 +27,7 @@ categories = ["decoration"]
 tags = ["port", "building", "blocks", "industrial"]
 
 [[versions]]
-version = "0.1.0"
+version = "1.4.2"
 published = "2026-11-09"
 game = "26.3"
 file = "factory_blocks.hmod"
