@@ -29,9 +29,9 @@ categories = ["equipment", "storage"]
 tags = ["port", "inventory", "storage", "tools"]
 
 [[versions]]
-version = "2.2.10"
-published = "2026-11-09"
+version = "0.1.0"
+published = "2026-11-10"
 game = "26.3"
 file = "toolbelt.hnmod"
-sha256 = "437ca3fc66b56de33a2da19f0c94e3aacff1f444701bcf7021e01e48388007f3"
+sha256 = "76c672215a9826b79048fdbef139e59efbae1f04caa620907fa88aab72016ac9"
 changelog = "First release"
