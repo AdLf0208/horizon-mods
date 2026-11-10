@@ -41,9 +41,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "1.0.3"
+version = "0.1.0"
 published = "2026-11-10"
 game = "26.3"
 file = "repeatable_trial_vaults.hnmod"
-sha256 = "0b4ee88ab378cf37755d5bdea07171d1931fe27b5eb733e32f6a80a614aaaf7c"
+sha256 = "8647b53155db309bd6c8b0f283164aa4a88574aa08410e32b7a193cdbe2dc7e9"
 changelog = "First release"
