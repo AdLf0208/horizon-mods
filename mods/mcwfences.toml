@@ -40,9 +40,9 @@ categories = ["decoration"]
 tags = ["port", "fences", "building", "blocks"]
 
 [[versions]]
-version = "1.2.1"
-published = "2026-11-09"
+version = "0.1.0"
+published = "2026-11-10"
 game = "26.3"
 file = "mcwfences.hmod"
-sha256 = "7fb680f0ea708cfcda4becddef08705898fd0d7c6d8e42c91bafa3eec8d43dd7"
+sha256 = "d3434de876d7362933457da06c7c0b8079303d534e6aed2d901bf82d1eb28186"
 changelog = "First release: the slice described above."
