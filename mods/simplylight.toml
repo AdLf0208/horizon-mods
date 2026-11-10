@@ -27,9 +27,9 @@ categories = ["decoration"]
 tags = ["port", "decoration", "lighting", "blocks"]
 
 [[versions]]
-version = "1.5.3"
-published = "2026-11-09"
+version = "0.1.0"
+published = "2026-11-10"
 game = "26.3"
 file = "simplylight.hmod"
-sha256 = "3ab6ee0921c3efed804372b0c605f5c74c3b49b42b54f77049a360f639e5c8a8"
+sha256 = "ec720186987a743a9770df96e237f97413d4f9dd9f81f9939c755806d1b79771"
 changelog = "First release"
