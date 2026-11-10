@@ -40,9 +40,9 @@ categories = ["decoration"]
 tags = ["port", "doors", "building", "blocks"]
 
 [[versions]]
-version = "1.1.5"
-published = "2026-11-09"
+version = "0.1.0"
+published = "2026-11-10"
 game = "26.3"
 file = "mcwdoors.hmod"
-sha256 = "bf1878eacf450735fd5c89be4b0cfa4ab56e45110db7fd36b0bd11521d4f575a"
+sha256 = "e6099736986f6676ae696c53bd91e7e5b610c65e1b3124bb70d9a2b8bafc7eb0"
 changelog = "First release: the slice described above."
