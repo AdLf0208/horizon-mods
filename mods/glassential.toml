@@ -1,0 +1,49 @@
+id = "glassential"
+kind = "native-mod"
+name = "glassential"
+summary = "A Horizon port of glassential."
+description = """
+A port of [glassential](bigenergy/glassential-renewed) for Horizon.
+
+**Implemented so far**
+
+- Content API 0.2 gives a block a vanilla template's class, states and shapes,
+- plus `hardness`, `explosion_resistance`, `light`, `requires_tool`,
+- `friction`, `map_color`, `sounds` and `random_ticks`
+- (`horizon-mods/src/content.rs:73-95`). That carries the **look, light,
+- hardness, states, drops, recipes, tags and tabs**. The upstream *methods* are
+- native-mod territory and are recorded as gaps:
+- Ethereal / ghostly / reverse** (`EtherealGlassBlock.java:26-31`,
+- `GhostGlassBlock.java:38-41`) choose the collision shape per entity. A
+
+**Not yet ported**
+
+- Remaining behaviour is still content-only.** Redstone glass and the
+- smart-glass panel are native now (slice 2); the per-entity collision
+- (ethereal/ghostly/reverse), gravity glass, the colour-able painter, the
+- clear-fluid face occlusion, the lava-lamp step damage and the one-way
+- glasses still need hooks the pin does not have (or a block-entity renderer).
+- Smart-glass panel size.** The panel flood is an unbounded six-neighbour
+- BFS; upstream caps it at 1024 blocks. A panel that large would cost one
+- tick of work instead of being cut off — not exercised by the e2e.
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/glassential"
+icon = "icons/glassential.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "glassential.hnmod"
+sha256 = "56465263dab5a22776ef40a4df67dc11c9af375cc4b26cd376cf233dd19d4221"
+changelog = "First release"
