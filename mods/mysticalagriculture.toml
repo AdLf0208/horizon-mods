@@ -27,7 +27,7 @@ categories = ["game-mechanics", "food"]
 tags = ["port", "farming", "crops", "essence"]
 
 [[versions]]
-version = "0.1.0"
+version = "1.21.1-8.0.29"
 published = "2026-11-09"
 game = "26.3"
 file = "mysticalagriculture.hnmod"
