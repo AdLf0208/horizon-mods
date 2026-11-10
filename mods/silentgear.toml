@@ -32,8 +32,8 @@ tags = ["port", "tools", "gear", "crafting"]
 
 [[versions]]
 version = "0.1.0"
-published = "2026-11-09"
+published = "2026-11-10"
 game = "26.3"
 file = "silentgear.hnmod"
-sha256 = "84078f8fb22d6540933858f32b06ad570bc766ff664e3a180540af5ebe137ded"
+sha256 = "59e43deeb731f2f788046a9cdd731c554a228fc80a9294c7f244d2d45b4d56b8"
 changelog = "First release"
