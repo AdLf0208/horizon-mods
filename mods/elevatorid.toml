@@ -1,0 +1,49 @@
+id = "elevatorid"
+kind = "native-mod"
+name = "elevatorid"
+summary = "A Horizon port of elevatorid."
+description = """
+A port of [elevatorid](VsnGamer/ElevatorMod) for Horizon.
+
+**Implemented so far**
+
+- Origin**: from the feet block, scan down at most `ACTIVATION_RANGE` (6)
+- cells; the first elevator is the origin; if the cell above it suffocates the
+- attempt aborts (upstream does not scan deeper).
+- Target**: step one cell at a time in the travel direction, stop at
+- `RANGE` (384, inclusive); the first elevator whose above-cell does not
+- suffocate wins; blocked cells are skipped, and with `sameColor` a different
+- dye is skipped.
+- Teleport**: destination is the target block's top, x/z centred
+
+**Not yet ported**
+
+- Teleport motion** (documented deviation): the native helper `/tp`s as a
+- command does — the player's motion is lost (upstream keeps horizontal
+- velocity) and no upstream sound/particles are sent. The console-command path
+- (level-4 permission, command feedback) is gone since slice 2.
+- Input**: raw key edges unavailable; jump inferred from the body (see above),
+- with `player_jump` as the exact edge at this pin.
+- An issue-shaped request: give `native_player_tick` the player's input or
+- `on_ground`/jump flag.
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/elevatorid"
+icon = "icons/elevatorid.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "elevatorid.hnmod"
+sha256 = "f0a1f09642d94abe86a03e40b46f892ee6e46b3d6795d3eb91a741acad18914b"
+changelog = "First release"
