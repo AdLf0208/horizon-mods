@@ -1,0 +1,49 @@
+id = "enderio"
+kind = "native-mod"
+name = "enderio"
+summary = "A Horizon port of enderio."
+description = """
+A port of [enderio](Team-EnderIO/EnderIO) for Horizon.
+
+**Implemented so far**
+
+- The block.** `enderio:conduit` (template `minecraft:stone`, hardness 1.5,
+- blast resistance 10, no occlusion, a 3 px core outline) with six boolean
+- state properties — `down`, `up`, `north`, `south`, `west`, `east` — and a
+- `multipart` blockstate that draws the 3 px core plus one 2 px arm per
+- connected side. The block carries a self-drop loot table.
+- Connections.** A face connects to another `enderio:conduit` or to a block
+- with an item container reachable from the touching side (the pin's
+- `native_container_slots`, API 48). The connection state is recomputed after
+
+**Not yet ported**
+
+- Implemented: the conduit block and item, carried texture/models/lang/loot/tab,
+- the connection state, the per-side configuration, the network cycle, item
+- transfer, `/enderio info|config`.
+- Not implemented (planned slices, see `FINDINGS.md`):
+- item **filters** (extract/insert filter slots), **speed tiers**
+- (enhanced/vibrant item conduits), **priority** and **dye channels**;
+- the **conduit screen** (menu/slots/toggles), the redstone control;
+- the **bundle** (several types in one block), **facades**, the Yeta Wrench
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "Unlicense"
+source = "https://github.com/AdLf0208/enderio"
+icon = "icons/enderio.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "enderio.hnmod"
+sha256 = "20aaca058ba36cd57204ed0dcfa3440d32914761cb58606b630837e1e98bc51e"
+changelog = "First release"
