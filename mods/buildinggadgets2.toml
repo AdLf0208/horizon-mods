@@ -1,0 +1,49 @@
+id = "buildinggadgets2"
+kind = "native-mod"
+name = "buildinggadgets2"
+summary = "A Horizon port of buildinggadgets2."
+description = """
+A port of [buildinggadgets2](Direwolf20-MC/BuildingGadgets2) for Horizon.
+
+**Implemented so far**
+
+- `buildinggadgets2:gadget_building` (stack size 1) right-clicked on a block:
+- sneak + right click** selects the clicked block's state (upstream's
+- `onShiftAction`); air, unbreakable and non-source fluids are refused;
+- plain right click** builds the selected block's **horizontal row**:
+- `side = face.axis == Y ? player facing : -face`, cells
+- `clicked + side*i` for `i in 0..range`, skipping cells that are not
+- replaceable, outside the build height, or where the state cannot survive;
+- each placed cell consumes one item of the block's kind; creative pays
+
+**Not yet ported**
+
+- Mode fixed to `horizontal_row`.** Upstream's default is `build_to_me`; the
+- other modes (vertical wall/column, surface, horizontal wall, stairs, grid,
+- build-to-me) and mode switching are deferred. The mode wheel is client-only.
+- Selection and range are per-player in memory**, not item components: the
+- pin's `use_item_on` gives `&ItemStack` and has no component-write path, and
+- there is no scroll/key hook. They reset on relog.
+- Selection stores the raw state id**, so transient properties (age, lit,
+- waterlogged, open, ...) are not cleaned as upstream's `cleanBlockState`
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/buildinggadgets2"
+icon = "icons/buildinggadgets2.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "buildinggadgets2.hnmod"
+sha256 = "781f4e5438e8daf38f6660246114834a7a5e3e716bf0f50e399b663f72a3ed0c"
+changelog = "First release"
