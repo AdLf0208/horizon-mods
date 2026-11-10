@@ -33,8 +33,8 @@ tags = ["port", "mining", "laser", "energy"]
 
 [[versions]]
 version = "0.1.0"
-published = "2026-11-09"
+published = "2026-11-10"
 game = "26.3"
 file = "mininggadgets-0.1.0.hnmod"
-sha256 = "3d78b7dee51255f3df5411ea2ece58f28f7eeca7e0638263d681990c8f84082e"
+sha256 = "b49bb4b25b2268acfc504e9db42aaf8b3134ea8c304968fef3349c74095cac0c"
 changelog = "First release"
