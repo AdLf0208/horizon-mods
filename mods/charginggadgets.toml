@@ -29,9 +29,9 @@ categories = ["technology", "utility"]
 tags = ["port", "energy", "charging", "machines"]
 
 [[versions]]
-version = "1.14.1"
-published = "2026-11-09"
+version = "0.1.0"
+published = "2026-11-10"
 game = "26.3"
 file = "charginggadgets.hnmod"
-sha256 = "1878b25f19b215dcd064491c6340e682f047bd9b1631ba5bf596494ed2b3631f"
+sha256 = "b02bd130df827a615d843345876ded838d63535b8d82d5af4ae1ea84f02e6e58"
 changelog = "First release"
