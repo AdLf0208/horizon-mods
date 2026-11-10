@@ -1,0 +1,42 @@
+id = "apothic_spawners"
+kind = "native-mod"
+name = "apothic_spawners"
+summary = "A Horizon port of apothic_spawners."
+description = """
+A port of [apothic_spawners](Shadows-of-Fire/Apothic-Spawners) for Horizon.
+
+**Implemented so far**
+
+- see the port repository
+
+**Not yet ported**
+
+- Not a vanilla-spawner override.** Horizon content mods cannot replace
+- `minecraft:spawner`; the port adds a block and provides the silk-touch drop
+- and in-place conversion bridge. A world's existing vanilla spawners stay
+- vanilla until converted.
+- `ignore_conditions` and `ignore_light` are stored and shown but inert.**
+- The pin's spawn helpers (`native_spawn_mob`, `native_summon`) do not run
+- vanilla `SpawnPlacements`/custom-rule checks, so there is no condition check
+- to bypass. The port always requires air for the mob's height, as vanilla's
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/apothic_spawners"
+icon = "icons/apothic_spawners.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "apothic_spawners.hnmod"
+sha256 = "1335f8c4d3296ab27500796630ae8bbca987fe78ded8fb8bd455c2ef80d7ae67"
+changelog = "First release"
