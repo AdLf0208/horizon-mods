@@ -41,9 +41,9 @@ categories = ["decoration"]
 tags = ["port", "paths", "building", "blocks"]
 
 [[versions]]
-version = "1.1.1"
-published = "2026-11-09"
+version = "0.1.0"
+published = "2026-11-10"
 game = "26.3"
 file = "mcwpaths.hmod"
-sha256 = "947c913ee1e184a62a6261e6ce3e9e8a46e054c91691805b184c3924401789e0"
+sha256 = "9870e0bc7b5bdba44c1e10867189cf7c523668865a8c326bae2b95996e3c122f"
 changelog = "First release: the slice described above."
