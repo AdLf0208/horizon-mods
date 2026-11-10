@@ -1,0 +1,49 @@
+id = "enderstorage"
+kind = "native-mod"
+name = "enderstorage"
+summary = "A Horizon port of enderstorage."
+description = """
+A port of [enderstorage](chicken-bones/EnderStorage) for Horizon.
+
+**Implemented so far**
+
+- Upstream keeps **one inventory object per `Frequency`** (three wool colours,
+- combinations) in a world-global manager, persisted in
+- `<save>/EnderStorage/data*.dat`, and every chest with that frequency opens the
+- same `Container`. Horizon gives a mod block entity its own item slots, so the
+- port keeps the store as the truth and **mirrors** it into each chest once per
+- block-entity tick:
+- Store** (`runtime.rs`): `Store<Slot>` keyed by `Frequency`; 27 slots
+- (`item_storage_size = 1`, upstream's default 3x9). Persisted as
+
+**Not yet ported**
+
+- Tank deferred.** `native_block_entity_fluids` (API 54) and
+- `native_fluid_insert/extract/move` exist at the pin, so a tank block can
+- declare 16-bucket tanks in its block entity's NBT; but the pin has **no
+- bucket path into a mod block's tanks** (only mods call the fluid helpers),
+- so the tank's player interaction would need a `use_item_on` bucket handler
+- with a held-stack swap. That is the next slice; the fluid store would reuse
+- the same per-frequency merge (one tank instead of 27 slots).
+- Pouch deferred.** A pouch opens the same inventory from an item; a mod
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/enderstorage"
+icon = "icons/enderstorage.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "enderstorage.hnmod"
+sha256 = "9342ca9b43a630332f92c2b94be00939f2807e8db98cfe96f37cfff66651b3b4"
+changelog = "First release"
