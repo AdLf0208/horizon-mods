@@ -27,9 +27,9 @@ categories = ["game-mechanics", "food"]
 tags = ["port", "farming", "crops", "essence"]
 
 [[versions]]
-version = "1.21.1-8.0.29"
-published = "2026-11-09"
+version = "0.1.0"
+published = "2026-11-10"
 game = "26.3"
 file = "mysticalagriculture.hnmod"
-sha256 = "13554eb8cfcc8f07c1b22a33bc3e9708ed3e3433a468e86423bc8c2abce9cd54"
+sha256 = "96ab3dae77e6d7f6a1ced43b4a828659d261688063b72d38dadcd802c1f922f9"
 changelog = "First release"
