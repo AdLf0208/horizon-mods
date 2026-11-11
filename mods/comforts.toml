@@ -1,0 +1,49 @@
+id = "comforts"
+kind = "native-mod"
+name = "comforts"
+summary = "A Horizon port of comforts."
+description = """
+A port of [comforts](illusivesoulworks/comforts) for Horizon.
+
+**Implemented so far**
+
+- One block** `comforts:sleeping_bed` on the `minecraft:white_bed` template
+- (bed class, `facing`/`part`/`occupied`), 3 px high (`shapes` and
+- `collision_shapes`), hardness 0.1, wool sounds, `occludes: false`,
+- head-only self-drop, 3 white wool → 1 recipe, `comforts:sleeping_bags`
+- block/item tags, a creative tab and its item icon from upstream.
+- Sleeping** uses the engine's bed path (`Class::AbstractBed` →
+- `PlayerEffect::Sleep` → `try_sleep`), so reach, obstruction, the monster
+- check, the sleep list, the stat and the `slept_in_bed` trigger are vanilla's.
+
+**Not yet ported**
+
+- Block id** `comforts:sleeping_bed` (upstream `comforts:sleeping_bag_white`)
+- because of the pin's `_bed` suffix rule (above). Only the plain white variant
+- is carried; the other 15 dyed bags, the 16 hammocks, `rope_and_nail`, the
+- sleeping-bag **item** (auto-use on placement) and the block-entity model are
+- deferred.
+- The bag's model is the port's**: upstream draws it from a Java
+- `LayerDefinition` (a block-entity renderer, deep/client tier) which a data
+- model cannot carry; the port draws a flat 3 px body and a pillow with vanilla
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "LGPL-3.0-or-later"
+source = "https://github.com/AdLf0208/comforts"
+icon = "icons/comforts.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "comforts.hnmod"
+sha256 = "247d79370fbad02c14339adbc6b01354152460ef171e6c09fa9399f8e216b210"
+changelog = "First release"
