@@ -1,0 +1,47 @@
+id = "compactmachines"
+kind = "native-mod"
+name = "compactmachines"
+summary = "A Horizon port of compactmachines."
+description = """
+A port of [compactmachines](CompactMods/CompactMachines) for Horizon.
+
+**Implemented so far**
+
+- | Template | Interior | Colour | Shell |
+- |---|---|---|---|
+- | tiny | 3 × 3 × 3 | `#C95B13` | 5³ (98 blocks) |
+- | small | 5 × 5 × 5 | `#D4D2D2` | 7³ |
+- | normal | 7 × 7 × 7 | `#FBF236` | 9³ (386 blocks) |
+- | large | 9 × 9 × 9 | `#211B2E` | 11³ |
+- | giant | 11 × 11 × 11 | `#43D6CD` | 13³ |
+- | colossal | 13 × 13 × 13 | `#423F42` | 15³ |
+
+**Not yet ported**
+
+- | Gap | Why | What the slice does instead |
+- |---|---|---|
+- | **No player-position write** | the pin has no hook that moves a player; `native_run_command` is refused inside player hooks | the deferred `execute in <dim> run tp` from `server_tick` (the `waystones` pattern) |
+- | **No teleport veto** | `entity_teleport` is listen-only, so a non-command teleport out of a room cannot be cancelled | the shell is `solid_wall` (unbreakable), which keeps players in by geometry |
+- | Preview screen, upgrade screen, keybinds, Jade/JEI/Curios, villager, gamerules, OOB damage | client half and integrations | `/compactmachines info` replaces the preview; the rest is deferred |
+- | PSD "set room spawn" (sneaking) | the slice has one spawn per room (`IRoomBoundaries.defaultSpawn`) | sneak-use is not special-cased; the room spawn is its centre |
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/compactmachines"
+icon = "icons/compactmachines.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "compactmachines.hnmod"
+sha256 = "74a00b8ae852adf3ee0c91dd4f0a387e217d5c759a4bbb7889046124ed93b663"
+changelog = "First release"
