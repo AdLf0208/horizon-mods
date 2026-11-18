@@ -1,5 +1,5 @@
 id = "storagedelight"
-kind = "mod"
+kind = "native-mod"
 name = "Storage Delight"
 summary = """A port of Storage Delight for Horizon: barrel-like storage furniture. Slice 1 is the oak family — fourteen 27-slot containers (a drawer, a drawer with a…"""
 description = """A port of Storage Delight for Horizon: barrel-like storage furniture. Slice 1 is the oak
