@@ -34,9 +34,9 @@ categories = ["technology"]
 tags = ["port", "combat"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "gateways.hmod"
-sha256 = "9478db99cc91ba875cab4e878fd2115f251bd67239151f8c1755816547067199"
+sha256 = "d6bf75a9685be9eb9ebd48be5dba9559a136a505eb4e92fc8310d5cc5e040bd0"
 changelog = "First publication in the SDK format."
