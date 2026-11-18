@@ -1,5 +1,5 @@
 id = "crashutilities"
-kind = "mod"
+kind = "native-mod"
 name = "Crash Utilities"
 summary = """Server-admin housekeeping commands for Horizon, from Crash Utilities 9.0.4: count and clear the world's ground items on a configured countdown, remove or…"""
 description = """Server-admin housekeeping commands for Horizon, from Crash Utilities 9.0.4: count and clear the world's ground items on a configured countdown, remove or dump entities by type, group or name, teleport yourself across dimensions, and get yourself out of a block. Every command sits under the roots /cu and /crashutilities at permission level 2. The inventory, chunk, block-entity and memory readout commands of the original are not ported (the API surface for them does not exist here).
