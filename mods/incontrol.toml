@@ -1,5 +1,5 @@
 id = "incontrol"
-kind = "mod"
+kind = "native-mod"
 name = "InControl!"
 summary = """Spawn and loot control driven by two JSON rule files a pack author edits by hand: config/incontrol/spawn.json denies a fresh mob by id, mod, dimension,…"""
 description = """Spawn and loot control driven by two JSON rule files a pack author edits by hand:
