@@ -1,5 +1,5 @@
 id = "bettermineshafts"
-kind = "mod"
+kind = "native-mod"
 name = "YUNG's Better Mineshafts"
 summary = """YUNG's Better Mineshafts 5.1.1 for Horizon: the mod's own mineshaft geometry, generated in Rust behind an SDK structure type. The jar has no templates at…"""
 description = """YUNG's Better Mineshafts 5.1.1 for Horizon: the mod's own mineshaft geometry, generated in
