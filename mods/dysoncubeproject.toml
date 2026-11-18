@@ -1,5 +1,5 @@
 id = "dysoncubeproject"
-kind = "mod"
+kind = "native-mod"
 name = "Dyson Cube Project"
 summary = """A Dyson-sphere ray receiver: place the controller where its 3x6x3 shell fits and it writes the sixteen multiblock placeholders around itself, then pulls…"""
 description = """A Dyson-sphere ray receiver: place the controller where its 3x6x3 shell fits and it writes the sixteen multiblock placeholders around itself, then pulls up to 50,000,000 FE a tick from a sphere of solar sails into a 100,000,000 FE buffer that only gives power through its bottom face. Beams support six sails each, a sail makes 20 FE a tick, and /dysoncubeproject status, set and add read and change the sphere at a controller. This slice has the receiver, its multiblock and the beam and solar-sail components; the EM Rail Ejector (the only way to grow a sphere in game), the shared per-player sphere, the client renderers and GUIs, and the advancements are not ported yet.
