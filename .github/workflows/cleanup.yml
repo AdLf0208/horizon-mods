@@ -17,7 +17,7 @@ jobs:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Delete staging files nobody needs
         run: |
           set -euo pipefail
@@ -34,6 +34,8 @@ jobs:
             sha="${name%%.*}"
             age=$(( (now - $(date -d "$created" +%s)) / 86400 ))
             grep -qx "$sha" pending.txt && continue
+            # Frozen history is not abandonment: preserve even a staging-only copy.
+            if grep -qrlF "sha256 = \"$sha\"" archive; then continue; fi
             if grep -qx "$sha" published.txt; then
               [ "$age" -ge 7 ] || continue
             else
