@@ -1,5 +1,5 @@
 id = "repurposed_structures"
-kind = "mod"
+kind = "native-mod"
 name = "Repurposed Structures"
 summary = "18 outposts and 6 witch huts carried whole, with their pools, processors and loot."
 description = """A Horizon port of [Repurposed Structures](https://github.com/TelepathicGrunt/RepurposedStructures) (LGPL-3.0, by **TelepathicGrunt**) for Horizon. Slice 1 carries **two families whole**: 18 outposts (overworld, nether, ocean and end variants) and 6 witch huts — 24 structures, 5 sets, 80 pools, 21 processor lists, 211 templates, 19 loot tables and 45 biome tags.
