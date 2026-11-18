@@ -1,5 +1,5 @@
 id = "mekanismtools"
-kind = "mod"
+kind = "native-mod"
 name = "Mekanism: Tools"
 summary = "72 Mekanism: Tools items \u2014 tools, paxels, armour and shields in six materials."
 description = """
