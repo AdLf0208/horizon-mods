@@ -1,5 +1,5 @@
 id = "integratedcrafting"
-kind = "mod"
+kind = "native-mod"
 name = "Integrated Crafting"
 summary = """A port of Integrated Crafting for Horizon: a Crafting Interface block that accepts crafting jobs, resolves each against the game's own crafting recipes,…"""
 description = """A port of Integrated Crafting for Horizon: a Crafting Interface block that accepts crafting jobs,
