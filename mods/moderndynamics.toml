@@ -37,9 +37,9 @@ categories = ["technology", "storage"]
 tags = ["port", "pipes", "item-transport", "automation"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "moderndynamics.hmod"
-sha256 = "20fca6d83481645936840daa4259fdc84914bcccf7bcae76ef3db5498bf6f7d8"
+sha256 = "af740f062fc54a97489f5d52dd01fd931e4987098a72083ba479c9622807f976"
 changelog = "First release: slice 1 of the port, with the full licence and corresponding source in the port repository"
