@@ -38,9 +38,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "compactmachines.hmod"
-sha256 = "a6530b255f12c58a28a0973425b6ffc6298d6b37c45d136bde2b76d0bf73f4bf"
+sha256 = "3088104a0e02b3a8887cf09b8b7743d8b522fdbf12c554794097c4fa9cb7cc09"
 changelog = "First release"
