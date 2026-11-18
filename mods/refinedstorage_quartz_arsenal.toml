@@ -1,5 +1,5 @@
 id = "refinedstorage_quartz_arsenal"
-kind = "mod"
+kind = "native-mod"
 name = "Refined Storage - Quartz Arsenal"
 summary = "Refined Storage's two wireless crafting grid items, carried to 26.3 with 18 locales."
 description = """
