@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "ambientsounds.hmod"
-sha256 = "39ce7931723ec5a7910beac42a120506bc2f9dcf92cc1383bf5f9086ab61c6b4"
+sha256 = "0e9b878c64ab353c07291286fb78929f01352d01dd09f070a168c05bd3e14213"
 changelog = "First release"
