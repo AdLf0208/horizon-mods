@@ -1,0 +1,42 @@
+id = "betterdungeons"
+kind = "mod"
+name = "YUNG's Better Dungeons"
+summary = """YUNG's Better Dungeons for Horizon, slice 1: the small dungeon. The port registers its own structure type (betterdungeons:small_dungeon_type), which…"""
+description = """YUNG's Better Dungeons for Horizon, slice 1: the small dungeon. The port
+registers its own structure type (betterdungeons:small_dungeon_type), which assembles the
+jar's carried jigsaw templates -- sixteen .nbt shells and loot piles, two template pools with
+their weights and max_counts, four processor chains -- rotates and places them by the jar's
+own rules, and decorates them with the eleven betterdungeons:* processors the data calls,
+including the dungeon banners, the mob spawner, the chest and banner caps, the ceiling props,
+the support legs and the rule processor that turns air into cave air. The other five
+structures, the aggregate structure and the two biome-modifier files are recorded gaps in
+notes.md.
+
+**Implemented so far:** the slice in the package, as described above.
+
+**Not yet ported**
+
+- **Only one of the five structures.** skeleton_dungeon, zombie_dungeon,
+- **The two remove_*_feature_in biome modifiers**
+- **The config file** — defaults compiled in (src/runtime.rs,
+- **start_height's x_offset_in_chunk/z_offset_in_chunk**: the jar omits
+- **Saved pieces are re-derived from the template, not from a stored block list**
+- **Liquid settings**: the jar's "liquid_settings": "ignore_waterlogging" is
+
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+authors = ["YUNGNICKYOUNG", "Acarii", "AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "LGPL-3.0-only"
+source = "https://github.com/AdLf0208/betterdungeons"
+icon = "icons/betterdungeons.png"
+categories = ["adventure"]
+tags = ["port", "worldgen", "dungeons"]
+
+[[versions]]
+version = "0.2.0"
+published = "2026-11-18"
+game = "26.3"
+file = "betterdungeons.hmod"
+sha256 = "561c09a5104489eb6c4acf9073467c5c2cf5d0d0a4feda628792e1a908d50c26"
+changelog = "First publication in the SDK format."
