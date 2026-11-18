@@ -34,9 +34,9 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-09"
 game = "26.3"
 file = "powah.hmod"
-sha256 = "11824c7cc17003caf71f1ee9eef63bf1fdfc81c1c2535b7fa54463ce3166455d"
+sha256 = "698b63fb7880f84729dda23d0c9a14ccca091ebd595b97a7c56b977efc981670"
 changelog = "First release: slice 1 of the port, with the full licence and corresponding source in the port repository"
