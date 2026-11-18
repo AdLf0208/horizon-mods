@@ -1,5 +1,5 @@
 id = "yungsextras"
-kind = "mod"
+kind = "native-mod"
 name = "YUNG's Extras"
 summary = """YUNG's Extras' scattered decoration for Horizon: six swamp pieces (arches, double arches, pillars, cubbies, a church and an ogre) and five desert pieces…"""
 description = """YUNG's Extras' scattered decoration for Horizon: six swamp pieces (arches, double arches, pillars, cubbies, a church and an ogre) and five desert pieces (wells, obelisks, ruins, a giant torch and a chillzone), each a structure template placed by a feature. The pin has no surface for a mod to register a feature type, so the swamp arch family (11 templates) is carried as vanilla `minecraft:template` configured features with a data processor list that runs the mod's own marker-block processing, and the other ten families are carried as content only with their placement recorded as blocked: their feature types (`yungsextras:desert_well`, `yungsextras:swamp_cubby`, ...) and the mod's `yungsextras:rng_initializer` placement modifier cannot be named at 26.3. All 62 templates ship, so every piece can be placed by hand with `/place template`; only the arches generate in a swamp.
