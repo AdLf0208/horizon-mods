@@ -1,5 +1,5 @@
 id = "gateways"
-kind = "mod"
+kind = "native-mod"
 name = "Gateways to Eternity"
 summary = """A port of Gateways to Eternity for Horizon: a gate pearl opens a gateway, the gateway runs its wave list, and each wave pays out when its mobs die. The…"""
 description = """A port of Gateways to Eternity for Horizon: a gate pearl opens a gateway, the gateway runs
