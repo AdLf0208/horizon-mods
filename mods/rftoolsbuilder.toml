@@ -39,9 +39,9 @@ categories = ["technology"]
 tags = ["port", "building", "automation"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "rftoolsbuilder.hmod"
-sha256 = "231e5d00d134f8a622d0568b2096ff7306cb18e82ee5ce984a78f296505777be"
+sha256 = "da48b02d137e8d6cbf8df87536feb417ed7e4b02761f84b9e620cef314d627a6"
 changelog = "First publication in the SDK format."
