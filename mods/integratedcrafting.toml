@@ -30,9 +30,9 @@ categories = ["technology"]
 tags = ["port", "crafting", "automation"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "integratedcrafting.hmod"
-sha256 = "aab6b6fd5e83525343006d6cd8e698040d490bf314a7b0f0fba542c9c745da70"
+sha256 = "0798935ecaaaff52301b2160ae580deae33f34b1daf927d25b2170b9d479d4fc"
 changelog = "First publication in the SDK format."
