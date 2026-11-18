@@ -30,9 +30,9 @@ categories = ["adventure"]
 tags = ["port", "worldgen", "dimension"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "twilightforest.hmod"
-sha256 = "87cae848f944892453c4261c8309bdf4f88d2836b008cd1dd134a43b582a4c0f"
+sha256 = "68072dc02a1fbc3340635a47667344dc9fcab050e991624794c9276329215dc3"
 changelog = "First publication in the SDK format."
