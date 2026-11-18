@@ -1,5 +1,5 @@
 id = "moredragoneggs"
-kind = "mod"
+kind = "native-mod"
 name = "More Dragon Eggs"
 summary = """Vanilla places a dragon egg on the first ender-dragon kill only; this mod places one at the End exit podium on every kill after the first. With spawn_head…"""
 description = """Vanilla places a dragon egg on the first ender-dragon kill only; this mod places one at
