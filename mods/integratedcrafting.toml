@@ -1,0 +1,38 @@
+id = "integratedcrafting"
+kind = "mod"
+name = "Integrated Crafting"
+summary = """A port of Integrated Crafting for Horizon: a Crafting Interface block that accepts crafting jobs, resolves each against the game's own crafting recipes,…"""
+description = """A port of Integrated Crafting for Horizon: a Crafting Interface block that accepts crafting jobs,
+resolves each against the game's own crafting recipes, keeps the recipe for the job's life, holds the
+ingredients in its own slots, and crafts one recipe at a time. The network it attaches to upstream
+(Integrated Dynamics' crafting network) is not ported, so the interface works standalone: ingredients
+come from its own slots and its results stay in its output slots.
+
+**Implemented so far:** the slice in the package, as described above.
+
+**Not yet ported**
+
+- **blocked(no-parent-network-attachment-api)** — the network half: a part on
+- **blocked(no-variable-card-layer)** — the Crafting Writer part and every aspect the mod ships
+- **The part screens** — upstream has five containers and their screens
+- **The job dependency graph** — a job whose ingredient is itself craftable
+- **Priorities, distributed jobs over several interfaces, several crafting CPUs, blocking-mode
+- **The bound machine** — inserting the inputs into the block the interface faces through the item
+
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+authors = ["rubensworks (aka kroeser)", "Horizon native mod contributors", "AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/integratedcrafting"
+icon = "icons/integratedcrafting.png"
+categories = ["technology"]
+tags = ["port", "crafting", "automation"]
+
+[[versions]]
+version = "0.2.0"
+published = "2026-11-18"
+game = "26.3"
+file = "integratedcrafting.hmod"
+sha256 = "aab6b6fd5e83525343006d6cd8e698040d490bf314a7b0f0fba542c9c745da70"
+changelog = "First publication in the SDK format."
