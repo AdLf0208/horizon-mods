@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "enderio.hmod"
-sha256 = "322251413fa6d3723d7c8a7a798b033dabf916a1aa18c0415a88ec0d621ff1c4"
+sha256 = "d85004c41de5abca2b7e9b7e8a892449c40edf0c6a835328dc95ef165e12f3ee"
 changelog = "First release"
