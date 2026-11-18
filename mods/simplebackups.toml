@@ -1,0 +1,38 @@
+id = "simplebackups"
+kind = "mod"
+name = "Simple Backups"
+summary = """Scheduled, on-disk backups of the whole world, with retention. A backup saves the open world, then a worker thread walks the world folder into a…"""
+description = """Scheduled, on-disk backups of the whole world, with retention. A backup saves the open
+world, then a worker thread walks the world folder into a .zip.part, publishes it as a .zip and
+prunes the oldest ones down to keep. A copy a save cycle overlapped is thrown away and redone. The
+schedule is a game-tick interval or a wall-clock minute interval; the commands are
+/simplebackups backup|status|list at permission level 2.
+
+**Implemented so far:** the slice in the package, as described above.
+
+**Not yet ported**
+
+- **Consistency window**: there is no save-off/autosave-veto API at the pin; the
+- The schedule is not persisted across restarts; it starts at world open.
+- Retention prunes after success (upstream deletes before creating), and only
+- Naming is UTC; upstream uses local time. Backup location is
+- native_world_dir is a pin gap: it is not cleared after a close, so the port
+- Licence: upstream is **Apache-2.0** while the template Cargo.toml/LICENSE
+
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+authors = ["ChaoticTrials", "AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "Apache-2.0"
+source = "https://github.com/AdLf0208/simplebackups"
+icon = "icons/simplebackups.png"
+categories = ["utility"]
+tags = ["port", "backups"]
+
+[[versions]]
+version = "0.2.0"
+published = "2026-11-18"
+game = "26.3"
+file = "simplebackups.hmod"
+sha256 = "1d565c1d1f2b90d8ceb13b31a7715339601196f3bbacb405a67f95564a1d4f38"
+changelog = "First publication in the SDK format."
