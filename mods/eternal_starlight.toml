@@ -1,5 +1,5 @@
 id = "eternal_starlight"
-kind = "mod"
+kind = "native-mod"
 name = "Eternal Starlight"
 summary = """A port of Eternal Starlight for Horizon, slice 1: the Starlight dimension exists, is enterable and generates. The dimension is registered over the mod's…"""
 description = """A port of Eternal Starlight for Horizon, slice 1: the Starlight dimension exists,
