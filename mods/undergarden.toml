@@ -1,5 +1,5 @@
 id = "undergarden"
-kind = "mod"
+kind = "native-mod"
 name = "The Undergarden"
 summary = """The Undergarden's ceiling dimension for Horizon: the level undergarden:undergarden is registered with the jar's dimension type (a bedrock ceiling, fixed…"""
 description = """The Undergarden's ceiling dimension for Horizon: the level undergarden:undergarden is
