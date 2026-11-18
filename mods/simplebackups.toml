@@ -1,5 +1,5 @@
 id = "simplebackups"
-kind = "mod"
+kind = "native-mod"
 name = "Simple Backups"
 summary = """Scheduled, on-disk backups of the whole world, with retention. A backup saves the open world, then a worker thread walks the world folder into a…"""
 description = """Scheduled, on-disk backups of the whole world, with retention. A backup saves the open
