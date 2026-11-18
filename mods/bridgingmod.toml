@@ -1,5 +1,5 @@
 id = "bridgingmod"
-kind = "mod"
+kind = "native-mod"
 name = "Bridging Mod"
 summary = """A port of Bridging Mod for Horizon: a right click in the air with a placeable block item fills the gap the player looks into, so a bridge can be built…"""
 description = """A port of Bridging Mod for Horizon: a right click in the air with a placeable block item
