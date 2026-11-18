@@ -1,5 +1,5 @@
 id = "rftoolsbuilder"
-kind = "mod"
+kind = "native-mod"
 name = "RFTools Builder"
 summary = """RFTools Builder for Horizon: the Builder block and its shape cards. A card carries a shape (box, sphere, cylinder, capped cylinder, prism, cone, top and…"""
 description = """RFTools Builder for Horizon: the Builder block and its shape cards. A card carries a
