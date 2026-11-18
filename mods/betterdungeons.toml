@@ -1,5 +1,5 @@
 id = "betterdungeons"
-kind = "mod"
+kind = "native-mod"
 name = "YUNG's Better Dungeons"
 summary = """YUNG's Better Dungeons for Horizon, slice 1: the small dungeon. The port registers its own structure type (betterdungeons:small_dungeon_type), which…"""
 description = """YUNG's Better Dungeons for Horizon, slice 1: the small dungeon. The port
