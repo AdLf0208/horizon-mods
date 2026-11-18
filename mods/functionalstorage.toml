@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "functionalstorage.hmod"
-sha256 = "4ef7d482ae08a16bfb48270101861b4669ded2375e5657ff31dedff1c7a01996"
+sha256 = "9b7d86b920c0d6d09fc292cce3296792150915f7830c3f08ef6b2672cd845854"
 changelog = "First release"
