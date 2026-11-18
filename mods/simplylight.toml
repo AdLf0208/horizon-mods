@@ -1,5 +1,5 @@
 id = "simplylight"
-kind = "mod"
+kind = "native-mod"
 name = "Simply Light"
 summary = "160 decorative light-emitting blocks and panels in every colour."
 description = """
