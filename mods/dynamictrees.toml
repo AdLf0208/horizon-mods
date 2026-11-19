@@ -1,0 +1,38 @@
+id = "dynamictrees"
+kind = "mod"
+name = "Dynamic Trees"
+summary = """Dynamic Trees for Horizon, slice 1: the oak. An oak acorn planted on soil grows through named stages over time — sprout, trunk, branches, canopy — into a…"""
+description = """Dynamic Trees for Horizon, slice 1: the oak. An oak acorn planted on soil
+grows through named stages over time — sprout, trunk, branches, canopy — into a tree whose
+trunk, branches and leaves are placed progressively and whose growth resumes after a
+relaunch. Every other species, the tree-pack API, the dendro pouch and the cell-kit solver are
+out of this slice.
+
+**Implemented so far:** the slice in the package, as described above.
+
+**Not yet ported**
+
+- Every other species (acacia, birch, cherry, dark oak, jungle, mangrove, spruce, crimson,
+- The **tree-pack API** (com/dtteam/dynamictrees/api/**, treepack/) — Java interfaces and
+- The **cell-kit solver** (systems/cell, worldgen/JoCode, GrowthLogicKits): the real
+- The **dendro pouch**, the **Woodland Staff**, the **dendro potions**, the **dirt bucket**,
+- **Worldgen**: worldgen/configured_feature/dynamic_tree.json and the NeoForge biome
+- **Rooty soil**: upstream converts the soil under a sapling to dynamictrees:rooty_dirt
+
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+authors = ["Ferreusveritas", "AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/dynamictrees"
+icon = "icons/dynamictrees.png"
+categories = ["technology"]
+tags = ["port"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-18"
+game = "26.3"
+file = "dynamictrees.hmod"
+sha256 = "777d0d4bd09559e6f049fae33596d0433a19f4c2a372893293aa61b0c51c5987"
+changelog = "First publication in the SDK format."
