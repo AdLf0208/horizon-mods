@@ -33,9 +33,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "bigreactors.hmod"
-sha256 = "8eea3653872249b8d5e7fff818f3ab99a3b91f414f6b4631b5b20cf001aa3a83"
+sha256 = "f0875084ff184a137d337f93af72b57c74916c57f2bf86f639c8bf5da6cf0268"
 changelog = "First release"
