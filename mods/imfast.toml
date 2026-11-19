@@ -34,9 +34,9 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "movement", "server", "elytra"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-09"
 game = "26.3"
 file = "imfast.hmod"
-sha256 = "9102d2ed5e3aa84c881c124acb77a7caa4ddae53afc036e712351e2bb2997a6f"
+sha256 = "3132ed18ca60e573bbb0d8702c17c78042fcc6287ffca5935e23d5da4c10e732"
 changelog = "First release: player and elytra movement checks disabled per world"
