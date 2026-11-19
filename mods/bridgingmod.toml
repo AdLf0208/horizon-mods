@@ -38,9 +38,9 @@ categories = ["utility"]
 tags = ["port", "building"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.2"
 published = "2026-11-18"
 game = "26.3"
 file = "bridgingmod.hmod"
-sha256 = "29fc5b7443bd2e28a0182c3d4300ac8f6f3195442133da6c0952d7227bbb60f6"
+sha256 = "dd184f6b2a392024d25aeeea9952ae9650acd5466a812ebfabb9e821dfb3b1bd"
 changelog = "First publication in the SDK format."
