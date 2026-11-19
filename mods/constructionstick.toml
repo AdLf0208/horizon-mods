@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "constructionstick.hmod"
-sha256 = "0660f04c2ed5b36966646845e7d81211218a102ada9cebd7b24f58de083f5136"
+sha256 = "c26a23f8d2883533e7e7ad17cf115df05960d484b91a8ee1d209997bd593e175"
 changelog = "First release"
