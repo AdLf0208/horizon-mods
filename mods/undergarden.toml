@@ -35,9 +35,9 @@ categories = ["adventure"]
 tags = ["port", "worldgen", "dimension"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.2"
 published = "2026-11-18"
 game = "26.3"
 file = "undergarden.hmod"
-sha256 = "719ccce22aed9f7199f8942223b839a05de58ba5f1ac1933c515ebe2d011c3f4"
+sha256 = "2561d47a5413e51ce1bbffa6d314c543a4cb49adc3c203375be81c77ae8c33e7"
 changelog = "First publication in the SDK format."
