@@ -24,9 +24,9 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "enchanting", "machines", "utility"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "disenchanting_table.hmod"
-sha256 = "b4ebc477746b44a5a849d4f0d604da65d7510d230e8762ff4393f3b37752efc1"
+sha256 = "7ff3de30ee854f79d9ddbd501d3f68dacac0ac6219684b470c094340ed2e9323"
 changelog = "First release"
