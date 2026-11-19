@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "ironfurnaces.hmod"
-sha256 = "f13ed3cdd0c9edd4b28f1b4a7560fb0cde93cc9fbc636e0e1741b78f50502194"
+sha256 = "0b2a1f2b582c401b92930ecd864d74a057f4f3f47be402c93d2e186f4d7187f1"
 changelog = "First release"
