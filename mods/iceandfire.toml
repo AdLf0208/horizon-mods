@@ -2,7 +2,7 @@ id = "iceandfire"
 kind = "native-mod"
 name = "iceandfire"
 summary = "A fire dragon end to end: its egg hatches in flame and the dragon takes flight."
-description = """A Horizon port of [Ice and Fire Community Edition](https://github.com/iafenvoy/IceAndFire) (LGPL-3.0, by **IAFEnvoy**, **xiaowu** and **uoay**) for Horizon. This first slice is **one fire dragon, end to end**: its egg, its hatching and its flight.
+description = """A Horizon port of [Ice and Fire Community Edition](https://github.com/IAFEnvoy/IceAndFire-CE) (LGPL-3.0, by **IAFEnvoy**, **xiaowu** and **uoay**) for Horizon. This first slice is **one fire dragon, end to end**: its egg, its hatching and its flight.
 
 **Implemented so far**
 
