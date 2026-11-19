@@ -34,9 +34,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-12"
 game = "26.3"
 file = "sushigocrafting.hmod"
-sha256 = "44a2a0a9795ed8887acecfe460859342f0ef179bd9e8de95a3e9b8aae188d10e"
+sha256 = "c0f681c76551d96e71cb0f1929e72fc7009303e6ba05b9e59ab5d4183ea2c0e6"
 changelog = "Fix the cutting board's knife tag: the cleaver is declared under both `c:tools/knife` (the tag upstream's code tests) and `c:tools/knives` (the tag upstream ships), so the mod's own knife cuts without Farmer's Delight; the archive also carries its licence notices."
