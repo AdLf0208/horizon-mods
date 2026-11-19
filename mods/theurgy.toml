@@ -3,7 +3,7 @@ kind = "native-mod"
 name = "theurgy"
 summary = "A Horizon port of theurgy."
 description = """
-A port of [Theurgy](https://github.com/klikli-dev/theurgy) (MIT for the code, CC-BY-4.0 for the assets — by klikli-dev) for Horizon. This first slice is the **calcination** chain: the pyromantic brazier, the calcination oven and the alchemical salts they produce.
+A port of [Theurgy](https://github.com/klikli-dev/theurgy) (MIT for the code, CC-BY-SA-4.0 for the assets — by klikli-dev) for Horizon. This first slice is the **calcination** chain: the pyromantic brazier, the calcination oven and the alchemical salts they produce.
 
 **Implemented so far**
 
@@ -18,21 +18,21 @@ A port of [Theurgy](https://github.com/klikli-dev/theurgy) (MIT for the code, CC
 - The other items: 287 alchemical sulfurs, 19 niters, the mercury shard and crystal, purified gold, jars, divination rods (4 tiers × 4 attunements), filters and ceramic jars.
 - The apparatus not carried: distiller, liquefaction cauldron, fermentation vat and the rest; and the guide book.
 
-**Licence allocation** (upstream's own `REUSE.toml` split): the code, and this port's Rust rewrite of its behaviour, is **MIT** (`LICENSE`, `LICENSE-MIT`); the carried assets — models, textures, lang and data — are **CC-BY-4.0**, © 2024 klikli-dev (`LICENSE-CC-BY-4.0`). Both notices, and the allocation table in `LICENSE-NOTICE.md`, travel inside the archive.
+**Licence allocation** (upstream's own `REUSE.toml` split): the code, and this port's Rust rewrite of its behaviour, is **MIT** (`LICENSE`, `LICENSE-MIT`); the carried assets — models, textures, lang and data — are **CC-BY-SA-4.0**, © 2024 klikli-dev (`LICENSE-CC-BY-SA-4.0`). Both notices, and the allocation table in `LICENSE-NOTICE.md`, travel inside the archive.
 """
 authors = ["Kli Kli", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
-license = "MIT AND CC-BY-4.0"
+license = "MIT AND CC-BY-SA-4.0"
 source = "https://github.com/AdLf0208/theurgy"
 icon = "icons/theurgy.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.1"
+version = "0.2.2"
 published = "2026-11-10"
 game = "26.3"
 file = "theurgy.hmod"
-sha256 = "215974404b1c2edd51cba2dc7e9447151faaa9dfb0d377482087bcc63528ea4f"
+sha256 = "5fe7edbdcb7cc45065727761656a261d646282c8155c8587d3a5d94d588cbc7a"
 changelog = "First release"
