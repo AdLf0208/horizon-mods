@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "chisel.hmod"
-sha256 = "36a2b520881ff80f1fd067da22e44a875b45e3cee2b0a8c63c096426f0157d42"
+sha256 = "bc38ee783e5d5e17183bf6843f16f1f005a940b7fe61af49545657fd04f08ac5"
 changelog = "First release"
