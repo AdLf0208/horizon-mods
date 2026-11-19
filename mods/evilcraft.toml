@@ -24,16 +24,16 @@ MIT: the original copyright and licence travel inside the bundle, not only in th
 authors = ["rubensworks (aka kroeser)", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
-license = "MIT"
+license = "CC-BY-4.0"
 source = "https://github.com/AdLf0208/evilcraft"
 icon = "icons/evilcraft.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "evilcraft.hmod"
-sha256 = "a25beba657f13fc32600324f69064689b7180841b25343c8c302c9df2f7908f4"
+sha256 = "dc620c8b8de282fd8ee2edca590774059a5ffa53866477942035469ffd1cfb0c"
 changelog = "First release"
