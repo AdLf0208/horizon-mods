@@ -34,9 +34,9 @@ categories = ["adventure"]
 tags = ["port", "worldgen", "dungeons"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "betterdungeons.hmod"
-sha256 = "561c09a5104489eb6c4acf9073467c5c2cf5d0d0a4feda628792e1a908d50c26"
+sha256 = "f065f52799f61ba46b71738abf115d8393d4d7fdf9fa4b1124e3025a5675ce8c"
 changelog = "First publication in the SDK format."
