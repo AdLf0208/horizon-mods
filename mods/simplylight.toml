@@ -15,7 +15,7 @@ A port of [Simply Light](https://github.com/Flanks255/simplylight) by Flanks255 
 
 - Redstone toggling, the lamp-post column and the edge-light editor are later slices.
 
-A content-only carry: no native code and no hooks. MIT: the original copyright and licence travel inside the archive (`data/simplylight/license/`), not only in the source repository. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93. The artifact the entry pins is `content/simplylight.hmod` in the source repository; the release asset must be re-uploaded from that file so the two hashes agree.
+A content-only carry: no native code and no hooks. MIT: the original copyright and licence travel inside the archive (`data/simplylight/license/`), not only in the source repository. Pinned to Horizon 0b14f8a and horizon-mixins e59da90. The artifact the entry pins is `content/simplylight.hmod` in the source repository; the release asset must be re-uploaded from that file so the two hashes agree.
 """
 authors = ["Flanks255", "AdLf0208"]
 owners = ["AdLf0208"]
