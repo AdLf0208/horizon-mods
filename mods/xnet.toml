@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "xnet.hmod"
-sha256 = "22a8a691797197cda70edb65f34dae8f1dacd82ceb68fc721124207128a485d0"
+sha256 = "f0522c24886eef6fe18f3288b288fecf582be08815a41ef5f3e0719b8e6d341d"
 changelog = "First release"
