@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "mekmm.hmod"
-sha256 = "55c476c91af941d70d4d4c9c7469e5f08b1df1bd36cff2dae2ba09ea7bbf153c"
+sha256 = "b72a04acdb28029962bc23a0aaae14df2a93fa505ec54ab17886ac94610c1e42"
 changelog = "First release"
