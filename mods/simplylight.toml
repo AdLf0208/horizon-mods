@@ -3,7 +3,7 @@ kind = "mod"
 name = "Simply Light"
 summary = "160 decorative light-emitting blocks and panels in every colour."
 description = """
-A content-only carry of Simply Light: the blocks, states, models, textures, recipes and tags are data in the package, and it has no native code and no hooks. 160 blocks in ten families, 2,048 blockstates, the jar's light levels, self-drop loot, six recipes and the climbable/mineable tags.
+A Horizon port of [Simply Light](https://github.com/Flanks255/simplylight) by **Flanks255** (MIT): the blocks, states, models, textures, recipes and tags are data in the package, and it has no native code and no hooks. 160 blocks in ten families, 2,048 blockstates, the jar's light levels, self-drop loot, six recipes and the climbable/mineable tags.
 
 MIT: the original copyright and licence travel inside the archive (`data/simplylight/license/`), not only in the source repository. Built for mod API 0.2 on Minecraft 26.3.
 """
@@ -11,7 +11,7 @@ authors = ["Flanks255", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
 license = "MIT"
-source = "https://github.com/AdLf0208/simplylight"
+source = "https://github.com/AdLf0208/simply_light"
 icon = "icons/simplylight.png"
 categories = ["decoration"]
 tags = ["port", "decoration", "lighting", "blocks"]
