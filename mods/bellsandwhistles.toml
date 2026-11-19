@@ -8,12 +8,16 @@ description = """Bells & Whistles' decorative station, metro and train blocks fo
 
 **Not yet ported**
 
-- **Create is not ported.** The wrench behaviour, Create's panel placement
-- **The headlight uses minecraft:lever.** Its powered state and
+- **Create is not ported.** The wrench behaviour, Create's panel placement helper and copycat face-hiding, and the train-door forms (`folding_metro_door`, `sliding_metro_door`) are deferred — the two door forms are not registered by `ModBlocks` at 0.4.7 anyway.
+- **The headlight uses `minecraft:lever`.** Its `powered` state and right-click toggle are a template artefact; the light is constant 15.
 - **Custom shapes** for the rails, headlight and pilots are not declared.
 - **Nine pilots have no recipe** (Create's polished-cut stones).
-- **Recipe materials are substituted** (see the map above); the recipes are
-- **Stonecutting recipes are carried but not crafted in the e2e.** The
+- **Recipe materials are substituted**; the recipes are not upstream's exact ingredients, because Create is absent.
+- **Stonecutting recipes are carried but not crafted in the e2e.** The crafting path is proved for six recipes; the stonecutter menu path is not exercised.
+- **The creative tab's position** differs from upstream, which inserts into vanilla tabs; Horizon content mods cannot.
+- **Map colour** is the template's (upstream copied mossy cobblestone/stone colours) and was not visually checked headless.
+
+**Licence:** `GPL-3.0`, not "or later" — the pinned jar's own `neoforge.mods.toml` declares `license="GPL-3.0"`, its `LICENSE` is the GPL version 3 text, and the "or any later version" wording appears only in that text's generic application example, not in a project-specific grant.
 
 Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact.
 
