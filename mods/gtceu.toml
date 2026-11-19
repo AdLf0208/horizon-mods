@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "gtceu.hmod"
-sha256 = "6c0b06f360d564069a6dbe2696425d06bce604ef4fe7803949487a84fffe9778"
+sha256 = "9a8d861743b6516933694d7854586c15c63bd107012b3e0911292041ce6414d4"
 changelog = "First release"
