@@ -32,9 +32,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "rftoolsbase.hmod"
-sha256 = "f754cd0db35461e6617f65db031efdf9c6a85151c4238e8c6394cbc18204ac20"
+sha256 = "965003c8970f103385f2c8303fbfc72d0f0a3663beddc91e16c8535d1b9429de"
 changelog = "First release"
