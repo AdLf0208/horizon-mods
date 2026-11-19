@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "theurgy.hmod"
-sha256 = "bab2b93cf4c96a89d037003f665614ba9019d2d1cc18edaeedbdedf1ec2b9cf8"
+sha256 = "215974404b1c2edd51cba2dc7e9447151faaa9dfb0d377482087bcc63528ea4f"
 changelog = "First release"
