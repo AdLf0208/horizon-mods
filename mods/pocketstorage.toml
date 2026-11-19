@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "pocketstorage.hmod"
-sha256 = "5416872e41c7f62d9d4a8fa3fd6da5b482e6c9dc82821c4f03bfda85d034995a"
+sha256 = "d79212c6e573aa6b69a784d77dc1ca0e68bdf30454ec16e32f4514a9bfea62c0"
 changelog = "First release"
