@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "framedblocks.hmod"
-sha256 = "82fb24e0051b77cf7d3b2eb76e3694077602c09cb0800b150aad3802c0857a7e"
+sha256 = "c1fa1450fd3a25b8335a55bd0bec5c3c58544caa85140e7b4772fe89cdc2a225"
 changelog = "First release"
