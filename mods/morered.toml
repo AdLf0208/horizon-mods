@@ -33,9 +33,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.2"
 published = "2026-11-10"
 game = "26.3"
 file = "morered.hmod"
-sha256 = "03a19939a0af0a3b16373699282c646ada4cd5e1c918e78c6eb90780c1384128"
+sha256 = "9f3370b86a092635e2d9b33071e231e7e0090ddc9add7794860d5ea961fdda5c"
 changelog = "First release"
