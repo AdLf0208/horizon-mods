@@ -30,9 +30,9 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-09"
 game = "26.3"
 file = "mekanism.hmod"
-sha256 = "162e40e77430c4ec8a3692976ba50fffe039b49a8a6fa7ced400a74a0d663cba"
+sha256 = "2cf935e4b568d876535fafec9f0eb7c7aaf8c851ff30f424e1931b993ec76c5a"
 changelog = "First release"
