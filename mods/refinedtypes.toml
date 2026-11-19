@@ -1,0 +1,39 @@
+id = "refinedtypes"
+kind = "mod"
+name = "Refined Types"
+summary = """An add-on for Refined Storage that stores what Refined Storage does not: FE, Source and Souls. Storage blocks add their tier's capacity to the network,…"""
+description = """An add-on for Refined Storage that stores what Refined Storage does not: FE, Source and
+Souls. Storage blocks add their tier's capacity to the network, storage disks carry their amount in
+the item and live in the network's disk drives, and the Network Energizer keeps the network supplied
+from the energy storage. Scoped to that storage: the typed grid, exporters, importers, external
+storage, autocrafting, the storage screens and the recipes are the port's gap list, not this
+version.
+
+**Implemented so far:** the slice in the package, as described above.
+
+**Not yet ported**
+
+- Typed grid / exporter / importer / external storage / autocrafting / storage monitor insertion
+- Recipes: **not carried**. Every recipe needs refinedstorage:machine_casing (the parent has no
+- The block item does not carry the block's amount (deviation 3).
+- Menus and screens (deviation 4).
+- The energizer does not refill its buffer from the network once drained (upstream does not
+- Source and Soul have no consumer at this pin (no exporters, and Ars Nouveau / the soul mod are
+
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+authors = ["Starforcraft", "AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/refinedtypes"
+icon = "icons/refinedtypes.png"
+categories = ["technology"]
+tags = ["port"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-18"
+game = "26.3"
+file = "refinedtypes.hmod"
+sha256 = "b94fd6bf32bb6e0188160802ae9cb2e57b3b912daf31fd61b9aaee7e7c0b1fe2"
+changelog = "First publication in the SDK format."
