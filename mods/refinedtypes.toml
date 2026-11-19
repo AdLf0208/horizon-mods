@@ -13,14 +13,14 @@ version.
 
 **Not yet ported**
 
-- Typed grid / exporter / importer / external storage / autocrafting / storage monitor insertion
-- Recipes: **not carried**. Every recipe needs refinedstorage:machine_casing (the parent has no
-- The block item does not carry the block's amount (deviation 3).
-- Menus and screens (deviation 4).
-- The energizer does not refill its buffer from the network once drained (upstream does not
-- Source and Soul have no consumer at this pin (no exporters, and Ars Nouveau / the soul mod are
+- The typed grid, exporters, importers, external storage, autocrafting and storage-monitor insertion — that half needs Refined Storage's Java API and is the recorded gap, not this slice.
+- **Recipes are not carried.** Every one needs `refinedstorage:machine_casing` (the parent has no crafting chain), `c:dusts/redstone` (a NeoForge tag absent at 26.3) and `neoforge:conditions` (no such loader condition at 26.3); the 111 recipes and their advancement unlocks would be dead data, so the items come from the creative menu until the parent's chain exists.
+- The storage-block and energizer screens, block contents surviving a break, and `fireResistant` as upstream declares it.
+- The energizer does not refill its buffer from the network once drained — upstream does not either: the buffer is a load-time kick-start. The network is not shut down when unpowered (the parent has no such state); storage stays readable and `active` says whether the usage was covered.
+- Source and Soul have no consumer at this pin (no exporters, and Ars Nouveau / the soul mod are not ported), so their role is capacity, totals and usage.
+- A storage block beside a cable does not appear in the parent's cable connection state.
 
-Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+"""
 authors = ["Starforcraft", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
