@@ -14,7 +14,7 @@ owners = ["AdLf0208"]
 owner_ids = [107615167]
 license = "LGPL-3.0-only"
 source = "https://github.com/AdLf0208/repurposed_structures"
-icon = "icons/betterdeserttemples.png"
+icon = "icons/repurposed_structures.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
