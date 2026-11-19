@@ -1,5 +1,5 @@
 id = "refinedtypes"
-kind = "mod"
+kind = "native-mod"
 name = "Refined Types"
 summary = """An add-on for Refined Storage that stores what Refined Storage does not: FE, Source and Souls. Storage blocks add their tier's capacity to the network,…"""
 description = """An add-on for Refined Storage that stores what Refined Storage does not: FE, Source and
