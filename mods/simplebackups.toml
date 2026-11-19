@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "backups"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "simplebackups.hmod"
-sha256 = "1d565c1d1f2b90d8ceb13b31a7715339601196f3bbacb405a67f95564a1d4f38"
+sha256 = "6565f5acd73b5c03f2f49f3009b8a520cf945b25daec1f08d9f7869448b978a2"
 changelog = "First publication in the SDK format."
