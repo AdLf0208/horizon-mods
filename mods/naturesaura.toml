@@ -35,9 +35,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "naturesaura.hmod"
-sha256 = "a64a5d8ff02b87b02c79787852e6f7c13f5ac91eee04e560ba03c236cf9c4f3c"
+sha256 = "7ff4203525ca1d9ff54cb42d324130d08b6ae2fb3a975a830dda5a2f9dbc3c0b"
 changelog = "First release"
