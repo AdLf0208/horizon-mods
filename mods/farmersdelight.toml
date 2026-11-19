@@ -60,9 +60,9 @@ categories = ["food", "game-mechanics"]
 tags = ["port", "horizon", "farming", "crops", "recipes"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-12"
 game = "26.3"
 file = "farmersdelight.hmod"
-sha256 = "68d56c69da251294e58ba3d5703041799c6c55683317ee1f662d61706309e471"
+sha256 = "297ac8da11175ba1f765499204b7523a54ac769d7bd7669dc938410e092b7d72"
 changelog = "First release: the 77 foods with their nutrition and effects, the cabbage and tomato crops, 45 recipes and one creative tab."
