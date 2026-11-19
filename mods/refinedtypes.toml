@@ -31,9 +31,9 @@ categories = ["technology"]
 tags = ["port"]
 
 [[versions]]
-version = "0.1.0"
+version = "0.1.1"
 published = "2026-11-18"
 game = "26.3"
 file = "refinedtypes.hmod"
-sha256 = "b94fd6bf32bb6e0188160802ae9cb2e57b3b912daf31fd61b9aaee7e7c0b1fe2"
+sha256 = "9dcbbd3af28e7578e383858352d6f3ce3b8762470132857bd95cf2b15b264606"
 changelog = "First publication in the SDK format."
