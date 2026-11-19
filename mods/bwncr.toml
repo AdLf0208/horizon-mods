@@ -27,9 +27,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "bwncr.hmod"
-sha256 = "1bde8b52b9cfd019432d9e5dbf21a3ae7e74b40a5c04aca034907dbe325ccec4"
+sha256 = "216ccb50e043f1ee354915c46777c52ed4ef75d0f7a7a56b0fcc7acaeda1217b"
 changelog = "First release"
