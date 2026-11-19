@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "rules"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "incontrol.hmod"
-sha256 = "4c1a0d9d6aed240202443dea443a34f9865c25fd1a4b3a97fcc1984271682c20"
+sha256 = "14c4f743a03aea1dff536462fafaded1fa2d4b7fee0b5eb77d97f17e27ccf537"
 changelog = "First publication in the SDK format."
