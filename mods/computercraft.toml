@@ -31,7 +31,7 @@ Original copyright and licence notices are kept in this repository. Pinned to
 Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
 welcome.
 """
-authors = ["AdLf0208"]
+authors = ["Daniel Ratcliffe", "Aaron Mills", "SquidDev", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
 license = "CCPL-1.0"
@@ -41,9 +41,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "computercraft.hmod"
-sha256 = "830d815ef6cedb1786df671d7e00080ec65a05f3a78d5e636acc68d12daf7d5d"
+sha256 = "a92fc5ff2338dd3530049360b84b41f68eec37b40fbd3333a29b0058b3ecf4ff"
 changelog = "First release"
