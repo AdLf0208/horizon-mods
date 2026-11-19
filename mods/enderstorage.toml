@@ -14,12 +14,12 @@ A port of [EnderStorage](https://github.com/chicken-bones/EnderStorage) for Hori
 
 **Not yet ported**
 
-- **The tank is deferred.** The pin can declare a block's fluid tanks in its block entity, but there is no bucket path into a mod block's tanks (only mods call the fluid helpers), so the tank's player interaction needs a `use_item_on` bucket handler with a held-stack swap. That is the next slice; the fluid store already merges the same way.
+- **The tank does not store fluid at this pin.** The block entity can declare fluid tanks, but a bucket emptied into one does not keep the fluid: the engine's own bucket path consumes the item before any mod hook can refuse it, and a `FluidTanks::insert` over `horizon:fluids` loses the write (a 1000 mB insert leaves 0 after the tick; 500 mB is kept once and the next 500 mB refused; 250 mB is not kept at all; and cancelling the bucket event — which the mod must do so a full tank never pours into the world — takes the write back with the event's transaction). So the tank accepts the click, reads empty, and never pours into the world; the in-game leg asserts exactly that, so a pin that keeps the fluid makes it fail. The measured table and the SDK symbols are in the port's `notes.md` under *Gap: the declared tank at 0b14f8a*.
 - **The pouch is deferred.** A pouch opens the same inventory from an item; a mod item has no menu route at this pin.
 - Personal (owned) frequencies, the lid animation and the custom renderer are not carried.
 - A slot whose *item* is replaced on two chests in the same tick is a genuine tie: one slot holds one item, so the later edit wins and the other stack remains in its own chest.
 
-MIT: the original copyright (`Copyright (c) 2020 covers1624, ChickenBones, Christopher R. Thompson (Ecu)`) and licence travel inside the bundle, not only in the source repository. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93.
+MIT: the original copyright (`Copyright (c) 2020 covers1624, ChickenBones, Christopher R. Thompson (Ecu)`) and licence travel inside the bundle, not only in the source repository. Pinned to Horizon `0b14f8a` and horizon-mixins `e59da90`.
 """
 authors = ["chicken-bones", "AdLf0208"]
 owners = ["AdLf0208"]
@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.2"
 published = "2026-11-10"
 game = "26.3"
 file = "enderstorage.hmod"
-sha256 = "b4d9d58b21103caadd58e5df8405cdd521a565b2675cb55e2a8a1b516ec6e586"
-changelog = "First release"
+sha256 = "38aa56337e172376ca638088617f26e40a728781e6303ea38a11fccfd5d586ac"
+changelog = "Review fixes: sibling-mirror commit and reach-gated readout, hand exchange in the tank transaction, and the load-time double Part attach. The tank fluid gap at 0b14f8a is now measured and stated."
