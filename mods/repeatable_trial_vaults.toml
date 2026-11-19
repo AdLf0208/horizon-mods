@@ -17,6 +17,8 @@ A port of [Repeatable Trial Vaults](https://github.com/Buuz135/Repeatable-Trial-
 - The item tag cannot be read where the port runs (`native_item_in_tag` returns `NotServer` on a client execution), so the key check reads the item id.
 
 The original copyright and licence notices travel inside the distributed archive (`mixins/repeatable_trial_vaults/LICENSE` and `NOTICE.md`) and are also in this repository. MIT. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93.
+
+The upstream 1.0.3 tag ships a CC0-1.0 LICENSE file while the same tag's NeoForge metadata declares MIT; this port takes the material under MIT, with CC0-1.0 available as the alternative.
 """
 authors = ["Buuz135", "AdLf0208"]
 owners = ["AdLf0208"]
