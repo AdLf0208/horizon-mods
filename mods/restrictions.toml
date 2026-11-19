@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "restrictions.hmod"
-sha256 = "657dda40a99c20bc8b898246f6662def6107113cb9ba7fdc4ae9813e5ea8addc"
+sha256 = "8b0a40025b49341cea7e8310f9abc1b2b821a0330f6beb4d0709f88ecbef8dc4"
 changelog = "First release"
