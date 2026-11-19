@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "sfm.hmod"
-sha256 = "12d4f61c67a9d01420f5f29f1180de949308c4116623e6a56e2c745ac8f33348"
+sha256 = "9ba622c09210596837d425f0f2b77076196ab917e6252022ed12e28176edb03b"
 changelog = "First release"
