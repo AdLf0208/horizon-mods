@@ -3,37 +3,23 @@ kind = "native-mod"
 name = "createaddition"
 summary = "A Horizon port of createaddition."
 description = """
-A port of [createaddition](mrh0/createaddition) for Horizon.
+A port of [Create Crafts & Additions](https://github.com/mrh0/createaddition) for Horizon — the electric (FE) half of the mod, with the jar's own transfer rates. Upstream is **MIT**, by **MRH0**.
 
-**Implemented so far**
+**Implemented**
 
-- `createaddition:connector`** (small) and **`createaddition:large_connector`**
-- — a block entity whose window is `min(maxIn, maxOut)` = 1,000 FE (small) or
-- ,000 FE (large), declared through `block_entity_energy` (API 142) as
-- `Capabilities.Energy.BLOCK`. Placed against a face, `facing` points at the
-- block it is mounted on (API 76).
-- Placement mode**, upstream's `ConnectorMode.test` on the first server tick:
-- the mounted block can give → **Pull**, it can only take → **Push**, else
-- None**. Stored in the compound (`mode`) and shown in the block's `mode`
+- `createaddition:connector` (small) and `createaddition:large_connector` — 1,000 FE/t and 5,000 FE/t each way, declared through `block_entity_energy` as `Capabilities.Energy.BLOCK`. Placed against a face, `facing` points at the block it is mounted on.
+- `createaddition:modular_accumulator` — 2,000,000 FE storage, 5,000 FE/t each way.
+- Seven items: `copper_wire`, `gold_wire`, `electrum_wire`, `spool`, `copper_spool`, `gold_spool`, `electrum_spool`.
+- Placement mode, as upstream's `ConnectorMode.test` decides on the first server tick: a mounted block that can give is **pulled** from, one that can only take is **pushed** into, else none. `/createaddition mode` sets it (upstream uses Create's wrench, which is not installed here).
 
 **Not yet ported**
 
-- The rotation half**: `electric_motor`, `alternator`, `rolling_mill`,
-- `tesla_coil`, `servo_motor`, and the `charging/` recipe type (40+ oxidisation
-- and charging recipes). Blocked by the missing mod-to-mod API: a rotation
-- consumer** could read a neighbour's published `Speed`/`Capacity`/`Stress`
-- with API 18, but nothing here needs it, and producing or joining Create's
-- network is impossible without forking its engine.
-- `small_light_connector`** (its 1 FE/t lamp consumption).
-- `creative_energy`**, the e2e's source of last resort: the harness seeds an
+- The rotation half: `electric_motor`, `alternator`, `rolling_mill`, `tesla_coil`, `servo_motor`, and the `charging/` recipe type (40+ oxidisation and charging recipes). Create is a separate native mod with no mod-to-mod API, so these blocks cannot join its kinetic network — a recorded gap, not an omission.
+- `small_light_connector` (its 1 FE/t lamp consumption) and `creative_energy`.
 
-Original copyright and licence notices are kept in this repository. Pinned to
-Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
-welcome.
-
-Based on the original project: https://github.com/mrh0/createaddition
+Original copyright and licence notices are kept in this repository, and the upstream author is credited above. Pinned to Horizon `0b14f8a` and horizon-mixins `e59da90`. Help with the remaining slices is welcome.
 """
-authors = ["AdLf0208"]
+authors = ["MRH0", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
 license = "MIT"
