@@ -33,9 +33,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "hostilenetworks.hmod"
-sha256 = "dfeeb23f39b8dd1c5047042b2425c7f3ec3d258b41659ce8df215a18c097ba7c"
+sha256 = "c76c0996af962e3d702c40760855aba385e82f954a4aec0e3339377a8f295522"
 changelog = "First release"
