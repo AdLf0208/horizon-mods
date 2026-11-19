@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.1.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "justdirethings.hmod"
-sha256 = "4d1c5f14d49432519daa8dc9321ac6faa41b63618f9d2461b30360842cf58005"
+sha256 = "62c233cb7112e60a66c150dd6472dd079600af0ee92eb4701dc53e61f52104df"
 changelog = "First release"
