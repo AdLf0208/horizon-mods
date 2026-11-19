@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "little_big_redstone.hmod"
-sha256 = "16b6ff8a8249d46b9153d5a4fae4a856b5920d674939f05609905da65c89f4de"
+sha256 = "70214068c2bb7df78a0a59a0e95be642611552bef4d06f3bde3e20284857ea22"
 changelog = "First release"
