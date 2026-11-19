@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.2"
 published = "2026-11-10"
 game = "26.3"
 file = "redstonepen.hmod"
-sha256 = "b6b496daf827680589ed9a449312b135c759e637a65ac90a4891ecc03d4a06a5"
+sha256 = "414eecfbb5fa0a5aba07172db06dd47d9ea676f8519b088172c7f56cb61077e2"
 changelog = "First release"
