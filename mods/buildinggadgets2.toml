@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "buildinggadgets2.hmod"
-sha256 = "fa3e6ce7bdf44ca48591a4bbbe9100375be541a989fce0dee13945f099e4a6d5"
+sha256 = "46970fcf90e47aaa875e9173f5ecf6529597a5f5885e4bff075aedfe4c3aa4b6"
 changelog = "First release"
