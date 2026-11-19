@@ -33,9 +33,9 @@ categories = ["adventure"]
 tags = ["port", "worldgen", "dimension"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "eternal_starlight.hmod"
-sha256 = "9568d626b98917b9d8c2678e94d3dd563969b5724dc2dffb7628c4d463d78742"
+sha256 = "170d4e56ed627291951d2ea8a6d003493a99775b992cb44a9ffe708048494c16"
 changelog = "First publication in the SDK format."
