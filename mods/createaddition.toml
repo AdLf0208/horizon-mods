@@ -30,6 +30,8 @@ A port of [createaddition](mrh0/createaddition) for Horizon.
 Original copyright and licence notices are kept in this repository. Pinned to
 Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
 welcome.
+
+Based on the original project: https://github.com/mrh0/createaddition
 """
 authors = ["AdLf0208"]
 owners = ["AdLf0208"]
