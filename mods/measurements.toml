@@ -33,9 +33,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "measurements.hmod"
-sha256 = "a673c67ab5f2495bcd10be286063cfc4967a4a949d5b4a735f8e6c7116900cbd"
+sha256 = "adc0487e0a4ef466b181c39724c4bb94773ef5d01cf38d3dff07d0968356fd54"
 changelog = "First release"
