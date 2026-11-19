@@ -1,9 +1,8 @@
 id = "refinedtypes"
 kind = "native-mod"
 name = "Refined Types"
-summary = """A Horizon port of [Refined Types](https://github.com/starforcraft/Refined-Types) by **Starforcraft** (MIT) — an add-on for Refined Storage that stores what Refined Storage does not: FE, Source and Souls. Storage blocks add their tier's capacity to the network,…"""
-description = """An add-on for Refined Storage that stores what Refined Storage does not: FE, Source and
-Souls. Storage blocks add their tier's capacity to the network, storage disks carry their amount in
+summary = """An add-on for Refined Storage that stores FE, Source and Souls: storage blocks, disks and a Network Energizer."""
+description = """A Horizon port of [Refined Types](https://github.com/starforcraft/Refined-Types) by **Starforcraft** (MIT) — an add-on for Refined Storage that stores what Refined Storage does not: FE, Source and Souls. Storage blocks add their tier's capacity to the network, storage disks carry their amount in
 the item and live in the network's disk drives, and the Network Energizer keeps the network supplied
 from the energy storage. Scoped to that storage: the typed grid, exporters, importers, external
 storage, autocrafting, the storage screens and the recipes are the port's gap list, not this
