@@ -27,7 +27,7 @@ Not yet ported:
 
 A content carry with a test-only Rust census module (no injection). MIT — the original copyright and licence notices are kept in
 the port repository (see LICENSE and LICENSE-NOTICE.md there). Pinned to
-Horizon 1d63e0a and horizon-mixins 5a64af93.
+Horizon 0b14f8a and horizon-mixins e59da90.
 """
 authors = ["Refined Mods", "AdLf0208"]
 owners = ["AdLf0208"]
