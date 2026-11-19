@@ -17,7 +17,7 @@ description = """A Horizon port of [RFTools Utility](https://github.com/McJtyMod
 - the tank's own GUI (this slice uses the commands);
 - fluid push/pull between neighbouring tanks (the slice is the bucket and tank loop).
 
-Original copyright and licence notices are kept in this repository. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is welcome."""
+Original copyright and licence notices are kept in this repository. Pinned to Horizon `0b14f8a` and horizon-mixins `e59da90`. Help with the remaining slices is welcome."""
 authors = ["AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
