@@ -40,9 +40,9 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-09"
 game = "26.3"
 file = "actuallyadditions.hmod"
-sha256 = "2367bd09250116d2f57496b99212276f70399610965cc60feae52256fbb3c311"
+sha256 = "0ce6483c0e7fbcbfac4bb3c8c74ff9f0fbb2aacfddd5ac52e78834aa43110854"
 changelog = "First release: the Coal Generator and the Crusher."
