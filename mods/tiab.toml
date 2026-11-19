@@ -28,9 +28,9 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "time", "acceleration"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "tiab.hmod"
-sha256 = "1174bf09cc218ef2513a922b3206f92b3e361e10a12c56424f05a1e6f09a882c"
+sha256 = "af9399a5e6d02184bb1bd15646de114d253ffc33006ab365ddb2fe119f49f8d1"
 changelog = "First release"
