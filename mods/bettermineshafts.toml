@@ -34,9 +34,9 @@ categories = ["adventure"]
 tags = ["port", "worldgen", "mineshafts"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "bettermineshafts.hmod"
-sha256 = "fe2740675665d2c3999a3998ecafa5c9abaf218b874713ce22b19aa870d16798"
+sha256 = "bdefafb1e28582d0e369db0f3c5140b6dd45c964b2483df6fff3211da4115d12"
 changelog = "First publication in the SDK format."
