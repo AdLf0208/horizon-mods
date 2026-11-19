@@ -15,7 +15,10 @@ description = """Bells & Whistles' decorative station, metro and train blocks fo
 - **Recipe materials are substituted** (see the map above); the recipes are
 - **Stonecutting recipes are carried but not crafted in the e2e.** The
 
-Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact.
+
+Based on the original project: https://github.com/aesefficio/BellsAndWhistlesMod
+"""
 authors = ["lev", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
