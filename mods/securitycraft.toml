@@ -31,9 +31,9 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-09"
 game = "26.3"
 file = "securitycraft.hmod"
-sha256 = "5c7423f9702e3cc2e0dca45bd3947c489b646231f2a83aebbb338c422d34e6dc"
+sha256 = "9bb21d4c189066b6b1720f8df235b3056e0d0047586b59f260a04c0aed490830"
 changelog = "First release"
