@@ -41,9 +41,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "integratedtunnels.hmod"
-sha256 = "c72e5302004d32f13772d8ba976c75be208e947624fff312b8d60019d0695e0b"
+sha256 = "87ab0b4b23892527a1c8ba6550a7b084d3fe058384f35ce860c5427e1639bfaa"
 changelog = "First release"
