@@ -35,9 +35,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "neovitae.hmod"
-sha256 = "517b6981ed7b47c12cec953375ee7f4476320981852039d41f0b179d097ada6f"
+sha256 = "3f0e610056b6fa12a56cb0f733d81108d0bb8507e97de37563423c15b9f1adb2"
 changelog = "First release"
