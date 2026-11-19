@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "oritech.hmod"
-sha256 = "0d4e2d05b07b16746a04f15d5a64135829bfba115e37303896ffa5eaddb3f1bc"
+sha256 = "de762c4efd93b034561223d5ddb18b9c8fa44765ccb332069fe7fa12b5fc6d73"
 changelog = "First release"
