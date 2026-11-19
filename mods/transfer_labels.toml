@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "transfer_labels.hmod"
-sha256 = "0e8fa5ddcdbdc2e89b76f00c3cd30345ec67d407b5e02f1a87d8bfd20c23e599"
+sha256 = "0df45ce61119e36f3ec68b4aa5a8582412c162350100ab2f0279718506956a0e"
 changelog = "First release"
