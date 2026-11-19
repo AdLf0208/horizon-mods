@@ -24,7 +24,7 @@ Original copyright and licence notices are kept in this repository. Pinned to Ho
 authors = ["AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
-license = "Botania License"
+license = "LicenseRef-Botania-License"
 source = "https://github.com/AdLf0208/botania"
 icon = "icons/botania.png"
 categories = ["utility"]
