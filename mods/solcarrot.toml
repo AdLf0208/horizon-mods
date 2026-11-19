@@ -33,9 +33,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "solcarrot.hmod"
-sha256 = "e73918dcdf34b3fed0566bed01702a7858439977738def7d4e9b1f2375f78754"
+sha256 = "96c605904a0b40bad0b4b5f9a1b7384512a6ac85cce315d4f5732ecd90ca7ab6"
 changelog = "First release"
