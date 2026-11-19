@@ -33,9 +33,9 @@ categories = ["decoration"]
 tags = ["port", "blocks"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "bellsandwhistles.hmod"
-sha256 = "eb007e38766bbce05ded7c5fad8a3531f1f2d229a01030d17bd125a174e3a32c"
+sha256 = "b0b240ef02790d9da2d5ebafe1e07b0ceecde0aafb45bad84c1d50b885cdb986"
 changelog = "First publication in the SDK format."
