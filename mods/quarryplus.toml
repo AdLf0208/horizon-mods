@@ -39,9 +39,9 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "quarry", "mining", "machines"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-09"
 game = "26.3"
 file = "quarryplus.hmod"
-sha256 = "eb337c69080a6fb7ec1c1dbf82cc59ca094dccb6d203f6272f97b811bf346bda"
+sha256 = "d94a780871a921bceed2c8116456bbd5e7d414a17bf564523b68a6b8ad64e7ff"
 changelog = "First release: slice 1 of the port, with the full licence and corresponding source in the port repository"
