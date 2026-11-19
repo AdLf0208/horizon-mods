@@ -2,28 +2,28 @@ id = "betterdungeons"
 kind = "native-mod"
 name = "YUNG's Better Dungeons"
 summary = """YUNG's Better Dungeons for Horizon, slice 1: the small dungeon. The port registers its own structure type (betterdungeons:small_dungeon_type), which…"""
-description = """YUNG's Better Dungeons for Horizon, slice 1: the small dungeon. The port
-registers its own structure type (betterdungeons:small_dungeon_type), which assembles the
-jar's carried jigsaw templates -- sixteen .nbt shells and loot piles, two template pools with
-their weights and max_counts, four processor chains -- rotates and places them by the jar's
-own rules, and decorates them with the eleven betterdungeons:* processors the data calls,
-including the dungeon banners, the mob spawner, the chest and banner caps, the ceiling props,
-the support legs and the rule processor that turns air into cave air. The other five
-structures, the aggregate structure and the two biome-modifier files are recorded gaps in
-notes.md.
+description = """
+A Horizon port of [YUNG's Better Dungeons 1.21.1-NeoForge-5.1.4](https://github.com/YUNG-GANG/YUNGs-Better-Dungeons) by **YUNGNICKYOUNG and Acarii** (**LGPL-3.0-only**), slice 1: the small dungeon.
 
-**Implemented so far:** the slice in the package, as described above.
+**Implemented so far**
+
+- The mod's structures are assembled by `yungsapi:yung_jigsaw`, a Java structure type 26.3 does not have, so the port registers its own type, `betterdungeons:small_dungeon_type`, which does the assembly the Java type did: it draws a start element from the jar's carried template pool by the jar's rules, rotates and places the pieces and hands the result to the engine.
+- It carries sixteen `.nbt` shells and loot piles, two template pools with their weights and `max_counts`, and four processor chains, and it decorates the result with the eleven `betterdungeons:*` processors the data calls — the dungeon banners, the mob spawner, the chest and banner caps, the ceiling props, the support legs, and the rule processor that turns air into cave air.
+- A saved bounding box's span is checked in 64-bit and clamped per axis before any allocation, so a malformed save cannot make the support leg scan to the void.
+- The port was proven in game at 0.2.1: the launcher-built package passes, and a game without it fails at the first step.
 
 **Not yet ported**
 
-- **Only one of the five structures.** skeleton_dungeon, zombie_dungeon,
-- **The two remove_*_feature_in biome modifiers**
-- **The config file** — defaults compiled in (src/runtime.rs,
-- **start_height's x_offset_in_chunk/z_offset_in_chunk**: the jar omits
-- **Saved pieces are re-derived from the template, not from a stored block list**
-- **Liquid settings**: the jar's "liquid_settings": "ignore_waterlogging" is
+- **Only one of the five structures.** `skeleton_dungeon`, `zombie_dungeon`, `small_nether_dungeon` and `spider_dungeon` are not carried; the last two use the mod's own Java structure types with hand-written pieces, so they are a later slice with their own structure types.
+- **The two `remove_*_feature_in` biome modifiers** are not carried: they remove vanilla dungeons by tag, which is a separate feature the engine's biome-modifier registrar would express.
+- **The config file** is not carried — the defaults are compiled in, so there is no config screen and no `enableHeads` / `enableNetherBlocks` / `enableOreProps` toggle at run time.
+- **`start_height`'s `x_offset_in_chunk` / `z_offset_in_chunk`** are not implemented beyond the default 0 the jar omits; a pack that sets either is refused.
+- **Saved pieces are re-derived from the template**, not from a stored block list, so a structure saved by a different mod version loads its template through this port's processor chain.
+- **Liquid settings**: the jar's `liquid_settings: ignore_waterlogging` is carried and reported, but the port writes the template's own states rather than implementing waterlogging behaviour, so the engine's liquid handling is what applies.
+- **`spawn_overrides`** are carried empty and not read, because the engine ignores them for a mod's structures.
 
-Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+Upstream's licence and notice travel inside the package. Pinned to Horizon `0b14f8a` and horizon-mixins `e59da90`.
+"""
 authors = ["YUNGNICKYOUNG", "Acarii", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
