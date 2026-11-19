@@ -37,9 +37,9 @@ categories = ["storage", "technology"]
 tags = ["port", "storage", "ender-chest", "dimensional"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "dimstorage.hmod"
-sha256 = "5cfee46f3f88e4f0c0bec4fdefd8af75281ced4421199b9c2865b8bd966c0657"
+sha256 = "18641dc422a34eadab58d4f049e23f6642a7307bb4513f450765e0a84d4884d6"
 changelog = "First release: slice 1 of the port, with the full licence and corresponding source in the port repository"
