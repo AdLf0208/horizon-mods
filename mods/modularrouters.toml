@@ -30,9 +30,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "modularrouters.hmod"
-sha256 = "4cc2b75dade2bf0f6a5b0b9f7bfbca9630ca5318623fb6c545a17d4570eb4358"
+sha256 = "9f0852ff830e0c68bbec6644a639c20964a5eeb7126ee38cf79eeb95d3ce6756"
 changelog = "First release"
