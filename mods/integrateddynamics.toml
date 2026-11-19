@@ -36,9 +36,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "integrateddynamics.hmod"
-sha256 = "4723b651f5b77b5fa61af1dc2f93f4a8dab828d3bc74b85f58605c4c3a0a7c72"
+sha256 = "d1c04daf2f8e20bc4726f903d9ec60752173e00f24ba4ae9367561b3441e2153"
 changelog = "First release"
