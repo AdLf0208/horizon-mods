@@ -26,9 +26,9 @@ categories = ["utility"]
 tags = ["port", "commands"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "crashutilities.hmod"
-sha256 = "962a5cb5b7f939e5eaf7ba0b8a5755adec8a30aaf139fd0aeac6a1ae43bbd0c2"
+sha256 = "bf9b6ca6faaac51aeac4860ec0f6d2fd47150e1dbb8dd6468a845c068f8ed858"
 changelog = "First publication in the SDK format."
