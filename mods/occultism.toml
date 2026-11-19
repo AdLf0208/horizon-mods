@@ -37,9 +37,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "occultism.hmod"
-sha256 = "044b8360319fbe654203bb2f5dedeaf0d909d300206de948e12b994d69d54dc8"
+sha256 = "32253022e5e3e358d7832f10b7ffd86d1739521ca1cef9742e70d90662f973a9"
 changelog = "First release"
