@@ -37,9 +37,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.1"
-published = "2026-11-10"
+version = "0.2.2"
+published = "2026-11-21"
 game = "26.3"
 file = "occultism.hmod"
-sha256 = "7a528a56ae6e36d4edf5cdeca511af05493da968cabc5727a7d342971adbe340"
-changelog = "First release"
+sha256 = "35714e6fd044bf52c4d2a3c63c68dabee5a3aa898525700e5ffdbfd54bdd38e2"
+changelog = """First publication, with the review repairs. Spirit fire, its datura ignition rule and the 18 chalk colours, with the jar's models, recipes and loot. `/occultism info` is now a level-2 command **with** a body re-check, and a position holding no spirit fire answers only that it is not one — the readout no longer doubles as a world probe. A spectator's click changes nothing: the hook checks the player's game mode before recolouring, lighting a fire or consuming datura, and fails closed on an unknown mode. The conversion ring is bounded and keyed per world and dimension."""
