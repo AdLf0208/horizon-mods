@@ -33,9 +33,17 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.2"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "bigreactors.hmod"
-sha256 = "bdebad9f6389ee725fbab8f80b06be7c6b388217517497e2ee58c5f4efb4b611"
+sha256 = "f0875084ff184a137d337f93af72b57c74916c57f2bf86f639c8bf5da6cf0268"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.2"
+published = "2026-11-20"
+game = "26.3"
+file = "bigreactors.hmod"
+sha256 = "bdebad9f6389ee725fbab8f80b06be7c6b388217517497e2ee58c5f4efb4b611"
+changelog = """Slice 2: the energizer, the fourth multiblock — its 3x3x3 to 32-cubed forms, the cell count and capacity, the controller and the four blocks, on/off with FE in and out. Four defects fixed: the carried recipes named c: common tags Horizon never resolves (now direct item ids), the blocks were not in minecraft:mineable/pickaxe so every break harvested nothing, the power tap pushed its buffer back into the reactor once the controller became a receive face, and two graphite_from_coalblock recipes were dead data."""
