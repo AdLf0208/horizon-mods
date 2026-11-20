@@ -19,6 +19,8 @@ A port of [Gravitational Modulating Additional Unit](https://github.com/gisellev
 - The HUD indicator and the remaining config options.
 
 The original copyright and licence notices travel inside the distributed archive (`mixins/gmut/LICENSE` and `NOTICE.md`) and are also in this repository. MIT. Pinned to Horizon 0b14f8a and horizon-mixins e59da90.
+
+Licence notices ship **inside the package**: `LICENSE` and `LICENSE-NOTICE.md` at its root, with the same texts in the source repository — not at the retired `.hnmod` paths.
 """
 authors = ["gisellevonbingen", "AdLf0208"]
 owners = ["AdLf0208"]
