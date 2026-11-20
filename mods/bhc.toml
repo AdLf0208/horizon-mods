@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "bhc.hmod"
-sha256 = "b33bd4b13114f268c580a7c270627dbdcb516721d990cc071e2505e8ad6d5fb1"
+sha256 = "08e4c0da58785e8fa6c956e2a7edc91f6decaaf75addee9495bd2363a8891ea1"
 changelog = "First release"
