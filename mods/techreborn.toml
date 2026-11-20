@@ -16,7 +16,7 @@ description = """A port of [Tech Reborn](https://github.com/TechReborn/TechRebor
 - The cable tiers above copper, and the mod's own ore/metal chain beyond the items this slice consumes.
 - Redstone control, upgrades and the mod's GUIs (the furnace uses the vanilla menu).
 
-Original copyright and licence notices are kept in this repository (MIT, modmuss50 and contributors). Pinned to Horizon `1d63e0a` and horizon-mixins `5a64af93` for game 26.3."""
+Original copyright and licence notices are kept in this repository (MIT, modmuss50 and contributors). Pinned to Horizon `0b14f8a` and horizon-mixins `e59da90` for game 26.3."""
 authors = ["Team Reborn", "modmuss50", "drcrazy", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
