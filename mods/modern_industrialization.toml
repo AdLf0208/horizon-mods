@@ -1,7 +1,7 @@
 id = "modern_industrialization"
 kind = "native-mod"
-name = "Modern Industrialization"
-summary = "The electric macerator: a 32,000 FE insert-only buffer and the mod's own overclocking recipe tick."
+name = "modern_industrialization"
+summary = "A Horizon port of modern_industrialization."
 description = """
 A port of [Modern Industrialization](https://github.com/AztechMC/Modern-Industrialization) for Horizon.
 
