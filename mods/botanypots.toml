@@ -54,3 +54,11 @@ game = "26.3"
 file = "botanypots.hmod"
 sha256 = "2cea1f308608d65072ef9c945c289550238d5c5e3ce80e383750d5c2b5681279"
 changelog = """Repair plus slice 2. The published 0.2.0 could not load: it carried 131 crop, soil, interaction and fertilizer recipe files whose serializers do not exist at this pin, so Horizon refused the pack with an unregistered recipe serializer and the game exited. Those files are dropped (168 content files down to 37). Slice 2 adds the hopper pot: 15 slots, self-harvest on the tick with no click, and the storage pushed into the container below, with the harvest's overflow no longer destroyed."""
+
+[[versions]]
+version = "0.2.2"
+published = "2026-11-20"
+game = "26.3"
+file = "botanypots.hmod"
+sha256 = "f76388afda5f28434323247b9e95d237de925de741cc806f6d8a78839e7f23f9"
+changelog = """Operator-only diagnostic: `/botanypots info` was level 0, so any player could read any pot's soil, seed and growth at coordinates of their choosing, and a non-pot position echoed that block's id. It is now `Command::op(…, 2)` with a body re-check, and a position holding no pot answers only that it is not a botany pot — the command is no longer a world probe. Proven in game: operator reads the pot, a non-pot answers `not a botany pot`, a de-opped player gets `Unknown or incomplete command`, the operator reads it again."""
