@@ -21,7 +21,7 @@ A port of [Modern Industrialization](https://github.com/AztechMC/Modern-Industri
 - No menu: `ModContainer` has no per-slot rule for a player's menu at this pin, so the machine is driven by hoppers.
 - The energy and efficiency commands refuse any block entity that is not this macerator, and the energy hook leaves another mod's declaration for the same block alone.
 
-MIT: the original copyright (`Copyright (c) 2020 Azercoco & Technici4n`) and licence travel inside the bundle, not only in the source repository. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93.
+MIT: the original copyright (`Copyright (c) 2020 Azercoco & Technici4n`) and licence travel inside the bundle, not only in the source repository. Pinned to Horizon 0b14f8a and horizon-mixins e59da90.
 """
 authors = ["Azerococo", "Technici4n", "AdLf0208"]
 owners = ["AdLf0208"]
