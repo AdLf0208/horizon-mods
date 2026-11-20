@@ -1,7 +1,7 @@
 id = "gmut"
 kind = "native-mod"
-name = "gmut"
-summary = "A Horizon port of gmut."
+name = "Gravitational Modulating Additional Unit"
+summary = "The gravitational modulating module and its five vertical-speed steps, kept per stack."
 description = """
 A port of [Gravitational Modulating Additional Unit](https://github.com/gisellevonbingen-Minecraft/GravitationalModulatingAdditionalUnit) by gisellevonbingen for Horizon — slice 1, the item and its stored modes.
 
