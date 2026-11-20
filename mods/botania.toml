@@ -20,7 +20,7 @@ description = """A Horizon port of [Botania](https://github.com/VazkiiMods/Botan
 
 **Licence.** Botania is licensed under the [Botania License](https://botaniamod.net/license.html), which permits use, sharing and adaptation with attribution and a copyleft clause. This port credits **Vazkii** as the creator and the jar's authors (Vazkii, wiiv, williewillus, dylan4ever, Hubry, Alwinfy, artemisSystem, Falkory220, Wormbo), states that it is an alteration, keeps the complete source available, and is non-monetary. It contains no Botania API code.
 
-Original copyright and licence notices are kept in this repository. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is welcome."""
+Original copyright and licence notices are kept in this repository. Pinned to Horizon 0b14f8a and horizon-mixins e59da90. Help with the remaining slices is welcome."""
 authors = ["AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
