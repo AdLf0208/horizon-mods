@@ -1,0 +1,34 @@
+id = "regions_unexplored"
+kind = "mod"
+name = "Regions Unexplored"
+summary = """"""
+description = """
+
+**Implemented so far:** the slice in the package, as described above.
+
+**Not yet ported**
+
+- **Worldgen** as above. At 0b14f8a the 71 biomes **are registered** with
+- **Wolf variants** (9) are quarantined to outside/data/minecraft/wolf_variant/
+- **The neoforge compostables data map** and the jar's two vanilla recipe
+- **Block behaviour is not carried** (data tier): 105 blocks with code
+- **Item components are not carried.** All 41 plain items are stick
+- **Block shapes** follow templates; saguaro_cactus (stone), dusktrap
+
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/regions_unexplored"
+icon = "icons/regions_unexplored.png"
+categories = ["technology"]
+tags = ["port"]
+
+[[versions]]
+version = "0.5.9"
+published = "2026-11-18"
+game = "26.3"
+file = "regions_unexplored.hmod"
+sha256 = "1322d94974581955b38030988e19d580b923489f7b24f6f4ffd5e710f96ac29b"
+changelog = "First publication in the SDK format."
