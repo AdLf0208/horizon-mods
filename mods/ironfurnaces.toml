@@ -18,7 +18,7 @@ A port of [Iron Furnaces](https://github.com/Qelifern/IronFurnaces) for Horizon.
 - Lit light is 13 (the `minecraft:furnace` template) where upstream is 14.
 - The e2e exercises only the copper → iron upgrade.
 
-**Licence: Apache-2.0**, from the exact jar this port was written against (`ironfurnaces-neoforge-1.21.1-4.3.2.jar` declares `license="Apache License Version 2.0"`); upstream's GitHub default branch is the 1.20.1 tree, whose `LICENSE` says GPL-3.0, so the provenance follows the jar. The original copyright (Qelifern (pizzaatime), XenoMustache) and the licence travel inside the bundle (`mixins/ironfurnaces/LICENSE` and `data/ironfurnaces/license/`). Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93.
+**Licence: Apache-2.0**, from the exact jar this port was written against (`ironfurnaces-neoforge-1.21.1-4.3.2.jar` declares `license="Apache License Version 2.0"`); upstream's GitHub default branch is the 1.20.1 tree, whose `LICENSE` says GPL-3.0, so the provenance follows the jar. The original copyright (Qelifern (pizzaatime), XenoMustache) and the licence travel inside the bundle: `LICENSE` and `LICENSE-NOTICE.md` at the package root, with the same texts in the source repository. Pinned to Horizon 0b14f8a and horizon-mixins e59da90.
 """
 authors = ["Qelifern", "AdLf0208"]
 owners = ["AdLf0208"]
