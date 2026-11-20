@@ -29,9 +29,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "cloudglass.hmod"
-sha256 = "4a8b9fb7617faacad05ce489793d47a321a528fd2290cc7549671837b40bc497"
+sha256 = "af0a220fda3d19b06fe3803d56cacdd84d0140f50687bf8084476dd5f8effc5c"
 changelog = "First release (port 0.1.0: the sixteen carried blocks, their items, recipes, drops and walking behaviour, all inside one .hnmod)"
