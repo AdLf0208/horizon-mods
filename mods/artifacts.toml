@@ -31,9 +31,9 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
+version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
 file = "artifacts.hmod"
-sha256 = "72ebd4a225639317da2e7defd95ec3018c8b207e961a2b1ba057f7ddf8ddcae3"
+sha256 = "0a4cf99daddec0bf3e645360887074de87b0d75b048b414f148049e626e94914"
 changelog = "First release"
