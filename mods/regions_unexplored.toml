@@ -3,6 +3,8 @@ kind = "mod"
 name = "Regions Unexplored"
 summary = """"""
 description = """
+A Horizon port of [Regions Unexplored](https://github.com/TelepathicGrunt/RegionsUnexplored) (MIT), carried as a content-only package.
+
 
 **Implemented so far:** the slice in the package, as described above.
 
@@ -15,7 +17,8 @@ description = """
 - **Item components are not carried.** All 41 plain items are stick
 - **Block shapes** follow templates; saguaro_cactus (stone), dusktrap
 
-Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact."""
+Ported to Horizon 0.2 from the upstream mod; pinned to game 26.3, Horizon SDK `0b14f8a` and horizon-mixins `e59da90`. The full corresponding source ships in this repository beside the artifact.
+"""
 authors = ["AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
