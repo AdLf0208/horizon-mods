@@ -18,7 +18,7 @@ A port of [Gravitational Modulating Additional Unit](https://github.com/gisellev
 - The recipe needs Mekanism items and tags, so it is creative-only until Mekanism is in the registry.
 - The HUD indicator and the remaining config options.
 
-The original copyright and licence notices travel inside the distributed archive (`mixins/gmut/LICENSE` and `NOTICE.md`) and are also in this repository. MIT. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93.
+The original copyright and licence notices travel inside the distributed archive (`mixins/gmut/LICENSE` and `NOTICE.md`) and are also in this repository. MIT. Pinned to Horizon 0b14f8a and horizon-mixins e59da90.
 """
 authors = ["gisellevonbingen", "AdLf0208"]
 owners = ["AdLf0208"]
