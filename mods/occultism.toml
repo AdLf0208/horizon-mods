@@ -25,7 +25,7 @@ A port of [Occultism](https://github.com/klikli-dev/occultism) (MIT, by klikli-d
 - The remaining machines (crusher, smelter, sacrificial bowl, pentacles and rituals), every spirit and their jobs, the storage system and the dimensional mineshaft are later slices.
 - The ritual and chalk recipes beyond the ones carried, and the sapling models the carried sapling item references.
 
-MIT; the original copyright and permission notices (klikli-dev, 2020) travel inside the archive at `mixins/occultism/LICENSE`.
+MIT; the original copyright and permission notices (klikli-dev, 2020) ship inside the package: `LICENSE` and `LICENSE-NOTICE.md` at its root, with the same texts in the source repository.
 """
 authors = ["Kli Kli", "AdLf0208"]
 owners = ["AdLf0208"]
