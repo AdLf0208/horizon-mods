@@ -1,7 +1,7 @@
 id = "bhc"
 kind = "native-mod"
-name = "bhc"
-summary = "A Horizon port of bhc."
+name = "Baubley Heart Canisters"
+summary = "Miniature hearts that heal on use, and canisters that raise max health from the inventory."
 description = """
 A port of [Baubley Heart Canisters](https://github.com/Traverse-Joe/Baubley-Heart-Canisters) for Horizon.
 
