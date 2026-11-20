@@ -1,7 +1,7 @@
 id = "occultism"
 kind = "native-mod"
-name = "Occultism"
-summary = "Spirit fire, the datura ignition rule and the 18 chalk colours, ported."
+name = "occultism"
+summary = "A Horizon port of occultism."
 description = """
 A port of [Occultism](https://github.com/klikli-dev/occultism) (MIT, by klikli-dev) for Horizon. This first slice is **spirit fire**: the block, its ignition, and the chalk colours it takes.
 
