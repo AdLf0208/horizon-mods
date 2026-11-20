@@ -1,9 +1,9 @@
 id = "bigreactors"
 kind = "native-mod"
-name = "bigreactors"
-summary = "A Horizon port of bigreactors."
+name = "Extreme Reactors"
+summary = "Extreme Reactors' basic reactor and energizer: the mod's own simulation, fuel, waste, heat and FE, ported."
 description = """
-A port of [Extreme Reactors](https://github.com/ZeroNoRyouki/ExtremeReactors2) for Horizon.
+A port of [Extreme Reactors](https://github.com/ZeroNoRyouki/ExtremeReactors2) for Horizon. The project was called *Big Reactors* before 1.9, and the jar's mod id — and the namespace of every block and item it registers, `bigreactors:basic_reactorcasing` — is still `bigreactors`; the registry id keeps that id so it matches the pack and the content namespace, while the listing uses the project's current name.
 
 **Implemented so far**
 
