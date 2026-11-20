@@ -34,9 +34,17 @@ categories = ["adventure"]
 tags = ["port", "worldgen", "mineshafts"]
 
 [[versions]]
-version = "0.2.2"
+version = "0.2.1"
 published = "2026-11-18"
 game = "26.3"
 file = "bettermineshafts.hmod"
-sha256 = "7e27da816c58db978bdabbbbc088943831465cfff77fe1ca72d359843ce5aab7"
+sha256 = "bdefafb1e28582d0e369db0f3c5140b6dd45c964b2483df6fff3211da4115d12"
 changelog = "First publication in the SDK format."
+
+[[versions]]
+version = "0.2.2"
+published = "2026-11-20"
+game = "26.3"
+file = "bettermineshafts.hmod"
+sha256 = "7e27da816c58db978bdabbbbc088943831465cfff77fe1ca72d359843ce5aab7"
+changelog = "Slice 2: the stair piece family (SmallTunnelStairs) — its 5x9x5 box, the branch chain's per-segment kind roll, the stair rail shape on all four facings, and the vines/ore randomization. Two defects fixed on the way: the port's LCG used a signed shift (so nextInt went negative and the corridor chain stopped at two segments), and upstream's stairs always set an ascending-north rail whatever the piece's direction. The structure is now entered in game and the stair's rail read back at its own coordinate."
