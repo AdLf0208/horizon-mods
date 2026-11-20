@@ -1,7 +1,7 @@
 id = "artifacts"
 kind = "native-mod"
-name = "artifacts"
-summary = "A Horizon port of artifacts."
+name = "Artifacts"
+summary = "Bunny Hoppers, Feral Claws and the Shock Pendant, with their upstream effect rules."
 description = """
 A port of [Artifacts](https://github.com/ochotonida/artifacts) for Horizon.
 
