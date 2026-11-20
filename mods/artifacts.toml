@@ -35,7 +35,7 @@ version = "0.2.0"
 published = "2026-11-10"
 game = "26.3"
 file = "artifacts.hmod"
-sha256 = "72ebd4a225639317da2e7defd95ec3018c8b207e961a2b1ba057f7ddf8ddcae3"
+sha256 = "9382fa0cc62bddf15cf410c5811063a1e14c27489a7f355815b00ab5c5726442"
 changelog = "First release"
 
 [[versions]]
