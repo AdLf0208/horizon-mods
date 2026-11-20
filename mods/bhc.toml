@@ -33,7 +33,7 @@ version = "0.2.0"
 published = "2026-11-10"
 game = "26.3"
 file = "bhc.hmod"
-sha256 = "b33bd4b13114f268c580a7c270627dbdcb516721d990cc071e2505e8ad6d5fb1"
+sha256 = "3668bc07a06008cb75401ccf05920e958983edeef098051b67022ce890fda406"
 changelog = "First release"
 
 [[versions]]
