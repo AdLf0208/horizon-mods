@@ -33,6 +33,13 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-20"
+game = "26.3"
+file = "bigreactors.hmod"
+sha256 = "c0168cedbb2a222886ec053ba0a4c6817956bb13ba5439eda04e9056e771c65b"
+changelog = """Slice 2 (the energizer), the bounded-tick-cost repair, and the budget fix. Adds the energizer, the fourth multiblock — its 3x3x3 to 32-cubed forms, the cell count and capacity, the controller and the four blocks, on/off with FE in and out — with four defects fixed (carried recipes named c: common tags Horizon never resolves; the blocks were missing from minecraft:mineable/pickaxe; the power tap pushed its buffer back into the reactor; two graphite_from_coalblock recipes were dead data). Structure work is bounded: scans are shared per component, invalidation is limited to the affected topology (inside the box always, the one-block ring only when a machine part sits there, another level never), and SCANS_PER_TICK = 4 is paid from a budget refilled at level_tick_post. This version closes the remaining bypass: a capability scan — an energizer tick asking an adjacent machine's capacity — was charged Budget::Once, so every such tick did an unbudgeted scan. The budget now opens at level_tick_pre and closes at level_tick_post, so in-tick capability scans come out of the same share, while clicks, commands and one-off capability calls still cost one scan and a cache hit is free in both. Proven in game: an energizer fills two adjacent reactors (9,253 -> 216,000 FE); one tick that invalidates five machines runs 4 fresh scans and the rest report not-formed; with the old policy the same scenario runs 7 (counterfactual EXIT:1); all five recover once the casings are replaced."""
+[[versions]]
 version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
@@ -40,18 +47,3 @@ file = "bigreactors.hmod"
 sha256 = "f0875084ff184a137d337f93af72b57c74916c57f2bf86f639c8bf5da6cf0268"
 changelog = "First release"
 
-[[versions]]
-version = "0.2.2"
-published = "2026-11-20"
-game = "26.3"
-file = "bigreactors.hmod"
-sha256 = "bdebad9f6389ee725fbab8f80b06be7c6b388217517497e2ee58c5f4efb4b611"
-changelog = """Slice 2: the energizer, the fourth multiblock — its 3x3x3 to 32-cubed forms, the cell count and capacity, the controller and the four blocks, on/off with FE in and out. Four defects fixed: the carried recipes named c: common tags Horizon never resolves (now direct item ids), the blocks were not in minecraft:mineable/pickaxe so every break harvested nothing, the power tap pushed its buffer back into the reactor once the controller became a receive face, and two graphite_from_coalblock recipes were dead data."""
-
-[[versions]]
-version = "0.2.3"
-published = "2026-11-20"
-game = "26.3"
-file = "bigreactors.hmod"
-sha256 = "e8dcf1df35d35341e56e128bc9ec9c35efff05ece485921349b018a65ee8ba46"
-changelog = """Bounded tick cost: every controller scanned its structure and any block change cleared both whole caches, so a busy world made every machine re-walk its box each tick. Scans are now shared per component, invalidation is limited to the affected topology (inside the box always, the one-block ring only when a machine part sits there, another level never), and `SCANS_PER_TICK = 4` is paid from a budget refilled at `level_tick_post` — a machine the budget cannot reach reports not-formed for that tick rather than trusting an unproven shape. Proven: an unrelated break two blocks outside the shell leaves the readout identical, while a shell break reports `not formed (the shell has a hole in it)`."""
