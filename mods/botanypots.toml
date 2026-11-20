@@ -40,9 +40,17 @@ categories = ["game-mechanics", "food"]
 tags = ["port", "farming", "crops", "machines"]
 
 [[versions]]
-version = "0.2.1"
+version = "0.2.0"
 published = "2026-11-10"
 game = "26.3"
 file = "botanypots.hmod"
-sha256 = "2cea1f308608d65072ef9c945c289550238d5c5e3ce80e383750d5c2b5681279"
+sha256 = "18218cafb9ad6fc5d2c5de49c93311efef4cb912c1e68bc20a4a287f9556e515"
 changelog = "First release: slice 1 of the port, with the full licence and corresponding source in the port repository"
+
+[[versions]]
+version = "0.2.1"
+published = "2026-11-20"
+game = "26.3"
+file = "botanypots.hmod"
+sha256 = "2cea1f308608d65072ef9c945c289550238d5c5e3ce80e383750d5c2b5681279"
+changelog = """Repair plus slice 2. The published 0.2.0 could not load: it carried 131 crop, soil, interaction and fertilizer recipe files whose serializers do not exist at this pin, so Horizon refused the pack with an unregistered recipe serializer and the game exited. Those files are dropped (168 content files down to 37). Slice 2 adds the hopper pot: 15 slots, self-harvest on the tick with no click, and the storage pushed into the container below, with the harvest's overflow no longer destroyed."""
