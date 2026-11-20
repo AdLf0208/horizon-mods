@@ -1,7 +1,7 @@
 id = "regions_unexplored"
 kind = "mod"
 name = "Regions Unexplored"
-summary = """"""
+summary = """Regions Unexplored's 71 biomes with their blocks, signs, leaves, saplings and items, carried as content and upgraded to 26.3's worldgen shapes."""
 description = """
 A Horizon port of [Regions Unexplored](https://github.com/TelepathicGrunt/RegionsUnexplored) (MIT), carried as a content-only package.
 
