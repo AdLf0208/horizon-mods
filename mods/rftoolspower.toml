@@ -10,6 +10,7 @@ owners = ["AdLf0208"]
 owner_ids = [107615167]
 license = "MIT"
 source = "https://github.com/AdLf0208/rftoolspower"
+icon = "icons/rftoolspower.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
