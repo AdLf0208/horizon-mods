@@ -38,3 +38,11 @@ game = "26.3"
 file = "refinedstorage.hmod"
 sha256 = "7be4a4152b9d5ecab139b8c4f9ae87208788f4e9f6842c9d167fb4316830fd38"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.5"
+published = "2026-11-21"
+game = "26.3"
+file = "refinedstorage.hmod"
+sha256 = "0a5d894c67cec3483b3ec6955f4ed2d42eba150c5bbdf365a20360d67e8547fd"
+changelog = """A defect fix, and the defect mattered: the promise table that stops two grids handing out the same item was keyed by dimension, so two separate networks in one dimension hid each other's stock. It never duplicated anything, which is why it survived four slices, but a second network would simply show an empty grid while its own disk held the goods. The key is now the network's own controller position as well as the dimension, and both the block grid and the wireless grid build that key and call one function, so a rule that used to exist in two shapes is now one. Proven with two networks in one dimension, each holding three gold, both reads reporting three where the older package reported zero for the second; and the same assertion is fail-capable in the shipped package, because a selftest that demands the old wrong answer fails. This is our own drift from the reference rather than a defect inherited from it, and it is recorded that way."""
