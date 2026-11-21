@@ -1,0 +1,26 @@
+id = "industrialization_overdrive"
+kind = "native-mod"
+name = "industrialization_overdrive"
+summary = "A Horizon port of industrialization_overdrive."
+description = """
+A port of [industrialization_overdrive](https://github.com/WhitePhant0m/Industrialization-Overdrive).
+
+The first port of Industrialization Overdrive, and it opens with the machine the mod is named around: the pyrolyse oven, a thirty-three member multiblock of seventeen bronze plated bricks and sixteen coil blocks with item, fluid and energy hatches, which turns four logs into five charcoal and proxies the parent's own coke recipes. The parent surface it binds to went from nothing to complete across three slices of its own: the shell blocks, the hatches, the energy aggregation and a coke recipe kind another package can read, which is why this slice needed no hard-coded recipe table. Proven in game with the numbers that matter: the shell forms with three hatches and nothing missing, four logs and exactly twelve thousand eight hundred FE through the hatches make five charcoal with the controller and hatch both emptied, and twelve thousand seven hundred and eighty makes nothing and stalls at nine hundred and ninety-eight of a thousand, so the energy is coming from the hatch rather than from nowhere. Breaking one coil freezes the run and a brick where the coil belongs stays unformed, and restoring it finishes. A second coil tier reads its own batch size and multiplier and pays its own coke run. The creosote by-product, the oven's own craft recipe and the other four families are recorded with their exact missing symbols rather than approximated.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/industrialization_overdrive"
+icon = "icons/industrialization_overdrive.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-22"
+game = "26.3"
+file = "industrialization_overdrive.hmod"
+sha256 = "cc3125fe89bc197c5ed30332871c6fbbd226aefe78a8e13ef62e4dae5ee3cbef"
+changelog = """The first port of Industrialization Overdrive, and it opens with the machine the mod is named around: the pyrolyse oven, a thirty-three member multiblock of seventeen bronze plated bricks and sixteen coil blocks with item, fluid and energy hatches, which turns four logs into five charcoal and proxies the parent's own coke recipes. The parent surface it binds to went from nothing to complete across three slices of its own: the shell blocks, the hatches, the energy aggregation and a coke recipe kind another package can read, which is why this slice needed no hard-coded recipe table. Proven in game with the numbers that matter: the shell forms with three hatches and nothing missing, four logs and exactly twelve thousand eight hundred FE through the hatches make five charcoal with the controller and hatch both emptied, and twelve thousand seven hundred and eighty makes nothing and stalls at nine hundred and ninety-eight of a thousand, so the energy is coming from the hatch rather than from nowhere. Breaking one coil freezes the run and a brick where the coil belongs stays unformed, and restoring it finishes. A second coil tier reads its own batch size and multiplier and pays its own coke run. The creosote by-product, the oven's own craft recipe and the other four families are recorded with their exact missing symbols rather than approximated."""
