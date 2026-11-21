@@ -32,7 +32,8 @@ Submitting a project, through the form or a pull request, means you confirm that
 2. **If it is a port or a translation of another mod** (for example from Java Edition), the original's licence allows
    that, or its authors gave you permission. You keep the original's copyright and licence notices, and you credit
    its authors and link the original on your page. A port of a mod whose licence reserves all rights needs its
-   authors' written permission.
+   authors' written permission. A rewrite of such a mod needs none when it copies nothing of the original: new code
+   only, and no source, textures, models, sounds, icons or language text. Say so in the pull request.
 3. It contains no code, assets or data from Minecraft, Mojang or Microsoft beyond what their
    [usage guidelines](https://www.minecraft.net/usage-guidelines) and EULA allow. Horizon players bring their own
    copy of the game. Game-data tables copied from any version count as Mojang data, whatever licence the project
