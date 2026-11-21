@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "978a23652d2580b7e0486ff0d7f819c20330593fff3ab140edde5ef1f19e7112"
+changelog = """Three review fixes. The package now ships the Cargo.lock its declared sha2 dependency needs, proven by a clean build that refuses without it and compiles from scratch with it. An installed module survives a removal that is not a loot roll: a level-side write removes the block entity without calling the removal hook, so the module list is kept while the block stands and the drop is queued from the only notice every path reaches, then spawned after the tick. And the upstream MIT copyright line is kept verbatim above this port's own. Credit: a port of SecurityCraft by Geforce, bl4ckscor3, Redstone_Dubstep and ChainmailPickaxe, https://github.com/Geforce132/SecurityCraft."""
+
+[[versions]]
 version = "0.2.1"
 published = "2026-11-09"
 game = "26.3"
