@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.1"
+published = "2026-11-21"
+game = "26.3"
+file = "mifa.hmod"
+sha256 = "19f1ffcd80f62077197b5561fc07f1c9786369540156300716714bbf5ae7008a"
+changelog = """Version 0.2.1 carries the upstream MIT copyright and permission notice inside the archive, as the review asked."""
+
+[[versions]]
 version = "0.2.0"
 published = "2026-11-21"
 game = "26.3"
