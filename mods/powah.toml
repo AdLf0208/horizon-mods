@@ -48,3 +48,11 @@ game = "26.3"
 file = "powah.hmod"
 sha256 = "9b600446d7457809af1583b3f478881de5b066add4035c0d18ba14ae414bcdf3"
 changelog = """Slice 2: the dielectric and capacitor family — six items and eight recipes — so the three carried machine recipes finally craft. The leg drives a real crafting table through all eleven: paste, rods, casing, both capacitors, the furnator, the energy cell and the cables, asserting each result's id and count and that every ingredient is consumed (the lava bucket leaving its bucket), with an off-pattern grid leaving the result empty."""
+
+[[versions]]
+version = "0.2.6"
+published = "2026-11-21"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "3ab1b5b46df0285f14f5d8fd47367e1cd053cbf96e671bfe8e3bb2eca30ed358"
+changelog = """Slice 6, the two ladders completed: six more furnator tiers and six more cable tiers, so the furnator now runs from eighty FE a tick to forty thousand and the cable from two thousand to a million. Proven by reading every one of the fourteen numbers in game rather than by trusting the table: each furnator clamps at its own buffer under a request for far more than it can hold, each cable names its own rate in its readout, and the difference is observable through the blocks they feed, where a cell behind a starter cable takes five hundred a tick and the same cell behind a basic one takes a thousand. The nitro furnator is the one worth quoting, because its buffer was given exactly room for one coal so the read can be checked against the fuel rather than the machine: carbon reads eight thousand, not forty-seven thousand nine hundred and eighty. All eighteen new recipes craft with their exact outputs and ingredients consumed, and all twelve new blocks drop themselves. A selftest that demands the old rate fails, and the whole scenario on a game without the package fails at the first placement. Reactors stay recorded as blocked, because their fuel has no source in this pack at all."""
