@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-21"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "213695fc2d98491ee0a99dfd38ceaa4bb3ee9b591d41fa7921a19d9fca2ee4fb"
+changelog = """The crafter and spawner ticks now act in the dimension the tick runs in rather than in whichever dimension happens to hold a matching block at those coordinates. With the same machine at the same position in two loaded dimensions the defect was sharper than a wrong choice: the spawner paid its energy and spawned nothing, because a level that is not in place refuses a spawn, so it silently died while the twin stood idle. Proven by placing a crafter and a spawner at identical coordinates in the End and the Overworld, feeding only the End pair, and reading both back through their own dimension: the End crafter crafts twelve planks for its three logs and the Overworld twin stays empty, the End spawner produces its zombie and spends its eight hundred while the twin stays at zero, and a selftest that expects zero there fails."""
+
+[[versions]]
 version = "0.2.0"
 published = "2026-11-10"
 game = "26.3"
