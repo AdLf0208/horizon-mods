@@ -31,6 +31,13 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-22"
+game = "26.3"
+file = "minecolonies.hmod"
+sha256 = "bc41900e63fe6e766a6c188a065c865cc8dd49deda8b68ca7e0dcc9dd0f947b6"
+changelog = """Slice 4, the tool request: a worker needs its tool, the tool comes from the colony, and when it is missing the colony records a request and the worker does not work. A farmer needs its scythe, a lumberjack an iron axe, a miner an iron pickaxe; one matching item in the colony's chest is taken on the tick and put in the citizen's one held hand, and the request settles. This gives the carried scythe its first behaviour. Proven in game for all three jobs with their unarmed counterfactuals in the same run: a request line names the citizen and the item, the unarmed farmer leaves its crop ripe, the request clears when the scythe arrives and reads none, and the hand survives a relaunch; the lumberjack's tree stays whole for two hundred ticks until the axe is taken and then falls to four logs in the chest; the miner's column stays whole until the pickaxe arrives and then becomes an eight-deep shaft with eight cobblestone. Two defects were found and fixed: the saved-record decoder had stopped reading the logged and dug counters, so a colony's totals silently reset to zero on reload, and the harness planted a tree without asserting its soil so a lost command left a tree standing on air."""
+[[versions]]
 version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
