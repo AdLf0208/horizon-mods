@@ -48,3 +48,11 @@ game = "26.3"
 file = "powah.hmod"
 sha256 = "9b600446d7457809af1583b3f478881de5b066add4035c0d18ba14ae414bcdf3"
 changelog = """Slice 2: the dielectric and capacitor family — six items and eight recipes — so the three carried machine recipes finally craft. The leg drives a real crafting table through all eleven: paste, rods, casing, both capacitors, the furnator, the energy cell and the cables, asserting each result's id and count and that every ingredient is consumed (the lava bucket leaving its bucket), with an off-pattern grid leaving the result empty."""
+
+[[versions]]
+version = "0.2.4"
+published = "2026-11-21"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "663465ee8b93e5f8be371537f6515bd7252651e462a57f477faedd82ffcd3e34"
+changelog = """Slice 4, the energy cell ladder: the six remaining tiers as storage blocks with their own capacity and their own per-side transfer, so the starter cell the port already had is now the bottom of a ladder that ends at two billion. The rule is the most directly readable thing in the package: one command that asks each tier for far more than it can hold returns a different exact number per tier, one million, four, ten, forty, one hundred, four hundred million and two billion, with the comparator and transfer figures beside them. Proven in game by placing and reading every tier, by mining each and getting its own block back, and by crafting the one cell whose recipe the port can complete. This version also fixes three timing flukes in the existing scenario that had been costing red runs for unrelated reasons: a discharge sink read, a network sink read and an exact-equality poll against a drained source. Five of the six cell recipes are recorded as blocked rather than carried, because they need materials only the energizing orb makes and this port does not have it yet, which is the next slice."""
