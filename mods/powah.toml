@@ -48,3 +48,11 @@ game = "26.3"
 file = "powah.hmod"
 sha256 = "9b600446d7457809af1583b3f478881de5b066add4035c0d18ba14ae414bcdf3"
 changelog = """Slice 2: the dielectric and capacitor family — six items and eight recipes — so the three carried machine recipes finally craft. The leg drives a real crafting table through all eleven: paste, rods, casing, both capacitors, the furnator, the energy cell and the cables, asserting each result's id and count and that every ingredient is consumed (the lava bucket leaving its bucket), with an off-pattern grid leaving the result empty."""
+
+[[versions]]
+version = "0.2.5"
+published = "2026-11-21"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "7aef65e337192bb0caff50946ceb889e5f40bfcc10892654e766d46d78e697c3"
+changelog = """Slice 5, the energizing orb and the rods that feed it: the orb takes an item and a recipe, holds a buffer, and the rods around it push energy in, so the five materials the mod's whole ladder needs finally exist. It carries the whole rod ladder rather than one rod, and the number our brief guessed did not survive the jar: a starter rod holds ten thousand and gives a hundred a tick, not twenty thousand, so the blaze-crystal leg runs on a nitro rod and falls from two hundred thousand to eighty thousand, exactly the recipe's cost. Proven in game per tier: the starter makes two energized steel and ends at zero, the nitro makes a blazing crystal from powder and again from a blaze rod for the same hundred and twenty thousand, the higher tiers make niotic and spirited and sixteen nitro crystals, each dropping by its own recipe's exact price; an orb with no recipe leaves the rod's five thousand untouched, and no rod in range does nothing. All thirty-three crafting cases craft their declared output and consume their ingredients with two off-pattern controls empty. Two harness defects are recorded with it: an item that stacks to one cannot fill two grid cells from one pickup, and a scripted table interaction can silently miss, so the checker now asserts the result slot and retries."""
