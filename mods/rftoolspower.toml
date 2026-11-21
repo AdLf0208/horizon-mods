@@ -17,6 +17,13 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.2"
+published = "2026-11-22"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "989543d73da03afec9117d28ef3c4bf9175d55c03e2e5ce387461815622f6ebb"
+changelog = """Slice 3, the powercell: the mod's core storage, a block that holds five hundred thousand FE and shares it with its neighbours as one network. Its side faces default to none, so a fresh cell takes nothing until a face is set to input, which is upstream's own behaviour and the reason this family was blocked without the wrench: the stand-in is a command that sets one face at a time. Two numbers in our brief did not survive the jar and both made the port more faithful. A lone tier-one cell accepts two hundred and fifty FE a tick, not two thousand, because the reference caps what it receives by its own per-tick figure; the leg asserts the cell's gain and the generator's matching loss. And a tier-two cell beside a tier-one one does share the network, because membership is adjacency and the reference recurses without a tier test; the differential is a tier-two cell one block further away reading its own empty store. Proven in game across the sequence that matters: a fresh cell refuses a hundred thousand FE over forty ticks, one face set to input takes exactly two hundred and fifty a tick for thirty-eight ticks with the generator losing the same, and an output face likewise. Two defects only the game found are recorded: a pure item needs its own item declaration or a give refuses it while the recipe still crafts, and setting the same block again keeps its block entity data, which made one phase vacuous until it was cleared."""
+[[versions]]
 version = "0.1.1"
 published = "2026-11-21"
 game = "26.3"
