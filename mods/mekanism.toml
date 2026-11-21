@@ -30,12 +30,28 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
-version = "0.2.1"
-published = "2026-11-09"
+version = "0.2.5"
+published = "2026-11-21"
 game = "26.3"
 file = "mekanism.hmod"
-sha256 = "2cf935e4b568d876535fafec9f0eb7c7aaf8c851ff30f424e1931b993ec76c5a"
-changelog = "First release"
+sha256 = "ac8289c802ffdba25a1b3f7a96fea5c0904b8c7a65d20ca49417dea6f9363828"
+changelog = """Slice 6, the purification chamber: the middle of the ore chain, where a raw ore and oxygen become three clumps. It is the same machine shape as the injection chamber but its numbers are its own, read rather than carried over: two hundred FE a tick rather than four hundred, eighty thousand of buffer, and a whole operation is forty thousand. Proven in game with three counterfactuals in one run: four thousand oxygen in a tank turns one iron ore into three clumps for exactly forty thousand FE and leaves the tank at three thousand eight hundred, which is the per-tick draw times two hundred; with no tank beside it the chamber sits full and the ore untouched; with a hydrogen chloride tank, which is the injection chamber's gas, nothing moves and the tank is untouched. The chain is proved end to end as the data declares it rather than as our brief guessed: the clump crushes to a dirty dust and the dirty dust enriches to a dust in the enrichment chamber, while this chamber given a dirty dust sits at eighty thousand FE with an untouched input, which is the counterfactual that proves the two machines are not interchangeable. Fifteen purification rows ran, and the crusher and injecting sweeps still pass at a hundred and forty-eight and seventy-two."""
+
+[[versions]]
+version = "0.2.4"
+published = "2026-11-21"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "dc37efbcea33fc5e7c0feb26fa2a126f947b107aa566dd90dc9cd91df49dac6c"
+changelog = """Slice 5, the chemical injection chamber: the consumer half of the capability slice 4 published, so a machine now pulls gas out of a neighbour's tank through the key on its tick and turns ore into shards with it. Two numbers were read from the artefact rather than assumed: the raw iron row wants hydrogen chloride and not hydrogen, which makes hydrogen a useful wrong-gas control, and this machine costs four hundred FE a tick rather than the fifty of its siblings, so an operation is eighty thousand, and the cell draws one tick's gas two hundred times, so a whole operation empties two hundred times the per-tick amount. Proven in game with three counterfactuals in the same run: a tank of four thousand hydrogen chloride turns three raw iron into eight shards and ends at three thousand eight hundred, which is exactly two hundred times the row's per-tick; with no tank beside it the chamber sits at zero progress with its energy untouched; a tank of oxygen behaves the same; and a hydrogen tank is left alone. All seventy-two carried rows ran, and each drew exactly its own per-tick amount from the tank, which is the assertion that would fail if the pull were inert. The limit found in slice 4 holds and is recorded rather than worked around: the provider and the consumer here are the same crate's tank and chemical type, which is why this draw resolves."""
+
+[[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "5e304608de3b1094a2b9ce62b5fe9245299cc0587e4bacc44201b303cf8fd989"
+changelog = """Slice 4, the chemical capability: one resource, one published capability key, one block entity holding a tank and one item that carries a chemical. A basic chemical tank holds sixty-four thousand units and names them in its own saved data, and a gauge dropper takes two hundred and fifty units a call into its component, so a chemical can now be moved between a machine and a hand the same way items and energy are. Proven in game in five parts: the capability is published by name and lists Mekanism's thirty-two chemicals with hydrogen among them; an insert of four thousand units lands in the tank and reads back from the block data as the id and the number exactly; a partial drain takes two hundred and fifty of a thousand asked, leaving three thousand seven hundred and fifty in the tank and putting exactly two hundred and fifty on the item; an unknown chemical is refused by name and moves nothing; and the counterfactual against a block entity that answers items and energy but not this key finds no handler and no saved chemical. This is the surface two stopped add-ons were waiting for: the article of Mekanism's identity that this port had none of, noted in its own manifest as a gap for four slices."""
 
 [[versions]]
 version = "0.2.2"
@@ -46,9 +62,9 @@ sha256 = "d52219f7f369bded568a031d8a8e31d8e0a8a2cb8b0fc19bafe43112187d38f6"
 changelog = """Slice 3, the Crusher — the ore-processing machine that needs no new capability: 50 FE/t, a 20,000 FE buffer and 200 ticks (10,000 FE) per operation, from the jar's own config, carrying 145 of its 313 crushing rows (the rest need dusts this port does not register, and each skipped row is printed by the generator). Two defects found while carrying it, both fixed. First: every shaped recipe in 0.2.x used the 1.21.1 `{"item": …}` ingredient form, which 26.3 rejects — all four existing recipes and the new one could not craft at all; they now use bare item ids and are proven in game. Second: the local `Stack` and `Recipe` types shadowed SDK names, so the `uses` table claimed SDK types the port never used and `fits` against a different build failed; renamed `ItemAmount` and `MachineRecipe`, and the table is now true. Proven in game: cobblestone becomes gravel with the buffer at 0 after exactly one 10,000 FE operation, all 145 rows crush in a sweep, an uncharged crusher does nothing, and dirt with no recipe burns nothing."""
 
 [[versions]]
-version = "0.2.5"
-published = "2026-11-21"
+version = "0.2.1"
+published = "2026-11-09"
 game = "26.3"
 file = "mekanism.hmod"
-sha256 = "ac8289c802ffdba25a1b3f7a96fea5c0904b8c7a65d20ca49417dea6f9363828"
-changelog = """Slice 6, the purification chamber: the middle of the ore chain, where a raw ore and oxygen become three clumps. It is the same machine shape as the injection chamber but its numbers are its own, read rather than carried over: two hundred FE a tick rather than four hundred, eighty thousand of buffer, and a whole operation is forty thousand. Proven in game with three counterfactuals in one run: four thousand oxygen in a tank turns one iron ore into three clumps for exactly forty thousand FE and leaves the tank at three thousand eight hundred, which is the per-tick draw times two hundred; with no tank beside it the chamber sits full and the ore untouched; with a hydrogen chloride tank, which is the injection chamber's gas, nothing moves and the tank is untouched. The chain is proved end to end as the data declares it rather than as our brief guessed: the clump crushes to a dirty dust and the dirty dust enriches to a dust in the enrichment chamber, while this chamber given a dirty dust sits at eighty thousand FE with an untouched input, which is the counterfactual that proves the two machines are not interchangeable. Fifteen purification rows ran, and the crusher and injecting sweeps still pass at a hundred and forty-eight and seventy-two."""
+sha256 = "2cf935e4b568d876535fafec9f0eb7c7aaf8c851ff30f424e1931b993ec76c5a"
+changelog = """First release"""
