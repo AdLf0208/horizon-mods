@@ -34,3 +34,11 @@ game = "26.3"
 file = "rftoolsutility.hmod"
 sha256 = "7121e48f95642d568cd0561181c9cafbd4d458eb94fa4f5d0febdb1089710a5a"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.2"
+published = "2026-11-21"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "ba50851d3aa5c9a37929750be8acc7f34724a48652cd2dbf8856f546834463eb"
+changelog = """Slice 3, the tier-one crafter: a machine that is taught a recipe from the engine's own crafting table and then runs it from its own input buffer, honouring ingredient tags cell by cell so a planks cell accepts any plank. It keeps two recipe slots, burns energy per operation rather than per tick, merges its product up to the stack limit, can feed a second recipe straight from the first, and carries its taught recipes, its buffer and its energy on its own item when broken. Proven in game across nine phases with parsed readouts: teaching a planks recipe and refusing a fifth slot and a smelting id, doing nothing with no energy, producing twelve planks for one operation, leaving an unrelated item alone, refusing when the four output slots are full, chaining a crafting table recipe with no planks ever reaching the buffer, and restoring all of it after a break and a replace. Two defects were only visible in the game and are recorded: a slot feeding several cells, which the first version refused and which would have broken every chained craft, and a per-cycle energy cost from the jar's own formula. The first in-game failure was a real index mix-up that wrote the product into the ghost slots, now pinned by a test asserting the ghost grid shows exactly one item per filled cell."""
