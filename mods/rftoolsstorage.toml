@@ -29,6 +29,13 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-22"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "5a034f0ac023bb31dd107c98c439943842a8a722a6f94d9917006df43156996b"
+changelog = """Slice 6, the scanner's item slots and the tick that uses them: an in slot, an automation slot and an out slot, with the tick taking the first stack it can and pushing it into the nearest inventory the scan found, charging one fixed price per attempt. The slots existed as dead data before this; now they have their consumer. Proven in game: with a chest two blocks away and the buffer at five thousand, sixty-four stone put into the in slot lands in the chest and the buffer falls by exactly twenty, which is one attempt at the per-insert price; with the buffer at zero the stone stays in the slot and the chest is untouched, and recharging lets it continue to a hundred and twenty-eight, which is the stall being the power and nothing else. The automation slot works the same way at the same price, items entering through the game's own container path behave, a stack nothing will accept still costs one attempt and stays where it was, and the walk passes a full barrel to reach the chest behind it while never writing the out slot. Two deviations are stated: upstream's tick pushes to nothing until the player stars an inventory in a list this port does not have, so every scanned inventory is treated as routable, and the walk order is the scan's rather than the GUI's reorderable one. A hopper inside the scan box is deliberately not used as a scenario: upstream pushes into it and it pushes straight back, which is a livelock rather than a behaviour worth pinning."""
+[[versions]]
 version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
