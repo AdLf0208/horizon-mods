@@ -29,6 +29,13 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-22"
+game = "26.3"
+file = "oritech.hmod"
+sha256 = "2d5c36276718c5868c69d218ff5e0a5e9973462b36e9efe59ea108f31189f491"
+changelog = """Slice 6, the control unit: a redstone addon that stops the machine it sits beside, which is the mod's own rule read correctly — no recipe resolved, no progress, no energy, no output push, while the burst counter still ticks because that is the caller's own line. The signal is read live at the addon's own position and the flag is saved under the reference's own key, so a powered machine reads as disabled in its readout rather than silently doing nothing. Proven in game with the signal recorded rather than assumed: the pulverizer, its addon and a redstone block are read back by id; with the signal on, forty ticks change nothing, the buffer stays at ten thousand and the bone stays in the input; removing the signal lets the same bone finish in a hundred ticks for exactly thirty-two hundred FE with six bone meal out. A selftest that expects a different energy figure fails, and the whole scenario on a build without the package fails at the first placement. One trap cost a run and is recorded: setting the same block id again keeps its block entity data, so the new leg reuses a shelf that still held coal from an earlier phase; it now uses a position no other phase touches, clears it first and asserts the output is empty before it starts."""
+[[versions]]
 version = "0.2.7"
 published = "2026-11-21"
 game = "26.3"
