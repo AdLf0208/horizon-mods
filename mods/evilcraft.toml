@@ -37,3 +37,11 @@ game = "26.3"
 file = "evilcraft.hmod"
 sha256 = "dc620c8b8de282fd8ee2edca590774059a5ffa53866477942035469ffd1cfb0c"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "fde8475d6769321c7d717b4c3254ca881c6b053c90810e86c338661341273590"
+changelog = """Slice 3, the tank in the dropped block: a blood chest or blood infuser broken in survival now carries its blood with it, and gives it back when placed, which matters because blood is the mod's currency and losing six thousand five hundred millibuckets to a pickaxe is the kind of loss a player notices immediately. Proven in game on the same block and the same break: a chest holding six thousand five hundred drops one item whose components carry the block entity data with that amount and the fluid id, placing it again reads six thousand five hundred, and the cobblestone that was inside spills separately rather than coming back inside the block, which is the trap this payload deliberately avoids by carrying the tank alone. An empty chest drops an item with no payload at all, which is exactly what a break without the listener leaves, and that same comparison is the differential. A doctored item asking for twenty thousand is clamped to the ten thousand capacity when placed. Two harness facts are recorded with it: the client mirror of a dropped item does not carry a mod component even when the payload is really there, so the assertion reads the block's saved data and the break reply instead, and the block data command prints in a different shape than vanilla's."""
