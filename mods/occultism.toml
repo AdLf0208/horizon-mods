@@ -43,3 +43,11 @@ game = "26.3"
 file = "occultism.hmod"
 sha256 = "35714e6fd044bf52c4d2a3c63c68dabee5a3aa898525700e5ffdbfd54bdd38e2"
 changelog = """First publication, with the review repairs. Spirit fire, its datura ignition rule and the 18 chalk colours, with the jar's models, recipes and loot. `/occultism info` is now a level-2 command **with** a body re-check, and a position holding no spirit fire answers only that it is not one — the readout no longer doubles as a world probe. A spectator's click changes nothing: the hook checks the player's game mode before recolouring, lighting a fire or consuming datura, and fails closed on an unknown mode. The conversion ring is bounded and keyed per world and dimension."""
+
+[[versions]]
+version = "0.2.5"
+published = "2026-11-21"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "658ed0f7a8ae06c06ae6b786930ac3d4124027631b2935791e3506cdf315e4e4"
+changelog = """Slice 4, the crafting recipes that make an item obtainable for the first time: the dream essence, from datura fruit or from its seeds, now that the crop and its tags exist. Only two of the nineteen recipes whose result the package carries actually qualify, and the table of what was left out is part of the report: the impure chalks need a dust the package does not carry, and the otherstone building family has every ingredient but an unregistered result, so carrying its thirty-eight recipes would ship dead data. Proven in game in a real crafting table: the three-by-three fruit grid makes exactly one essence with the ingredients consumed, the same for seeds, and a mixed five-and-four grid also makes exactly one; nine dirt makes nothing, and the shapeless binding book crafts. This version also fixes a defect of our own, found only in the game: the crop harvest ran once per hand, so one click gave two fruit and six seeds, where the engine reaches the off hand only after the main hand fails. Only the main hand harvests now, and the run reads one fruit and three seeds. Two harness facts are recorded with it: a menu phase needs the offscreen renderer, and a death screen makes every later break answer that the screen is open, which silently cost two runs."""
