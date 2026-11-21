@@ -48,3 +48,10 @@ file = "bigreactors.hmod"
 sha256 = "f0875084ff184a137d337f93af72b57c74916c57f2bf86f639c8bf5da6cf0268"
 changelog = "First release"
 
+[[versions]]
+version = "0.2.5"
+published = "2026-11-21"
+game = "26.3"
+file = "extreme_reactors.hmod"
+sha256 = "0f5f3698be82cf9f13d745ac0c960d0fc92a152355d80b0825aa6f3e3ac920f2"
+changelog = """"""
