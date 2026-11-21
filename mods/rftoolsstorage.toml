@@ -35,3 +35,11 @@ game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "32f0505ef59a5eb1aa476578430a024bb02e9913edca853cf342bd5d9320a0f6"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "7e0709577e4e29761207c95b163ceb8a1e30ff0bf829bfb52f54fc3aacba2f3f"
+changelog = """Slice 3, the storage module's card slot: the menu now has the real slot upstream has instead of a one-way sneak-click install, so a module can go in and come back out, and the contents survive the module leaving. Capacity comes from the card, not from the block, so removing the module hides the grid and putting it back finds everything still there. Proven in game as a sequence of numbers: a fresh storage reads zero of zero and empty, a stone is refused and stays in the hand, a module placed in the card slot gives zero of six thousand four hundred and leaves the hand, taking it out returns the storage to nothing with the module back in the hand, a locked grid stores sixty-four, and after the module leaves and returns the storage reads sixty-four of six thousand four hundred still locked with fifty slots untouched by the unit. A relaunch keeps the contents, the lock, the grid and the module. The first design followed upstream's per-slot rule and made a locked storage refuse every click, which is recorded as an engine difference rather than worked around silently: the engine consults the card slot while planning a click on a different slot, and a refusal there cancels that click. That is worth an upstream report, and the port's own rules are stated as deviations instead of pretending to match."""
