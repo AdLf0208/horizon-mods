@@ -34,3 +34,11 @@ game = "26.3"
 file = "rftoolsutility.hmod"
 sha256 = "7121e48f95642d568cd0561181c9cafbd4d458eb94fa4f5d0febdb1089710a5a"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.4"
+published = "2026-11-21"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "4cd3abdb4786ff498bfd2d45bfb8d50a444f7f89d18d396a93ebd9c2e427534f"
+changelog = """Slice 5, the crafter tiers: the same machine at four and eight recipe slots, so a crafter two runs four recipes at once and a crafter three runs eight, each at the same hundred FE a cycle. Proven with the refusal as the boundary and a smaller tier as the control: eight teaches are accepted by the eight-slot crafter and a ninth says it has eight slots; four are accepted by the four-slot one and a fifth says four; and fed the same stock and the same eight hundred FE, the two-slot crafter crafts only two of the eight recipes while the eight-slot one crafts all eight, each at a hundred FE, which is the assertion that fails if the tier value is inert. Breaking a taught crafter carries all eight of its recipes and its buffer on the item, and placing it back finds them. One deviation is recorded rather than hidden: the jar's tier recipes are a wrapper that copies the old machine's taught recipes and buffer onto the new item, and that wrapper needs a library this package does not carry, so crafting an upgrade gives an empty new machine where upstream would move the contents across."""
