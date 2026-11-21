@@ -35,3 +35,11 @@ game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "32f0505ef59a5eb1aa476578430a024bb02e9913edca853cf342bd5d9320a0f6"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.4"
+published = "2026-11-21"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "a2d6add422d7442671aa9ae79d9d66a678e88141b7ed20305a8cc794f7d90d60"
+changelog = """Slice 4, the contents travelling on the dropped item: break a modular storage in survival and its stacks, its lock and its storage module ride on the item, and placing it back restores them. The engine's own spill no longer scatters anything, because the slots are emptied before removal and the payload deliberately strips the item list, which is what stops every stack being counted twice. Proven in game with the saved data read straight from the block by the game itself, no mod code in the path: the dropped item carries sixty-four stone in slot zero, the module in slot one, the locked flag and the block entity id; placing it back reads sixty-four of six thousand four hundred, locked; a doctored payload naming two hundred stone places sixty-four; and a level-side break, where the player path does not run, still spills and places back empty, which is the counterfactual that proves the payload is what carries. A selftest that demands the old spill behaviour fails, and a barrel as the differential behaves like the barrel it is."""
