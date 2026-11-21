@@ -30,12 +30,12 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
-published = "2026-11-10"
+version = "0.2.6"
+published = "2026-11-22"
 game = "26.3"
 file = "industrialforegoing.hmod"
-sha256 = "c10182f32584e6522b274855f6c8331793421237112d87acf804a4fb17752ed7"
-changelog = "First release"
+sha256 = "d9dbb2316b701dab2bf7877bf2361772d3f634113dd75291ac9e6e172b4869a4"
+changelog = """Slice 6, the latex chain: an extractor that pulls latex out of a log into its own tank, and a processing unit that turns latex and water into dryrubber, which smelts into the plastic every recipe in the mod wants. Until now plastic could only be given as an item. The chain is proven end to end in game: an unpowered operation gives two millibuckets for nothing, a powered one gives six for five hundred FE, and stone behind the machine gives no recipe at all and changes neither tank nor buffer; seven hits with a forced final roll strip the log and add four hundred millibuckets, which drains back out as exactly four hundred of latex; the unit takes a thousand latex and a thousand water and makes one dryrubber in a hundred ticks, and a hopper under it feeds a furnace that yields one plastic with the rubber consumed. A broken unit returns with its tanks and buffer intact. One question the brief asked is answered by measurement rather than assumption: the engine's fluid-move helper cannot move a mod fluid between two machines, both because a package cannot call it at this pin and because engine-side it fills only through a path that accepts water and lava, so the port fills its tanks by its own command path and says so."""
 
 [[versions]]
 version = "0.2.5"
@@ -44,3 +44,11 @@ game = "26.3"
 file = "industrialforegoing.hmod"
 sha256 = "0876ea235c4fd196113992cd743c116d513add5e408e723dc2ec7bf34c7b2bad"
 changelog = """Slice 5, the dissolution chamber: the machine that gives the mod's whole item set a source, including the three higher machine frames and all sixteen lenses that until now could only be given as items. It has its own recipe type read as data, eleven slots, two fluid tanks and its own timing, and the fluids it needs are declared and written the way a mod fluid has to be at this pin, then proved through the declared capability rather than by reading the block entity. Proven in game end to end: twenty-three recipes load and the readout says so; two thousand millibuckets of latex enter the tank and answer through the capability; a white lens takes exactly a hundred ticks, spends exactly a hundred times ninety FE and two hundred and fifty millibuckets, and produces one lens from five consumed inputs; an empty tank leaves the recipe unstarted with its energy untouched, and filling it starts the run; a hopper empties the output into a barrel; the simple frame's three hundred ticks spend ninety FE a tick; and the advanced frame is made from the plastics tag, a crafted diamond gear and the simple frame, which is exactly the chain an add-on was waiting on. Two harness facts cost runs and are recorded: a container command writes the window's copy and never reaches a machine's server slots, and the End's mobs will kill the player mid-scenario unless difficulty is peaceful."""
+
+[[versions]]
+version = "0.2.0"
+published = "2026-11-10"
+game = "26.3"
+file = "industrialforegoing.hmod"
+sha256 = "c10182f32584e6522b274855f6c8331793421237112d87acf804a4fb17752ed7"
+changelog = """First release"""
