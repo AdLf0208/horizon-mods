@@ -39,3 +39,11 @@ game = "26.3"
 file = "modern_industrialization.hmod"
 sha256 = "e495ddae3a5d63d81555b209a85dd5e9617267566fa3015f35397da6922f8a14"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.2"
+published = "2026-11-21"
+game = "26.3"
+file = "modern_industrialization.hmod"
+sha256 = "d2d388ce1932fbd94afeb75c2d804951692f992d0786c0596e41fddf22276ae7"
+changelog = """Slice 3, the hatches: four types, a block each, a shell position that may hold one, its own one-slot container or tank, and the controller aggregating them, plus the bronze plated bricks and the two coil blocks the add-on family builds its shells from, and a coke recipe kind another mod can read by type instead of a table baked into this package. Proven in game both halves separately, because the two cannot be one run without building the add-on's controller, which this slice deliberately does not add: a three by three by four shell of seventeen bricks and sixteen coil positions matches with two hatches in place and reports thirty-three members, one broken coil makes it missing one, a brick where a coil belongs stays missing; and on the coke oven's own shell, coal put into the input hatch leaves it while the product appears in the output hatch and the controller's own output stays empty, for exactly twelve thousand FE per operation. A player break flips formed to false and freezes the run for a hundred and twenty ticks. Energy hatches are recorded as a separate tiered family this slice does not carry, and a fluid hatch's contents are recorded as not assertable at this pin rather than claimed."""
