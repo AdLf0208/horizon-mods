@@ -39,3 +39,11 @@ game = "26.3"
 file = "modern_industrialization.hmod"
 sha256 = "e495ddae3a5d63d81555b209a85dd5e9617267566fa3015f35397da6922f8a14"
 changelog = "First release"
+
+[[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "modern_industrialization.hmod"
+sha256 = "f665aa0bf7cb298fea4a2a730aaee4ae97837815a68ee2764a0d5264fa2c8691"
+changelog = """Slice 4, the energy hatches: ten blocks, five tiers each way, an input and an output, so a multiblock can finally be fed electricity through its shell instead of only through its controller. The tiers are the jar's own, thirty-two EU up to a hundred and twenty-eight million, and their buffers follow; the superconductor tier's real buffer exceeds what this pin can hold, so it is declared at the largest value a thirty-two-bit buffer can express and the difference is stated rather than hidden. Proven in game in the way that matters for a hatch: five thousand FE put into the hatch appears in the controller's buffer and leaves the hatch, a run of exactly twelve thousand makes one coke with both ending at zero, and a run of eleven thousand nine hundred and eighty stalls at nine hundred and ninety-eight of a thousand with the same recipe and no product, which is the differential that shows the energy came from the hatch rather than from nowhere. Each tier clamps at its own capacity when filled twice over, and an output hatch drains the controller back out. The shell accepts the hatch in place of a brick and refuses it in the middle ring. The item and fluid hatches from the last slice still pass, and the coke oven's own recipe list is unchanged as a regression."""
