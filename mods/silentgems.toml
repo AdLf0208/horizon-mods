@@ -1,5 +1,5 @@
 id = "silentgems"
-kind = "mod"
+kind = "native-mod"
 name = "Silent's Gems"
 summary = "21 gems with storage blocks and 84 ores, plus overworld, nether and end worldgen."
 description = """
