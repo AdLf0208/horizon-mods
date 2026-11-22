@@ -44,7 +44,7 @@ source = "https://www.curseforge.com/minecraft/texture-packs/abelha-skull-java/f
 icon = "icons/abelha_skull.png"
 categories = ["16x", "simplistic", "themed"]
 tags = ["bee", "moonskull"]
-screenshots = ["screenshots/abelha_skull/1.png", "screenshots/abelha_skull/2.png"]
+screenshots = ["screenshots/abelha_skull/1.png"]
 
 [[versions]]
 version = "1.0.0-fix"
