@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "1b29b731068bc6a2f21281fc88f60b7643b39f819a4a2f8885d0ad0818fe53d6"
+changelog = """The tower plan is linear in the number of disconnected accumulators, proven by counting set lookups rather than wall time; a saved tower outside the three by five limit is refused before any capacity arithmetic and a controller near the coordinate limit no longer overflows; and the upstream MIT notice travels inside the package verbatim. Credit: a port of Create Crafts & Additions by MRH0, https://github.com/MRH0/createaddition."""
+
+[[versions]]
 version = "0.2.1"
 published = "2026-11-10"
 game = "26.3"
