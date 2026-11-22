@@ -52,17 +52,17 @@ sha256 = "213695fc2d98491ee0a99dfd38ceaa4bb3ee9b591d41fa7921a19d9fca2ee4fb"
 changelog = """The crafter and spawner ticks now act in the dimension the tick runs in rather than in whichever dimension happens to hold a matching block at those coordinates. With the same machine at the same position in two loaded dimensions the defect was sharper than a wrong choice: the spawner paid its energy and spawned nothing, because a level that is not in place refuses a spawn, so it silently died while the twin stood idle. Proven by placing a crafter and a spawner at identical coordinates in the End and the Overworld, feeding only the End pair, and reading both back through their own dimension: the End crafter crafts twelve planks for its three logs and the Overworld twin stays empty, the End spawner produces its zombie and spends its eight hundred while the twin stays at zero, and a selftest that expects zero there fails."""
 
 [[versions]]
-version = "0.2.4"
-published = "2026-11-21"
-game = "26.3"
-file = "rftoolsutility.hmod"
-sha256 = "4cd3abdb4786ff498bfd2d45bfb8d50a444f7f89d18d396a93ebd9c2e427534f"
-changelog = """Slice 5, the crafter tiers: the same machine at four and eight recipe slots, so a crafter two runs four recipes at once and a crafter three runs eight, each at the same hundred FE a cycle. Proven with the refusal as the boundary and a smaller tier as the control: eight teaches are accepted by the eight-slot crafter and a ninth says it has eight slots; four are accepted by the four-slot one and a fifth says four; and fed the same stock and the same eight hundred FE, the two-slot crafter crafts only two of the eight recipes while the eight-slot one crafts all eight, each at a hundred FE, which is the assertion that fails if the tier value is inert. Breaking a taught crafter carries all eight of its recipes and its buffer on the item, and placing it back finds them. One deviation is recorded rather than hidden: the jar's tier recipes are a wrapper that copies the old machine's taught recipes and buffer onto the new item, and that wrapper needs a library this package does not carry, so crafting an upgrade gives an empty new machine where upstream would move the contents across."""
-
-[[versions]]
 version = "0.2.0"
 published = "2026-11-10"
 game = "26.3"
 file = "rftoolsutility.hmod"
 sha256 = "7121e48f95642d568cd0561181c9cafbd4d458eb94fa4f5d0febdb1089710a5a"
-changelog = """First release"""
+changelog = "First release"
+
+[[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "d12c3646abde71c541adc707add6a044a934a77ce375a301d4de1a46e52c27b7"
+changelog = """Slice 4, the spawner: a machine that sets a mob and spawns it on the neighbour its facing names, at the cost the mob's own recipe declares, with the mob chosen by a data recipe rather than a menu. The jar ships seventy such recipes, not the hundred our notes guessed, and all seventy travel byte for byte, because they carry the ingredient lists in a form this port deliberately never parses. Proven in game with the counterfactual on the same machine: with no energy it spawns nothing across sixty ticks and its counter stays at zero, and with the eight hundred its zombie recipe costs it spawns exactly one zombie within five blocks and leaves nothing in the buffer; a blaze costs a thousand and sets the second spawn's offsets. An absent mob is refused with the recipe count named, and an unknown id is refused before any energy is spent. That last point is a defect this port does not reproduce: upstream consumes the energy and clears the matter amounts before it checks whether the mob exists, so a recipe for an absent entity costs everything for a spawn that never happens. This port pays only once the spawn has answered."""

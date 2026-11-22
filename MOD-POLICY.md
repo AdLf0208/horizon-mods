@@ -15,8 +15,15 @@ who makes them, who is responsible for them, and how to have one removed. By sub
   hashes, that it builds or loads against the Horizon version it names, and that nothing obviously harmful is in it.
   That review is not a legal review, a security audit or a guarantee. An owner's later versions of an entry of
   kind `resourcepack`, `shader` (`.hshader`) or `datapack` publish once the automatic checks pass, without a person
-  reading them; new projects, page changes, `shaderpack` zips and every mod version are reviewed. Mods are provided
-  as they are, without warranty, by their authors.
+  reading them. Once the maintainers turn it on, so may a native mod's later version from an owner they vouch for,
+  when its whole source passes a stricter automatic check: no `unsafe` code, no file, network or process access and
+  no new build inputs. New projects, page changes, `shaderpack` zips and every other mod version are reviewed. Mods
+  are provided as they are, without warranty, by their authors.
+- **What reviewers block on.** Reviewers (human and AI) request changes only for policy, safety, or integrity issues:
+  harmful or malicious code, hidden network/data access, missing copyright or licence attribution, Mojang data, cheat
+  clients, mismatched hashes or un-staged files, broken packaging/build proof, or failing checks. Ordinary bugs,
+  gameplay edge cases, or polish suggestions in an otherwise compliant mod are **not** grounds to refuse a listing:
+  leave them as a non-blocking comment (COMMENT) so the author gets a helpful heads-up without blocking publication.
 - **Native mods** (source `.hmod` packages built locally against their exact signed Horizon SDK) run
   with the same access to your computer as the game. Install them only from authors you trust.
   The frozen native-v1 catalogue retains old `.hnmod` metadata and assets for history, not installation on the SDK runtime.
@@ -30,7 +37,8 @@ Submitting a project, through the form or a pull request, means you confirm that
 2. **If it is a port or a translation of another mod** (for example from Java Edition), the original's licence allows
    that, or its authors gave you permission. You keep the original's copyright and licence notices, and you credit
    its authors and link the original on your page. A port of a mod whose licence reserves all rights needs its
-   authors' written permission.
+   authors' written permission. A rewrite of such a mod needs none when it copies nothing of the original: new code
+   only, and no source, textures, models, sounds, icons or language text. Say so in the pull request.
 3. It contains no code, assets or data from Minecraft, Mojang or Microsoft beyond what their
    [usage guidelines](https://www.minecraft.net/usage-guidelines) and EULA allow. Horizon players bring their own
    copy of the game. Game-data tables copied from any version count as Mojang data, whatever licence the project

@@ -7,7 +7,7 @@ name = "Auto Login"
 summary = "Detects login/register prompts in chat and logs you in or registers you, per server."
 
 description = """
-Auto Login watches for login and register prompts — in chat and in the action bar — and acts on them: when the server asks you to log in, it sends /login with the password saved for that server and player; when the server asks you to register and no password is saved, it generates a random password, sends /register, and saves it for next time.
+Auto Login watches for login and register prompts — in chat, in the action bar and on the boss bar — and acts on them: when the server asks you to log in, it sends /login with the password saved for that server and player; when the server asks you to register and no password is saved, it generates a random password, sends /register, and saves it for next time.
 
 Manual commands /autologin and /autoregister do the same on demand, and /autologin set, pattern, delay, toggle and status configure it without rebuilding.
 
@@ -42,3 +42,17 @@ file = "autologin-1.1.1.hmod"
 sha256 = "503994d0aa7aa7521f94fcb70ebaca28b8607690d3b1ec023014c4bdb2b53e0e"
 
 changelog = "The .hmod now also reads action-bar (overlay) chat lines for login/register prompts. Title text has no hook in the mod API, so title-only prompts are caught by the .hnmod only."
+
+[[versions]]
+
+version = "1.1.3"
+
+published = "2026-11-22"
+
+game = "26.3"
+
+file = "autologin-1.1.3.hmod"
+
+sha256 = "50c0ab0ae098b45ec8a9c35b493349de4b693b79b177ebe1daa5cc3297919b3a"
+
+changelog = "Boss-bar prompts are now deduplicated per bar and per connection, so two bars on screen no longer re-trigger processing each frame; the mod manifest now declares the MIT license."
