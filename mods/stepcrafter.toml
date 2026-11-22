@@ -14,6 +14,13 @@ icon = "icons/stepcrafter.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
+[[versions]]
+version = "0.2.1"
+published = "2026-11-22"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "b40307c5ddf08c4ea9f7d6e358248dff1d27c5774b41e46eabcbcca6cdc6de63"
+changelog = """Slice 2, the Step Requester: a block that watches a stock and asks a nearby machine to craft more when the stock falls below a minimum, batching up to a maximum, so the machine's own band no longer has to be set by hand. The rule is the reference's own hysteresis with the network replaced by the nearest machine within four blocks that maintains the same item, and the request is one integer written into that machine's saved data which its own tick spends one step at a time. The question our brief flagged as a possible blocker is answered by measurement: world-state interop between two blocks works at this pin, with one block reading another's slots and saved values and writing a single value that the other's next tick sees, so nothing had to be recorded as blocked. Proven in game on the same world twice: with the requester present the machine reaches a stored and crafted count of eight on two coal and two sticks, and with the requester removed the identical machine sits at zero and zero. An ingredient shortage reads as not enough ingredients with a backoff, and the restock resumes both machines to eight. The managers and monitor stay recorded as blocked, because they mix into a screen the parent port does not ship."""
 
 [[versions]]
 version = "0.2.0"
