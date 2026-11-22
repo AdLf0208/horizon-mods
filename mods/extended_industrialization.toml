@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.2"
+published = "2026-11-22"
+game = "26.3"
+file = "extended_industrialization.hmod"
+sha256 = "c0166da12f2c3f3e36029e166c49f7e6e180c141b55a2d9c3f5876c6c1a54cb5"
+changelog = """Slice 3, the solar boilers: a bronze and a steel boiler that turn water into steam only in daylight with a clear view of the sky, and that calcify as they work, losing efficiency until a wrench scrapes them clean. The steam question was the point of this slice and it is answered by measurement rather than assumption: the campaign's own parent port models steam as energy and registers no steam fluid, and a package may only declare a fluid in its own namespace, but the engine does offer a tank-only fluid declaration, so the boiler declares its own steam, fills a real tank with it, and a pipe drains it. That also corrects an earlier claim in this port that distilled water was blocked for want of a fluid registry. Proven in game with the ratio and the sky rule: sixteen millibuckets of steam per millibucket of water, four a tick at noon, three hundred and twenty drained back out by a pipe, the tank frozen for forty ticks when a block is placed above and running again when it is removed, and calcification at fifty percent halving the rate until an iron axe resets it. Two defects only the game found are recorded: one part type attached as both the block and the block-entity part makes the engine refuse the package, and this data set spells the axe tag differently from the loader's convention, so both spellings are accepted."""
+
+[[versions]]
 version = "0.1.1"
 published = "2026-11-21"
 game = "26.3"
