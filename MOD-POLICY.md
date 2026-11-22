@@ -19,6 +19,11 @@ who makes them, who is responsible for them, and how to have one removed. By sub
   when its whole source passes a stricter automatic check: no `unsafe` code, no file, network or process access and
   no new build inputs. New projects, page changes, `shaderpack` zips and every other mod version are reviewed. Mods
   are provided as they are, without warranty, by their authors.
+- **What reviewers block on.** Reviewers (human and AI) request changes only for policy, safety, or integrity issues:
+  harmful or malicious code, hidden network/data access, missing copyright or licence attribution, Mojang data, cheat
+  clients, mismatched hashes or un-staged files, broken packaging/build proof, or failing checks. Ordinary bugs,
+  gameplay edge cases, or polish suggestions in an otherwise compliant mod are **not** grounds to refuse a listing:
+  leave them as a non-blocking comment (COMMENT) so the author gets a helpful heads-up without blocking publication.
 - **Native mods** (source `.hmod` packages built locally against their exact signed Horizon SDK) run
   with the same access to your computer as the game. Install them only from authors you trust.
   The frozen native-v1 catalogue retains old `.hnmod` metadata and assets for history, not installation on the SDK runtime.
