@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-22"
+game = "26.3"
+file = "oritech.hmod"
+sha256 = "8c39bc526b3dbb0457d4c4f3ea71126214c3267acc51e2f328990a82b107bb6e"
+changelog = """Slice 8, the assembler: a machine with four input slots and a three-core multiblock requirement, where a craft costs exactly its recipe's time multiplied by the machine's own rate. Proven in game with the arithmetic rather than the outcome alone: with no core the full grid at twelve hundred and eighty FE shows no recipe and makes nothing, three core placements form it, twelve hundred and eighty FE advances exactly ten of forty-eight ticks, and priming the remaining four thousand eight hundred and sixty-four yields two motors with the buffer at zero and every input slot empty. A second craft primed with more than it needs spends exactly its cost and returns the excess; one coil short gives no progress, no recipe and no energy spent, which is the differential that separates a correct recipe match from a lenient one; and a slot holding two steel pays one and keeps one, which separates one item per ingredient from a whole stack. Five of the jar's recipes are carried and fifty-two are refused with a reason each: thirteen need a plastic plate from an oil chain this port has not built, twenty-nine are compatibility files for a mod the pack does not ship alongside, seven name a result family that is not carried, two need a bio fuel tag and one a leather tag. The brief's list of which recipes resolve was wrong in both directions, and the sweep of all fifty-seven files is what replaced it.
+"""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-22"
 game = "26.3"
