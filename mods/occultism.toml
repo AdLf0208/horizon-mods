@@ -37,6 +37,22 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-21"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "658ed0f7a8ae06c06ae6b786930ac3d4124027631b2935791e3506cdf315e4e4"
+changelog = """Slice 4, the crafting recipes that make an item obtainable for the first time: the dream essence, from datura fruit or from its seeds, now that the crop and its tags exist. Only two of the nineteen recipes whose result the package carries actually qualify, and the table of what was left out is part of the report: the impure chalks need a dust the package does not carry, and the otherstone building family has every ingredient but an unregistered result, so carrying its thirty-eight recipes would ship dead data. Proven in game in a real crafting table: the three-by-three fruit grid makes exactly one essence with the ingredients consumed, the same for seeds, and a mixed five-and-four grid also makes exactly one; nine dirt makes nothing, and the shapeless binding book crafts. This version also fixes a defect of our own, found only in the game: the crop harvest ran once per hand, so one click gave two fruit and six seeds, where the engine reaches the off hand only after the main hand fails. Only the main hand harvests now, and the run reads one fruit and three seeds. Two harness facts are recorded with it: a menu phase needs the offscreen renderer, and a death screen makes every later break answer that the screen is open, which silently cost two runs."""
+
+[[versions]]
+version = "0.2.3"
+published = "2026-11-21"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "e81ce0172de24411deefb93a3479b1c043e1e57c93c04924cb726b1ff93e5949"
+changelog = """Slice 2, the datura crop and its seed source: before this the seed was creative-only, so the mod's own first step, the spirit fire loop, was unreachable in survival. A wheat-shaped crop that grows through eight ages, harvests ripe into one datura and three seeds while a young one gives a single seed, and replants itself at age zero; plus the jar's two seed modifiers on short and tall grass, two percent by hand and inverted on shears. Proven in game across four legs: the eight ages read back, a planted crop advanced from age zero to age seven under random ticks, a ripe crop dropped one fruit and three seeds while a young one dropped only a seed, and twenty-five hand breaks landed three seeds where twenty-five shear breaks dropped grass and no seed at all, which is the deterministic half of the rule. An honest gap is recorded rather than papered over: an explosion reaches the loot callback with no block at this pin, so the two percent modifier fires only on a player or mob break, and the statistical positive is reported rather than asserted because the harness cannot land hundreds of aimed breaks reliably here."""
+
+[[versions]]
 version = "0.2.2"
 published = "2026-11-21"
 game = "26.3"
