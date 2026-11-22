@@ -1,0 +1,35 @@
+id = "gamma"
+kind = "native-mod"
+name = "Gamma"
+summary = "Ultra-lightweight Gamma toggle between 100% and 1500%."
+description = """
+Ultra-lightweight native Gamma mod for Horizon that toggles brightness between 100% and 1500%.
+
+- Press **G** (rebindable in **Options > Controls**) to toggle between 100% and 1500% gamma with a brief status message.
+- Can also be toggled in **Options > Mods > Gamma**.
+- Respects Horizon's external-server fullbright restriction (`fullbright_held`): leaves normal vanilla brightness intact on external servers and LAN guest sessions while staying active in singleplayer, hosted LAN worlds, and Replay Studio.
+- Performs zero allocations on idle frames and updates settings and renderer state only when the gamma state changes.
+- Pinned to Horizon Nightly `2026-11-20` (`0a875da91dbb0fdcb7ba8c42c11341aa229af51a`) and `horizon-mixins` `e59da9094f0c2fdda6c627fe9eff22dec6a906f0`.
+"""
+authors = ["qwinterx"]
+owners = ["qwinterxxx"]
+owner_ids = [250209679]
+license = "MIT"
+source = "https://github.com/qwinterxxx/horizon-gamma"
+icon = "icons/gamma.png"
+categories = ["utility"]
+tags = ["gamma", "brightness", "fullbright", "utility"]
+key = "RWQjqg8rypRO1FcAIBc+P7vxdFaU1fjCss8evaMaYSBDL21Fy12PGnH8"
+
+[[versions]]
+version = "1.0.1"
+published = "2026-11-21"
+game = "26.3"
+file = "gamma-1.0.1.hmod"
+sha256 = "8da6ef6cb089ec2f3733251fed081fe54b5052014590398fd525cd076bae9c5e"
+signature = """
+untrusted comment: signature from minisign secret key
+RUQjqg8rypRO1NH+iDamwCH1YLtyakZ0M3jIbyZcPSupTZWGsmKjXdPliqrTE5rAg5ZhyXT5Hn4aDDBZnnsn8mv/bfpRHhJf8QQ=
+trusted comment: timestamp:1795291259	file:gamma-1.0.1.hmod	hashed
+3FZRaCAHbPBAhcq3F1S1+BOi26oet+7U8eN1Yo4JApnhXThl3VBR7ImUsR4NmOwcd7lnHdZQSs0CIh0pLexPDg=="""
+changelog = "Respect Horizon's external-server fullbright restriction (`fullbright_held`), pack LICENSE into the .hmod archive, and update version metadata to 1.0.1."
