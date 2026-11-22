@@ -31,12 +31,12 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.1"
-published = "2026-11-10"
+version = "0.2.5"
+published = "2026-11-22"
 game = "26.3"
 file = "evilcraft.hmod"
-sha256 = "dc620c8b8de282fd8ee2edca590774059a5ffa53866477942035469ffd1cfb0c"
-changelog = "First release"
+sha256 = "7a1ead321c53d2a4610c2b78c84327da10b5ec3bb612bf322beef9e81e0e69bc"
+changelog = """Slice 5, the blood stain: the block the extractor fills from, a small tank that a crouching click drains into the extractor the player carries and that vanishes when emptied. Proven with the numbers the mechanic needs rather than an outcome: a stain seeded to three and a half thousand pours exactly the one thousand the extractor had room for and stops there, the same click standing still moves nothing, so does the same click on stone, and a stain at four hundred drains to nothing and the block becomes air. Two facts are recorded that only a real game could produce. The replaceable tag cannot be expressed at this pin, because it is a per-state block fact with no key in the property set, so a block placed onto a stain lands above it and the tag is inert; it is carried as the jar ships it and the assertion flips if a later pin reads it. And the harness cannot aim at a one pixel block by its centre, because the aim is at the cell middle which is above the shape, so a stain is aimed within its shape and clicked with the raw mouse action instead."""
 
 [[versions]]
 version = "0.2.4"
@@ -45,3 +45,11 @@ game = "26.3"
 file = "evilcraft.hmod"
 sha256 = "a6632c3c555a9c9de1c7337ad4ce3b9bd0f08f5cf38470445d675c41f52790b8"
 changelog = """Slice 4, projectile kills: an arrow kill now fills the blood extractor the player carries, which the melee-only hook never could. The credit rule is one listener on the death itself, so a melee kill cannot be filled twice and the existing melee phase remains the regression guard. Proven with three counterfactuals in one run: a twenty-health zombie killed with thirty-two arrows leaves the extractor at five hundred and forty-one of five thousand, the previous package's bytes at the same kill leave it at zero, and a zombie killed by a skeleton's arrow, whose owner was read back as that skeleton, leaves it at zero as well. The hook named in our brief did not work for this and the reason is measured rather than guessed: the death-loot hook does name the player for a bow kill, but a write to the player's inventory made there is discarded, so the fill moved to the death hook where the write lands. A second engine fact came with it: a player switched from survival to creative stops keeping a death hook's inventory write, so the kill phases run in survival and the numbers say why, two hundred and sixty-six in creative from launch, five hundred and ninety-eight in survival, and zero after the switch."""
+
+[[versions]]
+version = "0.2.1"
+published = "2026-11-10"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "dc620c8b8de282fd8ee2edca590774059a5ffa53866477942035469ffd1cfb0c"
+changelog = """First release"""
