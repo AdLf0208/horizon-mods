@@ -37,6 +37,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-22"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "7b382835c0b9b7325809c4b542d803c47c0f617865b5d51168aefd828120992c"
+changelog = """Slice 5, the first tier of the otherstone and otherrock building family: slabs, stairs and walls for both stones, six blocks with their recipes, loot tables and tags, which makes thirty-eight recipes' worth of ingredients already carried finally pay off. Proven in game with the full default state of each block read back rather than a bare id: six slabs, four stairs and six walls per stone with every ingredient consumed, three dirt making nothing, both a hand break and a wooden pickaxe break asserted because these blocks do need the tool, a double slab dropping two through the table's own branch, and the wall pair joining through the wall tag. One defect in the reference is fixed rather than copied: the otherstone rock slab has no loot table in the jar at all while every sibling table ships, so upstream it drops nothing, and this port ships the table and proves one drops with a wooden pickaxe. One assertion of my own was also wrong and is recorded as such: I required a modifier list in every table and the engine does not, so the test was corrected rather than the data."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
