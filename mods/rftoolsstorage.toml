@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-22"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "150e9784930d2ce7e5ee010219587338bee217b188f37d77ec63e4a6da4ddec8"
+changelog = """Slice 8, the give-from-screen path: a storage scanner can now hand a matching stack straight to the player, the way the GUI list's click does, without routing it through the output slot. The rule re-read from the reference is what makes the assertions sharp: the full request price is checked and charged once whether it hands over a single item or a whole stack, nothing found charges nothing, and there is no output slot to fall back to. Proven in game with every branch: a give of sixty-four stone moves the chest to empty, the player to sixty-four and the buffer down exactly one request price; the single variant gives one and drains one; a request for something nothing holds refuses and charges nothing; at ninety-nine against a cost of one hundred the request refuses with the chest untouched; and the same command aimed at a chest answers that it is not a storage scanner. The inverted selftest fails on the passing assertion, so the check can fail. One harness fact cost the first run and is recorded: the inventory slot reads as a slot index rather than a list entry, so a match on the list form silently found nothing.
+"""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-22"
 game = "26.3"
