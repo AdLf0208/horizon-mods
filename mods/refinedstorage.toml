@@ -32,6 +32,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-22"
+game = "26.3"
+file = "refinedstorage.hmod"
+sha256 = "397bb8c0cd23c708b80e0b2b253f85280c89dfbc6a5d991d34d0e98b505d2014"
+changelog = """Slice 9, the wireless grid's own energy buffer: the item now carries a thousand FE and pays five of them for opening the grid, for each deposit and for each withdrawal, which is a separate budget from the network's. Proven in game against the network beside it rather than in isolation: the item sits at full while the network drains thirty a tick, reads nine hundred ninety-five after the open, nine hundred ninety after the deposit and nine hundred eighty-five after the withdrawal, and at zero the very same deposit is refused naming the item's energy rather than the network's while the network itself is still online and drawing. The two refusals are deliberately different strings, because a player who reads them needs to know which of the two budgets ran out. One defect in the port was found and fixed by the game leg: charging a held item through the stock component exchange puts the charged copy in the inventory in creative, because an extract from the hand leaves the stack in place, so writes now go through the player's own slot the way binding the grid already did. A harness defect from the previous slice is also fixed rather than tolerated: its rate window could start partly drained and read a correct rate as a short one.
+"""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-22"
 game = "26.3"
