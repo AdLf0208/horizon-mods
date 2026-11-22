@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-22"
+game = "26.3"
+file = "minecolonies.hmod"
+sha256 = "63825cc5327a584ca837f0f2d0ee428cfc737d11122a993645a2e869aea0ac92"
+changelog = """Slice 5, the food request: a citizen spends one point of saturation per work tick, stops working when it reaches zero, and the colony records a request for bread that one loaf from the chest settles. This is the request system's second family, and it uses the same machinery the tool request built: one saved field on the roster row, one request kind, one more branch of the delivery queue. Proven in game on the same tree: saturation falls from forty-six to forty-one over two hundred ticks while the tree still stands, then reaches zero and the citizen is hungry with one request naming the bread, and once the loaf leaves the chest the citizen reads fed, the request clears and the tree falls. The asset half is measured rather than asserted: a new provenance tool hashes every one of the jar's twenty-two thousand seven hundred and forty-seven files and every one of the port's twenty-five asset files, and reports zero matches, so the licence's no-copying requirement is checked by the same command every slice."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-22"
 game = "26.3"
