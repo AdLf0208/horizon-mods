@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-22"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "2f4706bc8c2e35c148df11762cc2219ddca249fbefa23e625341e93c1d22adaf"
+changelog = """Slice 8, the matter beamers: a block that eats a stack of material and sends matter to a spawner it is linked to, which closes the feed half of the matter gate. The beamer reads a recipe's three material sources itself rather than trusting the recipe's older object form, and it carries the four living tags so the empty living form yields its own reduced amounts. Proven in game with parsed values across nine phases: a link to a stone block is refused, to a spawner four blocks away is made, a target twelve blocks away is refused and a beamer cannot link to itself; eight items and four thousand FE give exactly two sends, the store growing by two for the first material, two for the list form and three for the living form at its one and a half per block, with the buffer emptied; cobblestone is refused with both the items and the energy kept; no power and no redstone send nothing; and a broken beamer carries its link, its count, its energy and its contents back. Two defects in the reference are fixed rather than copied: it spends the energy before it knows the material is accepted and burns it on a refusal, and it consumes a zero-yield living item for no matter. The link is a command because no wrench exists in this port or its parent, and the twenty tick clock is the tick's own game time rather than a saved counter."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-22"
 game = "26.3"
