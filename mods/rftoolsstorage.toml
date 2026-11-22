@@ -29,12 +29,12 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.1"
-published = "2026-11-10"
+version = "0.2.7"
+published = "2026-11-22"
 game = "26.3"
 file = "rftoolsstorage.hmod"
-sha256 = "32f0505ef59a5eb1aa476578430a024bb02e9913edca853cf342bd5d9320a0f6"
-changelog = "First release"
+sha256 = "bf1094cef2e24b7aba521f74b103b672836eddc3209d5664167942c911391057"
+changelog = """Slice 7, the scanner's request path: a command pulls a named item out of the inventories the scan found and hands it to the player, priced the way the reference prices it and refusing for the three reasons it should. Proven in game with the numbers the brief asked for: a chest holding a hundred and twenty-eight stone drops to ninety-six while the buffer falls from five thousand to four thousand nine hundred and ninety, and the player holds thirty-two. A request for something nothing holds answers that it has nothing to pull and charges nothing, and a buffer of nine refuses with the price line naming ten. The counterfactual seeds the out slot with a different kind, and the request refuses while the chest and the buffer stay exactly where they were. One deviation is recorded rather than hidden: the out-slot fallback cannot be reached through the harness because the console still carries an acting player, so only the guard is exercised in game and the fallback write is marked blocked. A false failure is also recorded with its fix: a bare command item pattern made the older build think it was constructing the engine's own item type, so the match now lives in a macro the toolbelt port already uses, and both builds fit again."""
 
 [[versions]]
 version = "0.2.5"
@@ -43,3 +43,11 @@ game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "48a860378bfafddcf78e4e5d6fcc2eb055de475bfd91713aa0bcfe4600546776"
 changelog = """Slice 5, the storage scanner: a block that reads the inventories inside a cube around it and answers one command with what it found, charging its own energy for the question and refusing when it has none. The radius is settable because the reference exposes it as a slider, so here it is a command that clamps to the same bounds. Proven in game as a sequence of exact answers: a fresh scanner with no power says so with its buffer in the reply; at the default radius it sees nothing because the chest is two blocks away and reports its charge falling; at radius two it finds sixty-four stone and no dirt; at radius three it finds the dirt too, each answer costing the same fixed charge; with the buffer emptied it refuses and reads nothing, and recharging makes it answer again. A chest and a modular storage both answer that they are not scanners, the buffer and radius and answer all survive a relaunch, and a survival break drops the block itself. Two honest restrictions are recorded rather than worked around: the scanner's recipe needs a machine frame from a sibling port that is pinned at an older build and so cannot share this game, and the claimed-land check is blocked because the pin exposes a cancellable destroy hook rather than a permission query."""
+
+[[versions]]
+version = "0.2.1"
+published = "2026-11-10"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "32f0505ef59a5eb1aa476578430a024bb02e9913edca853cf342bd5d9320a0f6"
+changelog = """First release"""
