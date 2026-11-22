@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-22"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "d152d396ff809f291b8bee6043f78ac1f1a23771a1b44dcfb6fb00c6f3b43950"
+changelog = """Slice 8, the energy discharger at all seven tiers: the mirror of the charge slot, a storage block that pulls energy out of the items in its seven slots through the item energy capability's extract side, which nothing had driven until now. Our brief had its capacity wrong and the artefact corrected it: a discharger uses the cell's numbers rather than the rod's, so the starter tier holds a million and transfers a thousand a side, and the measured line reads five thousand in the buffer with the item at zero. Proven in game against the block's own tick clock rather than a sleep: seven ticks moved seven thousand into the buffer with the item losing the same, the room arm stopped at a full buffer with four thousand nine hundred and eighty left on the item, a stone in the slot moved nothing, and the nitro tier reads two billion at two million a tick. A charged cell sitting beside one keeps its fifty thousand because the buffer is extract only, and all seven tiers drop themselves. The item draining goes through the item's own capability in a transaction at the end of the level tick, so a failed extract cannot lose or duplicate a charge."""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-22"
 game = "26.3"
