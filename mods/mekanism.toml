@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-22"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "38a7bca520354e06932a914fbcd70adb0f2c2f12624b74598a855bcc4a7458a4"
+changelog = """Slice 8, the chemical washer: the port's first fluid machine, where a dirty slurry and five millibuckets of water become a clean one. The question the brief asked is answered before the build and it is the opposite of the chemical one: the pin's fluid capability is a shared resource type, so unlike a mod's own chemical it crosses packages and a real tank answers through the declared handler — inserted ten thousand, saved, and read back attributed to the game rather than to the mod. The numbers are the jar's own, re-read for this machine rather than carried from its siblings: two hundred FE a tick, eighty thousand of buffer, two hundred ticks, ten thousand of each tank, and the water and slurry spent at the finish rather than per tick, which a mid-operation read confirms by still holding all thousand. Proven in game with one operation charged exactly and the rest of the brief's figures kept: the buffer empties, the output holds one clean iron, the water tank sits at nine thousand nine hundred and ninety-five, the machine's input is empty, and the neighbour tank falls by the unit it is about to spend. All seven washing rows sweep, and the fluid and chemical worlds are kept apart both ways: water is unknown to the chemical handler and there is no fluid handler where the chemical one lives."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-22"
 game = "26.3"
