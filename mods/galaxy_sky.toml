@@ -36,6 +36,16 @@ tags = ["galaxy", "sky", "clouds", "planets", "stars", "water", "rain", "weather
 screenshots = ["screenshots/galaxy_sky/1.jpg", "screenshots/galaxy_sky/2.jpg", "screenshots/galaxy_sky/3.jpg", "screenshots/galaxy_sky/4.jpg", "screenshots/galaxy_sky/5.jpg", "screenshots/galaxy_sky/6.jpg"]
 
 [[versions]]
+version = "1.1.0"
+published = "2026-11-22"
+game = "26.3"
+file = "galaxy_sky-1.1.0.hshader"
+sha256 = "2ef6c01f0bc508aba4aec90b81b43efe25c94451ed644dbb18407ac9dc97f084"
+changelog = """
+- A round, cratered moon with real phases instead of Minecraft's square moon, with a soft terminator and earthshine.
+- A fuller comet: a broad, curved dust tail with striations, a green coma and a faint blue ion tail."""
+
+[[versions]]
 version = "1.0.0"
 published = "2026-11-18"
 game = "26.3"
