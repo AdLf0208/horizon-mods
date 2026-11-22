@@ -14,6 +14,14 @@ icon = "icons/industrialforegoingsouls.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
+[[versions]]
+version = "0.2.1"
+published = "2026-11-22"
+game = "26.3"
+file = "industrialforegoingsouls.hmod"
+sha256 = "75ebd87afc83cf52197c522184b72f3968fbdf57ab607bcf1d76baf8b70b7c7c"
+changelog = """Slice 2, two families the first version left dead or absent. The efficiency augment on the Soul Laser Base now shortens the bar exactly as the reference computes it, a floor of twenty times the multiplier so a tier one addon reads sixteen, and a speed addon is refused with the seated addon left in place rather than handed back — a defect the game leg found, because the engine re-enters the use path with the stack still in hand. The ore recipe the add-on ships was dead data until the parent learned to read its type; it is now carried and the parent's machine produces one echo shard from it in a two-package game, in the deep dark at depth zero, with the parent's table reading eleven of eleven. That end-to-end path is the point: this package's recipe file, the parent's recipe type, and the machine's own output. Every leg has its inverted twin, and the control refuses the block without the package.
+"""
 
 [[versions]]
 version = "0.2.0"
