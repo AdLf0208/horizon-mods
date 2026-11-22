@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-22"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "8b5b1c2250b1d884d0b35fdc90a1cff5d46e3de7354dd95640ed34572783eacd"
+changelog = """Slice 4, the redstone relay: a wire block that passes energy only while it has a redstone signal, with two separate ports so the input pool and the output pool are different networks rather than one, and a thousand FE of in-flight energy that is conserved across the gap. The gate is what the slice is about: unpowered, nothing crosses and the sink stays exactly where it was; powered, twenty-four thousand and twenty FE arrive and the books balance to the last FE, with the block's own `powered` state read back before and after the redstone block is placed. The reference has no energy capability on this block, so none was declared here either — declaring one would let a neighbour bypass the gate entirely, and that is recorded as a deviation from our brief rather than from the mod. A selftest that trips the conservation assertion fails, and a second one that flips the gate fails on its own, so the two claims are independent. One harness defect is recorded with the fix: a local variable shadowed the readout's field name through bash's dynamic scoping, which made a restore branch never run and produced a false no-movement reading."""
+
+[[versions]]
 version = "0.2.3"
 published = "2026-11-21"
 game = "26.3"
@@ -42,4 +50,4 @@ published = "2026-11-10"
 game = "26.3"
 file = "createaddition.hmod"
 sha256 = "16ce1dec5e002333871794ca3839e837b6d3b04a7b0139d2c1d52ca36926d50c"
-changelog = "First release"
+changelog = """First release"""
