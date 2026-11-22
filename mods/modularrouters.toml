@@ -30,6 +30,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-22"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "0f73d1fb08113b105e5ee4c6b367fa75feee4e43d8d71108425f4831494b375a"
+changelog = """Slice 5, the ranged puller module: the module takes a container the player selects by sneaking and right-clicking it, and pulls from it up to twelve blocks away, twenty-four once range augments exist. The selection is stored on the module item itself, so the same module moved to another router keeps its target. Proven in game with four differential rigs inside one run: the selected chest ten blocks out moves exactly one item per operation until empty; the same router keeps pulling north after its direction is set to the left, because the target rather than the facing decides; a module with no selection facing the same chest moves nothing in a hundred ticks; a target thirteen blocks out moves nothing, the reach being twelve; and a plain puller at the same ten blocks moves nothing, which is what proves the range rather than the pull. The reference turned out to be a targeted module rather than a scanned one, so the selection is what shipped and the readout names the selected block, its dimension and the range; a scan would have pulled from a chest the player never chose, which is behaviour the mod does not have.
+"""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-22"
 game = "26.3"
