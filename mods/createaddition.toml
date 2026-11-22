@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-22"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "854e9d6ac9a8b9af0501310053c8e9c833215694663959501447a15199372b41"
+changelog = """Slice 5, the small light connector: the lamp variant of the small connector, which draws one FE a tick from its network and lights after a period that depends on where it stands, then darkens just as slowly when the energy stops. The period is the reference's own hash of the block's position, ten to twenty-eight ticks, and the counter clamps, so a lamp that has gone dark needs twice its period of energy before it lights again — the game leg waits that long and says why, rather than pretending the first figure was wrong. Proven in game with the numbers: at no energy the lamp is unpowered and its emitted light reads zero; seeded with five thousand and linked it is powered, its light reads fifteen, and the source falls forty-two FE over forty-two ticks, exactly one a tick, with the source, the pool and the lamp's draw adding up. Unlinked, it darkens and the source stops falling. This is also the first slice whose second build check is red, and that is the honest result: the light emission handle this family needs does not exist in the older build, so the pin run is not a tautology. Recorded in the notes for whoever repins next.
+"""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-22"
 game = "26.3"
