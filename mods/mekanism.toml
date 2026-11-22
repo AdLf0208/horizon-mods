@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-22"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "6633dde7616f86fb8d8a6baad3cbaa1f842d977ae500a207000345a8a8b60e67"
+changelog = """Slice 7, the basic factory family: five machines that run the same recipe three times side by side, one input and output pair per process, sharing a buffer and, for the two gas machines, one tank. Every number was re-read for this family rather than carried from its single-machine sibling, including the buffer formula that multiplies by the process count, which gives thirty thousand for the three-item factories, a hundred and twenty thousand for purification and two hundred and forty thousand for injection, and a gas tank of two hundred and ten per process. Proven in game: three iron ore in three processes make nine clumps and empty both the buffer and three ticks of gas per process, while one ore in one process makes three; forty thousand FE charges exactly two hundred ticks without finishing an operation, which is the shared buffer being paid per working process; and the item factories take three ore to three ingots with the buffer emptied. A real defect surfaced that the unit tests had not caught: the factory drew its neighbour's gas while unpowered, so the gas ask now counts only the processes the tick can pay for and is pinned by two tests."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
