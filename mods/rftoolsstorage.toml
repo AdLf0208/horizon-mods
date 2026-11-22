@@ -37,6 +37,14 @@ sha256 = "bf1094cef2e24b7aba521f74b103b672836eddc3209d5664167942c911391057"
 changelog = """Slice 7, the scanner's request path: a command pulls a named item out of the inventories the scan found and hands it to the player, priced the way the reference prices it and refusing for the three reasons it should. Proven in game with the numbers the brief asked for: a chest holding a hundred and twenty-eight stone drops to ninety-six while the buffer falls from five thousand to four thousand nine hundred and ninety, and the player holds thirty-two. A request for something nothing holds answers that it has nothing to pull and charges nothing, and a buffer of nine refuses with the price line naming ten. The counterfactual seeds the out slot with a different kind, and the request refuses while the chest and the buffer stay exactly where they were. One deviation is recorded rather than hidden: the out-slot fallback cannot be reached through the harness because the console still carries an acting player, so only the guard is exercised in game and the fallback write is marked blocked. A false failure is also recorded with its fix: a bare command item pattern made the older build think it was constructing the engine's own item type, so the match now lives in a macro the toolbelt port already uses, and both builds fit again."""
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-21"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "5a034f0ac023bb31dd107c98c439943842a8a722a6f94d9917006df43156996b"
+changelog = """Slice 6, the scanner's item slots and the tick that uses them: an in slot, an automation slot and an out slot, with the tick pushing into the nearest inventory the scan found and charging one fixed price per attempt."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
