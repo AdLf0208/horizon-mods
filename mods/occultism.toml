@@ -37,6 +37,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-22"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "b746bfac30f361eaf4693c83cf4aec016702f3f8b3567fbb4480d84cf044ff59"
+changelog = """Slice 6, the bricks tier of the building family: twelve blocks made from the two stones the package already carries, with ten crafting recipes, two smelting recipes, twelve loot tables, their models, states, textures, tags and lang. This makes twenty-two more of the family's recipes pay off. The reference's shapes are kept exactly where they differ from the obvious guess: bricks are a two-by-two into four rather than a row, and the chiseled block is made from two brick slabs rather than from bricks, so the game leg runs a four-step chain in one opened table from twelve stones down to one chiseled block, with the intermediate outputs feeding the next recipe. The cracked pair has no crafting recipe at all, it is smelting, which the leg proves in a real furnace beside a furnace with no fuel that stays idle. Every one of the twelve blocks is placed, its default state read back, and broken both by hand for nothing and with a wooden pickaxe for one. A second instance of the same reference defect is fixed rather than copied: the otherrock brick slab has no loot table in the jar while every sibling slab has one, so it would drop nothing, and this package ships the table and proves one drops. One test of my own was wrong and is recorded as such: I counted three slabs in the chiseled recipe and the reference stacks two.
+"""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-22"
 game = "26.3"
