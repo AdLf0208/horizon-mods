@@ -32,6 +32,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-22"
+game = "26.3"
+file = "refinedstorage.hmod"
+sha256 = "e755815241995fc2d4dc6123c6feaae24a0130aa6999b5d21d4548b16ecff72a"
+changelog = """Slice 8, the controller's energy model: the network now stores and spends energy, which was the one gap every previous slice of this port had to cite. Every rate is read from the reference rather than invented: a thousand of capacity, ten for the grid, ten plus four a disk for a drive, sixteen plus eight per block of range for a transmitter, two per work pass for an importer or exporter with the upgrade multipliers on top, and nothing for cables or the controller itself, with four state levels at forty, thirty and one percent and a gate that refuses work until the store covers the charge. Proven in game against the tick counter the readout prints: a transmitter drains exactly sixteen a tick, the four levels read in order as the store falls, and at zero the refusal names energy before range, which is the ordering that matters because it tells a player which problem they have. A grid with no energy is inactive and shows an empty view while its disk still holds the goods, and an importer moves nothing until the network can pay. Two port defects were found and fixed on the way: reading another block entity's raw data is not a live read, so every read moved to the same capability the writes use, and the controller no longer writes its own amount back from an out-of-world payload, which could undo another node's drain from the same tick."""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-22"
 game = "26.3"
