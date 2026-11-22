@@ -31,6 +31,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-22"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "b99d911e1d8b64da16aa980ad39a0a2ff0278e65b986e81d845e481db9e1872c"
+changelog = """Slice 6, the fall death: a mob that dies falling leaves a blood stain holding twenty millibuckets for each point of its maximum health, or tops up the stain it lands on, capped at the tank. Proven in game with three cells that separate the rule from the coincidence: a twenty-health zombie dropped eight blocks leaves a stain holding four hundred, a second death on the same cell takes that same block to eight hundred rather than stacking a second stain, and the same mob killed with a sword leaves the cell empty, so the blood can only come from the fall. The rule was corrected by its own red run: the first draft only looked at the cell below, which would have written nothing for a second death, because the victim is standing on the stain it made. Two harness facts are recorded because each cost a run: a mob in a one-cell shaft dies of being in a wall rather than of the fall, and a fall death carries no position of its own, so the victim's own cell is the one to read.
+"""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-22"
 game = "26.3"
