@@ -26,6 +26,7 @@ source = "https://github.com/Pierddev/jade-horizon"
 icon = "icons/jade_horizon.png"
 categories = ["utility"]
 tags = ["hud", "tooltip", "waila", "jade", "port", "qol"]
+screenshots = ["screenshots/jade_horizon/1.png", "screenshots/jade_horizon/2.png", "screenshots/jade_horizon/3.png"]
 
 [[versions]]
 version = "0.1.1"
