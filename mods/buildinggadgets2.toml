@@ -3,6 +3,8 @@ kind = "native-mod"
 name = "buildinggadgets2"
 summary = "A Horizon port of buildinggadgets2."
 description = """
+**The build and area modes are held in this version, on purpose.** Horizon's API at the pinned build has no placement call that takes an actor **and** lets a protection mod cancel an individual position: `player_place_block` documents that no survival, obstruction, build-permission or spawn-protection check runs, and the call that does run them (`player_perform_action`) only works for a fake player, which a mod cannot create. Rather than write through protection, a click now plans the cells, reports how many would be allowed and how many were placed, and spends nothing. Selection, all eight mode plans, ranges, the wheel and the world-border rule all work; the hold lifts when the pin gains a cancellable placement call.
+
 A port of [Building Gadgets 2](https://github.com/Direwolf20-MC/BuildingGadgets2) (MIT, by Direwolf20 and the Building Gadgets contributors) for Horizon. This first slice is the **building gadget** and its horizontal-row mode.
 
 **Implemented so far**
@@ -30,9 +32,21 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-23"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "927409d7750cc246e1e98630b6355bc9e90ba6c7cdf17c80f9e87bb05066f14a"
+changelog = """
+This version answers a review with a behaviour reduction, deliberately and with the evidence for it. The gadget's area modes wrote blocks through a raw path, so a protection mod could not cancel a single placement, and the only calls this pin offers that take an actor either bypass protection by their own contract or require a fake player a mod cannot create. So the modes are held rather than written: a click plans the cells, reports how many would be allowed and how many were placed, spends nothing, and says which symbol is missing. Selection, all eight mode plans, ranges and the wheel keep working, and the hold lifts with one constant when the pin gains a cancellable placement call. The second review item is fixed and measured: the upper world-border bound is now exclusive, which the game proves by counting nineteen allowed cells when the clicked column lies exactly on the bound and twenty-four when it is one cell inside. The old assertion that encoded the defect was corrected with it, and the pre-fix mode logs are retired so no stale pass claims a build that no longer happens.
+"""
+
+[[versions]]
 version = "0.2.2"
 published = "2026-11-10"
 game = "26.3"
 file = "buildinggadgets2.hmod"
 sha256 = "de10c06860205d2d70c7bd93e5901aa1809a298043721be181d2d9079282b3cb"
-changelog = "First release"
+changelog = """
+First release
+"""
