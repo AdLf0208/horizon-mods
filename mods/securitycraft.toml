@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-23"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "7c93b68dc46f2ab00d533830c222795527abdb456942f8fc8fae84e72c074dc8"
+changelog = """This version removes the package's one registry dependency, which the registry now refuses outright, and the replacement is the interesting part: the keypad's salted digest is now computed by this port's own SHA-256 rather than a crate's. The saved shape does not change, so an existing keypad still opens with its code. The implementation is checked against the standard vectors including the empty message and both sides of the padding boundary, and in game by quitting and relaunching the same world: the code set before the restart still opens the same keypad and a wrong code is still refused. One intermittent is recorded rather than hidden: an existing leg about a module surviving a level-side removal failed once before the digest change could reach it, a targeted probe of the same rig passed ten times out of ten, and the re-run failed at its own intended inverted assertion."""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-22"
 game = "26.3"
