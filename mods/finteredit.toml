@@ -24,6 +24,13 @@ categories = ["game-mechanics", "utility"]
 tags = ["world-edit", "block-selection", "fill", "copy", "paste", "undo"]
 
 [[versions]]
+version = "0.1.8"
+published = "2026-11-23"
+game = "26.3"
+file = "finteredit-0.1.8.hmod"
+sha256 = "d3e111179ea94dc417d3799c103313ca93bf68b8907dfc524544a3e04a0d7853"
+
+[[versions]]
 version = "0.1.7"
 published = "2026-11-23"
 game = "26.3"
