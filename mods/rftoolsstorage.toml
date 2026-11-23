@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "f89f5974f411cf012a7c5a28242185e630bd6c9ffa726939863ceb1197baeb83"
+changelog = """Slice 13, the scanner's export choice and its selected inventory: whether a stack goes to the first routable inventory the walk finds or to the one row the player has selected, and which row that is. The reference's default is the walk, and its selected branch tries that one inventory and stops with whatever would not fit, rather than quietly falling through to the rest of the box, which is the part worth asserting: a full barrel selected leaves the stack in the slot while the other chests stay untouched. The selection is saved with the block rather than kept in memory, which is a stated deviation and the reason the leg can show it surviving a relaunch; switching back to the walk clears it. Proven in game across that whole sequence, including the same stack going to one chest then the other, and the mode read back as the byte the reference stores.
+"""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-23"
 game = "26.3"
