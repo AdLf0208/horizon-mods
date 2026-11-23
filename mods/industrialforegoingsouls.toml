@@ -17,6 +17,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-23"
+game = "26.3"
+file = "industrialforegoingsouls.hmod"
+sha256 = "e73258cc4aef8ff5e5e4e46d0f78b22b64c70a457dcf93a1932e0878d4474157"
+changelog = """This version turns the jar's tuning into a real config file, so the machines can be adjusted without rebuilding: twelve keys with their own defaults and ranges, written as a template on first run and read once at load and once on change, never inside a tick. Proven by launching the same world twice: the first run writes the template and a warden gives two souls into a tank of thirteen hundred and fifty, while a file tuned to five souls and a five-hundred tank, written before the second launch, makes the same warden give five into a tank that clamps at five hundred with a saved nine hundred cut to it. The parser cannot fail: a missing, partial or foreign file is the jar's defaults, and every value is clamped to the range the jar declares. Two keys are accepted and unused because the behaviours they feed are blocked at this pin, and the report names both rather than leaving them silently inert. Two of my expectations were wrong against the source and were corrected in the tests, not in the code.
+"""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-23"
 game = "26.3"
