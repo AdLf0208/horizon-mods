@@ -19,7 +19,7 @@ A port of [EvilCraft](https://github.com/CyclopsMC/EvilCraft) for Horizon.
 - **The BER chest model is not carried.** `RenderBlockEntityBloodChest` draws a chest model with `textures/model/blood_chest.png`; a content model cannot do a block-entity renderer, so the chest is a static block model.
 - The rest of the mod's blocks and items, the Blood Infuser, the Spirit Furnace, the broom and the werewolf/vampire systems are later slices.
 
-MIT: the original copyright and licence travel inside the bundle, not only in the source repository. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93.
+EvilCraft for Horizon is listed under CC BY 4.0. The package includes the upstream attribution and MIT notice. Version 0.2.10 is pinned to Horizon 0a875da and horizon-mixins e59da90.
 """
 authors = ["rubensworks (aka kroeser)", "AdLf0208"]
 owners = ["AdLf0208"]
