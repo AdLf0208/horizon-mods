@@ -30,12 +30,12 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
-version = "0.2.0"
-published = "2026-11-10"
+version = "0.2.2"
+published = "2026-11-23"
 game = "26.3"
 file = "torchmaster.hmod"
-sha256 = "b06aa76f34b344b9ba3834b09ec8a6e73a6eeb39ddb01d244ec4e74793025707"
-changelog = "First release"
+sha256 = "d6f3d1f12a8c5f46bbc6205f039c1bfedb1b2c036b202ff1522c446163fcd4db"
+changelog = """This version removes the package's one registry dependency, which the registry now refuses outright, and nothing observable is lost with it. The five log lines this port used to write went nowhere a player or a server owner could reach, so instead of replacing the logging crate the port grew a readout: a command lists every blocking light with its dimension and position, and a read or save problem is now printed beside it rather than whispered. Proven in game rather than argued: a sealed dark box spawns monsters with no light and none with a Mega Torch above it while the box's own light stays zero, a torch placed far outside the box leaves spawning untouched, and a Dread Lamp stops bats while seventy monsters keep spawning in the same box. Both carried recipes craft one and both loot tables drop one, with a vanilla control beside them. Two harness traps are recorded, including a passive-creature cap of zero that made the obvious lamp test vacuous."""
 
 [[versions]]
 version = "0.2.1"
@@ -44,3 +44,11 @@ game = "26.3"
 file = "torchmaster.hmod"
 sha256 = "3b9a1d5f46d1d790522b62ab528d763f7a23115e8ea802a91cf016b3d2665e86"
 changelog = """Carry-dialect repair: two recipes and two loot tables were in the 1.21.1 dialect. `megatorch` used the object ingredient form 26.3 rejects, so the mod's centrepiece could not be crafted, and both tables carried the array `"conditions"`, so the blocks dropped nothing. Converted. Proven in game: `megatorch` crafts with a diamond consumed and drops itself, while the pre-fix package failed both — `expected 1 torchmaster:megatorch, got None` and `dropped 0 of torchmaster:megatorch`."""
+
+[[versions]]
+version = "0.2.0"
+published = "2026-11-10"
+game = "26.3"
+file = "torchmaster.hmod"
+sha256 = "b06aa76f34b344b9ba3834b09ec8a6e73a6eeb39ddb01d244ec4e74793025707"
+changelog = """First release"""
