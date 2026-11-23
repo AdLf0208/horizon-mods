@@ -40,6 +40,15 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-23"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "414c0ab9ad5da8795420261ecd04720d5cc030c76d001832d395d2c34693d52b"
+changelog = """This version adds the atomic reconstructor, the machine that turns blocks into other blocks along a beam, and with it the crystal the crusher's own recipe needs, so the crafting chain the last two slices opened now closes. The brief's numbers were the shot rather than the buffer: a thousand energy is the price of firing at all and the conversion is paid again per block, so a leg charged with exactly a thousand converts nothing and the working cases are a thousand and forty, a thousand and thirty-nine, and one thousand one hundred and twenty for two blocks in the plane. Proven in game on all of them: one shot turns a redstone dust block into a crystal drop with the block gone and the buffer empty, stone in the beam leaves forty and converts nothing, the reach is ten and not eleven, two blocks in one plane both convert, a powered machine freezes its cycle and resumes when the power is removed, and a broken one carries its charge back on its item. The jar's own three block-reachable laser recipes are carried and two of them are proved with their own prices, and the crusher's recipe now crafts from the crystals this machine makes.
+"""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-23"
 game = "26.3"
