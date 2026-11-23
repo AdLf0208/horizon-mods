@@ -9,10 +9,11 @@ Realistic, physically-based WGSL shader pack built from scratch for Horizon's fi
 
 - **Physical Sky & Celestial Bodies:** Rayleigh/Mie atmospheric scattering, HDR sun with limb darkening, cratered 3D moon with phases & earthshine, rotating starfield, Milky Way and cold-biome Aurora Borealis.
 - **Total Solar Eclipse at `5800`:** Run `/time set 5800` for a 20-second Total Solar Eclipse with magnetic coronal streamers, H-alpha prominences, Diamond Ring flash, 360° twilight horizon and daytime stars.
+- **The End & Relativistic "Gargantua" Black Hole:** Full End dimension overhaul featuring curved-spacetime Schwarzschild gravitational lensing, pitch-black Event Horizon, Photon Ring, Doppler-beamed golden Keplerian accretion disk, Einstein-lensed starfield, IMAX anamorphic flare, water reflections and directional GGX End lighting.
 - **3D Volumetric Clouds:** Perlin-Worley cumulus clouds with Beer-Powder multi-scattering, temporal reprojection and high-altitude cirrus.
 - **Lighting & Shadows:** Soft rotated Vogel-disk PCF shadows, stained-glass & water coloured shadows, normal-aware SSAO, coloured block lights, dynamic hand/particle lights and glowing mineral ore veins.
 - **Water & Rain:** Multi-wave Gerstner normals, depth-checked refraction, Beer-Lambert spectral absorption, Voronoi seabed caustics, shore foam, planar water mirror, wet porous darkening, rain puddles with ripples and Screen-Space Reflections (SSR).
-- **LabPBR & Camera:** LabPBR normal/specular/emission support with geometric relief, foliage wind, volumetric god rays, Karis HDR bloom, FXAA and AgX / ACES / Neutral tonemapping (43 in-game options).
+- **LabPBR & Camera:** LabPBR normal/specular/emission support with geometric relief, foliage wind, volumetric god rays, Karis HDR bloom, FXAA and AgX / ACES / Neutral tonemapping (48 in-game options).
 
 ## GPU Requirements
 
@@ -28,7 +29,15 @@ license = "MIT"
 source = "https://github.com/mikolajlabuda17-lang/solis-pbr"
 icon = "icons/solis_pbr.png"
 categories = ["realistic", "pbr", "atmosphere"]
-screenshots = ["screenshots/solis_pbr/1.jpg", "screenshots/solis_pbr/2.jpg", "screenshots/solis_pbr/3.jpg"]
+screenshots = ["screenshots/solis_pbr/1.jpg", "screenshots/solis_pbr/2.jpg", "screenshots/solis_pbr/3.jpg", "screenshots/solis_pbr/4.jpg", "screenshots/solis_pbr/5.jpg", "screenshots/solis_pbr/6.jpg", "screenshots/solis_pbr/7.jpg"]
+
+[[versions]]
+version = "1.1.0"
+published = "2026-11-23"
+game = "26.3"
+file = "solis_pbr-1.1.0.hshader"
+sha256 = "a6204789660f2f2cf8d7434200a0d02d0b7462948e0b2939c8d23a673850a980"
+changelog = "Added full End dimension support featuring a relativistic Interstellar-style Gargantua Black Hole (gravitational lensing, photon ring, Doppler-beamed accretion disk), GGX End island lighting, black hole water reflections, IMAX flare, and a new End settings page."
 
 [[versions]]
 version = "1.0.0"
