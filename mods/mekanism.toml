@@ -30,6 +30,15 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "e487f3aebb981725c422219904b3c89a0f4c845944efe437327a5e801c623f66"
+changelog = """This version completes the ore chain for four metals, which is mostly data and one sweep the campaign owed: it registers clumps, dirty dusts, dusts and ingots, grows the crushing table to a hundred and fifty-two rows and the enriching table to a hundred and thirty-six, and adds the port's first enriching sweep, so a hundred and thirty-two rows that had never been exercised in game now run. Proven in game along the whole path rather than at one step: a clump crushes to its dirty dust, that dirty dust enriches to its dust for exactly half of a twenty-thousand buffer, and that dust smelts to an ingot, with a dirt control that stays dirt and makes nothing. The sweeps print their own totals, which is what catches a table that quietly lost a row. Sixteen items and twelve rows is not much, but the sweep is: it converts a hundred and thirty-two unexercised rows into ones that fail loudly if they break.
+"""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
