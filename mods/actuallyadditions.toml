@@ -40,6 +40,15 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-23"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "f7767ebadf65127b0f0d5b38d0152296051a49243d9b0c98251e54fbaadd1d67"
+changelog = """This version makes the coal generator's own recipe craft: an iron casing, a basic coil and the cobblestones tag, so the recipe that had been carried since the second slice now resolves its keys instead of being dropped at load. Proven in game with the ingredients counted rather than the result alone: six cobblestone, two casings and a coal become one generator and the grid empties; a mossy cobblestone in the same cells still crafts, which shows the key is a tag rather than a single item, and stone in those cells crafts nothing, which shows the tag is not a wildcard; iron ingots where the casings go craft nothing. The crusher's own recipe remains refused with its reason, because the crystal it needs is grown rather than crafted, and a negative run asserts that the generator's recipe is unlocked so the check cannot pass by accident. One count in the brief was wrong and the artefact won: the grid is six cobblestone and nine items, not four and seven.
+"""
+
+[[versions]]
 version = "0.2.3"
 published = "2026-11-23"
 game = "26.3"
