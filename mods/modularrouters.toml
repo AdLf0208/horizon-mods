@@ -80,16 +80,6 @@ Slice 8, the regulator augment: the augment that tells a module to leave a quant
 """
 
 [[versions]]
-version = "0.2.7"
-published = "2026-11-23"
-game = "26.3"
-file = "modularrouters.hmod"
-sha256 = "5d540a0da4df2fe08465b4cc0591800d8cf0ccbe7b3db7ae4b9a216aece33516"
-changelog = """
-Slice 7, the Stack Augment: the one augment whose number is not a reach but a count, and which overrides the router's own instead of adding to it. Two augments on a module make every operation move four items even where the router itself moves two, six make it sixty-four which is the cap, and a seventh is refused. The proof is designed against the wrong implementation: the same augment on a plain module moves four where the plain module alone moves one, so an implementation that merely read the router's number would fail, and a counterfactual build that hands the tick the router's count instead of the module's moves two and fails, with the source restored byte for byte afterwards. Seven module kinds refuse the augment outright, and that half is a unit test rather than a game leg because those modules are not carried yet. One first-run failure was the harness rather than the machine: the sampling rig's own buffer had filled, so there was no operation to observe, and the fix was to empty the slot rather than weaken the assertion.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-22"
 game = "26.3"
