@@ -17,11 +17,19 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.3"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanismcovers.hmod"
+sha256 = "c9d4e8705f37f5a10dc8f70bed96c35b3bb1fa4da3d77b2172ace386c33b631f"
+changelog = """This version applies the same rule to the other path a cover can be consumed by. A cover renamed in an anvil carries a component besides its block, and clicking it onto a transmitter used to store only the block, so the name was gone when the cover came back off. The click now refuses such a cover exactly as the crafting grid refuses a stack with components, through the same predicate, and the cover stays in hand with nothing written. Proven in game beside the plain case: a named cover clicked on a cable leaves the transmitter wearing nothing and the cover in the inventory, while a plain cover in the same session writes its block. Three harness faults the legs forced are fixed and recorded: an item given lands in the first free hotbar slot rather than the first, a spawned drop can miss its first sample, and the game's folder is the launching command's working directory, which had been writing worlds into the campaign root instead of the run's scratch directory.
+"""
+
+[[versions]]
 version = "0.2.2"
 published = "2026-11-23"
 game = "26.3"
 file = "mekanismcovers.hmod"
 sha256 = "ff66815e65f539bee99fe4b1d85d4b6fb9fa65ce695df7b9c78711d2c966b362"
-changelog = """
-This version answers a review, and the defect was a data-loss bug in a crafting grid. A cover was filled by consuming whatever block item was offered and storing only its block id, and stripping the cover returned a fresh stack of that id, so filling a cover from a shulker box destroyed the box's contents. The rule now refuses before anything is consumed: a block that has a block entity, a stack carrying any component, or a cover that carries anything besides its own block key produces no result at all. The pure rule and the recipe share one predicate, so a refusal can never be a recipe that matched and then declined to consume. Proven in game with three cases in one table: a filled shulker box gives no result and keeps its contents, a named stone is refused the same way and stays untouched, and a plain stone in the same screen still fills exactly one cover and consumes exactly one stone — that last case is what shows the refusal belongs to the stack rather than to a broken screen. Clicking a filled shulker box on a cable applies no cover and leaves it in hand. The archive also carries the original author's credit and the MPL text, which the listing now names as well.
+changelog = """This version answers a review, and the defect was a data-loss bug in a crafting grid. A cover was filled by consuming whatever block item was offered and storing only its block id, and stripping the cover returned a fresh stack of that id, so filling a cover from a shulker box destroyed the box's contents. The rule now refuses before anything is consumed: a block that has a block entity, a stack carrying any component, or a cover that carries anything besides its own block key produces no result at all. The pure rule and the recipe share one predicate, so a refusal can never be a recipe that matched and then declined to consume. Proven in game with three cases in one table: a filled shulker box gives no result and keeps its contents, a named stone is refused the same way and stays untouched, and a plain stone in the same screen still fills exactly one cover and consumes exactly one stone — that last case is what shows the refusal belongs to the stack rather than to a broken screen. Clicking a filled shulker box on a cable applies no cover and leaves it in hand. The archive also carries the original author's credit and the MPL text, which the listing now names as well.
 """
