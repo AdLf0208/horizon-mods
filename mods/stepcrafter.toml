@@ -17,6 +17,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-23"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "70e238c3a262ee33e31db0ab10afc44dc14e7655189a258fc56b411413b34525"
+changelog = """This version gives the requester the forty-five filter entries the reference keeps rather than the one this port had, so a single requester can ask several crafters for several different things in the same tick. Each entry carries its own band, batch, phase and link, read back as one line per entry, and the saved form is migrated from the single-entry shape the previous version wrote. Proven in game with two crafters in reach of one requester: the torch entry is served by the crafter at one position and the stick entry by the crafter at another, each reading its own crafted count, while the same world with only the torch entry leaves the stick crafter at zero. One correction from the artefact: the brief said to stock the stick crafter with planks, which is a tag and not an item at this version, so the container silently took nothing and the machine could not step; the leg now names oak planks and asserts the stock before the filters run.
+"""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-23"
 game = "26.3"
