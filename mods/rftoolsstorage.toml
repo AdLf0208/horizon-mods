@@ -49,16 +49,6 @@ This version adds the storage's crafting grid and its four craft buttons, and it
 """
 
 [[versions]]
-version = "0.2.14"
-published = "2026-11-23"
-game = "26.3"
-file = "rftoolsstorage.hmod"
-sha256 = "4fde9c1eff9f97aea14f1324981d3c872e1b8d41d2155117dbe8d8bf22b53463"
-changelog = """
-This version adds the per-row contents view of the scanner's list, so a player can read what one inventory holds rather than the whole box, and gives the all-row the other half of the star: it lists only the starred inventories. The reference is unambiguous about the price and the leg proves it at an empty buffer: a row view costs nothing, because it is a listing rather than a request, while the whole-box scan stays priced as the request substitute it has always been. Proven in game with the star moved and removed under it: the selected row reads its own hundred and twenty-eight while the same row is unstarred and still reads it, the all-row drops to the other chest's sixty-four, nothing starred makes the all-row empty, and a cell outside the box or the scanner itself is refused by name. One defect in my own test was caught by the test: its out-of-box case named a cell inside the box.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
