@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-23"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "70f218d63974277c44b1d98fe6fd2a90b3fb131e45ecc212972ff532e3d9cf04"
+changelog = """This version gives every machine that has one a redstone mode: ignore the signal, which is the default, or run only while powered, or run only while unpowered. The reference's set is exactly those three and it is followed machine by machine rather than applied wholesale — eleven machines honour it and each gates the same thing the reference gates, so a cable refuses an insertion while a discharger's own item drain stops but its side extraction keeps running. The mode is saved where the reference saves it and not where it does not, so a broken machine's item carries its buffer and never its mode. Proven in game on all three modes and both polarities: a shut gate charges nothing over twenty ticks, the same rig charges again once the block is removed, ignoring the signal charges while the block is still there, and the powered and unpowered cases each behave as their own rule says. Five runs each caught a real defect, and they are recorded rather than smoothed over: a command word that was accepted but sent differently, a clamp that ran before the test item arrived, a foreign block answering a mode it has no field for, a shared channel that made a starter cell look wrong, and a pickup platform that had gone missing."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-23"
 game = "26.3"
