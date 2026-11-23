@@ -30,6 +30,15 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "216345bbec2e6136e03284bf2f9927ba8506c57f6269ee1f488626603533368b"
+changelog = """This version carries the step from crystal to shard for all seven crystals, so the gas machine now runs seventy-nine rows instead of seventy-two and no crystal the crystallizer makes is left without its next form. The numbers are proved per operation rather than per outcome: one crystal and one unit a tick of hydrogen chloride spend exactly eighty thousand energy over two hundred ticks and leave the output slot holding one shard with the neighbour tank four units lighter, and the sweep runs all seventy-nine rows. One correction: the brief expected a buffer reading zero after an operation charged with a full tank, but one operation costs eighty thousand of a hundred and sixty thousand buffer, so the leg asserts the eighty thousand — which pins the operation's cost rather than a tank running dry. The optional dirty dust and dust items were refused with the reason measured: they would need clumps and ingots this package does not carry, and an enriching sweep the port does not have, so eight items would have been dead data at both ends.
+"""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-23"
 game = "26.3"
