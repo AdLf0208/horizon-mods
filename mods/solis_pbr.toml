@@ -29,7 +29,7 @@ license = "MIT"
 source = "https://github.com/mikolajlabuda17-lang/solis-pbr"
 icon = "icons/solis_pbr.png"
 categories = ["realistic", "pbr", "atmosphere"]
-screenshots = ["screenshots/solis_pbr/1.jpg", "screenshots/solis_pbr/2.jpg", "screenshots/solis_pbr/3.jpg", "screenshots/solis_pbr/4.jpg", "screenshots/solis_pbr/5.jpg", "screenshots/solis_pbr/6.jpg", "screenshots/solis_pbr/7.jpg"]
+screenshots = ["screenshots/solis_pbr/1.jpg", "screenshots/solis_pbr/2.jpg", "screenshots/solis_pbr/3.jpg", "screenshots/solis_pbr/8.jpg"]
 
 [[versions]]
 version = "1.1.0"
