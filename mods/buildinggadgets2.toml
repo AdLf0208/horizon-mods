@@ -3,6 +3,8 @@ kind = "native-mod"
 name = "buildinggadgets2"
 summary = "A Horizon port of buildinggadgets2."
 description = """
+**The build and area modes are held in this version, on purpose.** Horizon's API at the pinned build has no placement call that takes an actor **and** lets a protection mod cancel an individual position: `player_place_block` documents that no survival, obstruction, build-permission or spawn-protection check runs, and the call that does run them (`player_perform_action`) only works for a fake player, which a mod cannot create. Rather than write through protection, a click now plans the cells, reports how many would be allowed and how many were placed, and spends nothing. Selection, all eight mode plans, ranges, the wheel and the world-border rule all work; the hold lifts when the pin gains a cancellable placement call.
+
 A port of [Building Gadgets 2](https://github.com/Direwolf20-MC/BuildingGadgets2) (MIT, by Direwolf20 and the Building Gadgets contributors) for Horizon. This first slice is the **building gadget** and its horizontal-row mode.
 
 **Implemented so far**
