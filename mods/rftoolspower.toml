@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.7"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "15cc6d27279638fb67003d7a9492eb8dd21f87b1273025a433c4712121212bbd"
+changelog = """This version adds the blazing agitator, the machine that makes a rod better by standing it beside other rods. The reference's arithmetic is unusual and it is followed exactly: each rod's quality factor comes from its own quality and duration, each neighbour contributes the difference between its factor and its own, the sum is floored at one and divided by four, and that figure then drives time down and quality and duration up, so a full box beats a lone rod and the middle of a row beats its ends. Proven in game on the arithmetic rather than on a trend: the store falls exactly ten a tick over forty-seven ticks, the combined change across the whole box matches the machine's own readout to six decimal places, a lone rod rises at its own much smaller rate, a neighbour feeding it gains and loses exactly in step, outputs move in order, locks hold, a plain blaze rod converts, and an agitated rod leaves in a hopper. One defect only the game could show is fixed: a number stored as a double was read as a float, so a rod whose time read five hundredths came back as four and a half quintillion ticks. Two corrections from the artefact are recorded: a lone rod's factor is not one but a fifth, and the infuser's counter period is eleven ticks rather than ten."""
+
+[[versions]]
 version = "0.1.6"
 published = "2026-11-23"
 game = "26.3"
