@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-23"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "63062d5fdcd07e7a573b3910727be91444332f42b9bd1b9e05daef0b25d82e4e"
+changelog = """This version makes a connector whose mounting block is taken away disappear with its wires, instead of being left hanging in the air. The reference's own mechanism could not be used as written and the reason is recorded: the engine asks a block whether it can survive only for blocks whose template checks survival, and a connector's template does not, so the rule is answered where the reference answers it — a neighbour changed, plus the level's own pass — and it breaks the block with drops exactly as a player's break would. One measured thing changes the shape of the fix: the reference deliberately allows a connector to be placed floating, so only a connector that had a support and lost it is removed, and every existing rig that floats one is left alone. Proven in game on the drop itself: breaking the far mounting block removes that connector and its four wires with a drop map naming the connector and the wires, its peer's link list ends up empty, and a connector on a support that stays keeps both."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-23"
 game = "26.3"
