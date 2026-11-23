@@ -24,6 +24,13 @@ owned by its own authors, not by the Horizon project or its maintainers. A listi
 [mod policy](MOD-POLICY.md): what authors promise when they submit (ports of other mods included), the licences
 it accepts, and how to have a project taken down.
 
+## Making a mod
+
+Start a new code mod (native or WebAssembly `.hmod`) from the official
+[horizon-mod-template](https://github.com/horizon-rust/horizon-mod-template) (a working Veinminer example on
+`horizon-mod-api` and the exact-build Mod SDK), or scaffold one with `cargo horizon-mod new`. Full guides live in the
+[Horizon modding book](https://github.com/horizon-rust/horizon/tree/main/docs/modding/src).
+
 ## Submit
 
 Submit with a pull request:
