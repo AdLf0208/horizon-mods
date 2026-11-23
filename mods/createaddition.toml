@@ -49,16 +49,6 @@ Slice 8, the festive wire and its spool: the jar's fourth wire kind, which carri
 """
 
 [[versions]]
-version = "0.2.7"
-published = "2026-11-23"
-game = "26.3"
-file = "createaddition.hmod"
-sha256 = "8387f865ed975963a9b7bd5b1d1d602434977c43a288dc0399e4cdbf962ad9b6"
-changelog = """
-Slice 7, the creative generator: the one block in this package whose whole purpose is the energy capability the relay and the lamp deliberately do not have. It stores and offers the largest number the type can hold, gives without limit and takes nothing, and its own tick additionally offers that maximum to every neighbour so a large sink caps it rather than the source. Proven in game on the game's clock: a connector mounted on it settles into pull, a wire drains exactly one thousand energy a tick so the sink gains twenty thousand over twenty ticks after the window has filled, and the direct pair moves five thousand a tick; putting stone where the generator goes leaves the sink at zero for thirty-one ticks, which is the differential. The second build check stays red for the reason the lamp established two slices ago, that the light emission surface is absent from that older build, and this block adds no new API of its own. Its model named another mod's textures, so two deterministic textures are generated rather than copied.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-22"
 game = "26.3"
