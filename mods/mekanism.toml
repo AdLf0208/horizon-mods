@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "4b5163cd96a7dcc53602f4de1ead2240e99534cd8fa182b37dd10317e2b77382"
+changelog = """This version completes the four metals: each gets a storage block, a nugget and the four recipes that connect them to its ingot, so nine ingots make a block and a block gives nine back, and an ingot makes nine nuggets. The shapes are the jar's own and they are not symmetric in the way the obvious version would be: the block is a ring of eight tag members around one of the metal, which looks redundant until you notice it lets the recipe accept any ingot the tag names, and there is no nugget-from-block recipe at all because the jar has none — so none is carried. Proven in game: all sixteen recipes craft with their grids emptied and their ingredients consumed, eight ingots and a dirt in the centre make nothing, all nineteen blocks place and read back and drop themselves, and no ingredient fails to resolve, which is the check that the tag-keyed cells actually read their tags. One thing deliberately not carried is the tool-tier tag: this build implements no tool tiers, so shipping it would be data claiming a behaviour the port does not have."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-23"
 game = "26.3"
