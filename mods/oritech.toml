@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-23"
+game = "26.3"
+file = "oritech.hmod"
+sha256 = "f2da80ce2a2e7487c473c7c561cd47aa2900d383c00b1bfe3059695585d1ec81"
+changelog = """Slice 10, the foundry: a two-input alloying machine, and the slice where the gates went green while the package could not open a world. The first build carried an alloy recipe under the mod's own type without registering the type or its serializer, so the game crashed at load while the static check, both compatibility runs, one hundred and thirty-seven unit tests and the content carry all passed. The fix registers the pair, and a test now walks every carried recipe type and greps the registration site for the matching pair, watched failing with the registration removed. The measurement that chose this family is also worth stating: all twenty-two refinery recipes were read and none of them resolves, because every one needs a fluid tag no mod here declares and the pin has no fluid-tag query, so the refinery is recorded as blocked and the foundry taken instead. Five of its thirty recipes are carried, each fed to the machine in game with its own numbers: steel in twenty-six ticks for three thousand three hundred and twenty-eight energy, and three more at eighty ticks for ten thousand two hundred and forty, with a wrong pair producing nothing and spending nothing, and the ingredient order shown not to matter.
+"""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-23"
 game = "26.3"
