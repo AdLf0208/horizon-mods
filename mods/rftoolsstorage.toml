@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "7820eeccb3d40fba47ef72041bce5c39a216d700dd1cd43756c10af7ba4979a8"
+changelog = """Slice 11, the scanner list's sort choice: the five orders the reference's list offers, four of which work here and one of which is refused with a reason. The rules are the reference's rather than the obvious ones: the two amount orders compare only the count and leave equal counts in the order the walk found them, so the sort is stable and reproducible; the mod order compares the namespace first and then the name; and the default is by name. The game leg proves all four on one fixed rig, twice in opposite directions, and then proves the choice survives a relaunch by setting one, quitting and reading the same order back. The name order is the differential against the two amount orders, so an implementation that ignored the mode would fail one of them. One mode is refused rather than faked: the tag order needs the set of tags an item belongs to, and this pin's tag service answers membership but not the reverse, so the command names the gap and saves nothing.
+"""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
