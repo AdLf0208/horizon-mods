@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-23"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "964b0a83c110f3eabb00a763b338246dc7860eb241c2727705a94bcf8ccd9911"
+changelog = """This version removes the package's one registry dependency, which the registry now refuses outright, without changing a single rule. The crushing and laser tables were read with a JSON library; they are now read by a reader written for this port, and the reason it stays in the runtime rather than becoming a generated table is that the table does not belong to the package: the recipes are asked of the world, so a data pack's addition or a reload changes them, and a table frozen at build time would ignore both. Numbers keep the digits they were written with, so an integer stays an integer and a float stays a float, and the glue now parses each file once instead of twice. Proven by re-running every existing leg rather than a new family: the crusher, the reconstructor, the laser, the ore tripwire and the item half all behave exactly as before, and the six carried recipes still resolve with nothing blocked. One trap is recorded: the reader's first name collided with an SDK type the fit checker knows, which no test could see."""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-23"
 game = "26.3"
