@@ -42,16 +42,6 @@ This version adds the other storage disks and the parts they are made from, so a
 """
 
 [[versions]]
-version = "0.2.10"
-published = "2026-11-23"
-game = "26.3"
-file = "refinedstorage.hmod"
-sha256 = "41c9810a2d6c33a032abc935cad389b56ec5330cfb34141847c620cf017ba922"
-changelog = """
-Slice 10, the machine's own slots on its dropped item: breaking an importer, exporter or transmitter in survival now returns an item that carries what was in it, so the four speed upgrades, the stack upgrade and the filter come back when the machine is placed again. The payload is built fresh from the slots rather than copied from the saved block entity, which is what keeps the contents from being both spilled and carried, and it is stripped from the stack once it has been used so a creative placement cannot restore the same machine twice; the game leg proves that too, by placing the stripped item again and reading an empty machine. The slots are taken before the block is removed and held for that break, so a break by anything other than a player, or a creative break, leaves the engine's own spill untouched, which is recorded rather than hidden. One defect was caught by the leg itself: treating an empty component patch as nothing to write left the payload on the stack, and the same item restored a second machine — the early return was wrong and the second placement is now the assertion that proves it.
-"""
-
-[[versions]]
 version = "0.2.7"
 published = "2026-11-22"
 game = "26.3"
