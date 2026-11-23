@@ -34,6 +34,15 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-23"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "387259ea8a3b6ce0975279cd4f4d67620d8c2fc11d1c634a76cc8113e32045f3"
+changelog = """Slice 9, the energy hopper in all seven tiers: a block with a keep-reserve and no slots of its own, which takes the container on the face it faces and charges the items inside it from its own buffer. The rule that makes it interesting is that the buffer and the per-item charge rate are different numbers, and the game leg proves the rate against the game's own tick counter rather than a sleep: seven ticks take three thousand five hundred from a starter hopper, which is five hundred a tick, and an item in a chest reaches exactly the amount the arithmetic predicts. Four counterfactuals sit in the same run: a hopper facing away leaves its container alone, an item with no energy buffer takes nothing at all, a machine with no mob or no fuel equivalent is irrelevant here because the hopper's own barrel reads zero and then five thousand, and a placed-back hopper keeps its stored charge. The seven tiers are carried with their own capacities and rates, and the tags accept the real blocks while refusing a position where nothing is.
+"""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-22"
 game = "26.3"
