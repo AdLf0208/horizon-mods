@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "2a755a80b3945bb98db9fa8cd3ed9638401509c1722b427f353cab3b46d870d3"
+changelog = """This version adds the chemical dissolution chamber, the machine that turns ore into the dirty slurry every later step of this chain already consumes: the washer, the crystallizer and the injecting chamber had nothing to work on until now. Its numbers are read rather than guessed: four hundred energy a tick, a buffer of a hundred and sixty thousand, a hundred ticks and forty thousand energy an operation, and two tanks of ten thousand, with one unit of acid spent per tick so a hundred per operation. Twenty-three of the jar's recipes are read and twelve are carried; the fourteen left out are ore rows for materials this build has no ore for, plus two that take a gas rather than a slurry. Proven in game on the numbers themselves: one iron ore with a thousand acid leaves the input empty, the chamber's own acid at zero, its slurry tank at exactly one thousand, and the neighbour's acid short by exactly a hundred while the buffer reads one hundred and twenty thousand; water in the tank makes no progress and spends nothing; dirt makes nothing and siphons nothing; and a washer beside it pulls that slurry out and finishes one clean iron, leaving nine hundred and ninety-nine. One defect found was in a tool rather than a machine: the new block dropped nothing at all because its block tag was missing, which no unit test could see, so a checker now fails any declared block without its tag or loot table."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-23"
 game = "26.3"
