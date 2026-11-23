@@ -30,6 +30,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-23"
+game = "26.3"
+file = "industrialforegoing.hmod"
+sha256 = "f7154dc52f6c9a343a11d5b757b1c674bb924c92ba199f2d73a1ccc91fa962ad"
+changelog = """This version adds the mob duplicator and the imprisonment tool that feeds it, so essence now has a use: twelve millibuckets for each point of a mob's health buys a copy, which for a cow is a hundred and twenty. The config was read from the code rather than its comments and the comments are wrong twice, once about the energy per operation and once about the principle, so the leg asserts the numbers the code uses. Proven in game on all the cases: a cow in the box costs five thousand energy and a hundred and twenty essence and leaves a second cow, an empty essence tank spawns nothing and spends no energy, and a box already at the nearby cap spawns nothing while holding both its charge and its essence. The tool captures and releases a cow, and a broken machine carries its energy and its essence on the item. One harness fact cost a run and is worth keeping: the game's own entity-cramming rule kills a crowd before a cap can be tested, so the cap leg raises that rule and restores it afterwards.
+"""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
