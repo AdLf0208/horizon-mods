@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-23"
+game = "26.3"
+file = "oritech.hmod"
+sha256 = "50b53500b9827b6454b59861817157e78732c7e2a825dc19c080673c2017e335"
+changelog = """This version removes the package's one registry dependency, which the registry now refuses outright. The seven recipe tables are read at run time from the world because a data pack can add or override them, so the parse could not move into a generator; instead the port carries its own JSON reader. It is deliberately unsentimental: a truncated document, a bad escape or absurd nesting is refused rather than trusted, accessors fall back to nothing instead of panicking, and a number keeps the digits it was written with. Proven by re-running all five carried-data sweeps and every recipe family through the new reader, with the package-less control red and the standing inverted assertion still red, plus a counterfactual that plants two defects in the reader and watches the two tests that should fail fail. One naming trap is recorded: a local type matched an SDK type by name and made the fit checker refuse the build."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-23"
 game = "26.3"
