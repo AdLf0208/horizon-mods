@@ -37,6 +37,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-23"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "b4807a007516b46c6a5b8684a2bd84f0d65a7e14d65391fd3a62d8d3deb4d978"
+changelog = """This version carries the redstone pair of the building family, two buttons and two pressure plates, plus the reverse smelt that takes each cobbled stone back to its smooth form. The behaviour is the engine's rather than ours: the blocks copy vanilla's stone button and stone pressure plate, so the press, the player scan and the release come with the template, and the game proves them as states — both plates read powered while the player stands on them and unpowered after stepping off, both buttons read pressed and then released, with the ticks recorded rather than assumed. Two corrections came from the artefact. These blocks do not need a tool, so the assertion is one drop by hand and one by pickaxe, with a plain stone's hand break for nothing as the differential, rather than the hand-zero the brief asked for. And this pin cannot express the reference's thirty-tick stone button, so the vanilla twenty ships and the leg asserts it, chosen over a wooden button that would have the right interval and the wrong feel. A third omission in the jar is fixed: its item tag lists one button while its block tag lists both.
+"""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-23"
 game = "26.3"
