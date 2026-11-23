@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.8"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "49885b17eefb49dc54ae8cb400a05a85f6125201d09f0bef564fdc1a26bb559d"
+changelog = """This version adds the blazing infuser, the machine that spends a catalyst to raise a rod's quality and duration until the rod is used up. Its period was the thing to get right and two numbers were wrong in the brief: the counter field is ten but the period is eleven, because the tick decrements first and compares with zero, so the first operation lands on the eleventh tick and every eleventh after; and a nether star on a full-quality rod adds a thousand one hundred and twenty-five, not a tenth of that, because the percentage is of a whole stack. Both are read from the source and both are asserted. Proven on the arithmetic rather than on a trend: with no catalyst the counter wraps twice in twenty-six ticks and nothing moves; one nether star raises a sixty-thousand rod to sixty-one thousand one hundred and twenty-five and its duration by three eighths while the store falls ten, the rod's steps fall by one and the catalyst is consumed; redstone raises quality only; and over a longer window a hopper feeding stars shows six runs in sixty-nine ticks with the stars conserved across runs, hopper and slot. Two harness problems were fixed rather than worked around, including a gate script that reported success after a failed copy because it lacked error handling."""
+
+[[versions]]
 version = "0.1.7"
 published = "2026-11-23"
 game = "26.3"
