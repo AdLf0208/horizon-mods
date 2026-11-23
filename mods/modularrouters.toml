@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "dd7db49377876fd14d18f2abeca0e9d78b72bf460105ede8a96e9f93c4bf3805"
+changelog = """This version adds the placer module, which puts the router's buffer into the block beside it and stops once that block is occupied. One thing the brief had wrong is worth stating because the machine is right and the brief was not: a placer has exactly one destination, so eight stone cannot mean eight placements — the first one fills the block, every later attempt finds it occupied and takes nothing, and the buffer stays at seven. That is the reference's rule and it is what the game shows. Proven in nine rigs whose differences are the claims: a front-facing placer places one and keeps seven, a direction of none places nothing, a stick has no block form and places nothing, a whitelist naming dirt moves nothing, a pre-filled destination changes nothing, an upward placer fills the block above, and a regulator of three places only when the buffer is above three. The two augment rules the port had unit-tested but marked blocked are now shown in game: the module refuses a stack augment outright and accepts exactly one regulator, and the recipe crafts with its ingredients consumed."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-23"
 game = "26.3"
