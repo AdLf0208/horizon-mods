@@ -17,11 +17,19 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.2"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanismcovers.hmod"
+sha256 = "ff66815e65f539bee99fe4b1d85d4b6fb9fa65ce695df7b9c78711d2c966b362"
+changelog = """This version answers a review, and the defect was a data-loss bug in a crafting grid. A cover was filled by consuming whatever block item was offered and storing only its block id, and stripping the cover returned a fresh stack of that id, so filling a cover from a shulker box destroyed the box's contents. The rule now refuses before anything is consumed: a block that has a block entity, a stack carrying any component, or a cover that carries anything besides its own block key produces no result at all. The pure rule and the recipe share one predicate, so a refusal can never be a recipe that matched and then declined to consume. Proven in game with three cases in one table: a filled shulker box gives no result and keeps its contents, a named stone is refused the same way and stays untouched, and a plain stone in the same screen still fills exactly one cover and consumes exactly one stone — that last case is what shows the refusal belongs to the stack rather than to a broken screen. Clicking a filled shulker box on a cable applies no cover and leaves it in hand. The archive also carries the original author's credit and the MPL text, which the listing now names as well.
+"""
+
+[[versions]]
 version = "0.2.1"
 published = "2026-11-23"
 game = "26.3"
 file = "mekanismcovers.hmod"
 sha256 = "e12b57be0a0465ceca3bbc04f6c86ab602c23e3ebf38e5b14e14447d03fd8942"
-changelog = """
-This version answers the same blocker two other submissions were refused for: a package that binds to another mod's block entity must declare that mod. The covers are worn by Mekanism transmitters and their state lives in the transmitter's saved data, so Mekanism is a required parent rather than an optional integration, and the manifest now says so with a version floor matching the first parent build this port was actually exercised against in game. The proof is on both sides: with only this package installed the mod loader refuses it by name and echoes the declaration's own reason and link, before compiling anything, and with the parent present the cover leg still passes end to end. Nothing in the cover behaviour changed, which is the point of the version: the package is identical apart from the declaration.
+changelog = """This version answers the same blocker two other submissions were refused for: a package that binds to another mod's block entity must declare that mod. The covers are worn by Mekanism transmitters and their state lives in the transmitter's saved data, so Mekanism is a required parent rather than an optional integration, and the manifest now says so with a version floor matching the first parent build this port was actually exercised against in game. The proof is on both sides: with only this package installed the mod loader refuses it by name and echoes the declaration's own reason and link, before compiling anything, and with the parent present the cover leg still passes end to end. Nothing in the cover behaviour changed, which is the point of the version: the package is identical apart from the declaration.
 """
