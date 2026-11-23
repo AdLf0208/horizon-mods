@@ -3,6 +3,8 @@ kind = "native-mod"
 name = "industrialforegoingsouls"
 summary = "A Horizon port of industrialforegoingsouls."
 description = """
+A port of [Industrial Foregoing Souls](https://github.com/InnovativeOnlineIndustries/Industrial-Foregoing-Souls) by Buuz135 and Rid. Requires [industrialforegoing](https://github.com/AdLf0208/industrialforegoing) 0.2.7 or later, which provides the blue laser lens and the laser drill ore recipe type it registers against.
+
 The first port of Industrial Foregoing Souls, and the three blocks are one mechanic: a laser base that turns a warden in range into souls, pipes that move them, and a surge that spends them to accelerate a block. The gate is the parent's own: the base produces nothing until a blue laser lens sits in its catalyst slot, which is exactly how the jar gates it. Proven in game with that differential in one run: sixty ticks with no lens leaves the bar at zero and the warden at full health, seating the lens makes four operations land sixteen damage and eight souls, and pulling the lens freezes the tank for the next sixty ticks. The pipes move four and then eight souls at one transfer a tick, and the surge takes a wheat crop from age zero to age four with random ticks disabled while its own counter falls from two hundred and ninety-three to two hundred and merely waits while it has no signal. Three recipes craft with their ingredients consumed and each block drops itself. Two of the agent's own expectations were wrong against upstream and were corrected in the test rather than in the code, which is the right way round: a nearly full tank still fires and clamps, and a surge facing nothing still spends its ticks.
 """
 authors = ["AdLf0208"]
