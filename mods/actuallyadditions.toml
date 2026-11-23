@@ -40,6 +40,15 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-23"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "de43f029a98fa818f59dfb7ce6cbbb777d3436497ab67195ee1bbb1805662486"
+changelog = """This version carries the black quartz ore, the gem, and the tags the iron casing and basic coil needed, so the crafting chain that gates both machines is now reachable on the data path. The generation claim is the interesting part and it is recorded as blocked rather than claimed: the placed feature reaches the content root and the biome modifier is read, but the configured feature never merges at this pin, so the log says one placed feature cannot run and will be skipped, and the leg asserts that gap so it fails the day it closes. Everything else is proved by placing the block and using it: a break drops one gem and stone at the same stance drops cobblestone, a silk touch pickaxe returns the ore and no gem, the furnace and blast furnace each give one gem, the crusher gives two with its input consumed, and an iron casing crafts from four ingots, four sticks and one gem with the wrong-ingredient controls producing nothing. One measurement changed the emitter: the reference's custom biome-modifier type is skipped at this pin, so the supported add-features file is what ships, and the registrar call is accepted but consumed by nothing, so both are emitted and the data file is the one that works.
+"""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-23"
 game = "26.3"
