@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-23"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "dbbdf5d865689c45d98ab4151fefe00fad04f29f64ac7f669922a9c5364013ef"
+changelog = """This version answers a review with two data-loss bugs and an attribution correction. The chest's anvil repair used to replace a whole stack with one repaired anvil, taking every other item with it; it now repairs the stack item by item, charges for each, keeps the components, and leaves the stack untouched when the tank cannot pay for all of it, in both machines that share that code. The blood extractor used to be stackable, so a drain debited the stain once and wrote one amount onto the whole stack; it is now a single item, and a stack saved before this version resolves deterministically — the first extractor keeps the stored amount, the others come back empty, and the total is unchanged, which the leg proves by creating that stack with the previous version and reading it back. The packaged notice now credits all ten carried infusion recipes, each compared byte for byte against the jar. Both fixes are proved in game on their own legs and inverted by their own selftests."""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-23"
 game = "26.3"
