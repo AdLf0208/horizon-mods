@@ -30,6 +30,15 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "ff719b859f3cc0ca810a86b4d01fa60f23cc00c66a9d37a0eeec24da3ade8945"
+changelog = """Slice 9, the chemical crystallizer: the machine that turns a clean slurry back into an item, and so the customer the washer was built for. The brief's arithmetic did not survive the jar: four hundred energy a tick, two hundred ticks and a one hundred sixty thousand buffer means one charge buys exactly two operations, not five, so the game leg proves the brief's claims with the reference's numbers — one charge gives two crystals, a second and a third charge carry it to five, eighty thousand alone gives one, and a dirty slurry gives nothing while spending nothing. One defect was found only in game: the machine ran once and then stalled, because the check for which slurry a slot wants treated a slot holding one material's crystal as a refusal for every other material, so a slot of iron crystal hid the iron slurry. The rule moved into the pure core where a test pins it, and four further operations in the same run are the proof. A harness collision is also recorded and fixed rather than re-run until it vanished: a hopper placed on a coordinate the persistence phase reads was overwriting that phase's machine.
+"""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-22"
 game = "26.3"
