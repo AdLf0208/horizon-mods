@@ -42,16 +42,6 @@ This version answers the second review round with three data-integrity fixes and
 """
 
 [[versions]]
-version = "0.2.12"
-published = "2026-11-23"
-game = "26.3"
-file = "refinedstorage.hmod"
-sha256 = "54da631dc81bc3ba331e6e2adb6f129a9d65c638f0fa532984653c6e30d4356f"
-changelog = """
-This version adds the in-place disk upgrade, which is the only route that grows a full disk without emptying it: a smaller disk plus the bigger part becomes the bigger disk, its stacks carried across, and the smaller part handed back to the grid. The crafting kind was measured before it was used, because a campaign note said this family crashes at load: that note is about machine recipe types, and a crafting kind registers cleanly here, which the game confirms by crafting a filled four-thousand disk into a sixteen-thousand one whose component reads the new capacity with every stack intact and whose part returns to the grid. The drive then reads one disk holding four thousand and ninety-six of sixteen thousand three hundred and eighty-four, and the earlier capacity work is re-proved in the same run. This build also regenerated its archive after a document edit, so every log now names the delivered bytes, and its own test script refuses to run against a package whose packed sources differ from the tree.
-"""
-
-[[versions]]
 version = "0.2.7"
 published = "2026-11-22"
 game = "26.3"
