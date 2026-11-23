@@ -50,16 +50,6 @@ This version adds the mob duplicator and the imprisonment tool that feeds it, so
 """
 
 [[versions]]
-version = "0.2.10"
-published = "2026-11-23"
-game = "26.3"
-file = "industrialforegoing.hmod"
-sha256 = "c759203e51229549e63fb4b113c76950e661576d3053472fa5e69dc5e627f4d4"
-changelog = """
-This version adds the mob crusher, which is the first machine that turns a mob into essence as well as loot, and it gave the last declared fluid in this package its source. The brief's rule for that number was wrong and the artefact won: there is no essence per point of health, the reference fills the tank with twenty millibuckets for each experience point the killed mob would have given, and the engine's own count is printed beside it, so a cow worth one point gives twenty and the leg asserts twenty times a number it reads rather than a number it assumes. The kill is made through a fake player so the experience event and the loot table both fire, and the drops go into the machine's own output container while the world's are cancelled. Proven in game on all the cases that matter: a cow dies, one leather and two beef land in the output, the tank gains twenty and the buffer fifty, the same box with no mob spends nothing at all, the same cow with no energy stays alive, a hopper empties the output into a barrel, and a broken machine returns its charge and its essence. The config values were read from the code rather than its comments, which differ in one place.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
