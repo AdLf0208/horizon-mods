@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-23"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "60f93e175ec3122f602058f5bdd851f90438cb2a57683d1bb902727878b17010"
+changelog = """This version gives the crafter the configuration panel it was missing: until now it could only be told what to make through chat, while its requester already had a panel of its own. The panel shows the machine's own slots and adds a cell that takes a carried item as the target, with step buttons for the band that refuse to invert it. The block's template did not need to change, and the reason is worth recording: this port opens the menu from its own click handler and draws the panel itself, so the class-dependent opener another port needed does not apply here. Proven in game: a machine nobody has opened reads no target and no band; a right click opens the panel with the machine's twenty-seven slots intact; a carried torch makes the target and the machine reads two cells and four out; sixteen presses of max and eight of min give a band of eight to sixteen; a press that would invert the band is refused; and the band values are clamped so a very large number cannot wrap on the wire. The older requester panel, the queue and the take path all still pass."""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-23"
 game = "26.3"
