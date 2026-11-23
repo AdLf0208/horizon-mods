@@ -37,16 +37,9 @@ published = "2026-11-23"
 game = "26.3"
 file = "buildinggadgets2.hmod"
 sha256 = "927409d7750cc246e1e98630b6355bc9e90ba6c7cdf17c80f9e87bb05066f14a"
-changelog = """This version answers a review with a behaviour reduction, deliberately and with the evidence for it. The gadget's area modes wrote blocks through a raw path, so a protection mod could not cancel a single placement, and the only calls this pin offers that take an actor either bypass protection by their own contract or require a fake player a mod cannot create. So the modes are held rather than written: a click plans the cells, reports how many would be allowed and how many were placed, spends nothing, and says which symbol is missing. Selection, all eight mode plans, ranges and the wheel keep working, and the hold lifts with one constant when the pin gains a cancellable placement call. The second review item is fixed and measured: the upper world-border bound is now exclusive, which the game proves by counting nineteen allowed cells when the clicked column lies exactly on the bound and twenty-four when it is one cell inside. The old assertion that encoded the defect was corrected with it, and the pre-fix mode logs are retired so no stale pass claims a build that no longer happens.
+changelog = """
+This version answers a review with a behaviour reduction, deliberately and with the evidence for it. The gadget's area modes wrote blocks through a raw path, so a protection mod could not cancel a single placement, and the only calls this pin offers that take an actor either bypass protection by their own contract or require a fake player a mod cannot create. So the modes are held rather than written: a click plans the cells, reports how many would be allowed and how many were placed, spends nothing, and says which symbol is missing. Selection, all eight mode plans, ranges and the wheel keep working, and the hold lifts with one constant when the pin gains a cancellable placement call. The second review item is fixed and measured: the upper world-border bound is now exclusive, which the game proves by counting nineteen allowed cells when the clicked column lies exactly on the bound and twenty-four when it is one cell inside. The old assertion that encoded the defect was corrected with it, and the pre-fix mode logs are retired so no stale pass claims a build that no longer happens.
 """
-
-[[versions]]
-version = "0.2.3"
-published = "2026-11-21"
-game = "26.3"
-file = "buildinggadgets2.hmod"
-sha256 = "eed5258a64b413a462c28416fb14f17e64e4459f29bda97e5e7c44766d169920"
-changelog = """Slice 2, the mode family: all eight building-gadget modes and their selection, where the port was fixed to one. `build_to_me` is now the default as upstream has it, and `vertical_wall`, `vertical_column`, `surface`, `horizontal_wall`, `stairs`, `horizontal_row` and `grid` each come from their own upstream class, with two quirks kept and pinned by tests: `horizontal_wall`'s centre-cell column gate and `stairs`' own sign rule. `/buildinggadgets2 mode` and `placeontop` store beside range and selection. Proven in game: every mode's phase asserts the exact cell set and one stone consumed per cell, the mode, range and placeontop replies are read from the parsed action bar, the carried recipe crafts with its ingredients consumed and a wrong-ingredient control matching nothing, and the control game refuses the gadget. Anchor, undo, energy, preview, the bound inventory and the GUI stay recorded gaps rather than being half-built."""
 
 [[versions]]
 version = "0.2.2"
@@ -54,4 +47,6 @@ published = "2026-11-10"
 game = "26.3"
 file = "buildinggadgets2.hmod"
 sha256 = "de10c06860205d2d70c7bd93e5901aa1809a298043721be181d2d9079282b3cb"
-changelog = """First release"""
+changelog = """
+First release
+"""
