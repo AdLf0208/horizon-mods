@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-23"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "0b1b8184af405689c80154aacdc718949f701cc6466d473106e50a2c0705f6fc"
+changelog = """This version answers a review that the port had recorded as a deviation instead of fixing: a comparator answer outlived the block that gave it, the chunk that held it and the session that computed it. Four clears now sit on the four events that matter, and each was chosen from the pin's own declarations rather than guessed: a state change scoped to our block for removal or replacement, a chunk unload told by dimension and column, a level close, and a player leaving for the selection that is keyed to them. A save deliberately does not clear anything, because a save is not an unload and clearing there would blank a live answer; the leg proves that a save keeps them. Proven in game by counting the answers the mod holds: two accumulators, then one after a removal, then two when replaced, then one after a chunk unload with the survivor's own reading intact, then back to two, unchanged across a save, and only what the new session computed after a relaunch. One limit is declared rather than implied: a level close cannot be separated from the chunk unloads that precede it, so it is unit-tested and the relaunch leg covers the session's half."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
