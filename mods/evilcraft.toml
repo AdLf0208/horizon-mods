@@ -39,49 +39,6 @@ sha256 = "dbbdf5d865689c45d98ab4151fefe00fad04f29f64ac7f669922a9c5364013ef"
 changelog = """This version answers a review with two data-loss bugs and an attribution correction. The chest's anvil repair used to replace a whole stack with one repaired anvil, taking every other item with it; it now repairs the stack item by item, charges for each, keeps the components, and leaves the stack untouched when the tank cannot pay for all of it, in both machines that share that code. The blood extractor used to be stackable, so a drain debited the stain once and wrote one amount onto the whole stack; it is now a single item, and a stack saved before this version resolves deterministically — the first extractor keeps the stored amount, the others come back empty, and the total is unchanged, which the leg proves by creating that stack with the previous version and reading it back. The packaged notice now credits all ten carried infusion recipes, each compared byte for byte against the jar. Both fixes are proved in game on their own legs and inverted by their own selftests."""
 
 [[versions]]
-version = "0.2.9"
-published = "2026-11-23"
-game = "26.3"
-file = "evilcraft.hmod"
-sha256 = "e1266a7ffd974cbd488430c397e4d97248ac354bce596b63fd27c85c95c1568f"
-changelog = """This version carries the blook and builds the purifier, and the purifier does one of its four things: it takes a curse off an item for a bucket of blood over three seconds. The other three of the reference's purify actions need an enchantment generator, an entity query round the block, or the infuser's head progression, and they are named as such rather than approximated. The blook crafts through the blood infuser from a book, which also proves that machine's own recipe table in force. Proven in game with the cursed item read before and after: a diamond pickaxe carrying a vanishing curse loses it and keeps everything else, the tank falls by exactly one bucket, and the same pickaxe in a blood chest for the same time still carries the curse, which is the differential that shows the two machines do different jobs. One correction the artefact forced: this build's give refuses the older enchantment syntax and takes the bare map, so the leg writes the shape the game accepts."""
-
-[[versions]]
-version = "0.2.8"
-published = "2026-11-23"
-game = "26.3"
-file = "evilcraft.hmod"
-sha256 = "4d8f7f679207c0e4dd76b0de1dda18e5de69be9fb84449ade5b427d5871de410"
-changelog = """Slice 8, the dark tank: a sixteen-bucket tank that fills from an extractor with a crouching click and gives the fluid back the same way, and carries its contents on its own item when broken. The requested slice was the purifier, and the artefact refused it: its behaviour lives in four action classes, none of which this package can supply, because one needs an item it does not carry, one needs a living entity query around the block, and one only means anything with the infuser's head progression. That is recorded as a blocked row with the missing pieces named rather than approximated, and the fallback was taken. Proven in game on both sides of the room check: a tank holding fourteen thousand of sixteen takes the two thousand it has room for and leaves the extractor holding the rest, standing pours nothing, crouching on stone pours nothing, crouching on the tank pours the whole five thousand, and a twelve-thousand tank broken in survival carries its fluid on the item and gives it back on placement. One harness trap is recorded because it produced a false pass: wrapping the leg in a subshell that echoes its own status reports zero for a failing run.
-"""
-
-[[versions]]
-version = "0.2.7"
-published = "2026-11-23"
-game = "26.3"
-file = "evilcraft.hmod"
-sha256 = "71f78499ac66335de499b50957ac522419abe0063cb8eabb8cdf260615b6d9f1"
-changelog = """Slice 7, the colossal blood chest: a multiblock that repairs what its tank can pay for, with forty-five repair slots behind a fifty-slot screen. The brief described a solid cube of the mod's own block and the artefact wanted the opposite: a hollow three-by-three-by-three shell of twenty-five reinforced planks with exactly one controller set into a wall and air in the middle, which is what the leg builds wall by wall. The numbers are the jar's own and are proved against the clock: fifty-four ticks take damage from two hundred and forty-one to two hundred and fourteen, nine hundred and fifty-five millibuckets to eight hundred and twenty, which is one point every two ticks at five each, and a tank run dry stops repairing with the damage left where it was. Two counterfactuals separate the rule from the block: removing one plank leaves the chest unformed and nothing repaired over forty-eight ticks, and the same pickaxe in the plain chest repairs at the same rate, which is the shared rule working in both machines. Two harness facts are recorded because each cost a leg: a mod container's menu only opens when the block's template class is a container, and a command argument that reads as empty arrives namespaced and had silently skipped a clear step.
-"""
-
-[[versions]]
-version = "0.2.6"
-published = "2026-11-22"
-game = "26.3"
-file = "evilcraft.hmod"
-sha256 = "b99d911e1d8b64da16aa980ad39a0a2ff0278e65b986e81d845e481db9e1872c"
-changelog = """Slice 6, the fall death: a mob that dies falling leaves a blood stain holding twenty millibuckets for each point of its maximum health, or tops up the stain it lands on, capped at the tank. Proven in game with three cells that separate the rule from the coincidence: a twenty-health zombie dropped eight blocks leaves a stain holding four hundred, a second death on the same cell takes that same block to eight hundred rather than stacking a second stain, and the same mob killed with a sword leaves the cell empty, so the blood can only come from the fall. The rule was corrected by its own red run: the first draft only looked at the cell below, which would have written nothing for a second death, because the victim is standing on the stain it made. Two harness facts are recorded because each cost a run: a mob in a one-cell shaft dies of being in a wall rather than of the fall, and a fall death carries no position of its own, so the victim's own cell is the one to read.
-"""
-
-[[versions]]
-version = "0.2.5"
-published = "2026-11-22"
-game = "26.3"
-file = "evilcraft.hmod"
-sha256 = "7a1ead321c53d2a4610c2b78c84327da10b5ec3bb612bf322beef9e81e0e69bc"
-changelog = """Slice 5, the blood stain: the block the extractor fills from, a small tank that a crouching click drains into the extractor the player carries and that vanishes when emptied. Proven with the numbers the mechanic needs rather than an outcome: a stain seeded to three and a half thousand pours exactly the one thousand the extractor had room for and stops there, the same click standing still moves nothing, so does the same click on stone, and a stain at four hundred drains to nothing and the block becomes air. Two facts are recorded that only a real game could produce. The replaceable tag cannot be expressed at this pin, because it is a per-state block fact with no key in the property set, so a block placed onto a stain lands above it and the tag is inert; it is carried as the jar ships it and the assertion flips if a later pin reads it. And the harness cannot aim at a one pixel block by its centre, because the aim is at the cell middle which is above the shape, so a stain is aimed within its shape and clicked with the raw mouse action instead."""
-
-[[versions]]
 version = "0.2.4"
 published = "2026-11-21"
 game = "26.3"
