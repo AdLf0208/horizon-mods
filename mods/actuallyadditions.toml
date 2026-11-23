@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-23"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "5440228fe6a14f9fa35fedd6efe924c1c099a1d5832f466fb6d2438daf123097"
+changelog = """This version adds pulse mode, so the reconstructor can fire once on each rising edge of a redstone signal instead of freezing while it is powered, and the toggle is a click with the reference's configurator item rather than a new item of its own. Two of the brief's premises did not survive the artefact: the mod has no wrench, and the item that toggles is a config value defaulting to a redstone torch, so nothing was carried and no extra item part was added — the branch sits where the reference puts it. The saved flag rides the existing state allowlist rather than an item component, because a component route exists here but would give one flag two homes. Proven in game on the edges themselves: with the torch the machine reads pulse on and the toggle item is still in hand; with no signal across a hundred and forty ticks the cycle does not move; the first rising edge spends exactly one thousand and forty and makes one crystal, the falling edge does nothing, and the second rising edge makes another. The same rig without the toggle runs its cycle through the same window, which is the differential. It also answers the review on conversion order for both halves: the source is removed and checked before the result appears, the price is charged only after success, and the item half restores the whole stack if the spawn is refused."""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-23"
 game = "26.3"
