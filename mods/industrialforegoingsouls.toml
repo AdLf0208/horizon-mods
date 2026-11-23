@@ -17,6 +17,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-23"
+game = "26.3"
+file = "industrialforegoingsouls.hmod"
+sha256 = "79159d3fead5c82aec88e3526e17098e0c76511244b487147ccc046b36bda82b"
+changelog = """This version gives the laser base the screen its slots have been missing, so a player can seat a lens and two augments without reading a command. The menu is the mod's own, declared as a menu type in the package's data and drawn by a screen part, and three data slots carry the tank and the bar; the machine opens it itself on a plain right-click because this pin's own click path never opens a mod container's menu, a limit another port measured. Proven in game: a right-click opens three slots, a lens seated through the menu harvests and the readout's data array grows with it, a second efficiency addon is refused in both augment slots and stays on the cursor, and a vanilla barrel beside it opens twenty-seven slots from the same click, which is the differential. Two limits are recorded rather than worked around: this harness cannot read a menu's data slot directly, so the array is asserted through the block entity's own readout, and clicking the same addon onto a seated one goes through the pin's top-up path, which ignores the slot rule, so the refusal is shown with a different tier instead.
+"""
+
+[[versions]]
 version = "0.2.3"
 published = "2026-11-23"
 game = "26.3"
