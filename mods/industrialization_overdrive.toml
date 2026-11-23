@@ -18,6 +18,14 @@ icon = "icons/industrialization_overdrive.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
+[[versions]]
+version = "0.1.1"
+published = "2026-11-23"
+game = "26.3"
+file = "industrialization_overdrive.hmod"
+sha256 = "c4bca2573a5f6f114ccd1d61517bf5f79c4f06849a7b625bfc929f3dc6397509"
+changelog = """This version answers a review, and the review was right on all three counts. The package now declares the parent its only machine is built from, and the proof is a refusal: without the parent the loader names both mods and stops before compiling, in the console and again at launch; with it, both packages compile in the parent-first order and every machine leg still passes. Two defects are fixed with numbers. A craft whose product could not fit the output used to run anyway, spending inputs and energy and losing the result; the batch is now sized by the input supply and the output room before anything is spent, a row whose product cannot fit is skipped so it cannot block a later row, and a run that finishes after the output filled waits at a hundred percent rather than dropping what it made. Proven in game: thirty-three logs and twenty-five thousand six hundred energy against an output with room for four of a five-item craft leaves the machine at zero progress with every input still in place. And the hatch pump used to compare item ids and rebuild both sides, which stripped names, enchantments and damage; it moves the real stacks now, splitting with the payload on both halves and merging only stacks that match on components, proven by a named stack crossing a hatch intact.
+"""
 
 [[versions]]
 version = "0.1.0"
