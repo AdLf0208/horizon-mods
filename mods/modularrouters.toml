@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "5f5bc461a58c94e3829a17f68dfc80c9c7789f7f54b576c9643566cf21e57e5d"
+changelog = """This version adds the flinger module, which throws the router's buffer along an aim the player sets: speed, pitch and yaw, with the reference's own geometry and its rule that one field out of range resets all three. The operation, filter and count are the dropper's, already proved, because the reference's flinger extends it and overrides only the velocity. Proven in game with six rigs whose differences are the claims: a throw at speed one puts all eight past the adjacent block while the same module at speed zero leaves them in it, an upward facing throws them above the router, a pitch of ninety on a horizontal aim throws them beside it, a yaw of sixty throws them out of the row, and a whitelist naming dirt throws nothing. It also answers a performance review on the vacuum: the buffer's room is checked before any dropped item is resolved, inspection is capped at sixty-four candidates, and the read stops once the budget is filled — proved by counted unit tests rather than by a stopwatch, because this harness cannot isolate one operation's resolutions from the twenty-tick cadence."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-23"
 game = "26.3"
