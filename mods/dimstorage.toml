@@ -3,6 +3,8 @@ kind = "native-mod"
 name = "DimStorage"
 summary = "Frequency-linked dimensional chests: a 54-slot inventory shared across dimensions, ported."
 description = """
+Two dimensional blocks in this version: a chest whose 54 slots live in a remote inventory keyed by its frequency, and a tank that holds 16,000 mB of one fluid per frequency, shares that store across every tank on the same frequency, fills and drains by bucket, and keeps its contents across a relaunch. Both persist and both are read back through the game's own capability, not a private field.
+
 A port of [DimStorage](https://github.com/Edivad99/DimStorage) by Edivad99 for
 Horizon. This is the first slice, not a full replacement.
 
