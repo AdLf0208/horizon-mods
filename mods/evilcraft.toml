@@ -31,6 +31,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-23"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "71f78499ac66335de499b50957ac522419abe0063cb8eabb8cdf260615b6d9f1"
+changelog = """Slice 7, the colossal blood chest: a multiblock that repairs what its tank can pay for, with forty-five repair slots behind a fifty-slot screen. The brief described a solid cube of the mod's own block and the artefact wanted the opposite: a hollow three-by-three-by-three shell of twenty-five reinforced planks with exactly one controller set into a wall and air in the middle, which is what the leg builds wall by wall. The numbers are the jar's own and are proved against the clock: fifty-four ticks take damage from two hundred and forty-one to two hundred and fourteen, nine hundred and fifty-five millibuckets to eight hundred and twenty, which is one point every two ticks at five each, and a tank run dry stops repairing with the damage left where it was. Two counterfactuals separate the rule from the block: removing one plank leaves the chest unformed and nothing repaired over forty-eight ticks, and the same pickaxe in the plain chest repairs at the same rate, which is the shared rule working in both machines. Two harness facts are recorded because each cost a leg: a mod container's menu only opens when the block's template class is a container, and a command argument that reads as empty arrives namespaced and had silently skipped a clear step.
+"""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-22"
 game = "26.3"
