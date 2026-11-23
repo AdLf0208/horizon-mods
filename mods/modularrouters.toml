@@ -30,6 +30,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "f03fcc7bff45d7620dab1435bf41bd8ec396f5f12fa85da7a92953b05167dad1"
+changelog = """Slice 8, the regulator augment: the augment that tells a module to leave a quantity behind rather than to move more. A puller with a regulator set to three empties twelve stone down to nine in its own buffer and stops with three still in the chest, where the identical router without the augment takes all twelve; and a source holding exactly three is never touched at all, because the reference refuses the whole operation rather than taking part of it, which is the difference between a rule and a rounding. The amount is refused on a module that does not carry the augment, and shown on the line only when it does. One measurement in the brief was wrong and the artefact won: one operation is twenty ticks, so a hundred ticks is five operations and could never leave nine of twelve, and the leg waits three hundred ticks so the numbers are reachable rather than adjusting the numbers to the wait. A first attempt also failed for a harness reason worth recording: the modules ran at their chests before the amount was saved, so the rig now starts facing away and turns after the setting is written.
+"""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-23"
 game = "26.3"
