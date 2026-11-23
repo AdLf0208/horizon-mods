@@ -70,16 +70,6 @@ Slice 9, the mob slaughter factory and the pink slime set: the machine that turn
 """
 
 [[versions]]
-version = "0.2.8"
-published = "2026-11-23"
-game = "26.3"
-file = "industrialforegoing.hmod"
-sha256 = "f34f98ee0c57a700595160189162ee80856e962df12218d04f7ab7529fbbbfc9"
-changelog = """
-Slice 8, the fluid laser base and its own fluid recipe type: a second base that sits under the same drill, holds a tank rather than a buffer, and produces a fluid where the ore base produces an item. The gate is not what the brief assumed: the ether recipe names no biome and no depth band at all, its condition is a wither nearby, so the game leg proves the entity gate instead — no wither gives no recipe and still spends the charge, a wither inside gives the ether recipe only inside its depth band and none at three hundred, and one completed bar puts ten millibuckets in the tank as read both from the tank and from the declared fluid capability. Two further bars and a drain show the tank and the capability agreeing at twenty and then at ten, and the ten is then spent by a dissolution chamber on a recipe that names it, which closes the last declared fluid in this package that had no source. The counterfactual for the entity gate is in the same run, so the difference is a wither rather than a biome.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
