@@ -59,16 +59,6 @@ Slice 13, the scanner's export choice and its selected inventory: whether a stac
 """
 
 [[versions]]
-version = "0.2.12"
-published = "2026-11-23"
-game = "26.3"
-file = "rftoolsstorage.hmod"
-sha256 = "d194c73b31d2d3e2b3bf60e9ed3b727a2feac90e26ff33cf2234fbd3df47991b"
-changelog = """
-Slice 12, the scanner's routable star list: the set of inventories the scanner is allowed to route into, which upstream keeps empty until the player stars a cell. That default is the whole point and it changes behaviour: a freshly scanned scanner now routes nothing at all, where this port had treated every inventory it could see as fair game. Proven in game with both directions and a relaunch: two chests, one starred, and the tick fills only the starred one while the list still shows both, because the star filters routing and not what the scan reports; the star is a saved position, so moving it from one chest to another moves the delivery, and it survives a relaunch. One harness fact is recorded because it cost a first run: the tick charges its energy every tick while a refused stack stays in the slot, so a leg that waits for a drained buffer is measuring the wrong thing and must assert on the stack instead.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
