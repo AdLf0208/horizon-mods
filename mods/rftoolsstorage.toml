@@ -79,16 +79,6 @@ Slice 11, the scanner list's sort choice: the five orders the reference's list o
 """
 
 [[versions]]
-version = "0.2.10"
-published = "2026-11-23"
-game = "26.3"
-file = "rftoolsstorage.hmod"
-sha256 = "1aadf54d967054073d7b0898e1c6b60005829440d54105bb69296543d494f868"
-changelog = """
-Slice 10, the storage scanner's search box: the list can now be filtered by a word or by a mod, exactly as the GUI's search does. The rule is the reference's: every word must match, a word beginning with an at sign matches the namespace as a prefix, and anything else is a case-insensitive contains on the item's name, with no words meaning everything. Proven in game at four queries against a fixed rig, each with its own price taken: the mod query lists both stacks, the word dirt lists only the dirt, the word stone lists only the stone, and a mod that matches nothing answers empty while still charging — and the unfiltered listing both is the differential that proves the filter did the work. One deviation is recorded rather than hidden: the reference matches the hover name, which this pin exposes only to the client, so a plain word matches the item's id with its underscores read as spaces, which is identical for every item whose name is its path.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
