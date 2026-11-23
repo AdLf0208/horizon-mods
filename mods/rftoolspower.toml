@@ -17,6 +17,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.5"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "26485b9a8e5277bc248ad4a476e17b98cdcd3a1632e4718bb44d0b8909b614d6"
+changelog = """Slice 6, the power level display: a block that writes a redstone strength onto the face it displays on, in ten steps from empty to full. The brief's arithmetic was wrong and the artefact won: the reference multiplies by ten and divides, so a generator at half of its capacity reads five, not four, and the game leg pins five while the counterfactual keeps a deliberate four so the assertion can fail. Proven in game on all three readings plus a differential: empty reads zero, half reads five with a wire on the display face and nothing on the wrong face, and full reads nine because ten clamps. The block also answers a query at a position where there is no display, and its recipe refuses to craft with a wrong ingredient. The reference has the same face bug this family's other machine had — it answers redstone on one side and notifies another — so the port answers and notifies on the face it shows on.
+"""
+
+[[versions]]
 version = "0.1.4"
 published = "2026-11-23"
 game = "26.3"
