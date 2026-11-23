@@ -31,6 +31,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-23"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "4d8f7f679207c0e4dd76b0de1dda18e5de69be9fb84449ade5b427d5871de410"
+changelog = """Slice 8, the dark tank: a sixteen-bucket tank that fills from an extractor with a crouching click and gives the fluid back the same way, and carries its contents on its own item when broken. The requested slice was the purifier, and the artefact refused it: its behaviour lives in four action classes, none of which this package can supply, because one needs an item it does not carry, one needs a living entity query around the block, and one only means anything with the infuser's head progression. That is recorded as a blocked row with the missing pieces named rather than approximated, and the fallback was taken. Proven in game on both sides of the room check: a tank holding fourteen thousand of sixteen takes the two thousand it has room for and leaves the extractor holding the rest, standing pours nothing, crouching on stone pours nothing, crouching on the tank pours the whole five thousand, and a twelve-thousand tank broken in survival carries its fluid on the item and gives it back on placement. One harness trap is recorded because it produced a false pass: wrapping the leg in a subshell that echoes its own status reports zero for a failing run.
+"""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-23"
 game = "26.3"
