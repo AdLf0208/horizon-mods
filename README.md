@@ -42,8 +42,9 @@ Then:
 2. Checks compare the entry with main, verify package structure, hashes and signatures, and build the candidate
    index. They never compile or execute submitted code. Their report and candidate index are in the pull request.
 3. A reviewer (see [`.github/CODEOWNERS`](.github/CODEOWNERS)) reads the entry, the source and the report (a native
-   mod's source also gets a security review), and asks for changes in the pull request if needed. An owner's update
-   of a pack skips this step (see Updates below).
+   mod's source also gets a security review), and merges it unless one of the blocking reasons in
+   [REVIEWING.md](REVIEWING.md) applies. Bugs get a comment, not a hold, and small problems in the submission are
+   fixed by the reviewer in the pull request. An owner's update of a pack skips this step (see Updates below).
 4. Merging publishes it: the file becomes a release, the project appears on the site and in the launcher within
    minutes.
 
