@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-23"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "9daebe6da2536041f42f76e2b7f169ee2d243ae60fbbc0312f719508b6e756f4"
+changelog = """Slice 6, the modular accumulator's comparator output: the tower now answers a comparator with a strength that follows how full it is, read from the tower's pooled fill rather than from the block the comparator touches. The mapping is the reference's own and it is not the obvious one: the fraction is multiplied by fourteen and one is added when it is above zero, so a half-full tower reads eight rather than seven, and a run that only checked empty and full would pass while the middle was wrong. The game leg therefore asserts the middle value explicitly — empty reads zero, three of six million reads eight, full reads fifteen, the same rig behind stone reads zero, and emptying the tower returns it to zero. The fraction is computed in single precision because the reference does, which is the kind of difference that only shows at a boundary. One thing the port had already measured is worth repeating here: the second build check stays red because the light emission surface this package needs does not exist in that older build, and the comparator adds no new surface of its own.
+"""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-22"
 game = "26.3"
