@@ -30,6 +30,15 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "3f72a2acaeed253f580e975d3fb6a7cc376bca57732c535b6e5e470e1b08a025"
+changelog = """This version registers the four crystals the crystallizer could not make, so every slurry the washer can produce now has its own crystal. The washer and crystallizer already shipped; what was missing was the data, and the proof is the sweep rather than one machine: seven rows crystallize, two operations each, with the tank emptied and the buffer spent, and the game reads one of them end to end — one thousand clean lead in the neighbour tank, two iron crystals out, six hundred left. The table is regenerated from the jar rather than hand-written, and three recipes are still skipped because their outputs are not registered. One claim in the brief did not survive the artefact and is recorded as not ported rather than implied: the next step, crystals into shards, needs four shard items this port does not carry, so the chain closes at the crystal and the shard remains a named gap.
+"""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-23"
 game = "26.3"
