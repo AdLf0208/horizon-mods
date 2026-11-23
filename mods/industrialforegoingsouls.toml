@@ -25,13 +25,3 @@ sha256 = "7397e359a64ddb7b34f46e870ae8a8dc7c60ec2da15145b0a9dc735a50fb0e16"
 changelog = """
 This version answers a review. The package now declares the parent it binds to, with the reason and the link, and the proof is a refusal rather than an assurance: installed alone, the loader stops before compiling anything and names both mods, repeating the declaration's own reason and address; installed with the parent, both packages compile and the machine leg passes. Three behaviour defects are fixed with them. The pipe network was walked in full by every pipe every tick, with a linear membership test at each neighbour, so a large network cost work that grew faster than it; it is now set-based, walked once per tick per component, cached for the tick and bounded. A second lens no longer consumes the new item and voids the seated one: the swap reserves a destination first and refuses the click when there is none, because a full inventory is not permission to destroy one. And a broken machine now carries its lens and its augment on its own item and restores them, while an empty machine's item carries nothing. The original notice is the upstream text verbatim, including the second copyright holder our first archive had dropped.
 """
-
-[[versions]]
-version = "0.2.1"
-published = "2026-11-22"
-game = "26.3"
-file = "industrialforegoingsouls.hmod"
-sha256 = "75ebd87afc83cf52197c522184b72f3968fbdf57ab607bcf1d76baf8b70b7c7c"
-changelog = """
-Slice 2, two families the first version left dead or absent. The efficiency augment on the Soul Laser Base now shortens the bar exactly as the reference computes it, a floor of twenty times the multiplier so a tier one addon reads sixteen, and a speed addon is refused with the seated addon left in place rather than handed back — a defect the game leg found, because the engine re-enters the use path with the stack still in hand. The ore recipe the add-on ships was dead data until the parent learned to read its type; it is now carried and the parent's machine produces one echo shard from it in a two-package game, in the deep dark at depth zero, with the parent's table reading eleven of eleven. That end-to-end path is the point: this package's recipe file, the parent's recipe type, and the machine's own output. Every leg has its inverted twin, and the control refuses the block without the package.
-"""
