@@ -29,13 +29,20 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolsstorage.hmod"
+sha256 = "68620ecd44b0b2a5422db08185daa6898bb2eeb534dc47fd44ad7656e1427f16"
+changelog = """This version closes a security hole rather than a cosmetic one: the storage scanner could reach into any container in its radius, including another player's, with the only check being that the caller was an operator or within eight blocks of the machine. Now the scanner belongs to whoever placed it, and a caller who is neither that player nor an operator is refused; and every target must agree to be touched, which the engine answers for a player's reach and the container itself answers for a lock. A locked container is closed to the scanner, and a refusal is reported as a plain non-inventory rather than disclosing what is behind it. Delivery is one transaction priced by what was actually delivered, so a refused hand or output slot refunds both the items and the charge. Proven in game against the very package this replaces: a locked chest is hidden from the scan and from both content readouts, cannot be starred or pulled from, is routed past on insert, and appears again the moment its lock is removed — which is the differential. Two limits are stated rather than hidden: the scanner's owner check is proved by unit test because this harness has only the host identity, and a locked cell is refused even for the player holding its key, since the scanner presents no hand to match."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-23"
 game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "ce7599e3f3c73f1f48b064d81b17427ee3131a25bb4f0679b93991fc1befc4ad"
-changelog = """
-This version adds the storage's crafting grid and its four craft buttons, and it is the first slice where the pin's menu surface decided the design rather than merely allowing it. The reference's grid is a ghost: its cells hold no items, the result is taken from a button rather than the slot, and the craft pulls from your inventory and then from the locked storage. That is not expressible here, because nothing tells a mod that a result slot was emptied, so a real grid would have to guess by polling — an invented mechanic with a way to duplicate items — and a plain grid would simply be a crafting table. So the pattern is the block's own saved cells, the readout shows what the recipe table makes of them, and the four buttons become one command whose match is the engine's own. Proven in game on the cases that matter: an empty pattern refuses, a cobblestone cell is no recipe and takes nothing, one plank is the shapeless oak button, two cells of planks make four sticks from two of eight, four and eight and stack are one, two and sixty-four, a short storage names the cell and takes nothing, the player's planks go before the storage's, an unlocked storage refuses a cell write, and the pattern survives a relaunch.
+changelog = """This version adds the storage's crafting grid and its four craft buttons, and it is the first slice where the pin's menu surface decided the design rather than merely allowing it. The reference's grid is a ghost: its cells hold no items, the result is taken from a button rather than the slot, and the craft pulls from your inventory and then from the locked storage. That is not expressible here, because nothing tells a mod that a result slot was emptied, so a real grid would have to guess by polling — an invented mechanic with a way to duplicate items — and a plain grid would simply be a crafting table. So the pattern is the block's own saved cells, the readout shows what the recipe table makes of them, and the four buttons become one command whose match is the engine's own. Proven in game on the cases that matter: an empty pattern refuses, a cobblestone cell is no recipe and takes nothing, one plank is the shapeless oak button, two cells of planks make four sticks from two of eight, four and eight and stack are one, two and sixty-four, a short storage names the cell and takes nothing, the player's planks go before the storage's, an unlocked storage refuses a cell write, and the pattern survives a relaunch.
 """
 
 [[versions]]
@@ -44,8 +51,7 @@ published = "2026-11-23"
 game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "4fde9c1eff9f97aea14f1324981d3c872e1b8d41d2155117dbe8d8bf22b53463"
-changelog = """
-This version adds the per-row contents view of the scanner's list, so a player can read what one inventory holds rather than the whole box, and gives the all-row the other half of the star: it lists only the starred inventories. The reference is unambiguous about the price and the leg proves it at an empty buffer: a row view costs nothing, because it is a listing rather than a request, while the whole-box scan stays priced as the request substitute it has always been. Proven in game with the star moved and removed under it: the selected row reads its own hundred and twenty-eight while the same row is unstarred and still reads it, the all-row drops to the other chest's sixty-four, nothing starred makes the all-row empty, and a cell outside the box or the scanner itself is refused by name. One defect in my own test was caught by the test: its out-of-box case named a cell inside the box.
+changelog = """This version adds the per-row contents view of the scanner's list, so a player can read what one inventory holds rather than the whole box, and gives the all-row the other half of the star: it lists only the starred inventories. The reference is unambiguous about the price and the leg proves it at an empty buffer: a row view costs nothing, because it is a listing rather than a request, while the whole-box scan stays priced as the request substitute it has always been. Proven in game with the star moved and removed under it: the selected row reads its own hundred and twenty-eight while the same row is unstarred and still reads it, the all-row drops to the other chest's sixty-four, nothing starred makes the all-row empty, and a cell outside the box or the scanner itself is refused by name. One defect in my own test was caught by the test: its out-of-box case named a cell inside the box.
 """
 
 [[versions]]
@@ -54,8 +60,7 @@ published = "2026-11-23"
 game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "f89f5974f411cf012a7c5a28242185e630bd6c9ffa726939863ceb1197baeb83"
-changelog = """
-Slice 13, the scanner's export choice and its selected inventory: whether a stack goes to the first routable inventory the walk finds or to the one row the player has selected, and which row that is. The reference's default is the walk, and its selected branch tries that one inventory and stops with whatever would not fit, rather than quietly falling through to the rest of the box, which is the part worth asserting: a full barrel selected leaves the stack in the slot while the other chests stay untouched. The selection is saved with the block rather than kept in memory, which is a stated deviation and the reason the leg can show it surviving a relaunch; switching back to the walk clears it. Proven in game across that whole sequence, including the same stack going to one chest then the other, and the mode read back as the byte the reference stores.
+changelog = """Slice 13, the scanner's export choice and its selected inventory: whether a stack goes to the first routable inventory the walk finds or to the one row the player has selected, and which row that is. The reference's default is the walk, and its selected branch tries that one inventory and stops with whatever would not fit, rather than quietly falling through to the rest of the box, which is the part worth asserting: a full barrel selected leaves the stack in the slot while the other chests stay untouched. The selection is saved with the block rather than kept in memory, which is a stated deviation and the reason the leg can show it surviving a relaunch; switching back to the walk clears it. Proven in game across that whole sequence, including the same stack going to one chest then the other, and the mode read back as the byte the reference stores.
 """
 
 [[versions]]
@@ -64,8 +69,7 @@ published = "2026-11-21"
 game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "48a860378bfafddcf78e4e5d6fcc2eb055de475bfd91713aa0bcfe4600546776"
-changelog = """
-Slice 5, the storage scanner: a block that reads the inventories inside a cube around it and answers one command with what it found, charging its own energy for the question and refusing when it has none. The radius is settable because the reference exposes it as a slider, so here it is a command that clamps to the same bounds. Proven in game as a sequence of exact answers: a fresh scanner with no power says so with its buffer in the reply; at the default radius it sees nothing because the chest is two blocks away and reports its charge falling; at radius two it finds sixty-four stone and no dirt; at radius three it finds the dirt too, each answer costing the same fixed charge; with the buffer emptied it refuses and reads nothing, and recharging makes it answer again. A chest and a modular storage both answer that they are not scanners, the buffer and radius and answer all survive a relaunch, and a survival break drops the block itself. Two honest restrictions are recorded rather than worked around: the scanner's recipe needs a machine frame from a sibling port that is pinned at an older build and so cannot share this game, and the claimed-land check is blocked because the pin exposes a cancellable destroy hook rather than a permission query.
+changelog = """Slice 5, the storage scanner: a block that reads the inventories inside a cube around it and answers one command with what it found, charging its own energy for the question and refusing when it has none. The radius is settable because the reference exposes it as a slider, so here it is a command that clamps to the same bounds. Proven in game as a sequence of exact answers: a fresh scanner with no power says so with its buffer in the reply; at the default radius it sees nothing because the chest is two blocks away and reports its charge falling; at radius two it finds sixty-four stone and no dirt; at radius three it finds the dirt too, each answer costing the same fixed charge; with the buffer emptied it refuses and reads nothing, and recharging makes it answer again. A chest and a modular storage both answer that they are not scanners, the buffer and radius and answer all survive a relaunch, and a survival break drops the block itself. Two honest restrictions are recorded rather than worked around: the scanner's recipe needs a machine frame from a sibling port that is pinned at an older build and so cannot share this game, and the claimed-land check is blocked because the pin exposes a cancellable destroy hook rather than a permission query.
 """
 
 [[versions]]
@@ -74,6 +78,5 @@ published = "2026-11-10"
 game = "26.3"
 file = "rftoolsstorage.hmod"
 sha256 = "32f0505ef59a5eb1aa476578430a024bb02e9913edca853cf342bd5d9320a0f6"
-changelog = """
-First release
+changelog = """First release
 """
