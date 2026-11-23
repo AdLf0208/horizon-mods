@@ -14,6 +14,14 @@ icon = "icons/mekanismcovers.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
+[[versions]]
+version = "0.2.1"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanismcovers.hmod"
+sha256 = "e12b57be0a0465ceca3bbc04f6c86ab602c23e3ebf38e5b14e14447d03fd8942"
+changelog = """This version answers the same blocker two other submissions were refused for: a package that binds to another mod's block entity must declare that mod. The covers are worn by Mekanism transmitters and their state lives in the transmitter's saved data, so Mekanism is a required parent rather than an optional integration, and the manifest now says so with a version floor matching the first parent build this port was actually exercised against in game. The proof is on both sides: with only this package installed the mod loader refuses it by name and echoes the declaration's own reason and link, before compiling anything, and with the parent present the cover leg still passes end to end. Nothing in the cover behaviour changed, which is the point of the version: the package is identical apart from the declaration.
+"""
 
 [[versions]]
 version = "0.2.0"
