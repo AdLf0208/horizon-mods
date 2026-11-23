@@ -60,16 +60,6 @@ This version adds the mob crusher, which is the first machine that turns a mob i
 """
 
 [[versions]]
-version = "0.2.9"
-published = "2026-11-23"
-game = "26.3"
-file = "industrialforegoing.hmod"
-sha256 = "fa7300d371f22f81576f452d0c1994449d69ebaf0852c89a9491dcdc7479278d"
-changelog = """
-Slice 9, the mob slaughter factory and the pink slime set: the machine that turns a mob into meat and pink slime, which closes the last declared fluid in this package that had no source, and the dissolution chamber's output tank, which had been carried but inert because its only recipe needs the item this slice ships. Both are proven against their numbers rather than their existence: a cow of twenty health gives ten meat and two hundred pink slime for four hundred energy, read from the tank and from the declared capability, and a chamber fed three hundred millibuckets of pink slime with a glass pane returns a hundred and fifty millibuckets of water in its output tank. The brief's counterfactual was wrong and the artefact won: with no mob in the box the machine spends nothing, because the reference's own work action extracts zero energy when there is no target. One reference defect is fixed with them: the jar's pickaxe tag names ten fluid ids as blocks, which is not a tag any block can be in. One anomaly is recorded rather than papered over: a chamber placed by an earlier phase stopped being advanced by its own tick after a run, though seven probes in clean worlds all ran the recipe, so this leg places its own chamber and the question stays open.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
