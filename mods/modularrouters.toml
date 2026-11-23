@@ -30,6 +30,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "491723d43017a9b5dd620c48a56b6542b268b442012f91ea14a3d328975da0ad"
+changelog = """Slice 6, the range augments and a module's four augment slots: the module that pulls from a selected container now reaches further, and how far is not a separate rule but the module's own base reach plus its ups minus its downs, clamped to the hard maximum and never below one. Proven in game with the numbers on both sides of the boundary: a module whose target is fourteen blocks out reports twelve and moves nothing, four ups take it to sixteen and then it moves exactly one item per operation until the chest empties; a second module at twelve works and one down takes it to eleven and stops it, and removing that down restores twelve and the item comes back. The same augments work on the sender with its own base of eight, and a doctored save of fifteen ups reports twenty-four and keeps four slots. Two defects only the game could find are fixed rather than worked around: a command usage written as a choice of two words is dropped whole by this build's parser, so the command did not exist at all until it was spelled as two usages; and a saved augment this port does not run was having its count cut to one on every read, which is the same silent-loss class the port already fixed for modules.
+"""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-22"
 game = "26.3"
