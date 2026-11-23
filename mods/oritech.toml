@@ -17,7 +17,7 @@ A port of [Oritech](https://github.com/Rearth/Oritech) by Rearth for Horizon —
 - The buffer's key is the API's int `energy` rather than upstream's long `oritech.machine_energy`; every value here fits and the buffer is a real block energy capability other mods can use.
 - **The rest of Oritech:** the other generators, the accelerator ring, the reactor, the GeckoLib deep-tier models, the machines beyond these two, the ore/ingot sets and the rest of the crafting chain.
 
-The original copyright and licence notices travel inside the distributed archive (`mixins/oritech/LICENSE` and `NOTICE.md`) and are also in this repository. CC0-1.0. Pinned to Horizon 1d63e0a and horizon-mixins 5a64af93.
+Oritech 0.2.13 includes the upstream CC0-1.0 licence in `LICENSE` and credits in `LICENSE-NOTICE.md`. The [release receipt](https://github.com/AdLf0208/oritech/blob/1a230cb0f29429e1ba8d97a931b51820ed6d05f9/RECEIPT.md) records the exact build pins.
 """
 authors = ["Me! - Rearth", "AdLf0208"]
 owners = ["AdLf0208"]
