@@ -34,6 +34,15 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-23"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "13f0e7be10390536b39ae315d81878f257e5a5921f2cf7c071b45c60d6cfc9b4"
+changelog = """Slice 10, the solar panel ladder: seven tiers of panel that generate only when they can see the sky, in a dimension that has sky light, and in daylight — three conditions, each read from the game rather than assumed. The proof is built from differentials rather than a single positive: the panel gains one hundred and twenty energy over six ticks measured against its own clock, exactly twenty thousand from twenty of room and never above it, and holds five thousand unchanged for sixty ticks both under a stone and at midnight, which separates the sky from the day. Its buffer extracts through the bottom face only, so the cell underneath reads fourteen hundred and twenty while the cell beside it reads zero and the panel's own buffer stays empty. The nitro tier clamps two billion to forty million and names its two rates. Two defects the legs found are fixed: the shared push read its buffer through a face the panel does not extract on, so it pushed nothing downward, and my own craft-check data put panes in every tier's top row, which the table correctly refused. Every one of the seven drops itself and the pane and its recipes craft.
+"""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-23"
 game = "26.3"
