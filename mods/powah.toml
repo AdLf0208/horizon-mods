@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-23"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "c6f1e813acea2b4891f40eebfc1e49e5ee889449715458206939234fb53f0ac2"
+changelog = """This version makes a comparator read a machine's own charge instead of the container behind it. Eight kinds answer it, which is exactly the eight that already print a comparator figure, and the ones that store nothing stay silent rather than reporting zero for the wrong reason. Two things in the brief were simply wrong and the game settled both: a comparator has no block entity here, so its output is read at the redstone wire the game itself drives rather than queried from the block, and a cell half full reads seven rather than eight, because the fraction is taken of fifteen and truncated. Proven at three charges with the wire in front: half full reads seven, full reads fifteen, a quarter reads three, and each change is announced to the neighbours rather than waiting for a read. The differentials are the ones that matter: a stone reads nothing, and a cable beside a full chest reads nothing while a comparator on that same chest reads one."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-23"
 game = "26.3"
