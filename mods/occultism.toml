@@ -37,6 +37,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-23"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "8dc4b0633c3ad413217ac673b085ff8f98fa880992eea8052c8c06f2d29bba09"
+changelog = """This version carries the seventeen impure-chalk recipes, which needed twenty-six ingredients the package did not have. Three things the brief assumed did not survive the jar and are worth stating: the essences and pastes are not spirit-fire results at all but ritual and possessed-drop results, the tag it named was the wrong one, and only two of the twenty-six ingredients have a source in this package today. So the slice declares all twenty-six and records where each one will come from, and the two burnt dusts get a real source by smelting the polished pair the package already carries. Every grid is proved at a real table: all seventeen craft their declared chalk with the grid emptied and every ingredient consumed, the two white grids fill their nested base through both burnt stones, the two smelting recipes run in a real furnace at two hundred ticks, a pink grid with dirt and a base with no otherworld wood make nothing, and not one tag-keyed cell failed to resolve. The next family this unblocks is the otherstone tablet, whose only missing ingredient was one of these tags."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-23"
 game = "26.3"
