@@ -17,6 +17,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-23"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "6463ca1d05de67a3a2d6d890a76658b672e98aad82b655ff7b65479c4ea251b9"
+changelog = """This version gives the requester a screen, so a player edits its filter entries by clicking rather than by typing commands, and the screen and the command write the same saved container. The surface was measured before anything was written: a menu declared as a menu type in the package's data, a screen part that draws cells and numbers, button presses for stepping an amount, and data slots that are a view of the saved compound rather than a second source of truth. Proven in game: a right-click opens the container, a carried torch clicked onto a cell becomes an entry with its band, raising the minimum past the maximum is refused, clicking a second carried item repoints the cell and keeps the band, the screen's remove button drops the entry, a command adding an entry shows up as two, and a requester that was never opened reads zero. Four traps cost runs and are recorded: the engine opens a mod container's menu for nobody so the machine must ask, the menu field must name a declared menu type, a panel taller than the screen is clipped and its clicks land elsewhere, and the harness numbers slots from the hotbar.
+"""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-23"
 game = "26.3"
