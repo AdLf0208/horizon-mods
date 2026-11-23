@@ -25,13 +25,3 @@ sha256 = "d7f5eb112ed6bd2e06d4ae83432a4744bc3a0f32cf849ed65a3a59f0d5d7bff5"
 changelog = """
 This version answers a review, and both defects were real. The machine planned against the stock's total rather than against the room its table actually had, so it could consume ingredients and place nothing, and the requester then counted the step as served; a held result is now committed only when the whole of it fits the slots that remain after the ingredients leave, otherwise the ingredients stay and the step is refused as a full network. Proven in game with the exact case: twenty-six stacks of coal and sixty sticks leave an aggregate of seven hundred and twenty-eight against a limit of seventeen hundred and twenty-four, yet no slot can take four torches, so the crafter reads stored zero and phase network-full with its stock untouched. Taking items out used to rebuild each stack from an id, which lost names, enchantments and damage; it now hands over the stored stacks themselves, split to the count asked for, and the game leg proves a named pair and a damaged sword coming out intact. The archive also carries the upstream notice byte for byte, which the review asked for, and the packaged readme is current.
 """
-
-[[versions]]
-version = "0.2.1"
-published = "2026-11-22"
-game = "26.3"
-file = "stepcrafter.hmod"
-sha256 = "b40307c5ddf08c4ea9f7d6e358248dff1d27c5774b41e46eabcbcca6cdc6de63"
-changelog = """
-Slice 2, the Step Requester: a block that watches a stock and asks a nearby machine to craft more when the stock falls below a minimum, batching up to a maximum, so the machine's own band no longer has to be set by hand. The rule is the reference's own hysteresis with the network replaced by the nearest machine within four blocks that maintains the same item, and the request is one integer written into that machine's saved data which its own tick spends one step at a time. The question our brief flagged as a possible blocker is answered by measurement: world-state interop between two blocks works at this pin, with one block reading another's slots and saved values and writing a single value that the other's next tick sees, so nothing had to be recorded as blocked. Proven in game on the same world twice: with the requester present the machine reaches a stored and crafted count of eight on two coal and two sticks, and with the requester removed the identical machine sits at zero and zero. An ingredient shortage reads as not enough ingredients with a backoff, and the restock resumes both machines to eight. The managers and monitor stay recorded as blocked, because they mix into a screen the parent port does not ship.
-"""
