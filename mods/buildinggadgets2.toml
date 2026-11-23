@@ -32,13 +32,20 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-23"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "9d19a3410c5dea90b062fb5818fea876710085ef412f9a23de151658c9bbfcf7"
+changelog = """This version consults the deny tag the reference ships, so a block the mod says must not be built is refused when it is selected and when it is a destination. The tag is carried byte for byte as the jar ships it: four blocks and three tags that resolve to forty-five in this build. The interesting part is that with the shipped tag the destination rule is invisible, because every one of those forty-five is already non-replaceable here, so a count built on the tag alone could not fail. The leg therefore extends the tag in a test world with a block that is replaceable and shows the count fall from eight to six, and it records the deviation plainly: the reference reads the tag at the selection only, and applying it to destinations is the exchange gadget's rule borrowed into this path. Selection is proved separately, with a block that only the tag can refuse. The build modes stay held and the preview stays blocked, neither re-attempted."""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-23"
 game = "26.3"
 file = "buildinggadgets2.hmod"
 sha256 = "927409d7750cc246e1e98630b6355bc9e90ba6c7cdf17c80f9e87bb05066f14a"
-changelog = """
-This version answers a review with a behaviour reduction, deliberately and with the evidence for it. The gadget's area modes wrote blocks through a raw path, so a protection mod could not cancel a single placement, and the only calls this pin offers that take an actor either bypass protection by their own contract or require a fake player a mod cannot create. So the modes are held rather than written: a click plans the cells, reports how many would be allowed and how many were placed, spends nothing, and says which symbol is missing. Selection, all eight mode plans, ranges and the wheel keep working, and the hold lifts with one constant when the pin gains a cancellable placement call. The second review item is fixed and measured: the upper world-border bound is now exclusive, which the game proves by counting nineteen allowed cells when the clicked column lies exactly on the bound and twenty-four when it is one cell inside. The old assertion that encoded the defect was corrected with it, and the pre-fix mode logs are retired so no stale pass claims a build that no longer happens.
+changelog = """This version answers a review with a behaviour reduction, deliberately and with the evidence for it. The gadget's area modes wrote blocks through a raw path, so a protection mod could not cancel a single placement, and the only calls this pin offers that take an actor either bypass protection by their own contract or require a fake player a mod cannot create. So the modes are held rather than written: a click plans the cells, reports how many would be allowed and how many were placed, spends nothing, and says which symbol is missing. Selection, all eight mode plans, ranges and the wheel keep working, and the hold lifts with one constant when the pin gains a cancellable placement call. The second review item is fixed and measured: the upper world-border bound is now exclusive, which the game proves by counting nineteen allowed cells when the clicked column lies exactly on the bound and twenty-four when it is one cell inside. The old assertion that encoded the defect was corrected with it, and the pre-fix mode logs are retired so no stale pass claims a build that no longer happens.
 """
 
 [[versions]]
@@ -47,6 +54,5 @@ published = "2026-11-10"
 game = "26.3"
 file = "buildinggadgets2.hmod"
 sha256 = "de10c06860205d2d70c7bd93e5901aa1809a298043721be181d2d9079282b3cb"
-changelog = """
-First release
+changelog = """First release
 """
