@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-23"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "0b20e8dbdfd9f5c82bd721305b8b883664b12a35864c1fbcc5588d7d18bfdb71"
+changelog = """This version pays a debt rather than adding a family: the smelting table has been carried since the first slice and never exercised, and it now runs all hundred and sixty-three rows in game, with the four new ingot-to-dust crushing rows beside it, a hundred and fifty-six in all. The sweep is batched so a hundred and sixty-three operations take nine waits rather than a hundred and sixty-three, and a failure names the row's index and its input rather than only the count, because a count tells you that something broke and not what. Proven in game on both sides: three representative rows each spend exactly one operation's energy and empty their input, while a dirt in the same smelter holds its twenty thousand and produces nothing. The negative run flips the coal-ore row's output assertion, so the sweep can fail. One leg died inside another port's phase under contention and passed on re-run with no panic in its log, which is recorded rather than retried quietly."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-23"
 game = "26.3"
