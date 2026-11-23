@@ -30,6 +30,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "24a902dd7bdaa9872e453cb82f74104d266d61b3fa42980d99b7758fa93ea685"
+changelog = """Slice 9, the void module: the module that destroys what the router holds, which is the first one whose operation is on the router itself rather than on a neighbour. Its rule is not "delete everything": it deletes at most what one operation moves, honours the module's filter, and honours the regulator augment that slice 8 proved on the pull side, so a router with a regulator set to three keeps three. Proven in game with four rigs in one run: eight stone in the buffer go to nothing, the same eight with a regulator stop at three, an identical router whose module is a sender with no target keeps all eight, and a whitelist for dirt leaves stone untouched. The recipe is the jar's, and its lava bucket leaves the vanilla bucket behind, so the grid is asserted to hold exactly that rather than to be empty. One measurement in the brief was wrong: one operation is twenty ticks, so a hundred ticks cannot empty eight stone, and the leg waits three hundred.
+"""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-23"
 game = "26.3"
