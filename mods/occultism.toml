@@ -37,6 +37,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-23"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "3d335fe802e7668d869bac6ab47ffacb9770b1d9b602cc7fe74805e4fe8d5998"
+changelog = """This version carries the frames and pedestals, and the brief's premise was wrong twice over, which made the slice simpler rather than harder: the frames are items with a model and no block at all, and the pedestals are plain blocks with no block entity, so nothing here needed a container or a renderer and nothing was faked to look like a machine. The frame being an item is itself asserted in game, since a block could not pass that check: a grid makes one, an item model draws it, and there is no blockstate, no loot table and no block item to find. The pedestals are proved like blocks: their grids, both of their tables, their full default state, and the tool pair those templates carry, with a plain stone's hand break as the differential. The storage controller bases are not carried and the reason is exact: they are ritual results, and their model also needs the controller this port does not have, so the row names the ritual rather than shipping an item that cannot be made.
+"""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
