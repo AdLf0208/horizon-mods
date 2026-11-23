@@ -11,7 +11,7 @@ Horizon Auto Fishing automates fishing input: it sends raw use_item packets to r
 
 Many servers forbid AFK or automated fishing, or may flag it with an anticheat, so using this mod can get you banned. Check the server's rules first.
 
-Break protection keeps a rod from being used once 5 or fewer durability remain, and the all-rods modes swap a worn-out rod for the freshest rod in your hotbar or inventory. Delays get a small random extra (up to 5 ticks by default). The opt-in junk filter throws away only the items you list — while it is on, it drops one listed item per tick, even when you are not fishing."""
+Break protection keeps a rod from being used once the protect-at threshold (default 5) or fewer durability remain, and the all-rods modes swap a worn-out rod for the freshest rod in your hotbar or inventory. Delays get a small random extra (up to 5 ticks by default). The opt-in junk filter throws away only the items you list — while it is on, it discards the whole stack of a listed item, one stack per tick, even when you are not fishing."""
 
 authors = ["SkyeSlav"]
 
@@ -42,3 +42,18 @@ file = "auto-fishing-1.0.3.hmod"
 sha256 = "4e78dbb3a47f919717ad441932de3f5e4e64f594c16036f372404683cd14f184"
 
 changelog = "Ships the MIT LICENSE file inside the .hmod, fixes the version mismatch, and rewrites the description to disclose automated fishing input and the ban risk. Bite detection unchanged from 1.0.2."
+
+[[versions]]
+
+version = "1.0.5"
+
+published = "2026-11-23"
+
+game = "26.3"
+
+file = "auto-fishing-1.0.5.hmod"
+
+sha256 = "4a38d9526789de56bb6ac113c0c5e452eebf8d2bed424da4064bc57d287b2290"
+
+changelog = "Fixes the mode migration 1.0.4 shipped with: the mode now lives under a new key, and the first load after updating migrates a mode saved by 1.0.3 to it — all four values keep the mode they had, before any automation runs. The old 1-4 slider stays beside the named choice and the two stay in sync. A value stored by 1.0.4 cannot be told apart from a 1.0.3 value, so 1.0.4 users should check the mode name on the /autofish status line once. Everything else is unchanged from 1.0.4."
+
