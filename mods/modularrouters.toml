@@ -30,6 +30,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "3431d2f6491e8410bdab08682be453fa83cf4157e17c78b1b8f67b3543b594e4"
+changelog = """This version makes the regulator augment act on the sending side, which was carried but inert: a sender with an amount set now tops the destination up to that amount and stops, rather than moving whatever its operation allows. Proven in game with four rigs in one run: a chest of six takes four from a sender holding eight, because ten is the amount; an identical sender without the augment takes all eight; one already at the amount sends nothing and keeps its buffer; and the Mk2 sender obeys the same rule. The brief's first choice, a sender that reaches another dimension, is not buildable at this pin and is recorded with the measurement rather than shipped: a level that is not the acting one lends no capability, and the alternative write path answers stale, so the machine keeps its items. The probe that proved it wrote into the router's own save and is kept as a script rather than in the package. One defect the leg found is fixed: re-saving an unchanged amount answered that the module had no augment.
+"""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
