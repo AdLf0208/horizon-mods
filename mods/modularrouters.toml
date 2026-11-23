@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "3ad02ddcacdffa72ca41d33792cfd83772187fae40b6b8ebcf90d3482ea4b9dc"
+changelog = """This version adds the dropper module, which throws what the router holds at the block its direction names, and its rule is the void module's turned outward: it drops at most what one operation moves, honours the module's filter, and honours the regulator amount as a floor left in the buffer. Proven in game with four rigs in one run: eight stone leave the buffer and land as eight on the floor north, an identical router with a void module destroys its eight and leaves nothing on the floor, a whitelist naming dirt keeps all eight in the buffer, and a regulator set to three leaves three while dropping five. The count is summed by stack rather than by entity, because two drops merge into one; and the floor is cleared before the run so the number cannot be inherited. One deviation is recorded: the call the brief named for dropping is hidden at this pin, so the item is spawned with zero motion through the supported handle, which is also what the reference does."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-23"
 game = "26.3"
