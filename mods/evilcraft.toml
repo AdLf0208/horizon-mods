@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-23"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "e1266a7ffd974cbd488430c397e4d97248ac354bce596b63fd27c85c95c1568f"
+changelog = """This version carries the blook and builds the purifier, and the purifier does one of its four things: it takes a curse off an item for a bucket of blood over three seconds. The other three of the reference's purify actions need an enchantment generator, an entity query round the block, or the infuser's head progression, and they are named as such rather than approximated. The blook crafts through the blood infuser from a book, which also proves that machine's own recipe table in force. Proven in game with the cursed item read before and after: a diamond pickaxe carrying a vanishing curse loses it and keeps everything else, the tank falls by exactly one bucket, and the same pickaxe in a blood chest for the same time still carries the curse, which is the differential that shows the two machines do different jobs. One correction the artefact forced: this build's give refuses the older enchantment syntax and takes the bare map, so the leg writes the shape the game accepts."""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-23"
 game = "26.3"
