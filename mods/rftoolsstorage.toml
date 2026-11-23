@@ -89,16 +89,6 @@ Slice 10, the storage scanner's search box: the list can now be filtered by a wo
 """
 
 [[versions]]
-version = "0.2.9"
-published = "2026-11-23"
-game = "26.3"
-file = "rftoolsstorage.hmod"
-sha256 = "f6db89ae783957109af86c926f3a8db592401b77f39cce7eed5a2763189e46ef"
-changelog = """
-Slice 9, the storage scanner's insert-from-screen path: the operation the list's insert button does, carried as a command so a single player can reach it. The rules are the reference's rather than the obvious ones, and the game leg proves each: the price is charged only when the stack the player offered empties, so a barrel with room for half takes thirty-two of sixty-four and charges nothing while the player keeps the rest, and a full barrel moves nothing and charges nothing. A box with nothing routable answers that there are no routable inventories without charging, and the command aimed at a chest answers that it is not a storage scanner. The main leg moves sixty-four stone from the player into the chest and the buffer falls by exactly one insert price, with the chest's own item list read back rather than assumed. The earlier attempt at this slice had already produced the package before it was cut off; the delivered bytes were rebuilt from the tree and compared, so the sha is reproducible and the documentation now names the build the game actually compiled.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
