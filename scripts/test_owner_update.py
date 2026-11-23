@@ -1,9 +1,13 @@
 import contextlib
 import importlib.util
 import io
+import itertools
 import json
+import os
 import pathlib
 import re
+import shutil
+import subprocess
 import tempfile
 import unittest
 from unittest import mock
@@ -604,6 +608,46 @@ class Replay(unittest.TestCase):
                                 ("c" * 12, "refused: not a commit on main's first-parent history")])
         self.assertEqual((pairs, fetched), ([], []))
 
+
+class FormsBot(unittest.TestCase):
+    """check.yml's "Who submitted it": the marker counts only in a pull request opened by a REGISTRY_BOT login."""
+    TEXT = pathlib.Path(__file__).parent.parent.joinpath(".github/workflows/check.yml").read_text()
+
+    def submitter(self, login, bot, body="<!-- submitted-by: alice -->\nA mod."):
+        step = self.TEXT.split("- name: Who submitted it\n", 1)[1]
+        lines = step.split("run: |\n", 1)[1].splitlines()
+        script = "\n".join(l[10:] for l in itertools.takewhile(lambda l: l.startswith(" " * 10) or not l, lines))
+        with tempfile.TemporaryDirectory() as d:
+            out = pathlib.Path(d, "out")
+            # The runner's environment stays out: only what the step gets, and what starting bash needs.
+            env = {k: os.environ[k] for k in ("PATH", "SYSTEMROOT") if k in os.environ}
+            env.update(LOGIN=login, BODY=body, BOT=bot, GITHUB_OUTPUT=str(out))
+            subprocess.run([shutil.which("bash"), "-e", "-c", script], env=env, check=True)
+            return out.read_text().strip()
+
+    def test_one_bot_as_before(self):
+        self.assertEqual(self.submitter("ludovic111", "ludovic111"), "login=alice")
+        self.assertEqual(self.submitter("mallory", "ludovic111"), "login=mallory")
+        self.assertEqual(self.submitter("ludovic111", "ludovic111", body="no marker"), "login=ludovic111")
+        # Exactly the listed login: no `[bot]` added or taken away.
+        self.assertEqual(self.submitter("ludovic111[bot]", "ludovic111"), "login=ludovic111[bot]")
+
+    def test_no_bot_trusts_no_marker(self):
+        for bot in ("", " "):
+            for login in ("ludovic111", "horizon-mods-submissions[bot]", "horizon-mods-bot[bot]"):
+                self.assertEqual(self.submitter(login, bot), f"login={login}")
+
+    def test_every_listed_bot_during_a_switch(self):
+        bots = "ludovic111 horizon-mods-submissions[bot]"
+        self.assertEqual(self.submitter("ludovic111", bots), "login=alice")
+        self.assertEqual(self.submitter("horizon-mods-submissions[bot]", bots), "login=alice")
+        # The App's name without `[bot]` is a plain account's, and brackets are text, not a pattern.
+        for login in ("horizon-mods-submissions", "horizon-mods-submissionsb", "horizon-mods-submissions[", "mallory",
+                      "ludovic111 horizon-mods-submissions[bot]", "[bot]"):
+            self.assertEqual(self.submitter(login, bots), f"login={login}")
+        self.assertEqual(self.submitter("horizon-mods-submissions[bot]", "horizon-mods-submissions[bot]"), "login=alice")
+        self.assertEqual(self.submitter("horizon-mods-submissionsb", "horizon-mods-submissions[bot]"),
+                         "login=horizon-mods-submissionsb")
 
 if __name__ == "__main__":
     unittest.main()
