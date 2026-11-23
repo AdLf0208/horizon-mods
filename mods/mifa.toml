@@ -17,11 +17,18 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.2"
+published = "2026-11-23"
+game = "26.3"
+file = "mifa.hmod"
+sha256 = "cb56241774645af99b4135a0fe01668b4bdac47eba40a75945b369f9f7849149"
+changelog = """This version answers a review with one declaration: the package now names the parent it binds to, so the launcher installs that parent and the game refuses this one rather than loading add-ons whose component and recipe type do not exist. The floor is the later of the two surfaces used, and it was measured rather than copied: the augment component arrived in one parent release and the dissolution chamber with its recipe type in another, so the requirement is the second. The refusal is proved by launching without the parent, where the loader names both mods and repeats the declaration's own reason and link, and by launching with it, where the parent compiles and the carried recipes read 33 of 33 against the chamber. Nothing in the content changed, which is the point of the version, and the test harness that produced the earlier evidence is kept as a script."""
+
+[[versions]]
 version = "0.2.1"
 published = "2026-11-21"
 game = "26.3"
 file = "mifa.hmod"
 sha256 = "19f1ffcd80f62077197b5561fc07f1c9786369540156300716714bbf5ae7008a"
-changelog = """
-Version 0.2.1 carries the upstream MIT copyright and permission notice inside the archive, as the review asked.
+changelog = """Version 0.2.1 carries the upstream MIT copyright and permission notice inside the archive, as the review asked.
 """
