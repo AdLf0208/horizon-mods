@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-23"
+game = "26.3"
+file = "industrialforegoingsouls.hmod"
+sha256 = "45b62107ace1e3d80a6d25c71571f30b3671fb1b0578045c3c3627bda36fe439"
+changelog = """This version fixes a join the port had been drawing wrong: a soul pipe beside the laser base showed no arm, because the tag the package generates named only the pipe and the surge, and at this pin a join is decided by that tag rather than by code. The reference joins a pipe to a soul handler, so the base belongs in the tag, and one line of generated data is the whole fix. Proven in game by reading the pipe's own block state with each neighbour: a pipe beside a pipe joins to the east, a pipe beside stone shows nothing on that side, and the same cell reads joined once the laser base replaces the stone, in both placement orders, and beside a surge as well. The base itself carries no pipe property, so the join belongs to the pipe. The negative run asserts the joined side reads false and fails, which is what makes the positive reading evidence."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-23"
 game = "26.3"
