@@ -43,12 +43,12 @@ categories = ["technology"]
 tags = ["port", "building", "automation"]
 
 [[versions]]
-version = "0.2.1"
-published = "2026-11-18"
+version = "0.2.3"
+published = "2026-11-23"
 game = "26.3"
 file = "rftoolsbuilder.hmod"
-sha256 = "da48b02d137e8d6cbf8df87536feb417ed7e4b02761f84b9e620cef314d627a6"
-changelog = "First publication in the SDK format."
+sha256 = "9efbb76f1a8092a217c81410ebc58f55b0e1a9691841f43d90183e0ee66da8b9"
+changelog = """This version gives the builder the quarry card, which was the one card type with no geometry of its own: it uses the card's box and replaces what it breaks. Six of them are carried, because the jar's are not one card but six — plain, silk, fortune, and the same three in a clearing form — and the difference between them is a drop rule rather than a shape. The void list is carried too, with the jar's own seven keys and its tags, and the replacement block is authored per builder because that is where the jar keeps it. Proven on a three-by-three-by-three volume with every count read back: twenty-seven cells quarried, two voided, twenty-five cobblestone collected and no gravel or coarse dirt, the card still carrying its type and void list after being taken and put back, the replacement block written into every cell when asked, the clearing form emptying them, silk giving twenty-seven stone instead of cobble, fortune turning the gravel into flint, and a box card on the same rig collecting nothing. One defect is fixed rather than copied: a block flagged as unbreakable handed out its drops while staying in place, which the port now refuses."""
 
 [[versions]]
 version = "0.2.2"
@@ -57,3 +57,11 @@ game = "26.3"
 file = "rftoolsbuilder.hmod"
 sha256 = "f09026b0f9f9cc91a2204f9231b07a595e62cda9f18e80ab46601ad049c5e872"
 changelog = """Slice 2, the two carried recipes, which were dead data: the builder and its shape card both used the 1.21.1 `{"item": …}` / `{"tag": …}` ingredient form, which 26.3 rejects at load, so the game logged `invalid ingredient` for every key and the grid sat full with an empty result — the mod could not be crafted at all. Both files now use bare item ids and `#tag` strings, with patterns, results and ids untouched, and the port gains a data guard that fails on the old shape. Proven in game: the shape card and the builder both craft with their ingredients consumed and the grid emptied, two wrong-ingredient controls return nothing, the game log has no `invalid ingredient` line, and a broken builder drops itself once."""
+
+[[versions]]
+version = "0.2.1"
+published = "2026-11-18"
+game = "26.3"
+file = "rftoolsbuilder.hmod"
+sha256 = "da48b02d137e8d6cbf8df87536feb417ed7e4b02761f84b9e620cef314d627a6"
+changelog = """First publication in the SDK format."""
