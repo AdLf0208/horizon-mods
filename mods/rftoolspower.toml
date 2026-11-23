@@ -17,6 +17,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.4"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "e1c6015697ba7825e07e6b58f0ca25daa89c7617c6880a90af4fec6968b1c9b2"
+changelog = """Slice 4, the ender monitor: the block that watches a pearl's journey and answers a redstone signal for exactly one tick, in one of three modes — the pearl lost, fired, or arrived. Proving a one-tick pulse needs a sample rather than a look, so the game leg samples sixteen consecutive server ticks around the landing and records the string, where the arrived monitor lights in exactly one of them and the same shot with the mode set to lost lights in none while still paying its energy; that pairing is the differential that makes the first claim mean something. Three further cases come with it: two notices inside one tick produce one pulse, a mis-facing monitor stays dark, and a survival break drops an item carrying the mode, which reads back after being placed again. One defect in the reference is fixed rather than copied: the generator answers its redstone through one face and notifies its display through another, so a lamp beside the monitor would never light; this port answers and notifies on the face it displays on.
+"""
+
+[[versions]]
 version = "0.1.3"
 published = "2026-11-22"
 game = "26.3"
