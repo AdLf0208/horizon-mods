@@ -37,6 +37,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-23"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "c1faa25ad14a03c78cdea9183c48b38985997518e033f1e0d1a089f7f1e1d0e2"
+changelog = """Slice 7, the polished tier of the building family: two polished stones made by smelting the raw stones in a furnace, and their slabs, stairs and walls, eight blocks in all with their grids, smelting recipes, loot tables, models, states, textures and tags. The game leg proves the pair through a real furnace with fuel and the absence of one without, then proves every variant by its own grid, its full default state read back, a bare hand for nothing and a wooden pickaxe for one, a joining wall pair, and two from a double slab. One correction to the brief worth stating: the family is eight results, not nine, because the jar carries no ninth block. A third instance of the same reference omission is fixed rather than copied: the polished otherrock slab has no loot table in the jar while seven of its eight siblings do, so it would have dropped nothing, and this package ships the table with the double-slab branch and proves one drops. The six stonecutting shortcuts the jar also ships are not carried, because the crafting grids produce the same blocks, and that is recorded as the family's one unported half.
+"""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-22"
 game = "26.3"
