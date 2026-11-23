@@ -18,7 +18,9 @@ Implemented so far
 
 Not yet ported
 
-- the dimensional tank (fluid store and capability) and the dimensional tablet (remote access, autocollect);
+- the dimensional tablet (remote access and autocollect), the frequency/owner/lock screens and the tank's
+  comparator — the tank itself ships here and is fully readable and writable through the game's own
+  capability;
 - the owner/lock/frequency GUI and the item `dimstorage:frequency` component, so a broken chest re-places on the default channel;
 - the custom chest renderer, lid animation and rotation display;
 - auto-eject, upgrades and size tiers, and the config file;
