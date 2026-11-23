@@ -37,6 +37,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-23"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "8c31154f9a07a6a6d97c62a0d919127ad0a41707341d5ff71be5591d002375e8"
+changelog = """Slice 8, the cobblestone tier: the two cobbled stones and their slabs, stairs and walls, eight blocks built from six grids, plus the pair of loot tables that make the raw stones drop their cobbled forms when broken without silk touch and keep the raw stone when broken with it. That last part is the interesting one: the reference's own table for the raw stones had never been carried, so breaking an otherstone dropped itself rather than its cobble, and with it the whole tier had no source. Proving it needs both hands: a bare or pickaxe break gives the cobbled block, and a silk-touch break gives the stone back. The jar's fourth omitted slab table is also found and fixed rather than copied, and the pattern is now exact enough to state: every slab of the rock family is missing its table while every slab of the stone family has one, which the unit test now checks across all eight paths so the next omission fails a test instead of shipping. Six stonecutting shortcuts the jar ships are not carried, and the reason is corrected from last slice: the engine does read stonecutting, but the harness has no way to select a station recipe, so a carried shortcut could not be proven in game.
+"""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-23"
 game = "26.3"
