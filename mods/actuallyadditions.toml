@@ -3,8 +3,6 @@ kind = "native-mod"
 name = "Actually Additions"
 summary = "The Coal Generator and Crusher of Actually Additions, with working recipes, real FE and persistence."
 description = """
-A port of [Actually Additions](https://github.com/Ellpeck/ActuallyAdditions) by Ellpeck.
-
 A port of [Actually Additions](https://github.com/Ellpeck/ActuallyAdditions) by
 Ellpeck for Horizon. This first slice is two machines, carried from the mod's own
 jar together with their blocks, items, models, textures, loot tables, recipes and
