@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-23"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "8b264c5d2e9a3da6073c9dc17229cd474d625ed63aabb56d6900922df5be951a"
+changelog = """This version adds the player transmitter and the binding card, so a machine can charge a player's inventory rather than a block beside it. The card is bound by using it, and the transmitter reads the name back and charges the bound player's items through their own energy handler at the tier's rate. Proven in game on the numbers: a card used from the hand binds to the operator and the transmitter names them; ten thousand in the buffer goes onto a cell item in that player's inventory and the transmitter reads exactly zero; a hundred thousand spends exactly five hundred a tick measured on the game clock, with the item gaining whole steps that add up against the same window; a blank card charges nothing and spends nothing; the nitro tier clamps two billion and names a million a tick. The slice also fixes a defect that predates it: a cable network rotated its starting port, so two storages on one cable ping-ponged the same charge and never equalized, which had also been making an older test pass or fail on which parity the harness happened to read."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-23"
 game = "26.3"
