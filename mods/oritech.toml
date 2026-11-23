@@ -34,48 +34,9 @@ published = "2026-11-22"
 game = "26.3"
 file = "oritech.hmod"
 sha256 = "8c39bc526b3dbb0457d4c4f3ea71126214c3267acc51e2f328990a82b107bb6e"
-changelog = """Slice 8, the assembler: a machine with four input slots and a three-core multiblock requirement, where a craft costs exactly its recipe's time multiplied by the machine's own rate. Proven in game with the arithmetic rather than the outcome alone: with no core the full grid at twelve hundred and eighty FE shows no recipe and makes nothing, three core placements form it, twelve hundred and eighty FE advances exactly ten of forty-eight ticks, and priming the remaining four thousand eight hundred and sixty-four yields two motors with the buffer at zero and every input slot empty. A second craft primed with more than it needs spends exactly its cost and returns the excess; one coil short gives no progress, no recipe and no energy spent, which is the differential that separates a correct recipe match from a lenient one; and a slot holding two steel pays one and keeps one, which separates one item per ingredient from a whole stack. Five of the jar's recipes are carried and fifty-two are refused with a reason each: thirteen need a plastic plate from an oil chain this port has not built, twenty-nine are compatibility files for a mod the pack does not ship alongside, seven name a result family that is not carried, two need a bio fuel tag and one a leather tag. The brief's list of which recipes resolve was wrong in both directions, and the sweep of all fifty-seven files is what replaced it.
+changelog = """
+Slice 8, the assembler: a machine with four input slots and a three-core multiblock requirement, where a craft costs exactly its recipe's time multiplied by the machine's own rate. Proven in game with the arithmetic rather than the outcome alone: with no core the full grid at twelve hundred and eighty FE shows no recipe and makes nothing, three core placements form it, twelve hundred and eighty FE advances exactly ten of forty-eight ticks, and priming the remaining four thousand eight hundred and sixty-four yields two motors with the buffer at zero and every input slot empty. A second craft primed with more than it needs spends exactly its cost and returns the excess; one coil short gives no progress, no recipe and no energy spent, which is the differential that separates a correct recipe match from a lenient one; and a slot holding two steel pays one and keeps one, which separates one item per ingredient from a whole stack. Five of the jar's recipes are carried and fifty-two are refused with a reason each: thirteen need a plastic plate from an oil chain this port has not built, twenty-nine are compatibility files for a mod the pack does not ship alongside, seven name a result family that is not carried, two need a bio fuel tag and one a leather tag. The brief's list of which recipes resolve was wrong in both directions, and the sweep of all fifty-seven files is what replaced it.
 """
-
-[[versions]]
-version = "0.2.9"
-published = "2026-11-22"
-game = "26.3"
-file = "oritech.hmod"
-sha256 = "df078ef68690cb78c92bbc4d66f53524a01a9ebe73b18a9dd948b6ce42b72aa8"
-changelog = """Slice 7, the material and component chain: the recipes the machines needed, so a generator, a pulverizer, a furnace, a chiller and a lava generator are now craftable instead of given. The selection rule is the interesting part and it is mechanical: a recipe is carried only if its result and every ingredient resolve inside this package or in the engine, which over the jar's nine hundred and sixty-five recipe files leaves exactly twenty and eighteen are carried, the other two being alternates of carried ones. Seventeen craft in a real table in game, each asserting the result's id and count, that the result reaches the inventory, and that every ingredient's count fell by exactly what it used, with a wrong grid making nothing and a selftest flipping a count. A smelting recipe completes in exactly thirty ticks for exactly nine hundred and sixty FE. One boundary is recorded rather than faked: the nickel and platinum ingots come from ores, and a content package's configured features never reach the feature registry at this pin, so the ore files are not carried and the two ingots stay give-only until that changes. The remaining nine hundred and forty-five recipes are each left with a reason, from machine recipes of machines this port has not built to compatibility recipes naming other mods' items."""
-
-[[versions]]
-version = "0.2.8"
-published = "2026-11-22"
-game = "26.3"
-file = "oritech.hmod"
-sha256 = "2d5c36276718c5868c69d218ff5e0a5e9973462b36e9efe59ea108f31189f491"
-changelog = """Slice 6, the control unit: a redstone addon that stops the machine it sits beside, which is the mod's own rule read correctly — no recipe resolved, no progress, no energy, no output push, while the burst counter still ticks because that is the caller's own line. The signal is read live at the addon's own position and the flag is saved under the reference's own key, so a powered machine reads as disabled in its readout rather than silently doing nothing. Proven in game with the signal recorded rather than assumed: the pulverizer, its addon and a redstone block are read back by id; with the signal on, forty ticks change nothing, the buffer stays at ten thousand and the bone stays in the input; removing the signal lets the same bone finish in a hundred ticks for exactly thirty-two hundred FE with six bone meal out. A selftest that expects a different energy figure fails, and the whole scenario on a build without the package fails at the first placement. One trap cost a run and is recorded: setting the same block id again keeps its block entity data, so the new leg reuses a shelf that still held coal from an earlier phase; it now uses a position no other phase touches, clears it first and asserts the output is empty before it starts."""
-
-[[versions]]
-version = "0.2.7"
-published = "2026-11-21"
-game = "26.3"
-file = "oritech.hmod"
-sha256 = "f1232e32e10c0d139d0e2681c06a970190f9ef6314b4bf736e73d4c5077c3753"
-changelog = """Slice 5, the machine addon system: six addon blocks that now change the machines they sit beside, with speed, efficiency, processing and burst rules read from the config's own default rather than from a guess. That default is the additive mode, which makes a speed addon two thirds rather than a half, and so the pulverizer finishes in sixty-seven ticks for three thousand eight hundred and eighty-six FE rather than the fifty ticks a multiplicative reading would give; both branches are implemented and tested because the config value selects between them. Proven in game by priming each leg with exactly the operation's whole cost, so a cheaper tick would leave energy behind and a dearer one would starve mid-progress: a speed addon gives sixty-seven ticks and three thousand eight hundred and eighty-six where the same machine without one takes a hundred and three thousand two hundred, an efficiency addon costs two thousand seven hundred, a capacitor takes the buffer from twenty-five thousand to two million and twenty-five thousand and clamps back when the addon is broken, a burst addon crafts two hundred and forty items in thirteen ticks for four hundred and sixteen, and a processing addon turns two bones into twelve bone meal for four thousand eight hundred. The furnace, the chiller and the lava generator each show their own tick and cost with the same addon, and all six new blocks drop themselves."""
-
-[[versions]]
-version = "0.2.6"
-published = "2026-11-21"
-game = "26.3"
-file = "oritech.hmod"
-sha256 = "a42999768aba2e3083422a006c28da3154b93256bc98d6fd691cf1c607f06cac"
-changelog = """Slice 4, the lava generator: a machine that burns one hundred millibuckets of lava over a hundred and twenty ticks for exactly sixty-four FE a tick, then hands everything it made to the ten blocks around it. It reuses the chiller's tank and fluid command and the assembly pattern the other machines already use. Proven in game with a fail-capable counterpart for each claim: a hundred millibuckets enters through the block's own declared handler and nothing burns until the core is in place; the burn reads exactly two thousand eight hundred and sixteen at seventy-six ticks, which is forty-four times sixty-four, and ends at exactly seven thousand six hundred and eighty with the tank empty; the push hands all of it to an adjacent pulverizer, which spends exactly three thousand two hundred on a bone; and an unassembled generator keeps its five thousand while its neighbour stays put, then re-assembly moves all five thousand over. An empty tank and a tank of water each make nothing for two hundred ticks. The last of those caught a bug in this port's own first draft: the energy push sat outside the assembly gate, so an unassembled controller would still have pushed stored energy, which upstream's tick prevents by returning early. It is fixed, and the differential that exposed it is now a permanent leg."""
-
-[[versions]]
-version = "0.2.5"
-published = "2026-11-21"
-game = "26.3"
-file = "oritech.hmod"
-sha256 = "89d0ae6fa5cf537af02358c7c3fa517abca9b04a7af9cbb4b484e5652045ef3b"
-changelog = """Slice 3, the industrial chiller: Oritech's first fluid machine, and the one machine in its line whose whole process is vanilla, water to three ice and lava to two obsidian. Everything else would have consumed dusts and clumps this port does not carry, so its recipes could never match and shipping them would be dead data. The numbers are the jar's: fifty thousand FE of buffer, thirty-two a tick, a four thousand millibucket tank, one bucket a craft, two hundred ticks, with the core offset this port already learned for its other multiblock. Proven in game by measurement rather than by reading the readout: three hundred and twenty FE advanced the craft exactly ten ticks, and a hundred and forty-four ticks spent exactly four thousand six hundred and eight, leaving three ice and an empty tank; lava gave two obsidian for exactly six thousand four hundred; a steam fluid was refused with an accepted count of zero. The cold-biome speed and efficiency bonus is recorded as blocked because the mod API has no biome read at this pin, rather than being approximated."""
 
 [[versions]]
 version = "0.2.2"
@@ -83,7 +44,9 @@ published = "2026-11-21"
 game = "26.3"
 file = "oritech.hmod"
 sha256 = "9af384e8e4aca3fd7ca956187791ebd9c85341ab258a3d845a52dad2b037eefc"
-changelog = """Slice 2, the powered furnace multiblock and the seven machine cores. It is the system rather than one machine: the core block, the assembled gate, the core lookup and "a broken core disassembles" are what the foundry, refinery, atomic forge and reactor reuse, and it closes slice 1's gameplay hole — a generator can now drive a machine that turns ore into ingots. From the jar's numbers: 10,000 FE capacity, 256 insert, 32 FE/tick, a 0.5 speed multiplier so a 200-tick recipe finishes in 100, the core at (0,1,0), seven cores with quality equal to tier, an unassembled machine inert, and a broken core freezing progress rather than losing it. The seven carried pulverizer recipes were dead data — they used the 1.21.1 `{"item": …}` form 26.3 rejects — and are rewritten to bare ids by the carry script. Proven in game: no core and ore with 5,000 FE smelts nothing; a core placed by right click assembles at quality 2; 320 FE finishes exactly 10 ticks and an iron ore yields one ingot for exactly 3,200 FE; a core broken mid-smelt freezes progress at 31 with the buffer unspent and a core 4 re-assembles to finish; all seven cores place and read back while machine_core_8 is refused; and all seven pulverizer recipes craft with their inputs consumed."""
+changelog = """
+Slice 2, the powered furnace multiblock and the seven machine cores. It is the system rather than one machine: the core block, the assembled gate, the core lookup and "a broken core disassembles" are what the foundry, refinery, atomic forge and reactor reuse, and it closes slice 1's gameplay hole — a generator can now drive a machine that turns ore into ingots. From the jar's numbers: 10,000 FE capacity, 256 insert, 32 FE/tick, a 0.5 speed multiplier so a 200-tick recipe finishes in 100, the core at (0,1,0), seven cores with quality equal to tier, an unassembled machine inert, and a broken core freezing progress rather than losing it. The seven carried pulverizer recipes were dead data — they used the 1.21.1 `{"item": …}` form 26.3 rejects — and are rewritten to bare ids by the carry script. Proven in game: no core and ore with 5,000 FE smelts nothing; a core placed by right click assembles at quality 2; 320 FE finishes exactly 10 ticks and an iron ore yields one ingot for exactly 3,200 FE; a core broken mid-smelt freezes progress at 31 with the buffer unspent and a core 4 re-assembles to finish; all seven cores place and read back while machine_core_8 is refused; and all seven pulverizer recipes craft with their inputs consumed.
+"""
 
 [[versions]]
 version = "0.2.1"
@@ -91,4 +54,6 @@ published = "2026-11-10"
 game = "26.3"
 file = "oritech.hmod"
 sha256 = "de762c4efd93b034561223d5ddb18b9c8fa44765ccb332069fe7fa12b5fc6d73"
-changelog = """First release"""
+changelog = """
+First release
+"""
