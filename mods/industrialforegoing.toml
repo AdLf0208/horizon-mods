@@ -40,16 +40,6 @@ This version answers four findings, and the first one was a duplication waiting 
 """
 
 [[versions]]
-version = "0.2.12"
-published = "2026-11-23"
-game = "26.3"
-file = "industrialforegoing.hmod"
-sha256 = "28eef176332c277538d8fc5d23bf60aac8eb226407b6a5895cfa47cbd9618826"
-changelog = """
-This version adds the animal rancher, which milked its first cow into a tank this package had never filled. The brief had it wrong in an interesting way and the artefact won: there is no input slot and no milk bucket anywhere in the machine, because it puts a bucket in a fake player's hand, calls the animal, drains the milk into its own tank and empties the hand, while a sheep's wool goes to its container. So the numbers are the machine's own: a cow gives exactly a thousand millibuckets of milk for four hundred energy, a red sheep gives its wool once and then nothing, no animal spends nothing with the bar resting full, and a machine with three hundred and ninety-nine energy leaves the cow alone. It also proves the output container's limits and its draw count, and a broken machine carries both its charge and its milk on its item. Two harness bugs were fixed rather than worked around: the crafting helper could not place two non-stackable items, and the pinned draw was being spent on the next tick rather than the next attempt.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
