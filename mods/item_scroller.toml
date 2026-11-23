@@ -17,12 +17,27 @@ Horizon port by **caskh**, based on [Sakura-Ryoko’s Java version](https://gith
 authors = ["caskh"]
 owners = ["caskh"]
 owner_ids = [194096617]
-license = "LGPL-3.0"
+license = "LGPL-3.0-only"
 source = "https://github.com/caskh/item-scroller"
 icon = "icons/item_scroller.png"
-categories = ["storage", "utility", "management"]
+categories = ["storage", "management", "utility"]
 tags = ["inventory", "storage", "sorting", "crafting", "item-transfer", "mouse-wheel", "recipe-memory", "client-side", "quality-of-life"]
 key = "RWR5VyGz8HewUdY5eOVOa0F5QKhlgvHmXqF+Hnk842B/iYtyKYb4BjNc"
+
+[[versions]]
+version = "0.4.7"
+published = "2026-11-23"
+game = "26.3"
+file = "item_scroller-0.4.7.hmod"
+sha256 = "37e4e379b9ee176c33d101fda4dbe3dec2456c34f4fbba2a0111b2ae75f6d88e"
+signature = """
+untrusted comment: signature from minisign secret key
+RUR5VyGz8HewUcvjvTo22b8N4XFwVejuRaK/r1F8A2bN5vpuAbe5NL0gaWwLes8oK+tIRtM8qSo973VfE2HwWEA20cTgj3+kbQs=
+trusted comment: timestamp:1795450457\tfile:item_scroller.hmod\thashed
+v1QDitaeZJSdNm4eGPE8DOEwGkyxoBDpafRSk2KhVDPjjcu558LxxdPAeUXvQgTPLSpQjuOSUwZ/tB7/CFrtDQ=="""
+changelog = """
+Fixed Shift + left-click in Item Scroller 0.4.7. Coal and other fuel-only items now go to the bottom slot. Items the open furnace can cook go to the top slot, including items that can also serve as fuel. Blast furnaces and smokers use their own cooking rules.
+"""
 
 [[versions]]
 version = "0.4.6"
