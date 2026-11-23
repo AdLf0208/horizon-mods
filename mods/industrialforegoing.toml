@@ -80,16 +80,6 @@ Slice 8, the fluid laser base and its own fluid recipe type: a second base that 
 """
 
 [[versions]]
-version = "0.2.7"
-published = "2026-11-22"
-game = "26.3"
-file = "industrialforegoing.hmod"
-sha256 = "68b63343357f9f9847bb5bf9be3cd44348aa0f90c98e449afbfc0af8ce5ec614"
-changelog = """
-Slice 7, the laser drill and its own ore recipe type: a base and a drill above it, where the base picks a recipe from the biome it sits in, the depth and the dimension, and the drill spends a thousand FE to produce what the lens weights toward. The rule is the reference's own rather than the block below it, because the pin exposes the biome and dimension type reads. Proven in game across eight phases: an End base lists ten recipes and picks none in that biome, fillbiome to a mountain biome makes it pick emerald ore, a lime lens raises that recipe's weight ninefold and removing the lens returns it, and one charge at ten thousand FE yields an emerald ore and leaves nine thousand with both bars reset; in the End's own biome the same charge produces nothing and still spends the energy. The add-on this slice exists for is proved end to end: its own recipe file and biome tag were installed exactly as its package ships them, the base's table moved from ten recipes to eleven, and that recipe ran to produce one echo shard. Two defects in the reference are fixed rather than copied: both machine loot tables nested their conditions in an array the engine does not read, so the machines could never drop themselves, and the recipe ingredient objects are unreadable by the pin's parser, which read zero of ten files until the decode flattened them.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
