@@ -45,13 +45,3 @@ sha256 = "675a229bb84827f55df67283c3b0080f1c489c0144a0b9e30966d8ad5a33e33e"
 changelog = """
 This version closes a silent-loss path in the step rather than a single case. The machine's room model counted a slot holding a named stack of the result as room for a plain one, so a step could be taken and counted while the result could not actually merge, and the items simply vanished. A slot now knows whether it accepts a plain insert, and that flag is derived from the same predicate the insert itself uses, so the model and the merge cannot disagree. Beyond that, applying a craft is a dry run committed only if every insert went in whole: the ingredients, the result and each remainder are simulated through the real merge rule on a copy, and nothing is consumed unless all of it fits. Proven in game on both sides of one inventory: a machine holding a named torch stack refuses the step, reports a full network and leaves all seventeen hundred and twenty-four items in place, while the same machine with a plain stack of the same count crafts four and consumes exactly what it should. A manual step's refusal is now recorded in the same phase field a tick-driven attempt uses, so the readout says where the last step left the machine instead of always reading idle.
 """
-
-[[versions]]
-version = "0.2.3"
-published = "2026-11-23"
-game = "26.3"
-file = "stepcrafter.hmod"
-sha256 = "ebbdd9cb13d44f8bd8d0319e86053dd24dd7f3aba832b1ca97f09eed39ef29c5"
-changelog = """
-Slice 3, crafting remainders: a step now leaves behind what the recipe returns instead of destroying it, so three milk buckets in a cake grid come back as three buckets beside the cake. The leftovers ride in the pattern's own saved compound rather than being recomputed, so a restart keeps them, and they are inserted under the same per-slot room rule the result already uses — a leftover with nowhere to go refuses the step with nothing consumed, rather than filling the output and quietly dropping a bucket. The proof is a real cake: nine items in, one cake and three buckets out, with the machine's own stock read before and after. The counterfactual runs the old behaviour and asserts the buckets are gone, which now fails, so the assertion is alive. One limit is recorded rather than hidden: the room model counts item ids, not components, so a slot holding a named stack of the same item is treated as having room it does not really have.
-"""
