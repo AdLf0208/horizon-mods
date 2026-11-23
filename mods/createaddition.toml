@@ -29,6 +29,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-23"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "715ce0ea799f9ad7c16d8bbc33df8b6c3fcafa2057ddf03bf60b84620a5025a4"
+changelog = """Slice 8, the festive wire and its spool: the jar's fourth wire kind, which carries copper's current rule and its own spool, with the iron wire carried as an item the reference registers but never lets you lay. The rules were read from the wire type rather than inferred from the names, and the surprise is worth recording: there is no per-kind loss rate at all in this release, so throughput belongs to the connector and the festive wire measures exactly one thousand a tick like copper. The low-current rule is not a field either: copper and festive are refused only between two large connectors, while a large and a small pair take any of the four. Proving the empty spool gives back the right kind found a defect of ours that had been shipping since the first version: the click that lays a wire wrote the changed spool back through an extract and insert, which loses a stack whose components differ, so one spool became three and the copper spool could not be used at all. The selection now belongs to the player rather than the item, and one spool makes one wire and returns exactly one empty spool. The second build check stays red for the reason established two slices ago.
+"""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-23"
 game = "26.3"
