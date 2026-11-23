@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-23"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "6885766f687e20941f3538a5576bfdf3a31ee5e97bcc41f18c15c23b08d0c857"
+changelog = """This version cleans a selected block's state the way the reference does, so a gadget no longer stores a furnace as lit or wheat as ripe when what it should remember is the block. The deny list is carried exactly and it is not a list of names: the reference compares property instances, which matters for a property called age that has eight different instances across the game, so a mod's seven-valued age survives while the eight it names are dropped. Proven on both sides of that line: a lit furnace keeps its facing and loses lit, ripe wheat drops to its default age, and a door's half and open are dropped while facing, hinge and powered survive, which the unit test pins because the carried deny tag refuses doors outright. A probe recorded why the in-game proof uses a furnace and wheat instead of the door the brief named, and also recorded that a world pack can only add to a tag, so a reader does not have to rediscover it. The build modes stay held and the preview stays blocked, neither re-attempted."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-23"
 game = "26.3"
