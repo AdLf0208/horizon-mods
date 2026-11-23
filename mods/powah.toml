@@ -34,6 +34,15 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-23"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "49ba3462341a8460bd020a5e5816113a974be3fee78555d226eab4923b71612f"
+changelog = """This version adds the ender cell and the ender gate in all seven tiers, which are not storage blocks at all: the energy lives in a world-level store keyed by owner and channel, so every block on one channel is the same battery and a fill into one is a fill into all. That is why a broken cell carries nothing on its item and a relaunch loses nothing, which is the opposite of every storage block this port has built so far and is the reason the leg checks it by moving one cell to another channel and reading its peer unchanged. Proven in game on the numbers: two cells on one channel both read a hundred thousand and name their own tier's transfer, the moved cell reads zero on its new channel while its peer stays exactly where it was and finds the energy again when moved back, an extender gives the channel its own capacity, and a gate feeds only the face it faces at the cable's rate while the hopper behind it stays empty. One arithmetic error of my own was caught by the red: an expectation of four million and one against a value of four thousand and one, and the expectation was corrected rather than the code.
+"""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
