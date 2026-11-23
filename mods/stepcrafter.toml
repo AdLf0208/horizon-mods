@@ -17,11 +17,19 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.3"
+published = "2026-11-23"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "ebbdd9cb13d44f8bd8d0319e86053dd24dd7f3aba832b1ca97f09eed39ef29c5"
+changelog = """Slice 3, crafting remainders: a step now leaves behind what the recipe returns instead of destroying it, so three milk buckets in a cake grid come back as three buckets beside the cake. The leftovers ride in the pattern's own saved compound rather than being recomputed, so a restart keeps them, and they are inserted under the same per-slot room rule the result already uses — a leftover with nowhere to go refuses the step with nothing consumed, rather than filling the output and quietly dropping a bucket. The proof is a real cake: nine items in, one cake and three buckets out, with the machine's own stock read before and after. The counterfactual runs the old behaviour and asserts the buckets are gone, which now fails, so the assertion is alive. One limit is recorded rather than hidden: the room model counts item ids, not components, so a slot holding a named stack of the same item is treated as having room it does not really have.
+"""
+
+[[versions]]
 version = "0.2.2"
 published = "2026-11-23"
 game = "26.3"
 file = "stepcrafter.hmod"
 sha256 = "d7f5eb112ed6bd2e06d4ae83432a4744bc3a0f32cf849ed65a3a59f0d5d7bff5"
-changelog = """
-This version answers a review, and both defects were real. The machine planned against the stock's total rather than against the room its table actually had, so it could consume ingredients and place nothing, and the requester then counted the step as served; a held result is now committed only when the whole of it fits the slots that remain after the ingredients leave, otherwise the ingredients stay and the step is refused as a full network. Proven in game with the exact case: twenty-six stacks of coal and sixty sticks leave an aggregate of seven hundred and twenty-eight against a limit of seventeen hundred and twenty-four, yet no slot can take four torches, so the crafter reads stored zero and phase network-full with its stock untouched. Taking items out used to rebuild each stack from an id, which lost names, enchantments and damage; it now hands over the stored stacks themselves, split to the count asked for, and the game leg proves a named pair and a damaged sword coming out intact. The archive also carries the upstream notice byte for byte, which the review asked for, and the packaged readme is current.
+changelog = """This version answers a review, and both defects were real. The machine planned against the stock's total rather than against the room its table actually had, so it could consume ingredients and place nothing, and the requester then counted the step as served; a held result is now committed only when the whole of it fits the slots that remain after the ingredients leave, otherwise the ingredients stay and the step is refused as a full network. Proven in game with the exact case: twenty-six stacks of coal and sixty sticks leave an aggregate of seven hundred and twenty-eight against a limit of seventeen hundred and twenty-four, yet no slot can take four torches, so the crafter reads stored zero and phase network-full with its stock untouched. Taking items out used to rebuild each stack from an id, which lost names, enchantments and damage; it now hands over the stored stacks themselves, split to the count asked for, and the game leg proves a named pair and a damaged sword coming out intact. The archive also carries the upstream notice byte for byte, which the review asked for, and the packaged readme is current.
 """
