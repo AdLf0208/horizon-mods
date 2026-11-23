@@ -39,16 +39,6 @@ This version closes a security hole rather than a cosmetic one: the storage scan
 """
 
 [[versions]]
-version = "0.2.15"
-published = "2026-11-23"
-game = "26.3"
-file = "rftoolsstorage.hmod"
-sha256 = "ce7599e3f3c73f1f48b064d81b17427ee3131a25bb4f0679b93991fc1befc4ad"
-changelog = """
-This version adds the storage's crafting grid and its four craft buttons, and it is the first slice where the pin's menu surface decided the design rather than merely allowing it. The reference's grid is a ghost: its cells hold no items, the result is taken from a button rather than the slot, and the craft pulls from your inventory and then from the locked storage. That is not expressible here, because nothing tells a mod that a result slot was emptied, so a real grid would have to guess by polling — an invented mechanic with a way to duplicate items — and a plain grid would simply be a crafting table. So the pattern is the block's own saved cells, the readout shows what the recipe table makes of them, and the four buttons become one command whose match is the engine's own. Proven in game on the cases that matter: an empty pattern refuses, a cobblestone cell is no recipe and takes nothing, one plank is the shapeless oak button, two cells of planks make four sticks from two of eight, four and eight and stack are one, two and sixty-four, a short storage names the cell and takes nothing, the player's planks go before the storage's, an unlocked storage refuses a cell write, and the pattern survives a relaunch.
-"""
-
-[[versions]]
 version = "0.2.5"
 published = "2026-11-21"
 game = "26.3"
