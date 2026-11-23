@@ -17,6 +17,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.6"
+published = "2026-11-23"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "7fe0e23708d8473564c53494f983c01bb9373fafdb8d551f7b8db5df0ae59a7c"
+changelog = """This version carries the blazing generator and the blazing rod, whose whole mechanic is a number in the rod's own item data: a rod starts at six units of energy a tick, climbs toward sixty over more than five hundred ticks, and decays once it leaves the slot. The ramp is proved by its own fold rather than by a rate: six point nine becomes seventeen point two over thirty-one ticks and the closed form predicts it to five decimal places. At sixty the generator makes exactly sixty a tick, a rod inserted into a full buffer takes it to exactly a million and is still burning, a hundred thousand is handed to a receiver in the same tick with nothing kept back, and a rod plus a generator both survive a relaunch. The component is a real registered type read from the delivered stack, not a lore string, and the in-game check reads it back with the generator consuming the same value. Two brief assertions were wrong and the artefact won: the four-hundred-tick rod never reaches its ceiling, and the block's click is owned by the global hook rather than the part, measured twice against two different templates.
+"""
+
+[[versions]]
 version = "0.1.5"
 published = "2026-11-23"
 game = "26.3"
