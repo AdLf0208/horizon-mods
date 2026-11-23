@@ -37,6 +37,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-23"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "d8c69505e24b2be9012ab6e5ad326735063fbe514bb2c82b90599a1b098aa292"
+changelog = """This version carries the six sacrificial bowls, the family's first block entity, and it holds one item at a time and gives it back. The reference is precise here and the port follows it: one slot with a limit of one, so five dirt put one in and leave four in the hand; a right-click with an empty hand returns the stored stack with its components intact, damage included; breaking a full bowl drops the bowl and spills what it held; and a plain bowl converts its stored item over spirit fire while a golden one deliberately does not. Proven in game on all of those plus the tool pair, which was measured rather than inherited — these blocks do not require a tool, so a hand break drops them and the template's own requirement had to be overridden. The game leg also found a port defect the unit tests could not: a click is dispatched once per hand, so the main hand stored the sword and the off hand's empty turn took it straight back, which is now a rule that only the main hand fills a bowl. The ritual itself stays blocked and is named, not approximated."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-23"
 game = "26.3"
