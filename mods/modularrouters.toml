@@ -30,6 +30,15 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-23"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "a6da9bf8dac0b6082b52e6d4832e966e74a3b8f219acfbbe4a97e0687b15469e"
+changelog = """Slice 10, the sender module Mk2: the sender that needs a container chosen in advance and reaches twenty-four blocks, or forty-eight with range augments, rather than the four directions of the plain sender. Proven in game with four rigs whose differences are the whole claim: a selected chest ten blocks out takes all eight and the buffer empties, an identical module with no selection sends nothing, a target twenty-five blocks out sends nothing at the base reach of twenty-four, and one range up takes the reach to twenty-five and the items start moving one per operation. Both of the jar's recipes craft, one and four at a time, with the pearl consumed and a stick in its place producing nothing. One rule is carried but inert and is recorded as such rather than implied: the reference lets the sender's filter cap how many of an item the target may hold, and this port keeps the setting without acting on it.
+"""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-23"
 game = "26.3"
