@@ -12,7 +12,7 @@ description = """
 - **Dark Mirror Water & Rain-Slicked Reflections**: Deep obsidian-teal water with Gerstner waves, Fresnel sky/SSR reflections, and storm rain ripples.
 - **Gothic Cinema Lens & AgX Tonemapping**: Soft eerie halation bloom, gothic SSAO, subtle chromatic fringe, organic 35mm film grain, FXAA, and bleach-bypass AgX color grading.
 - **39 In-Game Options**: Customize Blood Moon intensity, fog density, lantern warmth, water darkness, film grain, vignette, and horror effects live in Horizon's shader settings."""
-authors = ["mikolajlabuda17-lang"]
+authors = ["Mikolaj Labuda"]
 owners = ["mikolajlabuda17-lang"]
 owner_ids = [224315142]
 license = "MIT"
