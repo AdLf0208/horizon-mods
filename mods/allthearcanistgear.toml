@@ -10,7 +10,7 @@ A first port of All The Arcanist Gear for Horizon 26.3. The jar declared require
 authors = ["Jarva, AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
-license = "LGPL-3.0-only"
+license = "LGPL-3.0-or-later"
 source = "https://github.com/AdLf0208/allthearcanistgear"
 icon = "icons/allthearcanistgear.png"
 categories = ["utility"]
