@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-24"
+game = "26.3"
+file = "torchmaster.hmod"
+sha256 = "89fe9162ee4d00238dad2745729cbf0f0a0b21dc696742219a832191312b3b19"
+changelog = """This version vetoes phantom spawns near a mega torch. The artefact's stamped player_spawn_phantoms hook is a replace contract, so the veto is a Deny result rather than an invented cancel flag; the range is the mega torch's sixty-four blocks and only monsters match. Proven in game by an insomniac player under an open sky growing four phantoms unaided and none across two spawn windows with a torch ten blocks away, with a type-filtered count and a seeded player-stats fixture so the owner's random UUID cannot break it. The inverted self-test exits one. Village sieges remain the companion family."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-24"
 game = "26.3"
