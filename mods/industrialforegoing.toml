@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.17"
+published = "2026-11-24"
+game = "26.3"
+file = "industrialforegoing.hmod"
+sha256 = "b0e540b3adb98a4d3bd89e3b3bec189802505b0e02754916fc61eba2f258d115"
+changelog = """This version adds the plant sower, the planting half of the agriculture family. The artefact corrected two brief premises: it targets the cell two blocks above, and a powered miss still costs twenty FE while an uncharged buffer spends nothing. Proven in game by a seed planting wheat at age zero two blocks up for exactly one thousand FE and the seed consumed, with powered-empty and uncharged differentials; the earlier machines and recipe legs stay green. Eight timing flakes were kept as named logs with no assertion weakened."""
+
+[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
