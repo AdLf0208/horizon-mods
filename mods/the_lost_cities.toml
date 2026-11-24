@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.9"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "ebeca9f22eb117d2b512d9bde1df315e6aa5120f96c22a8a8304e56ad57155d7"
+changelog = """This version decodes the center building part, the ninth, with quartz stairs as the one new palette entry copied verbatim from the jar's default palette. No decoded part places stairs, so twelve of them authored in the modded dimension are a clean differential against vanilla noise, with an inverted self-test ending exit one. The part's brick rows begin with a quote-hash sequence, so it is embedded as an escaped literal; its sha was re-verified after formatting and in the packed archive. Nine parts are decoded; one hundred and ninety-nine remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.8"
 published = "2026-11-24"
 game = "26.3"
