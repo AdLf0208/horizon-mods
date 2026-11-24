@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "b93884158f168af3e41b84dd700ce47befcdacecf49ea0e5a759bd744c504051"
+changelog = """This version makes the retry cooldown depend on the smart module, closing a deviation where a keypad without the module still rate-limited. The reference's rule is read rather than assumed: an incorrect passcode starts a cooldown only when the module is enabled, and the module's own option defaults to a hundred ticks; the port keeps the existing five-tries budget and consults it only when the module is installed. Proven on two keypad rigs: without the module five wrong codes followed by the right one open the door, while the same sequence with a crafted and installed smart module leaves the door closed and the keypad in cooldown. The deny-before-allow order from the previous version is unchanged."""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-24"
 game = "26.3"
