@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.13"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "f1082558eb462ed18323ff456904d0307b24ed323d928663dda7cda596f55f41"
+changelog = """This version decodes the water-bearing building part, the thirteenth, with one new palette entry — water — copied verbatim from the jar's common palette. One hundred and sixty-eight water cells are authored in the modded dimension where vanilla noise writes none, with an inverted self-test ending exit one; the part's sha was re-verified in the source after formatting and inside the archive. Thirteen parts are decoded; one hundred and ninety-five remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.12"
 published = "2026-11-24"
 game = "26.3"
