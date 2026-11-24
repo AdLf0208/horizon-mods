@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "a27b5aec081b974255f36bd06ffaebcae74ea9db054f648aa6a72a364f94bca5"
+changelog = """This version adds the disenchanting lens, the last distinct beam rule path. The artefact corrected the id to lens_of_disenchanting and set the charge at 250,000 CF plus the existing gate, with a reach of five and only the first enchantment moving from the item onto the book. The component gate proved the pin can write stored_enchantments directly. Proven in game by sharpness moving from a dropped diamond sword to a book's stored-enchantments component, the sword's list emptying and the buffer draining, while a plain-lens differential leaves both untouched at full charge. An upstream defect that stripped an already-enchanted book was fixed in the port."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-24"
 game = "26.3"
