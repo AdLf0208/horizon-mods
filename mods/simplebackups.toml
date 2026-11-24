@@ -39,6 +39,14 @@ categories = ["utility"]
 tags = ["port", "backups"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-24"
+game = "26.3"
+file = "simplebackups.hmod"
+sha256 = "a2261c76ce1f2e6df592262279df92573a9cecceb687f1624f1f44d260294c09"
+changelog = """This version makes the backup interval survive a restart. The counter is written beside the world as one exact line on every save checkpoint and graceful close, with a staged rename so a crash cannot leave a half-written value, and read back when the world opens — the same moment the reference loads its saved data. Proven across a quit and relaunch of the same world: a seeded count of ten resumes to twenty-eight, an empty window passes without a zip, and the next interval produces exactly one fresh archive; a world with no state file still waits the full interval. The regex half of the same gap stays open, because adding a crate would be refused by the registry now."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-24"
 game = "26.3"
