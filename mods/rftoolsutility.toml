@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "5d59ce3f605cf106fa2ea8359e4497727bb37f3392b3b759877c117dd90d604d"
+changelog = """This version adds the three-input logic block. Read from the artefact: the eight-cell truth table is indexed by a mask of the left, input and right signals, a cell of minus one keeps the previous output, and any other cell drives full or zero strength. The eight GUI cells are set by command, the established stand-in. Proven in game from reply game-time stamps: mask five with a one cell lights the lamp, minus one keeps both the output and the changed flag, a zero cell darkens it at the same mask, and a zero-input window changes nothing. The earlier sensor, sequencer, timer, counter and analog legs stay green. Invchecker is expressible through the neighbour item capability but costs more, so it was left for the next slice rather than assumed blocked."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
