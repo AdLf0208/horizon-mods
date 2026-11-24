@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "ea0e6171d339385206350b8111a6ad47b832bc3b806a5a03fc1c6f37aa61192e"
+changelog = """This version adds the inventory checker, the last expressible logic sibling. Read from the artefact: it reads the input-side neighbour's live item slots with no provider of ours, checks one slot every ten ticks, and drives full or no redstone strength from the count, damage mode and optional tag. Proven in game with a vanilla chest holding one stone: matcher and amount give a lit lamp at fifteen, a stack of one against an amount of two gives zero at the same slot, and a redstone-block control drives the same lamp. The tag gate is unit-tested only, as the harness has no second-tag scenario; the GUI fields are set by command as with every logic sibling. The capability was measured first and is not blocked."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
