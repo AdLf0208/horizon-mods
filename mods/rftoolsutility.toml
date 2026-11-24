@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "6184edc93fc748a0a1eab067bf15905d0ab25cd24ac87d402e1a418d0b671389"
+changelog = """This version adds the sequencer, a redstone block that steps a sixty-four-bit pattern on rising input edges across the reference's seven modes. Twenty-eight mode rules were written red before the implementation, and the in-game leg found a real integration defect: the input probe included the sequencer's own emitted signal, so a high output latched a phantom edge; reading the input-side neighbour directionally fixed it. Proven with lever pulses driving a lamp through successive bits, a wrap, an all-zero differential and a redstone-block control, with the sensor, analyzer and teleporter legs still green."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-24"
 game = "26.3"
