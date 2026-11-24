@@ -29,6 +29,22 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "fa1558e908a71135c05be3fad0fe7f76312710ff73050d966c44a644932a1f94"
+changelog = """This version draws the held-wire preview from a selected connector to the player's hand, using the selection the mod already publishes and the same mixin pipeline and lightmap as the drawn wires. No second mixin was added. Proven on the wire's own colour rather than a grey panel: a held festive spool shows two hundred and nine green pixels at the reference's hue, the cleared selection shows none, and an inverted run fails at the count it should not have produced. Three deviations are recorded — the hand anchor is the feet plus half a block, the clear frame uses a second click on the same connector so a laid wire cannot masquerade as the preview, and light is sampled at the player and connector as the reference does."""
+
+[[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "aee4697fc35b2f788a344805220fcc2ccc30a76ce8674e5d5d361854da12a098"
+changelog = """This version makes a wire dim in the dark. The reference's lightmap is read from its renderer bytecode — two light layers lerped per piece, packed, then run through the game's brightness curve — and that computation is published by the server tick and applied in the same vertex buffer as before, with no second mixin. Proven on two screenshots of one rig with the glowstone near and moved back: the same nineteen hundred green wire pixels in both, but a mean green level of fifty-three in daylight and thirty-three in the dark. The inverted assertion fails on that difference, and a leg with no wire shows no wire pixels at all. A stale port-level instruction file is recorded as stale rather than followed; the brief, ledger and shipped two-mixin package govern."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-24"
 game = "26.3"
