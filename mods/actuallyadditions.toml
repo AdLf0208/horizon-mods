@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-24"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "5812fce939c1a12b45975812e134c459f42d6cc19c76f43fd8d306af68f2c39c"
+changelog = """This version adds the killer lens's own beam: the artefact charges 2,500 CF per entity after the 1,000 CF gate and deals twenty damage through a fake-player attack, with the hit cell queried before the air check and a reach of fifteen. The brief's item id was wrong — the artefact's killer is lens_of_the_killer, while lens_of_certain_death is the plain lens — and the correct item now ships. The pin has no damage-source object, so the attack is recorded as minecraft:player_attack with a connectionless fake as the causing entity. Proven in game by an un-infused cow reaching zero health and the buffer draining to nothing while a plain-lens differential keeps its charge and a living cow. Twelve counterfactual and control legs end exit one."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-24"
 game = "26.3"
