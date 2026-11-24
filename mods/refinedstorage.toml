@@ -32,13 +32,20 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "refinedstorage.hmod"
+sha256 = "7ace892b5e26622be1b89a8df071283119a59a9a8d135ca1bbfc062ab7a7341a"
+changelog = """This version adds the external storage block, which makes a chest beside the network look like part of the network's storage. Eight stones in an empty chest now appear as eight items in one resource beside the single disk; five gold deposited through the grid lands in that chest and withdraws back out of it; removing the block takes the chest's remaining three out of the network view while the disk stays empty, and facing the block at air does the same. One thing the readout makes visible is that the node costs six energy a tick alongside the grid's ten and the drive's fourteen, which is why the total reads thirty a tick. Every earlier recipe still crafts, and the inverted assertion fails at the old no-external-storage answer."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-23"
 game = "26.3"
 file = "refinedstorage.hmod"
 sha256 = "92858557af7dcf5bd4c88ce4f43a62fc666605c099bc373cfa8a4baa390cc21f"
-changelog = """
-This version answers the second review round with three data-integrity fixes and one authorization fix. A machine item carries its saved contents, and the previous build wrote them onto the stack that placed it — so placing one of two and keeping the second left the first machine's contents on the survivor. Survival now leaves the hand alone entirely, because the engine takes the placed unit after the hook, and creative strips only when the placed unit was the whole stack. A disk inserted into a drive is now one transaction: the slot write and the hand's decrement commit together or neither happens, and the decrement comes from the hand that clicked. Breaking a machine no longer takes its upgrades; the take happens at the completion gate, and a break that hands nothing over leaves the engine's usual spill alone, with the slots riding the item only when the item is actually in the drop list. Both mutating commands are operator-only and re-check permission in their own bodies, and a charge is applied only after the server's copy of the held stack proves it is the wireless grid. Proven in game: a stack of two places one and the survivor keeps its payload, a creative break spills four speed upgrades and one stack upgrade as five item entities while carrying nothing, a level-zero guest is refused both commands, and a stick in the main hand charges nothing.
+changelog = """This version answers the second review round with three data-integrity fixes and one authorization fix. A machine item carries its saved contents, and the previous build wrote them onto the stack that placed it — so placing one of two and keeping the second left the first machine's contents on the survivor. Survival now leaves the hand alone entirely, because the engine takes the placed unit after the hook, and creative strips only when the placed unit was the whole stack. A disk inserted into a drive is now one transaction: the slot write and the hand's decrement commit together or neither happens, and the decrement comes from the hand that clicked. Breaking a machine no longer takes its upgrades; the take happens at the completion gate, and a break that hands nothing over leaves the engine's usual spill alone, with the slots riding the item only when the item is actually in the drop list. Both mutating commands are operator-only and re-check permission in their own bodies, and a charge is applied only after the server's copy of the held stack proves it is the wireless grid. Proven in game: a stack of two places one and the survivor keeps its payload, a creative break spills four speed upgrades and one stack upgrade as five item entities while carrying nothing, a level-zero guest is refused both commands, and a stick in the main hand charges nothing.
 """
 
 [[versions]]
@@ -47,8 +54,7 @@ published = "2026-11-22"
 game = "26.3"
 file = "refinedstorage.hmod"
 sha256 = "3223f32ae80773769dd4a5b3ac1dc350477d7608778131223a6ba43e93bb6bb9"
-changelog = """
-Slice 7, the importer and the exporter: two machines that move items between a network and the block they face, with filters and with the speed and stack upgrades finally doing something after being refused for two slices. Proven as a differential on the same source over the same twenty ticks: three items with no upgrade, sixty-four in one pass with a stack upgrade, eighty-eight with four speed upgrades, and the readout naming the work interval falling from nine ticks to one; the filter lets its named item through and leaves another in the same source, while the exporter moves exactly the four items its filter names and a filterless one moves nothing. The machines open a thirteen slot menu and refuse a diamond in the upgrade row, and both break and drop themselves. Two defects were fixed on the way. The port's directional placement was mirrored, writing the clicked face where the reference writes its opposite, so a transmitter placed on a cable faced away and was offline; that is one line for all three directional blocks and the earlier assertion now reads south for a click on a north face. And the four new recipes were first written in the older object shape, which the pin drops silently, so the first run failed all four and their controls together.
+changelog = """Slice 7, the importer and the exporter: two machines that move items between a network and the block they face, with filters and with the speed and stack upgrades finally doing something after being refused for two slices. Proven as a differential on the same source over the same twenty ticks: three items with no upgrade, sixty-four in one pass with a stack upgrade, eighty-eight with four speed upgrades, and the readout naming the work interval falling from nine ticks to one; the filter lets its named item through and leaves another in the same source, while the exporter moves exactly the four items its filter names and a filterless one moves nothing. The machines open a thirteen slot menu and refuse a diamond in the upgrade row, and both break and drop themselves. Two defects were fixed on the way. The port's directional placement was mirrored, writing the clicked face where the reference writes its opposite, so a transmitter placed on a cable faced away and was offline; that is one line for all three directional blocks and the earlier assertion now reads south for a click on a north face. And the four new recipes were first written in the older object shape, which the pin drops silently, so the first run failed all four and their controls together.
 """
 
 [[versions]]
@@ -57,8 +63,7 @@ published = "2026-11-21"
 game = "26.3"
 file = "refinedstorage.hmod"
 sha256 = "5aa7faa89f85979a6347dc23b5982f9b993c895f0e3f8efdda34c8adab729743"
-changelog = """
-Slice 6, the upgrade items: the transmitter's four upgrade slots and the range upgrade that makes the sixteen-block rule a starting point rather than a ceiling. Only the range half is real here and the other eight upgrades are refused rather than shipped, because speed, stack, regulator and autocrafting bind to importers, exporters, destructors and the crafting grid, none of which this port has, and the four enchantment upgrades need a recipe type the pin does not offer. The numbers are read from the reference rather than guessed: eight blocks per upgrade, four slots, and the creative variant at the top of the priority chain. Proven in game with the differential the brief asked for: a use at seventeen blocks is refused at sixteen and accepted at twenty-four once one range upgrade sits in a slot, the creative upgrade takes the same transmitter to unlimited, the transmitter's own menu shows four slots, and a diamond shift-clicked into that menu does not enter an upgrade slot. The dimension rule is unaffected and still refuses a use from another dimension with an unlimited range in place. This version also fixes a port defect: the transmitter's template could never open a menu, because the game posts the open only for a container class, so the block keeps its nub shape and collision through declared shapes while carrying a container template, and the binding moved to the block's own click hook because the container's click runs first.
+changelog = """Slice 6, the upgrade items: the transmitter's four upgrade slots and the range upgrade that makes the sixteen-block rule a starting point rather than a ceiling. Only the range half is real here and the other eight upgrades are refused rather than shipped, because speed, stack, regulator and autocrafting bind to importers, exporters, destructors and the crafting grid, none of which this port has, and the four enchantment upgrades need a recipe type the pin does not offer. The numbers are read from the reference rather than guessed: eight blocks per upgrade, four slots, and the creative variant at the top of the priority chain. Proven in game with the differential the brief asked for: a use at seventeen blocks is refused at sixteen and accepted at twenty-four once one range upgrade sits in a slot, the creative upgrade takes the same transmitter to unlimited, the transmitter's own menu shows four slots, and a diamond shift-clicked into that menu does not enter an upgrade slot. The dimension rule is unaffected and still refuses a use from another dimension with an unlimited range in place. This version also fixes a port defect: the transmitter's template could never open a menu, because the game posts the open only for a container class, so the block keeps its nub shape and collision through declared shapes while carrying a container template, and the binding moved to the block's own click hook because the container's click runs first.
 """
 
 [[versions]]
@@ -67,6 +72,5 @@ published = "2026-11-10"
 game = "26.3"
 file = "refinedstorage.hmod"
 sha256 = "7be4a4152b9d5ecab139b8c4f9ae87208788f4e9f6842c9d167fb4316830fd38"
-changelog = """
-First release
+changelog = """First release
 """
