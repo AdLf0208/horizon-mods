@@ -1,0 +1,26 @@
+id = "the_lost_cities"
+kind = "native-mod"
+name = "the_lost_cities"
+summary = "A Horizon port of the_lost_cities."
+description = """
+A port of [the_lost_cities](https://github.com/McJtyMods/LostCities) by McJty.
+
+The first port of The Lost Cities for Horizon 26.3. The jar's cities are Java-generated, so this version carries what the pin can express honestly: the `lostcities:lostcity` dimension registered from the jar's own values, six block tags, language, and both chest loot tables. Both loot tables shipped a bare `type: item` that 26.3 cannot decode — an in-game probe dropped zero items — so the carry rewrites that one field and both tables now drop three to four. Proven in game with a control game where the dimension is unknown, a tag that matches bedrock, and a SELFTEST that inverts each assertion. The city generator, its private parts/buildings/palettes schema and the two Java feature types remain blocked at this pin and are recorded rather than faked.
+"""
+authors = ["McJty, AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/the_lost_cities"
+icon = "icons/the_lost_cities.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "6bbe5b775c2a2db1d4078c0bb88ebca50ca8f5aa81bc957736ca9875320dd89d"
+changelog = """The first port of The Lost Cities for Horizon 26.3. The jar's cities are Java-generated, so this version carries what the pin can express honestly: the `lostcities:lostcity` dimension registered from the jar's own values, six block tags, language, and both chest loot tables. Both loot tables shipped a bare `type: item` that 26.3 cannot decode — an in-game probe dropped zero items — so the carry rewrites that one field and both tables now drop three to four. Proven in game with a control game where the dimension is unknown, a tag that matches bedrock, and a SELFTEST that inverts each assertion. The city generator, its private parts/buildings/palettes schema and the two Java feature types remain blocked at this pin and are recorded rather than faked."""
