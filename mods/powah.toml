@@ -54,16 +54,6 @@ This version gives the wrench its ROTATE mode, which turns a machine's facing pr
 """
 
 [[versions]]
-version = "0.2.19"
-published = "2026-11-24"
-game = "26.3"
-file = "powah.hmod"
-sha256 = "837eade1f4f76de8aa14a268905dda57b145ef3067de7840e4cde64f3d923fd7"
-changelog = """
-This version adds the wrench's side-config action, so a face can be cycled in the game instead of only through a command. The first check was that the item-use hook really exposes the clicked face to a plain held item, and it does; the cycle order comes from the reference — a fresh cell face goes all, extract, receive, none, back to all — rather than from an assumed toggle. Proven on the parsed readout: a cell's north face moves from all to extract while the other five stay put and the reply's tick advances; a stone block refuses the action and keeps the wrench. The pattern row's iron and paste positions and the player's standing face were harness bugs fixed in tools, which are not packed.
-"""
-
-[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
