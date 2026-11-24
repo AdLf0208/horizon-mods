@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-24"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "31a87f798a6282663c0b4b74c6fa2c5241f12cd5a1308d93e21acc16559de377"
+changelog = """This version gives the crafter a facing state, read from the artefact's twelve blockstate variants: six directions crossed with active on and off, each with its own model rotation. The direction is the clicked face, not yaw or its opposite, and is set at placement through the pin's state hook. Proven on two placements: north reads north and passes a north predicate, south reads south and fails north, while vanilla stone has no such state. A first draft attached one part type twice and the launcher refused the game; a dedicated placement part fixed it and the whole ladder was rebuilt. The remaining gap families all need a Refined Storage grid or upgrade surface the pin does not expose, so this port waits for a repin rather than a speculative slice."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-24"
 game = "26.3"
