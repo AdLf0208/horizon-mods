@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "fa1558e908a71135c05be3fad0fe7f76312710ff73050d966c44a644932a1f94"
+changelog = """This version draws the held-wire preview from a selected connector to the player's hand, using the selection the mod already publishes and the same mixin pipeline and lightmap as the drawn wires. No second mixin was added. Proven on the wire's own colour rather than a grey panel: a held festive spool shows two hundred and nine green pixels at the reference's hue, the cleared selection shows none, and an inverted run fails at the count it should not have produced. Three deviations are recorded — the hand anchor is the feet plus half a block, the clear frame uses a second click on the same connector so a laid wire cannot masquerade as the preview, and light is sampled at the player and connector as the reference does."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
