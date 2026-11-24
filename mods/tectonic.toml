@@ -1,6 +1,6 @@
 id = "tectonic"
 kind = "native-mod"
-name = "tectonic"
+name = "Tectonic"
 summary = "A Horizon port of tectonic."
 description = """
 A port of [tectonic](https://github.com/Apollounknowndev/tectonic).
