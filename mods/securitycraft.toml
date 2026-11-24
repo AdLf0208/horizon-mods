@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "c71eefcf6df34528c2fedc5d9fd86fa15915b31339f0d3712a3a2274f11351d4"
+changelog = """This version adds the passcode smoker, reusing the furnace's saved-owner/code gate and three-slot cook container with the smoking recipe kind. The artefact corrected the brief: the pack's smoking recipes are food-only, so there is no raw-iron smoking recipe; the in-game proof instead shows raw iron producing nothing (which would fail if smelting were used) and beef producing one cooked beef with the input consumed, lit true, and the result surviving a relaunch. All seven smoker models are static meshes and the chest remains blocked on its entity renderer. Sixty-one tests and twenty-two strict e2e logs are green."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-24"
 game = "26.3"
