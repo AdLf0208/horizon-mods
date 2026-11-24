@@ -32,6 +32,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "refinedstorage.hmod"
+sha256 = "6b713d90a0f0391cb80cc0a4321a5db0249646983a015c7686a2908be0d9b576"
+changelog = """This version adds the relay, one block holding two network nodes: the input node joins every face but the relay's output face, the output node joins only that face, and a storage component delegates the input network's inventory into the output network. The artefact's default merges the two networks, so the port fixes pass-through off to keep them separate, with the toggle available as a command; the other pass-throughs and their GUI buttons are recorded as deviations. Each node costs eight energy a tick. Proven on two networks with different stocks: bridging moves exactly the configured resource from one grid to the other, and breaking the relay reverses the view. A port defect that doubled the source stock by mistaking the input node for the output one was found in game and fixed with an output-face neighbour check."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
