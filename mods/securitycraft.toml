@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "2829d08f2d21a71db2e47381215d0d50f3fbdaba0c18ee29b632fa20e1d41841"
+changelog = """This version adds the passcode barrel, the cheapest expressible member of the passcode family: a 27-slot container on 26.3's barrel template with no lit state or entity renderer. The artefact was inventoried first and the barrel was chosen over the chest/double/furnace variants for that reason. The owner-first rule runs the existing salted submit before open or wrong-code; deny-before-allow, the smart gate and disguise rendering are unchanged. Proven in game on a wrong/right code round trip: wrong code leaves zero container slots and the playing screen, the right code shows 27 slots with eight iron ingots surviving a relaunch, an unknown id is refused, and a vanilla barrel at the same position opens without a code. Ten inverted self-tests end exit one, including the new container check."""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-24"
 game = "26.3"
