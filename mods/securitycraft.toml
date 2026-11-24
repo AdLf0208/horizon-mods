@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "b3271e8884e04fc0a878eaf90a171bb7d49f8a6c34f36c94993448879a7e6f67"
+changelog = """This version adds the passcode furnace. The artefact inventory passed the same gate that blocked the chest: every furnace and smoker model is a static mesh, with no builtin/entity renderer, so cooking is expressible through the pin's container and recipe surfaces. The blockstate has an open property that 26.3's furnace lacks, so that variant was trimmed and the lid angle recorded as a deviation. Proven in game with a wrong code leaving no menu, the right code opening three slots, and raw iron plus coal smelting to one iron ingot with the input consumed and lit true, surviving a relaunch; a vanilla furnace is the no-code differential and every self-test ends exit one. The chest remains blocked."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-24"
 game = "26.3"
