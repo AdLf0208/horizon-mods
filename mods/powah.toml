@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.20"
+published = "2026-11-24"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "2490b1e79fb33b3e1bae5a17211bf1d0b09e0ef97e8890916b392198d99683c1"
+changelog = """This version gives the wrench its ROTATE mode, which turns a machine's facing property in the reference's order — down, up, north, south, west, east — and writes only when the block actually changes. The surface gate passed: the pin has a named-property write that preserves the block entity, though it has no general survival query; upstream's skip loop is vacuous for these machines and that is recorded rather than hidden. Shift-click mode selection is replaced by an operator-only command because the item-use hook carries no shift state. Proven on a hopper: facing north becomes south with a fresh tick and changed true, while CONFIG mode leaves it north and a block with no facing refuses cleanly."""
+
+[[versions]]
 version = "0.2.19"
 published = "2026-11-24"
 game = "26.3"
