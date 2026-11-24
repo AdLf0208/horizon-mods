@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.2"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "9e3220960cc2fd173026339ccf79048f3e09a5dbe202c8119d5c44eefa6057db"
+changelog = """This version decodes a second city part, the six-slice building, from the jar's private schema. Reading the artefact caught details the brief omitted: an extra char and two palette entries resolved through the style and variant files, so the decoder now handles variant and from-palette forms as well as multi-layer bounds. Two parts are decoded, at different heights, leaving the other 206 blocked rather than claimed. Proven by authoring four bookshelves in the modded dimension where vanilla noise fills none, with the street's 136 slabs still present and an inverted selftest ending exit one."""
+
+[[versions]]
 version = "0.1.1"
 published = "2026-11-24"
 game = "26.3"
