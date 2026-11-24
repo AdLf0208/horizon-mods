@@ -16,6 +16,13 @@ icon = "icons/create.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
+[[versions]]
+version = "0.1.1"
+published = "2026-11-24"
+game = "26.3"
+file = "create.hmod"
+sha256 = "bec224ec6802c113b0082bbbce78627f523770005333455ebb523f09c2a41b90"
+changelog = """This version adds the kinetics engine. The artefact's graph rules were carried clean-room: block ids map to nodes, rotation propagates along the facing axis, stress is the sum of consumer impacts scaled by speed, and every node publishes the solved state into its own NBT so an add-on can read a neighbour without a symbol link. The pin's tick event cannot read neighbours, so the solve runs on the network query path; that limitation is recorded, not faked. Proven in game by a motor, shaft and press reading speed sixteen, stress eight and running, an unconnected shaft reading idle, and an inverted self-test ending exit one."""
 
 [[versions]]
 version = "0.1.0"
