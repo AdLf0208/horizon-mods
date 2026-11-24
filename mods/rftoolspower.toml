@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.12"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "b98f7cbc05f4778656c02366ae5f451b4a3848873b3e722a0795c8f7902d95df"
+changelog = """This version adds the endergenic generator's infusable factors: a charged power core in the generator's slot cuts the pearl hold cost to 333 FE a tick and raises the mode-one gain to 300 FE. The dispatch's gain figure of 600 was wrong — it applied the powergen factor twice; the agent followed the artefact's two separate float truncations and recorded the discrepancy. The carrier gate proved the typed component binds to the endergenic's own slot without a chat command. Game-time stamps give 7,326 FE over 22 ticks for the hold, and the inverted self-test exits one against the un-infused 200/500 values. The five-second HUD window and the GUI remain out of tier."""
+
+[[versions]]
 version = "0.1.11"
 published = "2026-11-24"
 game = "26.3"
