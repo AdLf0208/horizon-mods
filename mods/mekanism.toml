@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.18"
+published = "2026-11-24"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "4a21b34897895797db27f8f15ae1d54174d3a33a01d35347fb8002938fec5c04"
+changelog = """This version completes the rotary condensentrator's gas-to-water direction. The mode persists through the same saved-data path the energy readout uses, and the gas handler gates on the saved mode; a fluid tank declaration cannot vary per block entity, so the mode-enforced producer lives in the machine's tick instead. Proven in game by a gas insert refused before the toggle, a saved mode byte after it, five units accepted afterwards, and a readout showing one millibucket of water beside four units of remaining vapour, with a gasless control spending nothing. The inverted self-test exits one."""
+
+[[versions]]
 version = "0.2.17"
 published = "2026-11-24"
 game = "26.3"
