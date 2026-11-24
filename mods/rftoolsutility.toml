@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "b82e87029d1f98349c125339021d923dabf467a52719911e3dda20941f885e41"
+changelog = """This version adds the counter, which counts rising redstone edges and lights an output on the configured limit. The reference only writes the output inside the pulse branch, so the fifteen is a level latch that stays until the **next** rising edge clears it and resets the count; a held input is never counted twice. Proven from the replies' own game-time stamps with a limit of four: the fourth pulse lights the lamp, the next pulse clears it, and a no-pulse window leaves the output untouched. GUI-only fields are set by command, recorded as a deviation; the input is sampled from the input-side neighbour rather than the block's own emitted signal."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-24"
 game = "26.3"
