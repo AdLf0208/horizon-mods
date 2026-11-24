@@ -3,11 +3,11 @@ kind = "native-mod"
 name = "Create"
 summary = "A Horizon port of create."
 description = """
-A port of [create](https://github.com/Creators-of-Create/Create).
+A port of [Create](https://github.com/Creators-of-Create/Create) by The Create Team.
 
 A first port of Create for Horizon 26.3, carrying the interop surface dependent add-ons need. The jar was inventoried first and only the ids a viable dependent names were carried — a creative motor, the two alloy metals and sheets, one recipe, one loot table and one tag — with every asset regenerated and a proven zero jar-derived byte count. The motor publishes its own saved speed, capacity, zero stress and running status through a parsed ctl readout, with a vanilla-block refusal and an inverted self-test; the alloy grid recipe consumes exactly its inputs. The kinetics engine, contraptions, Ponder and trains remain out of scope for this pin.
 """
-authors = ["AdLf0208"]
+authors = ["The Create Team", "AdLf0208"]
 owners = ["AdLf0208"]
 owner_ids = [107615167]
 license = "MIT"
