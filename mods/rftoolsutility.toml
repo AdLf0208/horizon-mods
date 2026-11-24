@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.17"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "224a3fbba5a7d93c4cbef0e8b2ef73495c9a588bd036c0e7a3985ee8245b5684"
+changelog = """This version adds the redstone transmitter and receiver pair. The artefact's world-saved channel table is persisted through the pin's world-data-files surface — the same path other ports use — so a written strength survives a real relaunch; no chat-command stand-in. Read from the artefact: a fresh channel is minus one, the transmitter writes only on a changed input, and a digital receiver collapses any positive value to fifteen while an analog one preserves the exact strength. Proven in game by a fed transmitter lighting a lamp on channel one while channel two stays dark, a five-wire analog run preserving eleven, and the value still reading eleven after relaunch. The inverted self-test exits one."""
+
+[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
