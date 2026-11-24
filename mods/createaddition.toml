@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "createaddition.hmod"
+sha256 = "f3981a6c299c0fa5d46b01ffc8a57a6afb4a2be30a88611e018dfde1c1884df8"
+changelog = """This version adds the brush wire drop, the last level-path family the port can express. A brush on a connector with a connection removes every wire on both ends and drops four items of that wire's own kind — a festive wire drops copper's four, because that is the reference's source drop — while an empty connector does nothing. Proven on the parsed entity list: wired ends go to empty links and exactly four ground copper wires, an empty connector leaves zero. Creative removes the wires without dropping anything. The goggles readout and display-link source remain blocked on Create's mod-to-mod API, so this port closes at the pin."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
