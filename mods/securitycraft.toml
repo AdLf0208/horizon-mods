@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "fd39a05a0058ee0a3f11c6ba7c78f3523f16ccb333bd298e4092ce980cfb8a56"
+changelog = """This version adds the full keypad door, the other half of the door family now that the trapdoor proved the path. All eight models were checked as static meshes and the jar's thirty-two variants match 26.3's iron door. The artefact opens both halves for a sixty-tick signal and closes them when it elapses. Proven in game by reading both halves from open false to true and back, with a vanilla iron door opening on redstone as the no-code differential and a new inverted self-test ending exit one. The chest remains blocked on its entity renderer."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-24"
 game = "26.3"
