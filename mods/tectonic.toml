@@ -1,0 +1,26 @@
+id = "tectonic"
+kind = "native-mod"
+name = "tectonic"
+summary = "A Horizon port of tectonic."
+description = """
+A port of [tectonic](https://github.com/Apollounknowndev/tectonic).
+
+This is a first port of Tectonic at the current SDK pin, carrying what the pin can actually express: a hundred and five density functions, thirty-two noise files, the placed-feature and tag data that resolve in this build, and the config defaults the Java reads, all inventoried from the jar before a single file was chosen. Four families are recorded as blocked with measured evidence rather than guessed: terrain replacement needs a level-reset manifest key the registry refuses; nested density decode has no child-node helper at this pin; placement modifiers and Lithostitched modifiers have no registrar. The in-game proof is at the game's own consumer: placing the carried river feature produces ice, a carried block tag resolves, both vanish on an unmodified game, and the two inversions fail at exactly those reads. The second-build fit check correctly refuses this package and names the density-function symbols it lacks; that is a measurement, not a defect.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/tectonic"
+icon = "icons/tectonic.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "tectonic.hmod"
+sha256 = "d90204c996bbeef08dfdf54b2ed345124dadfda4c49ffae8e886fe9e155e945f"
+changelog = """This is a first port of Tectonic at the current SDK pin, carrying what the pin can actually express: a hundred and five density functions, thirty-two noise files, the placed-feature and tag data that resolve in this build, and the config defaults the Java reads, all inventoried from the jar before a single file was chosen. Four families are recorded as blocked with measured evidence rather than guessed: terrain replacement needs a level-reset manifest key the registry refuses; nested density decode has no child-node helper at this pin; placement modifiers and Lithostitched modifiers have no registrar. The in-game proof is at the game's own consumer: placing the carried river feature produces ice, a carried block tag resolves, both vanish on an unmodified game, and the two inversions fail at exactly those reads. The second-build fit check correctly refuses this package and names the density-function symbols it lacks; that is a measurement, not a defect."""
