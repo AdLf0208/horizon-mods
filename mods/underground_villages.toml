@@ -1,6 +1,6 @@
 id = "underground_villages"
 kind = "native-mod"
-name = "underground_villages"
+name = "Underground Villages Mod"
 summary = "A Horizon port of underground_villages."
 description = """
 A port of [underground_villages](https://github.com/Mrbysco/UndergroundVillages) by Mrbysco.
