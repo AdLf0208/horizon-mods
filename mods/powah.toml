@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.17"
+published = "2026-11-24"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "767600b8a3cee804c85f88618b744371e22113a6d27188573db8c024ab21e92c"
+changelog = """This version adds the creative energy cell as a source rather than a storage tier: it begins full, gives energy without ever being debited, and is marked as an extract-only face. The reference's creative row is far larger than this build can hold, and the port's energy buffer is a signed thirty-two-bit number, so the capacity and transfer both land at the maximum that type can represent — the deviation is measured and recorded rather than hidden. Proven on the replies' own clocks: a full cell at two billion one hundred forty-seven million four hundred eighty-three thousand six hundred and forty-seven energy feeds a sink nine thousand over eighteen ticks, exactly five hundred a tick, and is still full afterwards; a stone in its place feeds nothing."""
+
+[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
