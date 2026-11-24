@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.18"
+published = "2026-11-24"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "44fc077ccc114dfe21220bfc2fda526718202c261c6aee5d3e754740c84f454f"
+changelog = """This version adds the seven battery tiers, which the reference scales by a factor ladder from one million to two billion energy, each with its own transfer rate. They all fit this build's signed thirty-two-bit energy type — a dedicated unit test proves it — unlike the creative cell, which needed a clamp in the previous version. Proven on the replies' own clocks: a battery lost exactly a thousand per tick while an empty cell beside it gained the same, the smaller five-thousand case conserved to zero and five thousand, a stone transferred nothing, all seven tiers reported their own capacity and transfer, and all seven recipes crafted. The new per-tier readout is opt-in so no earlier line changes."""
+
+[[versions]]
 version = "0.2.17"
 published = "2026-11-24"
 game = "26.3"
