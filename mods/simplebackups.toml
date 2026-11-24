@@ -39,6 +39,14 @@ categories = ["utility"]
 tags = ["port", "backups"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-24"
+game = "26.3"
+file = "simplebackups.hmod"
+sha256 = "53a767bb1c2a55915391ea69630fd4f36bad5a30ec8727bac820e2ad8bb31606"
+changelog = """This version captures the game log in each backup, so the archive carries the exact messages from the run that produced it. The hard part was the path: the mod's config API cannot name a file outside config, so the glue derives candidates from both host roots and refuses symlinks and traversal, with the headless launcher's log location measured before any code. Proven by opening the newest archive with zipfile and finding a concrete line from that scratch latest.log inside backup.log; with capture off the entry is absent, and the inverted assertion ends exit one. A collapsible branch and three needless clones found by clippy were fixed rather than allowed."""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-24"
 game = "26.3"
