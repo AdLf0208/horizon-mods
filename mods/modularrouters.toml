@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.17"
+published = "2026-11-24"
+game = "26.3"
+file = "modularrouters.hmod"
+sha256 = "8e4f86067d6fd3d7e74492e7d066d4bec2ff58eece5b077772aee09b99e147ea"
+changelog = """This version adds the first extruder module, and the artefact corrected the brief's premise outright: it is not a pass-through that moves an item from one block to another, but a redstone-driven extending and retracting arm along one face. While the router is powered it places buffered blocks outward one at a time up to a saved distance; when the signal is gone it retracts them back into the buffer, breaking with the module's pickaxe and testing drops against its filter. The range is sixteen to thirty-two, read from the reference configuration rather than the stale book value, and the pickaxe is copied from the breaker at crafting time. Proven in game on both directions: a powered module places stone and empties its buffer, an unpowered one pulls cobble back, and no signal, a dirt whitelist or no direction leave the arm still."""
+
+[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
