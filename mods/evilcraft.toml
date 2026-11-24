@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "d3dd3c59aaa0b83407052f7f7a6416cb0799bc566f77c7243690599151180546"
+changelog = """This version audits every one of the jar's forty Blood Infuser recipes and carries the only remaining file whose input and output are both registered ids: a spider eye becomes a fermented spider eye for 1,500 mB over 500 ticks at tier two. The other twenty fail honest gates — eighteen name items this port does not carry, and the two vanilla-keyed ones are the recorded upstream defects (a shadowed tier and a 25,000 mB cost against a 10,000 mB tank). Proven in game by a readout rising to thirteen recipes, the spider eye staying inert at tier zero, and exactly one product for the declared fluid and time, with the prior ten- and twelve-recipe packages as differentials and an inverted self-test exiting one. No further infuser file qualifies at this pin."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
