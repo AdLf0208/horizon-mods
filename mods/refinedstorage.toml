@@ -32,6 +32,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "refinedstorage.hmod"
+sha256 = "78574d1a0ebe985e9bc7e4879821cac31d9fbff1882cbf5fb68052408d55785b"
+changelog = """This version adds the interface, which exports a chosen resource from the network into an adjacent container. The artefact corrected three things in the brief: the interface exposes nine slots rather than one, it has no facing at all because its block state carries only active, and it costs four energy a tick — six belongs to the external storage block. All six sides are exposed with a nine-entry filter, and the export is capped at sixty-four of a resource per work tick. Proven on the stock itself: an unconfigured interface passes nothing, one with diamond in its filter empties the disk in a single work tick and the hopper reads five, breaking the interface leaves the hopper empty and the disk still holds five, and replacing it unconfigured keeps it at zero."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
