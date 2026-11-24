@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.11"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "12edfec12d1537c8d72e4ff3dafbb789addbf684dce4d1667173cbcf3a2a65a9"
+changelog = """This version carries the infusable upgrade factor on the coal generator. The pin has no SDK infusable capability, so the factor rides on the port's own integer component on the existing power core rather than an invented item or a chat command. Read from the artefact: burn ticks add floor(burning * factor / 2) after the coal block's times-nine, and the rate adds floor(60 * factor), both in single precision. At infused=128 the carrier reads factor 0.500, a 750-tick burn and 90 FE a tick; two replies' own game-time stamps give 3,330 FE over 37 ticks. An un-infused core burns 600 ticks at 60 FE, stone is refused, and nothing is placed client-side. The inverted self-test exits one at exactly that assertion."""
+
+[[versions]]
 version = "0.1.10"
 published = "2026-11-24"
 game = "26.3"
