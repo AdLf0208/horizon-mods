@@ -1,0 +1,26 @@
+id = "betteradvancedtooltips"
+kind = "native-mod"
+name = "Better Advanced Tooltips"
+summary = "A Horizon port of betteradvancedtooltips."
+description = """
+A port of [betteradvancedtooltips](https://github.com/latvian-dev/better-advanced-tooltips) by latvian-dev.
+
+A first port of Better Advanced Tooltips for Horizon 26.3. The client gate passed with a readable oracle — tooltip lines, exact modifier keys, burn time and a parsed command reply — so the fuel and component families are proved in game: coal reports sixteen hundred ticks, eighty seconds and eight items, a diamond sword reports its custom-name component, and a non-fuel or unknown id emits nothing. The tag family is blocked because the pin can test membership of a named tag but cannot enumerate an item's tags; no list was invented. The font glyphs are render-only and not carried.
+"""
+authors = ["latvian-dev, AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/betteradvancedtooltips"
+icon = "icons/betteradvancedtooltips.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "betteradvancedtooltips.hmod"
+sha256 = "ba7ed7bc9a498d930a60732f072b2c14cca9eded75e4834c81792c2816929a38"
+changelog = """A first port of Better Advanced Tooltips for Horizon 26.3. The client gate passed with a readable oracle — tooltip lines, exact modifier keys, burn time and a parsed command reply — so the fuel and component families are proved in game: coal reports sixteen hundred ticks, eighty seconds and eight items, a diamond sword reports its custom-name component, and a non-fuel or unknown id emits nothing. The tag family is blocked because the pin can test membership of a named tag but cannot enumerate an item's tags; no list was invented. The font glyphs are render-only and not carried."""
