@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "7f1f7243129083bee719a20c14b2c232d2ed1807c4d9b539b2c28bb6aee48f7c"
+changelog = """This version adds the denylist module and the branch that refuses interaction before an allowed player could be considered. The order is the reference's and it matters: a coded keypad, an unset code still opens the set screen, then denial is tested, then allowance, then the code screen — so a player on both lists is refused. The two modules differ in their recipe centre as well as their names, and the jar's texture was carried byte for byte. Proven on the parsed readout: a denied click stays in the game with no screen, the keypad unpowered and the door closed, while a player not on the list gets the code screen; the allowlist phase and the relaunch test remain green in the same leg."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-24"
 game = "26.3"
