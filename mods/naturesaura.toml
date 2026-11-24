@@ -35,6 +35,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-24"
+game = "26.3"
+file = "naturesaura.hmod"
+sha256 = "4e70a92adf6932e72f0de90393dd9fedd2019b663fa4d0e91140090c7522b5c9"
+changelog = """This version adds grass death at drained aura spots, the one passive effect the pin can express honestly. Read from the artefact: it fires only when the spot is negative and its radius-fifty area is also negative, with a capped amount and distance computed from the debt; grass turns to coarse dirt in the Overworld and Nether. The other effects are recorded as not ported — plant boost needs a bonemeal helper the pin exposes only on a hidden backend, and ore spawn and nether decay need blocks this slice does not carry. Proven by turning grass to coarse dirt at a measured debt while a spot at or above zero leaves it unchanged, with both a no-mod control and an inverted self-test ending exit one. The reviewer's exact upstream copyright line stays first in both packed licences."""
+
+[[versions]]
 version = "0.2.3"
 published = "2026-11-24"
 game = "26.3"
