@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "8df73c3810f2ad10d1c473b5583eaf4752b6cff047081614b554fd3ca65d80a1"
+changelog = """This version adds the allowlist module, so a player on a coded keypad's list can open it without typing a code. The order of checks is the reference's and it matters: an unset code still opens the owner's set screen and refuses the shortcut, and a denial would be tested before an allowance if the companion module were installed. The list is bounded at fifty players and names compare without regard to case. Proven on the observable difference: an allowed click with nothing typed leaves the player in the game, the keypad powered and the linked door open, while a stranger's click opens the code screen and leaves the door closed. The same module is still refused by a keypad whose code was never set. The denylist is a separate item and branch, so it is the next slice rather than a silent half of this one."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-23"
 game = "26.3"
