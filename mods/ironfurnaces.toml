@@ -1,6 +1,6 @@
 id = "ironfurnaces"
 kind = "native-mod"
-name = "ironfurnaces"
+name = "Iron Furnaces"
 summary = "A Horizon port of ironfurnaces."
 description = """
 A port of [Iron Furnaces](https://github.com/Qelifern/IronFurnaces) for Horizon.
