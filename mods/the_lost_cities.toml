@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.7"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "9f2c2e28d8eaec9252187bea4c2fed3c079c02f4c1d48718b67597101923ac3f"
+changelog = """This version decodes the first descent, the seventh part, with two palette entries copied verbatim from the jar's default palette — iron bars and a bottom stone slab. Iron bars are placed by no other decoded part, giving a clean in-game differential; thirty bars were authored in the modded dimension where vanilla noise writes none, with an inverted self-test ending exit one. The part sits above the street to avoid the lower descent, and the other two hundred and one parts remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.6"
 published = "2026-11-24"
 game = "26.3"
