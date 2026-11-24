@@ -1,6 +1,6 @@
 id = "refinedstorage"
 kind = "native-mod"
-name = "refinedstorage"
+name = "Refined Storage"
 summary = "A Horizon port of refinedstorage."
 description = """
 A port of [Refined Storage 2](https://github.com/refinedmods/refinedstorage2) by Refined Mods for Horizon — slice 1, the item network.
