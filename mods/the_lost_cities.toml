@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.10"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "a729fbd163b15a7ef1f87804c67adfb508b46f404f262d21be2f270d87a97e9f"
+changelog = """This version decodes the shopping-front part, the tenth, with cobblestone wall as a clean in-game differential — no earlier part writes it. The artefact matched the brief for once, including a private metadata array that is carried verbatim and ignored like any unknown key. Proven by eighteen wall blocks authored in the modded dimension where vanilla noise writes none, with an inverted self-test ending exit one. The decoder also handled a non-sixteen footprint without a new form. Ten parts are decoded; one hundred and ninety-eight remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.9"
 published = "2026-11-24"
 game = "26.3"
