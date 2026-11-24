@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "d384c5262a6a9f4838cc2f3d26b3b1c2026c220c54bc0216d747bd457597b13f"
+changelog = """This version adds the timer, a redstone block that fires a one-tick pulse after a configured delay from each rising input edge and then repeats. The reference's countdown is read rather than assumed: the first firing is delay minus one ticks after the edge, `pauses` holds the countdown while input stays high, and the input is sampled directionally from the input-side neighbour — the same trap that gave the sequencer a phantom self-edge. Proved from the replies' own game-time stamps: an edge at tick three hundred and nine fires at three hundred and twelve for a delay of four, a six-hundred-tick delay gives a one-tick pulse, and a no-edge window stays dark."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-24"
 game = "26.3"
