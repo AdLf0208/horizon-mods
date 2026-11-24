@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.13"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "ca86febbbb54b4642faf9c90185c260532227f5e63c48e36ce5b1a670c11ab1b"
+changelog = """This version adds the dimensional cell, the last machine-tier family. The card's typed component was proved on the live held stack before any link rule, so no chat command sets a network. The artefact's own capacities and rates were read from source — two hundred and fifty thousand over twelve hundred and fifty for a simple cell, scaling by four per tier — rather than the powercell's numbers. Proven in game by two cells four blocks apart sharing one store while an unlinked cell stays independent, and insert and output deltas matching the per-side rate over the replies' own game-time stamps. Cell recipes that need an absent parent are recorded blocked rather than invented."""
+
+[[versions]]
 version = "0.1.12"
 published = "2026-11-24"
 game = "26.3"
