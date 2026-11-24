@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.17"
+published = "2026-11-24"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "8b95b174bea90040327edce3690d04022d15b1e400be0075eb4adfe98d3ec4d2"
+changelog = """This version adds the rotary condensentrator, the last hand-filled input of the acid chain. The artefact corrected the brief again: fifty FE per one-tick operation, a 20,000 FE buffer, and 10,000 units in both tanks, with one millibucket of water converting to one unit of vapour. The surface gate proved the fluid declaration, published chemical key and neighbour writes all exist. Proven in game by a charged machine spending exactly fifty FE and one millibucket while a neighbour tank reads one unit of water vapour, with a dry control at another block entity and an inverted self-test exiting one. Nineteen shaped recipes and every earlier sweep plus the acid chain stay green."""
+
+[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
