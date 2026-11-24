@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "e80f46bf8feb2d6f40c2947abc34d7d95a72a78a19a9cfa10a3d57b36746f25d"
+changelog = """This version adds the Vengeance Pickaxe and the immunity that gives it a purpose: the Purifier refuses to strip a curse from that item, while the same curse on a vanilla pickaxe is removed for a bucket of blood. The gap line said the item was missing and the dispatch guessed a damage hook; the artefact disagrees on both counts and the source settles it — the guard is in the Purifier's curse action, with no entity or damage query involved. Proved on the saved item itself: after a hundred and forty ticks the enchanted pickaxe still carries vanishing curse and its tank stays full, while a diamond pickaxe in the same machine loses the curse and a thousand millibuckets. The item's own crafting recipe stays a gap because its ingredients are not carried."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
