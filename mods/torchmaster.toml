@@ -1,6 +1,6 @@
 id = "torchmaster"
 kind = "native-mod"
-name = "torchmaster"
+name = "Torchmaster"
 summary = "A Horizon port of torchmaster."
 description = """
 A port of [Torchmaster](https://github.com/Xalcon/TorchMaster) for Horizon.
