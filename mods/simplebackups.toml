@@ -39,13 +39,20 @@ categories = ["utility"]
 tags = ["port", "backups"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-24"
+game = "26.3"
+file = "simplebackups.hmod"
+sha256 = "13fb3e0a397b1ecd8232ed338f1dc986c82770f6bc09055cedf7fca714b0e16b"
+changelog = """This version adds pause and unpause, and the pause flag survives a restart because the reference stores it in the world's saved data rather than in memory. Only the scheduled backups are suppressed: a manual backup still runs while paused, which is the distinction that matters. Proven across a real schedule: one zip, pause, a hundred and fifty ticks with no new zip, a manual backup that still makes one, then unpause and exactly one fresh zip named by the listing. The inverted assertion fails at the paused window, so the leg cannot pass by reading a stale line. One earlier run failed on my own check, which matched an old status line from a twenty-message buffer; the check now parses only the newest reply."""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-23"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "f7a25eaef989cda98400e5f9eb7a44cacfe58c2f0b40cb8c27c30b2b824733c5"
-changelog = """
-This version answers four findings, and two of them were data loss waiting to happen. An archive that does not carry this port's own marker is no longer deletable by shape alone, because a hand-made export has the same shape as a real backup: an operator now adopts that exact file with a command, and the adoption records its size so replacing the file under the same name drops it out again. A second backup written in the same second is allocated above the highest suffix instead of reusing a pruned one, and the archive a run has just written is protected from both of its own retention passes, so it can never sort behind an older backup and be deleted immediately. A filename with a multibyte character across the timestamp boundary used to panic on the server tick; the parse now refuses it instead. Proven in game on each: a manual export survives retention, is adopted, and is then pruned by the next publish; two archives of one second both survive with the newer keeping its suffix; and the stale-copy rule from the previous version still holds.
+changelog = """This version answers four findings, and two of them were data loss waiting to happen. An archive that does not carry this port's own marker is no longer deletable by shape alone, because a hand-made export has the same shape as a real backup: an operator now adopts that exact file with a command, and the adoption records its size so replacing the file under the same name drops it out again. A second backup written in the same second is allocated above the highest suffix instead of reusing a pruned one, and the archive a run has just written is protected from both of its own retention passes, so it can never sort behind an older backup and be deleted immediately. A filename with a multibyte character across the timestamp boundary used to panic on the server tick; the parse now refuses it instead. Proven in game on each: a manual export survives retention, is adopted, and is then pruned by the next publish; two archives of one second both survive with the newer keeping its suffix; and the stale-copy rule from the previous version still holds.
 """
 
 [[versions]]
@@ -54,6 +61,5 @@ published = "2026-11-18"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "6565f5acd73b5c03f2f49f3009b8a520cf945b25daec1f08d9f7869448b978a2"
-changelog = """
-First publication in the SDK format.
+changelog = """First publication in the SDK format.
 """
