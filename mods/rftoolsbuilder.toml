@@ -43,6 +43,14 @@ categories = ["technology"]
 tags = ["port", "building", "automation"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsbuilder.hmod"
+sha256 = "6b61c2be83f6f0a35ff2a41883eae322f018fd6fc48e5793cd6c5947f02fefdc"
+changelog = """This version adds the filter module and filtered placement, which gives the builder's previously dead 50 FE skip cost a real path. Read from the two artefacts: a tag entry matches any member of the tag, a bare entry matches the item id, a blacklist inverts the match, and a skipped cell drains the lesser of the stored energy and 50 FE. Proven in game with 27 cells, nine placed and eighteen skipped, and a parsed energy line showing exactly 900 FE spent on skips; a filterless control skips nothing and the inverted self-test exits one. The filter rides the card component and accepts one entry rather than the GUI's list, both recorded as deliberate deviations. Quarry, void, energy and chunk-load numbers stay green."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-24"
 game = "26.3"
