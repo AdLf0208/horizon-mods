@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.3"
+published = "2026-11-24"
+game = "26.3"
+file = "torchmaster.hmod"
+sha256 = "51042af1bcf1d087f6c0b11b048502df53ea10a3ea70663e9c5941c17d3ce6d8"
+changelog = """This version adds the Feral Flare Lantern, which places invisible light blocks in a sphere of up to sixteen blocks every five ticks where the light is below ten. The reference's lifetime is tied to the lantern, not a timer: removing or replacing it removes its child lights. A cap off-by-one and a non-deterministic cell order were corrected while carrying the rule. Proven in game with seven lights around a placed lantern, none after it is broken, and none for a stone control; the inverted assertion fails at the seven it should not have seen."""
+
+[[versions]]
 version = "0.2.2"
 published = "2026-11-23"
 game = "26.3"
