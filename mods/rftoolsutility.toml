@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.20"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "86befcbad4ba701cc761448edea409761d05598271e387ef88d6d35a16562e57"
+changelog = """This version adds the regeneration-plus environmental module: the same potion id at amplifier two with its own per-tick cost. The artefact truncates each module's own contribution before summing, so adding a second module changes the total by more than a flat rate; the buffer deltas prove it, falling 1,170 FE with one module and 4,810 with two over the same sixty-five ticks. The stronger amplifier replaces the weaker on the same potion id and removing the module restores amplifier zero. Buff-type modules stay blocked because the pin has no player-buff store to read them; re-check that at a new pin."""
+
+[[versions]]
 version = "0.2.19"
 published = "2026-11-24"
 game = "26.3"
