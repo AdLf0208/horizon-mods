@@ -1,6 +1,6 @@
 id = "naturesaura"
 kind = "native-mod"
-name = "naturesaura"
+name = "Nature's Aura"
 summary = "A Horizon port of naturesaura."
 description = """
 A port of [Nature's Aura](https://github.com/Ellpeck/NaturesAura) for Horizon.
