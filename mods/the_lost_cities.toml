@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.8"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "00515ddedd40fcab8c97d68442f7bd12e75a3044946a5bcc5e293747e7ebe877"
+changelog = """This version decodes the second building part, the eighth, with quartz block and iron bars copied verbatim from the jar's default palette. Quartz is placed by no other decoded part, giving a clean differential: three blocks authored in the modded dimension where vanilla noise writes none, with an inverted self-test ending exit one. The part contains literal quote-hash sequences in its brick rows, so it is embedded as an escaped string rather than a raw literal. Eight parts are decoded; two hundred remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.7"
 published = "2026-11-24"
 game = "26.3"
