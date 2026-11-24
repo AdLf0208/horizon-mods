@@ -43,6 +43,14 @@ categories = ["technology"]
 tags = ["port", "building", "automation"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsbuilder.hmod"
+sha256 = "626a18010cc73899efdad449bcc666c7af3a4992eb352a3727e463372c8b01db"
+changelog = """This version adds the pump and liquid cards plus the builder's fluid tank. The BE-fluid capability was confirmed at the pin before any code, and the artefact's whole-bucket rule was carried: one source cell becomes exactly one thousand millibuckets at three hundred FE per cell, with no partial fills. Proven in game by pumping twenty-seven water sources into twenty-seven thousand millibuckets with all cells left as air, draining them back with the liquid card, and a quarry differential collecting no fluid. Every prior selftest and control leg was re-run on the final bytes."""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-24"
 game = "26.3"
