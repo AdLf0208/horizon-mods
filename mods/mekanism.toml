@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "d192d1529d48ec184ea1b244e3a612043841e7c89799ad4980e6c0fac704f25f"
+changelog = """This version closes the acid chain: sulfur dust is oxidised to sulfur dioxide, then two infuser rows turn that into sulfur trioxide and finally sulfuric acid, which the dissolution chamber already consumes. The reference's chain is three steps, not the two my brief described, and the timings differ between machines — one hundred ticks for the oxidiser, one tick per infuser operation. Proved end to end: locally made acid runs the chamber with no acid inserted by the harness, a sulfurless charge makes no gas and spends nothing, and the inverted assertion fails at the acid amount it should not have produced. The evidence-only sweep build that previously carried this version string was never published, so this is the first 0.2.15 release."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-23"
 game = "26.3"
