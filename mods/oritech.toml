@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "oritech.hmod"
+sha256 = "b9ff66e06ed671667cfe71b15c9ae8756527da74f13040ae034926e5f47c4b86"
+changelog = """This version adds the Atomic Forge, the last machines-shaped family whose table resolves at this pin. Its charge gate is different from every other machine in the port: instead of spending per tick, the buffer must already hold the whole recipe cost — five thousand one hundred and twenty energy for the wafer — and a single tick then drains it and performs the craft. Eight cores must be assembled first. Nineteen artefact files were read and only one carried; the other eighteen are recorded as inert because their results have no consumer here, and the wafer's downstream is gated on the plastic chain. Proven at both sides of the boundary: exactly the full cost makes one wafer and empties the buffer, one energy less leaves inputs and charge untouched for sixty ticks, and an unassembled ring makes nothing."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
