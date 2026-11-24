@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-24"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "b360583de142d0bea5e0036396e4d9149efb9977b0216f1c95d1039c3a069838"
+changelog = """This version gives the miner lens its own beam effect, which the artefact describes as a recipe-driven block swap rather than a simple break: it draws a weighted ore-replacement recipe and writes that result's default block, for sixty thousand energy on top of the beam's thousand gate. My brief's one thousand and forty could never fire it, and the report says so; the item is given by the harness because its crafting needs crystals this package lacks. Proven on the block itself: stone becomes iron ore and the buffer empties from sixty-one thousand, while the plain lens leaves the stone and spends only the gate. A real tick bug was fixed en route — a block entity is out of the world during its own tick, so the beam reads the lens from the event's stack."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-24"
 game = "26.3"
