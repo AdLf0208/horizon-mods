@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.5"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "e7afcbb8e25477582bc21065444aa5b0b8094432b8aee8aa98804f54e0592996"
+changelog = """This version decodes the three-split rail part, the fifth, at a sixth height. The artefact's palette was verified before the carry — n and q map to north-east and south-east rails — and the part is embedded byte-identically with no invented ids. Proven in game by an ascending-style north-east rail authored in the modded dimension where vanilla noise writes none, with a shaped-state differential and an inverted self-test ending exit one. Five parts are decoded; seven rail parts and two hundred and three internal parts remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.4"
 published = "2026-11-24"
 game = "26.3"
