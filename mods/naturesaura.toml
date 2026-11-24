@@ -35,6 +35,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-24"
+game = "26.3"
+file = "naturesaura.hmod"
+sha256 = "e8ac2549a9583b4750e7307ce6a1df93b73c11d1685415dd84f86bdfc2c13361"
+changelog = """This version adds the leaf branch of the drained-spot effect: oak and the other thirteen vanilla leaves turn into decayed leaves at the same negative-spot, negative-area threshold as grass death, with the artefact's block and silk-touch loot table carried. The random-tick decay to air is recorded as not ported, and plant boost still waits on a public bonemeal helper. Proven in game by draining leaves at a measured spot and reading the exact outcome block back, while a spot at or above zero leaves oak in place; the plain-versus-silk-touch differential proves the new loot table and the inverted self-test exits one. The exact upstream copyright line stays first in both packed licences."""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-24"
 game = "26.3"
