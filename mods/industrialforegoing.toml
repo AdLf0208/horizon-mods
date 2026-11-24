@@ -30,13 +30,20 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "industrialforegoing.hmod"
+sha256 = "10e7f0ee53b09d9e3fdb4fb17f50009034d39d38ea18e06592e099107c16faa9"
+changelog = """This version carries the sewage chain: the sewer collects 50 mB of sewage per animal above it for 20 FE, and the composter turns 1,000 mB into one fertilizer over 100 ticks for 4,000 FE. The brief's machine ids were stale; the artefact won — the real ids are sewer and sewage_composter, read from the jar and the upstream source at ce2852db. Proven in game with a pen of one cow (50 mB, capability read for industrialforegoing:sewage, 20 FE) and a 1,000 mB → one fertilizer operation in 138 ticks; an empty pen is the control and the inverted output ends exit one. The first in-game run exposed two defects — a double fill and an undeclared fluid — both fixed at the root and unit-pinned. The sewer's second essence tank stays not ported."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-23"
 game = "26.3"
 file = "industrialforegoing.hmod"
 sha256 = "a0c1d8cd75db5f24149f0c2362a73d79f5e8b79fa5136c34fa99ca23b35648b7"
-changelog = """
-This version answers four findings, and the first one was a duplication waiting to happen in three machines rather than the two named. A broken machine's item carried its whole saved compound, inventory included, and the engine already drops a container's contents separately — so a break and replace could give the contents twice. All three machines now build a fresh payload of exactly what should travel: its id, its charge, its progress, its fluids and its upgrades, never its slots. The second finding had three parts: the crusher merged loot by item id alone, so a named or damaged stack lost its components, it could not tell which machine a queued reward belonged to, and a full output silently discarded the reward. It now merges only into a stack that is genuinely the same, binds pending loot and experience to the machine instance that earned them, and returns anything it cannot accept to the world or to the machine's own break drops. The third stops server work that was happening for nothing: the working area is read only on an attempt that is actually powered, the crusher releases its temporary actor immediately, and the fluid laser reads a recipe before it damages anything. The fourth restores the upstream MIT copyright line.
+changelog = """This version answers four findings, and the first one was a duplication waiting to happen in three machines rather than the two named. A broken machine's item carried its whole saved compound, inventory included, and the engine already drops a container's contents separately — so a break and replace could give the contents twice. All three machines now build a fresh payload of exactly what should travel: its id, its charge, its progress, its fluids and its upgrades, never its slots. The second finding had three parts: the crusher merged loot by item id alone, so a named or damaged stack lost its components, it could not tell which machine a queued reward belonged to, and a full output silently discarded the reward. It now merges only into a stack that is genuinely the same, binds pending loot and experience to the machine instance that earned them, and returns anything it cannot accept to the world or to the machine's own break drops. The third stops server work that was happening for nothing: the working area is read only on an attempt that is actually powered, the crusher releases its temporary actor immediately, and the fluid laser reads a recipe before it damages anything. The fourth restores the upstream MIT copyright line.
 """
 
 [[versions]]
@@ -45,8 +52,7 @@ published = "2026-11-21"
 game = "26.3"
 file = "industrialforegoing.hmod"
 sha256 = "0876ea235c4fd196113992cd743c116d513add5e408e723dc2ec7bf34c7b2bad"
-changelog = """
-Slice 5, the dissolution chamber: the machine that gives the mod's whole item set a source, including the three higher machine frames and all sixteen lenses that until now could only be given as items. It has its own recipe type read as data, eleven slots, two fluid tanks and its own timing, and the fluids it needs are declared and written the way a mod fluid has to be at this pin, then proved through the declared capability rather than by reading the block entity. Proven in game end to end: twenty-three recipes load and the readout says so; two thousand millibuckets of latex enter the tank and answer through the capability; a white lens takes exactly a hundred ticks, spends exactly a hundred times ninety FE and two hundred and fifty millibuckets, and produces one lens from five consumed inputs; an empty tank leaves the recipe unstarted with its energy untouched, and filling it starts the run; a hopper empties the output into a barrel; the simple frame's three hundred ticks spend ninety FE a tick; and the advanced frame is made from the plastics tag, a crafted diamond gear and the simple frame, which is exactly the chain an add-on was waiting on. Two harness facts cost runs and are recorded: a container command writes the window's copy and never reaches a machine's server slots, and the End's mobs will kill the player mid-scenario unless difficulty is peaceful.
+changelog = """Slice 5, the dissolution chamber: the machine that gives the mod's whole item set a source, including the three higher machine frames and all sixteen lenses that until now could only be given as items. It has its own recipe type read as data, eleven slots, two fluid tanks and its own timing, and the fluids it needs are declared and written the way a mod fluid has to be at this pin, then proved through the declared capability rather than by reading the block entity. Proven in game end to end: twenty-three recipes load and the readout says so; two thousand millibuckets of latex enter the tank and answer through the capability; a white lens takes exactly a hundred ticks, spends exactly a hundred times ninety FE and two hundred and fifty millibuckets, and produces one lens from five consumed inputs; an empty tank leaves the recipe unstarted with its energy untouched, and filling it starts the run; a hopper empties the output into a barrel; the simple frame's three hundred ticks spend ninety FE a tick; and the advanced frame is made from the plastics tag, a crafted diamond gear and the simple frame, which is exactly the chain an add-on was waiting on. Two harness facts cost runs and are recorded: a container command writes the window's copy and never reaches a machine's server slots, and the End's mobs will kill the player mid-scenario unless difficulty is peaceful.
 """
 
 [[versions]]
@@ -55,6 +61,5 @@ published = "2026-11-10"
 game = "26.3"
 file = "industrialforegoing.hmod"
 sha256 = "c10182f32584e6522b274855f6c8331793421237112d87acf804a4fb17752ed7"
-changelog = """
-First release
+changelog = """First release
 """
