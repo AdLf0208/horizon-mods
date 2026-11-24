@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.4"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "5cf42ddc86a90b46baf2e9c37b0d761f32ce6ce99a5fc4179352ed74b3376628"
+changelog = """This version decodes the rail bend, the fourth part, at a fourth height beneath the street, building and horizontal rails. The jar's palette ids matched the brief this time and the embedded part is byte-identical to the artefact. Proven in game by ten north-south rails authored in the modded dimension where vanilla noise writes none, with the earlier slabs, bookshelves and east-west rails still present and an inverted self-test ending exit one. Four parts are decoded; the note's count of eleven remaining rail parts was corrected to ten total, eight remaining, after measuring the jar."""
+
+[[versions]]
 version = "0.1.3"
 published = "2026-11-24"
 game = "26.3"
