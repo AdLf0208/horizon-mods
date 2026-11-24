@@ -37,6 +37,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "2327e0e0273225ba3109a792b2c2cca26844a874817988a8579acda30892b565"
+changelog = """This version carries every stonecutting recipe in the jar, which is thirty-two rather than the thirty-one in the brief — the raw-stone family was undercounted by one, and all thirty-two resolve. Each ingredient moves from the reference's object form to this build's bare-string form, checked against vanilla's own andesite slab recipe, and the recipe-key check now reads a hundred and three craftable rows with none blocked. Proven at a real stonecutter: otherstone gives two slabs with the input consumed and stairs as the differential, otherrock gives its own slabs, vanilla stone offers no occultism result, and no ingredient failed to resolve. Two harness facts are recorded for the next slice: the menu lists only non-empty slots, and a stonecutter has no block entity so its container lives in the guarded menu's slots."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
