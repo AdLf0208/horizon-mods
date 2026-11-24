@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "2a76e9ebe81d2cf1c2865b00af92a697165c914527ee1b6b82350e31165adbc6"
+changelog = """This version adds the two undead-tree Blood Infuser recipes. The artefact corrected the brief twice: the sapling infuses at tier zero, not tier three, and the planks recipe is tier two in the jar. Both data files are carried byte for byte — a dead bush becomes an undead sapling for 800 mB over 200 ticks, and undead planks become reinforced planks for 1,000 mB over 250 ticks. The recipe count rises from ten to twelve in game, both inputs work at their declared tier and the planks stay inert at tier zero, with an inverted self-test ending exit one. All 34 earlier e2e legs and the full recipe table remain green."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
