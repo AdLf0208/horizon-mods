@@ -32,6 +32,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.17"
+published = "2026-11-24"
+game = "26.3"
+file = "refinedstorage.hmod"
+sha256 = "15798e8c7be12d12901c7ab52094112e29830345eb73085b44c7408ce5039e6c"
+changelog = """This version adds the storage blocks in all four capacities. The artefact corrected the brief: there is no disk slot — each block owns a fixed-capacity store keyed by UUID, charges two to eight FE per tick by tier, and carries its contents on the dropped item. Proven in game by a block reading 1k, zero of 1024 items, and two FE per tick when empty; after a grid deposit it reads five of 1024, the grid view shows exactly those five diamonds, and a survival break plus replacement restores them. The earlier input/output-node access fix and all prior recipe legs stay green."""
+
+[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
