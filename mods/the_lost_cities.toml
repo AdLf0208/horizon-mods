@@ -1,6 +1,6 @@
 id = "the_lost_cities"
 kind = "native-mod"
-name = "the_lost_cities"
+name = "The Lost Cities"
 summary = "A Horizon port of the_lost_cities."
 description = """
 A port of [the_lost_cities](https://github.com/McJtyMods/LostCities) by McJty.
