@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.10"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "acf020a0636fdebc6f799d721a034dcebc75a1b20e4a2c134f191377ad18f2fb"
+changelog = """This version adds the charge-item slot, which puts one thousand energy a tick into an energy item in the generator rather than into its own store. The artefact corrected my brief's direction — I said the item should lose energy and the store stay unchanged; the reference puts energy into the item and takes it from the store, and the port does that. A real pin constraint surfaced too: an item capability answers nothing during its own block-entity tick, so the charge runs in the post-tick pass over a per-level position queue. Proven on the item itself: it gains thirty-nine thousand over thirty-nine ticks from the replies' own clocks while the store loses the same, and a stone in that slot is kept server-side."""
+
+[[versions]]
 version = "0.1.9"
 published = "2026-11-24"
 game = "26.3"
