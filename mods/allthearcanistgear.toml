@@ -1,0 +1,26 @@
+id = "allthearcanistgear"
+kind = "native-mod"
+name = "All The Arcanist Gear"
+summary = "A Horizon port of allthearcanistgear."
+description = """
+A port of [allthearcanistgear](https://github.com/Jarva/All-The-Arcanist-Gear) by Jarva.
+
+A first port of All The Arcanist Gear for Horizon 26.3. The jar declared required Curios and Ars Nouveau parents, so the artefact corrected the ledger's `core` label to add-on; only the armour-protection family binds to surfaces the pin actually stamps. Proved in game by a ten-block fall hurting bare feet but leaving health full with the worn boots, the robes cancelling fire, higher tiers cancelling dragon breath and wither, and levitation cleared by the unobtainium set, with controls and an inverted self-test ending exit one. Perks, spell books, the enchanting apparatus and client renderers are blocked at this pin with grep evidence; the LGPL text and Jarva credit travel with the package.
+"""
+authors = ["Jarva, AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "LGPL-3.0-only"
+source = "https://github.com/AdLf0208/allthearcanistgear"
+icon = "icons/allthearcanistgear.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "allthearcanistgear.hmod"
+sha256 = "118443ef640e667818e45ec5bd56d0140a4270d91cade60ab5440fb3482f86c0"
+changelog = """A first port of All The Arcanist Gear for Horizon 26.3. The jar declared required Curios and Ars Nouveau parents, so the artefact corrected the ledger's `core` label to add-on; only the armour-protection family binds to surfaces the pin actually stamps. Proved in game by a ten-block fall hurting bare feet but leaving health full with the worn boots, the robes cancelling fire, higher tiers cancelling dragon breath and wither, and levitation cleared by the unobtainium set, with controls and an inverted self-test ending exit one. Perks, spell books, the enchanting apparatus and client renderers are blocked at this pin with grep evidence; the LGPL text and Jarva credit travel with the package."""
