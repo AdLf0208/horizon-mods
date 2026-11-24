@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "5f8857c08e6ab2168f8932b63512b2a39b7d7fa78c24770e8e97fc497ad74814"
+changelog = """This version adds the keypad trapdoor, chosen over the full door because it is cheaper: sixteen variants against thirty-two, a single block against a double-high pair, with the same owner/code rule. All thirty-seven door and trapdoor models in the jar were checked and none uses an entity renderer. The artefact's trapdoor activates for a sixty-tick signal then closes, and its neighbour-change handler is a no-op. Proven by a wrong code leaving the parsed open state false, the right code flipping it true, the tick closing it again, and a vanilla iron trapdoor opening on redstone with no code. The full keypad door is next."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-24"
 game = "26.3"
