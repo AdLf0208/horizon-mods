@@ -1,6 +1,6 @@
 id = "rftoolspower"
 kind = "native-mod"
-name = "rftoolspower"
+name = "RFTools Power"
 summary = "A Horizon port of rftoolspower."
 description = """
 A port of [rftoolspower](https://github.com/McJtyMods/RFToolsPower) by McJtyMods. The generator and monitor recipes use RFTools Base ingredients, provided by `rftoolsbase` 0.2.2 on the matching SDK.
