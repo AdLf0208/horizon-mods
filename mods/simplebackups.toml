@@ -39,6 +39,14 @@ categories = ["utility"]
 tags = ["port", "backups"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-24"
+game = "26.3"
+file = "simplebackups.hmod"
+sha256 = "ab6e2312d30142d2ae45476c735abd8505ec790668a1d2c01d86df62f608b737"
+changelog = """This version adds the no-player backup timer: with no one online, an explicit interval replaces the main one, and a value of zero falls back to it as upstream does. The minutes-to-milliseconds conversion is read from the artefact's CommonConfig, and both branches of that rule went red first. Proven in game by a new status field, timers=7, read from the newest parsed reply; an inverted self-test exits one at that assertion. A genuinely playerless window is not producible because the control client always places the owner, so the two interval branches stay unit-only rather than being dressed up as a chat command. Disk reservation and sync-copy remain measured blocks, and regex ignores remain not ported under the dependency rule."""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-24"
 game = "26.3"
