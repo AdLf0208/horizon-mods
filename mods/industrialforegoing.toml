@@ -1,6 +1,6 @@
 id = "industrialforegoing"
 kind = "native-mod"
-name = "industrialforegoing"
+name = "Industrial Foregoing"
 summary = "A Horizon port of industrialforegoing."
 description = """
 A port of [Industrial Foregoing](https://github.com/Buuz135/Industrial-Foregoing) by Buuz135 for Horizon — slice 1, the Water Condensator.
