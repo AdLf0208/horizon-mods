@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-24"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "a506d017e78f5e05781ad68870836e7c9d39dc044b00f4a5522ef3948146e81f"
+changelog = """This version gives the destruction gadget a destination plan: sneak-clicking a block now reports which cells would be destroyed without removing any of them, which is the shape the building gadget's held placement already uses. Three of the reference's four refusal rules are carried at this pin — air, an unbreakable block by its destroy speed, and a member of the deny tag the previous version added — and the fourth is recorded as blocked because this build exposes no block-class query for a render block, and no render block is placed here. Proven on the counts that matter: a piston head and a bedrock inside the planned layer leave one cell, while two ordinary stones leave three, with nothing removed in either case; a wrong-held-item control refuses the gadget entirely and the inverted assertion fails as it must. The deny tag's other consumer, the exchange gadget, is now the natural next slice."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-23"
 game = "26.3"
