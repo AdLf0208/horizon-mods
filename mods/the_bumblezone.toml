@@ -1,0 +1,26 @@
+id = "the_bumblezone"
+kind = "native-mod"
+name = "the_bumblezone"
+summary = "A Horizon port of the_bumblezone."
+description = """
+A port of [the_bumblezone](https://github.com/TelepathicGrunt/Bumblezone) by TelepathicGrunt.
+
+The first port of The Bumblezone for Horizon 26.3. A correction was made before any code: the jar ships LGPL-3.0 for code and an All-Rights-Reserved asset licence, which beat the mods.toml MIT declaration under the campaign's licence ruling. The port therefore regenerates all of its art — a proven zero jar-derived asset bytes — ships the LGPL text and a monogram icon, and credits TelepathicGrunt. This version registers the mod's dimension, chunk generator and biome source from the jar's own values; in game the modded dimension accepts blocks and answers its ids while an unmodded control reports an unknown dimension. The ten biome definitions and feature data remain blocked at this pin (no configured-feature registrar, no terrain reset) and are recorded rather than faked.
+"""
+authors = ["TelepathicGrunt, AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "LGPL-3.0-only"
+source = "https://github.com/AdLf0208/the_bumblezone"
+icon = "icons/the_bumblezone.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "the_bumblezone.hmod"
+sha256 = "7ce18cc9380e6a535899cedc32b3ab0a3115a7c629a8a7fdf6178a945bc9ec9c"
+changelog = """The first port of The Bumblezone for Horizon 26.3. A correction was made before any code: the jar ships LGPL-3.0 for code and an All-Rights-Reserved asset licence, which beat the mods.toml MIT declaration under the campaign's licence ruling. The port therefore regenerates all of its art — a proven zero jar-derived asset bytes — ships the LGPL text and a monogram icon, and credits TelepathicGrunt. This version registers the mod's dimension, chunk generator and biome source from the jar's own values; in game the modded dimension accepts blocks and answers its ids while an unmodded control reports an unknown dimension. The ten biome definitions and feature data remain blocked at this pin (no configured-feature registrar, no terrain reset) and are recorded rather than faked."""
