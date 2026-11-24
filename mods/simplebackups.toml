@@ -44,15 +44,8 @@ published = "2026-11-23"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "f7a25eaef989cda98400e5f9eb7a44cacfe58c2f0b40cb8c27c30b2b824733c5"
-changelog = """This version answers four findings, and two of them were data loss waiting to happen. An archive that does not carry this port's own marker is no longer deletable by shape alone, because a hand-made export has the same shape as a real backup: an operator now adopts that exact file with a command, and the adoption records its size so replacing the file under the same name drops it out again. A second backup written in the same second is allocated above the highest suffix instead of reusing a pruned one, and the archive a run has just written is protected from both of its own retention passes, so it can never sort behind an older backup and be deleted immediately. A filename with a multibyte character across the timestamp boundary used to panic on the server tick; the parse now refuses it instead. Proven in game on each: a manual export survives retention, is adopted, and is then pruned by the next publish; two archives of one second both survive with the newer keeping its suffix; and the stale-copy rule from the previous version still holds."""
-
-[[versions]]
-version = "0.2.3"
-published = "2026-11-23"
-game = "26.3"
-file = "simplebackups.hmod"
-sha256 = "4c9061c0e2c5f5f2baec76a14b764293655120522f16992b90f133a0aa5c592a"
-changelog = """This version fixes retention, which had one root cause behind two data-loss defects: it treated anything named like a backup as one, and it ran unconditionally after every publish. Now every archive carries a manifest written into it, and only an archive whose format and world both match is this world's, with older archives recognised by their world-zip shape so an upgrade orphans nothing; a hand-made file with the same name, or one made for another world, is never deleted. Retention also skips both passes after a stale copy, and same-second generations sort numerically rather than as text, which is what had been keeping the wrong nine. Proven in game with the differential in the same folder: a hand-made zip survives the cap while a mod-made archive of the same name pattern and age is removed, and a stale run leaves two archives and the clean restore point while reporting that the cap was skipped. The negative runs assert the pre-fix behaviour so neither claim can pass by accident.
+changelog = """
+This version answers four findings, and two of them were data loss waiting to happen. An archive that does not carry this port's own marker is no longer deletable by shape alone, because a hand-made export has the same shape as a real backup: an operator now adopts that exact file with a command, and the adoption records its size so replacing the file under the same name drops it out again. A second backup written in the same second is allocated above the highest suffix instead of reusing a pruned one, and the archive a run has just written is protected from both of its own retention passes, so it can never sort behind an older backup and be deleted immediately. A filename with a multibyte character across the timestamp boundary used to panic on the server tick; the parse now refuses it instead. Proven in game on each: a manual export survives retention, is adopted, and is then pruned by the next publish; two archives of one second both survive with the newer keeping its suffix; and the stale-copy rule from the previous version still holds.
 """
 
 [[versions]]
@@ -61,5 +54,6 @@ published = "2026-11-18"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "6565f5acd73b5c03f2f49f3009b8a520cf945b25daec1f08d9f7869448b978a2"
-changelog = """First publication in the SDK format.
+changelog = """
+First publication in the SDK format.
 """
