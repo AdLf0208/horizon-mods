@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "209077df6d5fedf5aa1d7eedb15b9b01635e73ad8036f91cf8a47c33153b057b"
+changelog = """This version adds the analog redstone computer. With the reference's identity defaults it passes the input level through; otherwise it truncates floor(input times the multiplier, plus the addend) for the equal, less and greater branches and clamps to zero through fifteen, waking neighbours only on a change. The six GUI-only fields are set by command, the established stand-in. Proven from game-time stamps: 15 at multiplier one-half truncates to seven, identity returns fifteen, and the zero-input and equal-multiplier-zero cases give zero; a negative result clamps. Digit is not carried — its tile has no redstone output at all, only a client renderer, so there is no fail-capable lamp assertion to make. The earlier sensor, sequencer, timer and counter legs stay green."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-24"
 game = "26.3"
