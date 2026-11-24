@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-24"
+game = "26.3"
+file = "stepcrafter.hmod"
+sha256 = "9bb9770bb572b52118df5fd9c80f68096d34b555adb66976c29298e8096c0760"
+changelog = """This version draws the machine's full forty-five pattern cells rather than the first nine. The geometry is computed, not eyeballed: fifteen-pixel cells in a nine-by-five grid, a hundred-and-seventy-six by two-hundred-and-thirty-eight panel, and the forty-fifth cell centred at a known pixel. A defect surfaced while doing it — the server-side button decoder stopped at button three hundred and forty, so cells forty-one through forty-four could never reach the editor — and that is fixed. Proven in game with a parsed readout of forty-five targets and a forty-fifth entry, while an identically planted machine nobody opened keeps forty-four; the screenshot is evidence only."""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-24"
 game = "26.3"
