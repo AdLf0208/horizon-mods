@@ -1,6 +1,6 @@
 id = "the_bumblezone"
 kind = "native-mod"
-name = "the_bumblezone"
+name = "The Bumblezone"
 summary = "A Horizon port of the_bumblezone."
 description = """
 A port of [the_bumblezone](https://github.com/TelepathicGrunt/Bumblezone) by TelepathicGrunt.
