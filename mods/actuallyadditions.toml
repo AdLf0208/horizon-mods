@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.12"
+published = "2026-11-24"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "abafd0075c23eeb80a7f1b25b3fdea0b0587719171a591d5774a8eecd6249a57"
+changelog = """This version adds the detonator lens's beam effect, which costs two hundred and fifty thousand energy on top of the beam's thousand gate and fires a radius-ten blast. The reference passes a block-interaction mode that leaves blocks standing and only hurts and pushes entities, so the brief's crater does not exist; the port uses the real explosion hook with that exact interaction and asserts the stone stays while the blast box gains fire blocks. Proven on both sides of the cost boundary: the charged shot empties the buffer and lights the box, while the plain lens keeps its two hundred and fifty thousand and lights nothing."""
+
+[[versions]]
 version = "0.2.11"
 published = "2026-11-24"
 game = "26.3"
