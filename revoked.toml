@@ -28,3 +28,9 @@ date = "2026-11-08"
 id = "twilightforest"
 reason = "Taken down at the request of TeamTwilight, the mod's owners: they do not permit ports of Twilight Forest, and parts of the mod are All Rights Reserved."
 date = "2026-11-23"
+
+[[revoked]]
+id = "rftoolsstorage"
+sha256 = "48a860378bfafddcf78e4e5d6fcc2eb055de475bfd91713aa0bcfe4600546776"
+reason = "The 0.2.5 scanner can read another player's container inventories without authorisation. Install 0.2.16, which enforces access at the target."
+date = "2026-11-24"
