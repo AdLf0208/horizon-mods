@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "1996cd5de6ec6869a818e3d270f1782411d7872269bd6e979905336851579b03"
+changelog = """This version carries the undead wood set: logs, stripped logs, wood, planks, stairs, slab, fence, gate, leaves and sapling, with the jar's own seven crafting recipes and tags. The artefacts were enumerated from the jar rather than from the brief, and the reinforced planks were not duplicated because an earlier slice already carries them. Proven in game on both halves: each new id gives and places with its declared state and an unknown id is refused, and all seven recipes craft their exact output with the grid emptied and the input consumed. The tree's worldgen file is inert at this pin and is recorded as such, not dressed up as a behaviour."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-24"
 game = "26.3"
