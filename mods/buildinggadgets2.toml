@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-24"
+game = "26.3"
+file = "buildinggadgets2.hmod"
+sha256 = "3d32d37baf5e50e39475485474c29fe3a3e79b62fc9a267a3f1adaa8ac186a5a"
+changelog = """This version gives the Cut Paste gadget its collection plan, keeping the same shape as the destruction, exchange and copy plans that came before it. The artefact names the item gadget_cut_paste, with a recipe whose centre is shears, and the kept cells are the ones that are not air, not unbreakable by destroy speed and not in the deny tag; the render-block line stays blocked because the pin cannot query block classes. Proven on the count pair: a piston head and bedrock in the layer leave one cell, two ordinary stones leave three, and nothing is placed or removed in either case. A harness bug needed fixing first — shears do not stack, so the crafting helper had to re-find a fresh stack rather than reusing the old one."""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-24"
 game = "26.3"
