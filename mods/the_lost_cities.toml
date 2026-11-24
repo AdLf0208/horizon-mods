@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.12"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "d8ce8f41fa661c5af889f66dc6af7d46ccd32a054f686cc3181a55c3a9ed4749"
+changelog = """This version decodes the larger stair part, the twelfth, in a six-wide seven-slice footprint above the normal stairs. Only the part bytes are new — all three chars reuse the previous palette — and the sha was re-verified in the source after formatting and inside the archive. Proven by forty-two stone stairs authored in the modded dimension where vanilla noise writes none, with an inverted self-test ending exit one. Twelve parts are decoded; one hundred and ninety-six remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.11"
 published = "2026-11-24"
 game = "26.3"
