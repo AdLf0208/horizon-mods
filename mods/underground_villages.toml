@@ -1,0 +1,26 @@
+id = "underground_villages"
+kind = "native-mod"
+name = "underground_villages"
+summary = "A Horizon port of underground_villages."
+description = """
+A port of [underground_villages](https://github.com/Mrbysco/UndergroundVillages) by Mrbysco.
+
+A first port of Underground Villages for Horizon 26.3, carrying the retired port's 153 worldgen files as one flat content `.hmod`: one jigsaw structure, a random-spread set, 17 template pools, a processor list, 3 vanilla placed features, 2 tags and 128 NBT templates. The tool rewrites the three chain cells to iron_chain for 26.3 and verifies every other template byte-identical to the jar. Proven in game: `/locate` and `place structure` generate the village, and block reads at the generated position find cut copper stairs, cyan terracotta and black stained glass panes that a control chunk has none of; 12 villagers spawn versus zero in the control, and an unknown id is refused. The mod's Java height-provider type and config surface are absent at this pin and are recorded as blocked, so the carried data uses the same vanilla constant at y = -20.
+"""
+authors = ["Mrbysco, AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "MIT"
+source = "https://github.com/AdLf0208/underground_villages"
+icon = "icons/underground_villages.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "underground_villages.hmod"
+sha256 = "4e2ca3f361e4a151c3bdb07acbce529c480b863785982b3b52288010ede56b8f"
+changelog = """A first port of Underground Villages for Horizon 26.3, carrying the retired port's 153 worldgen files as one flat content `.hmod`: one jigsaw structure, a random-spread set, 17 template pools, a processor list, 3 vanilla placed features, 2 tags and 128 NBT templates. The tool rewrites the three chain cells to iron_chain for 26.3 and verifies every other template byte-identical to the jar. Proven in game: `/locate` and `place structure` generate the village, and block reads at the generated position find cut copper stairs, cyan terracotta and black stained glass panes that a control chunk has none of; 12 villagers spawn versus zero in the control, and an unknown id is refused. The mod's Java height-provider type and config surface are absent at this pin and are recorded as blocked, so the carried data uses the same vanilla constant at y = -20."""
