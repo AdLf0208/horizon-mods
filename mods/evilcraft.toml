@@ -31,6 +31,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "798435ee468c3d2be917e44f0134cbb2eae9df2c5916e6fc4b77de5eb4de2be4"
+changelog = """This version applies the Blood Chest's curse roll, which the gap list said was recorded but never implemented. The artefact corrected my description twice: the draw is bounded so only roll zero curses, one in ten thousand, and the enchantment is chosen from the game's curse tag rather than hardcoded to vanishing — a binding curse is an equally valid result. Proven on the saved stack at the same chest and tool: roll zero leaves an enchantment at level one, roll nine thousand nine hundred and ninety-nine leaves only damage, with the same forty ticks and tank draw in both. The Colossal Chest's bulk repair path is deliberately untouched; it never curses upstream."""
+
+[[versions]]
 version = "0.2.12"
 published = "2026-11-24"
 game = "26.3"
