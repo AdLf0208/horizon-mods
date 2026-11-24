@@ -1,6 +1,6 @@
 id = "rftoolsstorage"
 kind = "native-mod"
-name = "rftoolsstorage"
+name = "RFTools Storage"
 summary = "Modular storage: a module block holding 6,400 items, sealed until locked."
 description = """A Horizon port of [RFTools Storage](https://github.com/McJtyMods/RFToolsStorage) (MIT, by **McJty**) for Horizon. This first slice is **modular storage**.
 
