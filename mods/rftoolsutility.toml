@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "a2b5a1427d6a2d50f09e93179cb63a9cb870bb1b6cb274a172ea7fb11803cfc3"
+changelog = """This version adds the sensor, a logic block that checks the block on its input side every ten ticks and drives a redstone signal of fifteen or zero. The dialing device was the named gap, but the artefact shows its entire behaviour is a GUI command protocol this pin cannot express and this port has no menu machinery, so the agent switched to the sibling sensor rather than inventing a destination registry. Proven with a vanilla lamp that lights only while the named block sits in front, plus a vanilla redstone-block control, a dirt differential and a restore. The earlier teleport and analyzer legs remain green, and a stability fix replaced a call absent from the older SDK build so both fit checks pass."""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-24"
 game = "26.3"
