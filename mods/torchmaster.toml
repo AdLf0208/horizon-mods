@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.5"
+published = "2026-11-24"
+game = "26.3"
+file = "torchmaster.hmod"
+sha256 = "bf05ad2348e0eb85300fdf6c81dd4d98003bdbb30e69369aee79e3574de49aa8"
+changelog = """This version vetoes spawner spawns beside a lit feral lantern. The artefact has no spawner event of its own — the interaction is the light it writes — so the port implements vanilla's light limit as a pure rule and cancels through the stamped finalize_spawn hook, with a light read at the spawn cell. The first build false-failed fits because a SpawnSource::Block variant was read as a Block constructor; the rule now gates on the stamped spawn reason instead. Proven in game by a type-filtered spawn count falling from four to zero beside a lit lantern, with all pearl, spawn, drop and flare legs green and an inverted self-test exiting one."""
+
+[[versions]]
 version = "0.2.4"
 published = "2026-11-24"
 game = "26.3"
