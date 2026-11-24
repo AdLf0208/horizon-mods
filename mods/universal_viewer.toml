@@ -7,14 +7,17 @@ Look inside things without opening them.
 
 - **Maps on their slot**: a loaded filled map shows its own picture as its inventory icon, edge to edge (inventory, chests, hotbar). The stack count stays on top. In the Creative screen, where the engine gives no slot positions, the mod places them from the vanilla layout: maps show along the hotbar row in every tab and across the whole inventory in the inventory tab; items in other tabs' grids keep their vanilla icon.
 - **Map tooltip**: hovering a map adds its picture, inside the game's own held-map frame, to the normal tooltip, with its scale (1:1 to 1:16) and lock state. The picture can be shown at 64, 96 or 128 px (a setting; 128 by default). Every other tooltip line stays: vanilla's, a server's lore and prices, other mods'.
-- **Shulker boxes and bundles**: hold **Shift** while hovering to see the full contents as a slot grid drawn like a vanilla inventory, tinted in the box's or bundle's colour. Hold **Ctrl** to lock the preview in place and hover its items (a setting switches to press-to-toggle).
+- **Shulker boxes and bundles**: hold **Shift** while hovering to see the full contents as a slot grid drawn like a vanilla inventory, tinted in the box's or bundle's colour, or **Alt** to see them as a list: one row per kind of item with its total, largest first. Hold **Ctrl** to lock the preview in place and hover its items (a setting switches to press-to-toggle). All three keys can be rebound on Options > Controls.
+- **Slot marks**: a shulker box shows a fill bar under its icon, and shulker boxes and bundles show a small icon of the item they hold the most of (a setting picks both, either or none).
+- **Ender chest memory**: the contents of an ender chest are remembered while it is open, per server or world, and shown when hovering an ender chest item, marked as last opened. Kept in memory only until the game closes.
+- **Item search**: a field above the inventory and container screens outlines every slot whose item matches the typed name, or whose shulker box, bundle or remembered ender chest holds a match, and dims the rest (a setting hides it; not on the Creative screen, which has its own search).
 - **Placed shulker boxes**: opening one tints the inventory panel and slots in the box's colour.
 
-**What it does and does not do.** All rendering runs on the client. One mixin (HEAD of `remote_map_item_data`) copies the map pictures a server already sends to the client, and the game's own map colour palette, so maps show on vanilla servers; it changes nothing in the game's handling of the packet. Separately, the mod registers an optional payload pair (`universal_viewer:map_request` / `universal_viewer:map_data`): when the server also runs the mod (or in singleplayer), the client may ask it for a map's picture by id, so maps sitting in a chest show at once. The server answers only for a map the player can see (in their inventory or the menu they have open, including inside shulker boxes and bundles there), at most 10 replies per second per player; clients ask at most once every 2 ticks. A server without the mod never answers. No other network access, no files written, no data collected. It gives no advantage over what a player could see by holding the map or opening the box.
+**What it does and does not do.** All rendering runs on the client. One mixin (HEAD of `remote_map_item_data`) copies the map pictures a server already sends to the client, and the game's own map colour palette, so maps show on vanilla servers; it changes nothing in the game's handling of the packet. Separately, the mod registers an optional payload pair (`universal_viewer:map_request` / `universal_viewer:map_data`): when the server also runs the mod (or in singleplayer), the client may ask it for a map's picture by id, so maps sitting in a chest show at once. The server answers only for a map the player can see (in their inventory or the menu they have open, including inside shulker boxes and bundles there), at most 10 replies per second per player; clients ask at most once every 2 ticks. A server without the mod never answers. No other network access, no files written (the ender chest memory lives in memory only), no data collected. It gives no advantage over what a player could see by holding the map or opening the box.
 
 The mod ships no Minecraft data: map colours come from the running game and the frame is the game's own `map_background` sprite.
 
-Pinned to Horizon f037744 (Nightly 2026-11-21) and horizon-mixins e59da90.
+Pinned to Horizon f1bb66f (Nightly 2026-11-22) and horizon-mixins e59da90.
 """
 authors = ["Aiken1609"]
 owners = ["Aiken1609"]
@@ -25,6 +28,30 @@ icon = "icons/universal_viewer.png"
 categories = ["utility", "storage", "management"]
 tags = ["map", "tooltip", "shulker", "bundle", "preview", "client-side", "qol"]
 screenshots = ["screenshots/universal_viewer/9.png", "screenshots/universal_viewer/10.png", "screenshots/universal_viewer/11.png"]
+
+[[versions]]
+version = "0.2.0"
+published = "2026-11-24"
+game = "26.3"
+file = "universal_viewer-0.2.0.hmod"
+sha256 = "d1b8d6079ae860c9da80f834cb1d2b4d1cc2f11d1e0e00e32dc09f8d7620bdc3"
+changelog = "Ender chest memory: hovering an ender chest item shows its contents as last opened, per server or world, kept in memory only. Item search: a field above container screens outlines matches, also inside shulker boxes, bundles and the remembered ender chest."
+
+[[versions]]
+version = "0.1.22"
+published = "2026-11-24"
+game = "26.3"
+file = "universal_viewer-0.1.22.hmod"
+sha256 = "f01236ef93ed76b8338f957752368aa7e9ab44237561251db54c13a0a0974429"
+changelog = "Contents, list and lock keys are rebindable on Options > Controls (Shift, Alt and Ctrl by default); hints show the keys as bound."
+
+[[versions]]
+version = "0.1.21"
+published = "2026-11-24"
+game = "26.3"
+file = "universal_viewer-0.1.21.hmod"
+sha256 = "cf653ea82771bbe9c13aea2aceda17a5becf5ce7edbb9d7310f00503697fb314"
+changelog = "Made for Horizon Nightly f1bb66f (2026-11-22). Slot marks on shulker boxes and bundles (fill bar and top item, with a setting) and an Alt contents list."
 
 [[versions]]
 version = "0.1.20"
