@@ -31,6 +31,30 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.13"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "798435ee468c3d2be917e44f0134cbb2eae9df2c5916e6fc4b77de5eb4de2be4"
+changelog = """This version applies the Blood Chest's curse roll, which the gap list said was recorded but never implemented. The artefact corrected my description twice: the draw is bounded so only roll zero curses, one in ten thousand, and the enchantment is chosen from the game's curse tag rather than hardcoded to vanishing — a binding curse is an equally valid result. Proven on the saved stack at the same chest and tool: roll zero leaves an enchantment at level one, roll nine thousand nine hundred and ninety-nine leaves only damage, with the same forty ticks and tank draw in both. The Colossal Chest's bulk repair path is deliberately untouched; it never curses upstream."""
+
+[[versions]]
+version = "0.2.12"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "d203fad4d2fc96fb574724ae4688fc7d39448eb1517558023e1aab06f26b4e78"
+changelog = """This version makes the carried tanks answer a comparator, using the same cache-and-notify route the power cells proved: the machine's tick records its tank fraction, and a change nudges the neighbours rather than the hook trying to read a block entity it cannot see. The fraction is the reference's ceiling of fifteen times the stored amount over capacity, which is why two thousand of three thousand reads ten and one thousand eight hundred reads nine — the brief's nine at two thousand was arithmetic error, and the artefact settled it. Proven at the game's own consumer: a full purifier drives a wire at fifteen, a stone control at zero, and the inverted assertion fails at the ten it should have produced."""
+
+[[versions]]
+version = "0.2.11"
+published = "2026-11-24"
+game = "26.3"
+file = "evilcraft.hmod"
+sha256 = "e80f46bf8feb2d6f40c2947abc34d7d95a72a78a19a9cfa10a3d57b36746f25d"
+changelog = """This version adds the Vengeance Pickaxe and the immunity that gives it a purpose: the Purifier refuses to strip a curse from that item, while the same curse on a vanilla pickaxe is removed for a bucket of blood. The gap line said the item was missing and the dispatch guessed a damage hook; the artefact disagrees on both counts and the source settles it — the guard is in the Purifier's curse action, with no entity or damage query involved. Proved on the saved item itself: after a hundred and forty ticks the enchanted pickaxe still carries vanishing curse and its tank stays full, while a diamond pickaxe in the same machine loses the curse and a thousand millibuckets. The item's own crafting recipe stays a gap because its ingredients are not carried."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-23"
 game = "26.3"
