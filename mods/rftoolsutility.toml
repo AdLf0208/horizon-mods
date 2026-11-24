@@ -1,6 +1,6 @@
 id = "rftoolsutility"
 kind = "native-mod"
-name = "rftoolsutility"
+name = "RFTools Utility"
 summary = "The RFTools tank: 32,000 mB of one fluid, filled and drained with a bucket."
 description = """A Horizon port of [RFTools Utility](https://github.com/McJtyMods/RFToolsUtility) (MIT, by **McJty**) for Horizon. This first slice is **the tank**.
 
