@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-24"
+game = "26.3"
+file = "torchmaster.hmod"
+sha256 = "98c23932949e573de647256284a45cd7687ec97d6d9281ef7d37ba796a7e7ff6"
+changelog = """This version vetoes village sieges near a mega torch. The artefact's stamped village_siege hook is a cancellable server event fired before any zombie exists; the port cancels it with the same sixty-four-block light check as the spawn veto but without an entity filter, because a dread lamp never vetoes a siege. Proven in game by a village arena growing three zombies unaided and none with a mega torch in range across a longer observation window, with a type-filtered count and an inverted self-test ending exit one. The phantom, spawner, pearl and earlier legs stay green."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-24"
 game = "26.3"
