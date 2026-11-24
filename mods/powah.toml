@@ -34,6 +34,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "power"]
 
 [[versions]]
+version = "0.2.21"
+published = "2026-11-24"
+game = "26.3"
+file = "powah.hmod"
+sha256 = "d41312efeb6f09e338fbe665c2afb4da8d5a7ae3dafd95f99ee3e43b3d9e3cca"
+changelog = """This version adds the wrench's LINK mode, the two-click rod-to-orb binding. The first click stores its position and kind on the wrench; the second verifies the other kind and that the truncated Euclidean distance is within the configured range of four, then writes the orb position onto the rod and clears the stored click either way. My brief's Chebyshev-style range was wrong and the artefact settled it. Proven on the rod readout: a far orb leaves the link empty, one moved within range names that exact position, and the inverted assertion fails at the link it should not have made; an unmatched orb click changes nothing."""
+
+[[versions]]
 version = "0.2.20"
 published = "2026-11-24"
 game = "26.3"
