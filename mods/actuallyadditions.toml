@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.10"
+published = "2026-11-24"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "63f263561061eede2b60fcd2886917004a998cc0321c302b32bfc02e6ca7b54b"
+changelog = """This version gives the lens slot something to hold and makes a lens in the beam do its own conversion. The recipe and the four conversion rows come from the jar — the brief said five rings, the artefact has four, and the artefact wins. Proved in game on the observable sequence: the crafted lens is accepted into the slot, a stick and a second lens are refused, and a dropped lens in the beam becomes a coloured lens with the energy read back as forty left after the gate and the conversion. The four behaviour lenses' own effects are deliberately out of scope: their crafting recipes need crystals this package does not carry."""
+
+[[versions]]
 version = "0.2.9"
 published = "2026-11-23"
 game = "26.3"
