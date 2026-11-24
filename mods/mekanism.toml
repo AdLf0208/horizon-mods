@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "mekanism.hmod"
+sha256 = "d439fd5d947fe9ad94ddd4621a4a39a9a28f59d00e1417b2c0e1acf58b206b28"
+changelog = """This version adds the Electrolytic Separator, which splits water into hydrogen and oxygen. The brief's "twice the usage" energy figure was wrong: the artefact's data maps give 200 FE per millibucket, the recipe runs in one tick, and the whole operation costs 400 FE out of a 160,000 FE buffer, with a 24,000 mB water tank and two 2,400 mB gas tanks. The jar's water recipe turns two millibuckets into two hydrogen and one oxygen. Proven in game on a charged, water-fed machine: its neighbour tanks hold exactly those amounts while a dry control keeps its 400 FE and empty tanks; the inverted self-test exits one on the hydrogen count. The full regression leg keeps all eighteen shaped recipes and the entire crushing, smelting, enriching, injecting, purifying, washing, crystallizing, dissolution and acid-chain families green."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
