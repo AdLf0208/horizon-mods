@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.11"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "0acc5d54dba2f6fb42bd3c767e761a66a715d329e9a617bf4d30edad98a0edfe"
+changelog = """This version decodes the normal stair part, the eleventh, in a six-wide seven-slice footprint. Three palette entries were copied verbatim from the jar's default palette, and the stone stair id is placed by no other decoded part, giving a clean differential: twenty-eight stairs authored in the modded dimension where vanilla noise writes none, with an inverted self-test ending exit one. The embedded part sha was re-verified both in the source after formatting and inside the packed archive. Eleven parts are decoded; one hundred and ninety-seven remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.10"
 published = "2026-11-24"
 game = "26.3"
