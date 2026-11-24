@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.18"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "cb690fab949b3c4fb2f0353324f9687b62ea20aa4365ddb7157141d2a299d0fd"
+changelog = """This version adds the logic wire, the last expressible logic-family sibling. The block gate passed — it is a directional signal relay with no cross-block network table. The two directional conventions had to be mapped in game: the pin's signal read uses vanilla's backwards direction while the block-signal event's face is consumer-facing, so the artefact's input-side test becomes a comparison with the opposite face. Proven by a six-wire run lighting a far lamp, a broken link leaving it dark, and a lone-wire directional differential. The loop guard stops reentrant propagation. One hundred and eighteen strict e2e logs stay green."""
+
+[[versions]]
 version = "0.2.17"
 published = "2026-11-24"
 game = "26.3"
