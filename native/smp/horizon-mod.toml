@@ -1,0 +1,13 @@
+id = "smp"
+name = "SMP"
+version = "0.36.1"
+description = "The official Horizon server's SMP: economy, market, trades, claims, homes and warps, auction house, casino."
+authors = ["Horizon"]
+api = "0.2"
+side = "server"
+capabilities = ["registries"]
+
+[native]
+game = "26.3"
+horizon = "f1bb66f353cf67f2aa4665293fc75c8d91186fc7"
+mixins = "e59da9094f0c2fdda6c627fe9eff22dec6a906f0"
