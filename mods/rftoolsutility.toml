@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "54791b79cda99b677de4d308cf2f96483a02bb4210e3abe4559af8328b863cf5"
+changelog = """This version adds the destination analyzer, a passive block that reports whether a dialled receiver can accept a teleport. The artefact corrected two things: there is no analyzer block entity, and the block emits no redstone at all — readiness is a three-colour readout, fifteen green, seven yellow, zero red. The rule is read from the receiver: two clear blocks above it and five thousand energy, with a missing receiver reported as a warning rather than an unknown. Proven on the readout at three states — underpowered zero, charged fifteen, blocked above zero — with the inverted assertion failing at the fifteen it should not have read and the previous teleport family still green."""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-24"
 game = "26.3"
