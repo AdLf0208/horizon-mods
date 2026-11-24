@@ -37,6 +37,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.14"
+published = "2026-11-24"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "bfef6df24eef45495c74318b30515993e94caf608662b6f9068b799a6eeeebfc"
+changelog = """This version adds the otherstone tablet, the obtainable item that the previous version's otherworld-ashes tag unblocked. Two grids make it, mirrored versions of the same shape, and both are proved at a real table with the result read from the guarded slot rather than from a menu that could be the player's own inventory. Every ingredient is consumed and the grid is emptied in each case, a grid short of ash makes nothing, and no tag-keyed cell failed to resolve. The full sweep still passes all earlier families, and the inverted assertion fails at the count it should have produced."""
+
+[[versions]]
 version = "0.2.13"
 published = "2026-11-23"
 game = "26.3"
