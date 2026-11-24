@@ -39,13 +39,20 @@ categories = ["utility"]
 tags = ["port", "backups"]
 
 [[versions]]
+version = "0.2.11"
+published = "2026-11-24"
+game = "26.3"
+file = "simplebackups.hmod"
+sha256 = "47ab00b7aa1ee0dd7966fb825a1c1c8016c4d9b2dfd65b4f9ae70a1471da3914"
+changelog = """This version answers the reviewer's product finding on #1578: an adoption is now bound to the archive's sha256 as well as its name and size, and the digest is re-checked immediately before both retention deletion loops. A file replaced under the same name and size therefore falls out of retention until the operator re-adopts it; older two-column journals adopt nothing silently. Proven in game by scenario G — the replaced export survives a publish, then is re-adopted and pruned — with an inverted self-test ending exit one. Eighty-four tests and sixteen strict e2e logs are green."""
+
+[[versions]]
 version = "0.2.10"
 published = "2026-11-24"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "ab6e2312d30142d2ae45476c735abd8505ec790668a1d2c01d86df62f608b737"
-changelog = """
-This version adds the no-player backup timer: with no one online, an explicit interval replaces the main one, and a value of zero falls back to it as upstream does. The minutes-to-milliseconds conversion is read from the artefact's CommonConfig, and both branches of that rule went red first. Proven in game by a new status field, timers=7, read from the newest parsed reply; an inverted self-test exits one at that assertion. A genuinely playerless window is not producible because the control client always places the owner, so the two interval branches stay unit-only rather than being dressed up as a chat command. Disk reservation and sync-copy remain measured blocks, and regex ignores remain not ported under the dependency rule.
+changelog = """This version adds the no-player backup timer: with no one online, an explicit interval replaces the main one, and a value of zero falls back to it as upstream does. The minutes-to-milliseconds conversion is read from the artefact's CommonConfig, and both branches of that rule went red first. Proven in game by a new status field, timers=7, read from the newest parsed reply; an inverted self-test exits one at that assertion. A genuinely playerless window is not producible because the control client always places the owner, so the two interval branches stay unit-only rather than being dressed up as a chat command. Disk reservation and sync-copy remain measured blocks, and regex ignores remain not ported under the dependency rule.
 """
 
 [[versions]]
@@ -54,8 +61,7 @@ published = "2026-11-24"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "53a767bb1c2a55915391ea69630fd4f36bad5a30ec8727bac820e2ad8bb31606"
-changelog = """
-This version captures the game log in each backup, so the archive carries the exact messages from the run that produced it. The hard part was the path: the mod's config API cannot name a file outside config, so the glue derives candidates from both host roots and refuses symlinks and traversal, with the headless launcher's log location measured before any code. Proven by opening the newest archive with zipfile and finding a concrete line from that scratch latest.log inside backup.log; with capture off the entry is absent, and the inverted assertion ends exit one. A collapsible branch and three needless clones found by clippy were fixed rather than allowed.
+changelog = """This version captures the game log in each backup, so the archive carries the exact messages from the run that produced it. The hard part was the path: the mod's config API cannot name a file outside config, so the glue derives candidates from both host roots and refuses symlinks and traversal, with the headless launcher's log location measured before any code. Proven by opening the newest archive with zipfile and finding a concrete line from that scratch latest.log inside backup.log; with capture off the entry is absent, and the inverted assertion ends exit one. A collapsible branch and three needless clones found by clippy were fixed rather than allowed.
 """
 
 [[versions]]
@@ -64,8 +70,7 @@ published = "2026-11-24"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "843d9fd8ba3aba26ba0f03e3fe9b295dc30efa182afa75e19466e94a39ebb117"
-changelog = """
-This version adds the empty-server policy, so a server with nobody online can be capped at a configured number of scheduled backups per empty period. The rule is read from upstream: no player online means an empty player list, the counter is per empty period and resets when somebody joins, and a count of zero disables it. The harness cannot produce a genuinely playerless interval — launching places the world owner and disconnecting needs a remote server — so the empty branch is proved red-first by unit tests rather than by dressing a chat command up as an empty server. The game leg proves the still-populated path is unchanged, with a per-period counter in the parsed status.
+changelog = """This version adds the empty-server policy, so a server with nobody online can be capped at a configured number of scheduled backups per empty period. The rule is read from upstream: no player online means an empty player list, the counter is per empty period and resets when somebody joins, and a count of zero disables it. The harness cannot produce a genuinely playerless interval — launching places the world owner and disconnecting needs a remote server — so the empty branch is proved red-first by unit tests rather than by dressing a chat command up as an empty server. The game leg proves the still-populated path is unchanged, with a per-period counter in the parsed status.
 """
 
 [[versions]]
@@ -74,8 +79,7 @@ published = "2026-11-24"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "f02f1aa1786e5b0d141ec4bed2e94535498a60c4bc600e4dc1a2a4af595f9656"
-changelog = """
-This version adds incremental backups, closing the chains half of the last coverage gap. The chain format comes from the reference: a flat archive's manifest names its base, kind, changed entries and length, thresholds persist beside the world, and a child includes a file only when its modification time is strictly newer than the saved threshold. A defect surfaced while proving it — the threshold was advanced at the current backup's start, so a child compared against its own time and missed the changed file; moving the write to after plan computation fixed it. Proven across a full chain: base then changed-only child, chain two, both named by list, merge, and a fresh world still starting at chain one. Regex ignores stay unported because a faithful pattern needs a crate the registry refuses.
+changelog = """This version adds incremental backups, closing the chains half of the last coverage gap. The chain format comes from the reference: a flat archive's manifest names its base, kind, changed entries and length, thresholds persist beside the world, and a child includes a file only when its modification time is strictly newer than the saved threshold. A defect surfaced while proving it — the threshold was advanced at the current backup's start, so a child compared against its own time and missed the changed file; moving the write to after plan computation fixed it. Proven across a full chain: base then changed-only child, chain two, both named by list, merge, and a fresh world still starting at chain one. Regex ignores stay unported because a faithful pattern needs a crate the registry refuses.
 """
 
 [[versions]]
@@ -84,8 +88,7 @@ published = "2026-11-24"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "a2261c76ce1f2e6df592262279df92573a9cecceb687f1624f1f44d260294c09"
-changelog = """
-This version makes the backup interval survive a restart. The counter is written beside the world as one exact line on every save checkpoint and graceful close, with a staged rename so a crash cannot leave a half-written value, and read back when the world opens — the same moment the reference loads its saved data. Proven across a quit and relaunch of the same world: a seeded count of ten resumes to twenty-eight, an empty window passes without a zip, and the next interval produces exactly one fresh archive; a world with no state file still waits the full interval. The regex half of the same gap stays open, because adding a crate would be refused by the registry now.
+changelog = """This version makes the backup interval survive a restart. The counter is written beside the world as one exact line on every save checkpoint and graceful close, with a staged rename so a crash cannot leave a half-written value, and read back when the world opens — the same moment the reference loads its saved data. Proven across a quit and relaunch of the same world: a seeded count of ten resumes to twenty-eight, an empty window passes without a zip, and the next interval produces exactly one fresh archive; a world with no state file still waits the full interval. The regex half of the same gap stays open, because adding a crate would be refused by the registry now.
 """
 
 [[versions]]
@@ -94,6 +97,5 @@ published = "2026-11-18"
 game = "26.3"
 file = "simplebackups.hmod"
 sha256 = "6565f5acd73b5c03f2f49f3009b8a520cf945b25daec1f08d9f7869448b978a2"
-changelog = """
-First publication in the SDK format.
+changelog = """First publication in the SDK format.
 """
