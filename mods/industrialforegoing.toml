@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "industrialforegoing.hmod"
+sha256 = "9b921a62ae8f50830a37ad4761bda17724b8359f7acda70f6915745587bfac6b"
+changelog = """This version adds the plant gatherer, the harvesting half of the agriculture family. The artefact's field values corrected its stale comment again — forty ticks, four hundred FE, a fifteen-slot output container — and a mature crop yields its own loot into that container while the cell becomes air. Proven in game by one wheat and three seeds in the output, the crop cell reading air afterwards, nine thousand six hundred FE left of ten thousand, and an immature crop leaving everything untouched. The seed count is a binomial loot roll, so the assertion pins the exact wheat count and the declared seed range without weakening either. The sludge and ether tanks are recorded gaps."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
