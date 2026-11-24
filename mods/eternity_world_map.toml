@@ -30,6 +30,19 @@ screenshots = [
 key = "RWQjqg8rypRO1FcAIBc+P7vxdFaU1fjCss8evaMaYSBDL21Fy12PGnH8"
 
 [[versions]]
+version = "0.1.2"
+published = "2026-11-23"
+game = "26.3"
+file = "eternity_world_map-0.1.2.hmod"
+sha256 = "f8c6e12376b57074c22501bdfbd19d53cd7db44880051c37e020c9c481477fb0"
+signature = """
+untrusted comment: signature from minisign secret key
+RUQjqg8rypRO1No6usA2iVr0bOkBAar6Zh92nYr9bDY5yAAsSXhyEHyOBJ2lwk+WR+OPYFM5OR+Bkm3AP/mT2VYexuXRHvXwvQY=
+trusted comment: timestamp:1795439050	file:eternity_world_map-0.1.2.hmod	hashed
+mQVxY94DaFYFwlUrQhl6rq6xir0p8WTRzEaOZNl6L1ZPhLlzFuxKsH2311RTGGEP2yfyu3B4Ke4LwnhLVC8pAw==
+"""
+
+[[versions]]
 version = "0.1.1"
 published = "2026-11-22"
 game = "26.3"
