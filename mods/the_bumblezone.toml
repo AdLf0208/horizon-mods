@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.2"
+published = "2026-11-24"
+game = "26.3"
+file = "the_bumblezone.hmod"
+sha256 = "fd31a9a6ffc0635181405ac8104951686936d99ed3b323433a7a2c40f15a36a9"
+changelog = """This version carries the nine biomes' mob spawner lists: sixty-five entries from the jar translated into the 26.3 natural-mob-spawns overlay, with the values authored from a contract and zero jar-derived asset bytes. The decoder was measured before any data edit, so the feature is real rather than stand-in data. Proven in game by a parsed readout naming creature and monster weights for hive_pillar, while the unmodded game reports an unknown command and the inverted self-test exits one. A command-argument mismatch was found and fixed in glue — the pin delivers a free id as a string, not an id value. Configured features and carvers remain blocked at this pin."""
+
+[[versions]]
 version = "0.1.1"
 published = "2026-11-24"
 game = "26.3"
