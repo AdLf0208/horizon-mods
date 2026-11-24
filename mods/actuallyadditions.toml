@@ -40,6 +40,14 @@ categories = ["technology", "game-mechanics"]
 tags = ["port", "machines", "energy", "ore-processing"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "actuallyadditions.hmod"
+sha256 = "752e6132578ddf75c472c6de5570d0cc1b05f0d681dc0ed93c15e5f9c58429aa"
+changelog = """This version wires the three machines' comparator output. The artefact's formulas were carried — generator and crusher floor energy over sixty thousand times fifteen, reconstructor clamps energy over twenty thousand — through a per-world table mirrored from each machine's tick, because the stamped analog hook cannot resolve a block entity from a position. Proven in game by a powered generator reading eight and a crusher seven on a vanilla comparator, an uncharged machine and stone reading zero, and eleven counterfactual legs ending exit one. The earlier killer, disenchanting and lens legs stay green."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
