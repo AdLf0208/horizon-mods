@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.9"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolspower.hmod"
+sha256 = "1e6beecff03678042053c3a4d2bc52fded2c1bc41cbe2984ebbc876bbe16bb35"
+changelog = """This version adds the third power cell, completing the tier family: twenty million energy stored and four thousand per side, both read from the reference configuration rather than inferred from the smaller cells. A broken cell of this tier now keeps its own block-entity type on its item — the old two-way choice would have labelled it a cell two. One recipe is deliberately not carried, the one that copies a cell's contents, because the second-tier precedent forbids a recipe that can never craft without the parent's machine frame. Proven across five new phases: a placed cell carries its five thousand into a twenty-million network; beside a first-tier cell the network reads twenty million five thousand; the larger cell gives four thousand a tick alone and five thousand beside another, each measured from the replies' own tick counts; and a third-tier core item is carried while a fourth-tier cell is refused."""
+
+[[versions]]
 version = "0.1.8"
 published = "2026-11-23"
 game = "26.3"
