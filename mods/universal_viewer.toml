@@ -27,7 +27,15 @@ source = "https://github.com/Aiken1609/uni-viewer"
 icon = "icons/universal_viewer.png"
 categories = ["utility", "storage", "management"]
 tags = ["map", "tooltip", "shulker", "bundle", "preview", "client-side", "qol"]
-screenshots = ["screenshots/universal_viewer/9.png", "screenshots/universal_viewer/10.png", "screenshots/universal_viewer/11.png"]
+screenshots = ["screenshots/universal_viewer/1.png", "screenshots/universal_viewer/2.png", "screenshots/universal_viewer/3.png", "screenshots/universal_viewer/4.png", "screenshots/universal_viewer/5.png"]
+
+[[versions]]
+version = "0.2.1"
+published = "2026-11-24"
+game = "26.3"
+file = "universal_viewer-0.2.1.hmod"
+sha256 = "3510ff788b5dcfd44ee782b7d3f969d4ab68285a223d83eeb9797e556a14056a"
+changelog = "The mod is now marked client-side, so Horizon servers without it no longer refuse the player (0.2.0 and earlier were marked for both sides). No other changes."
 
 [[versions]]
 version = "0.2.0"
