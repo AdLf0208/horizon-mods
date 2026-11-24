@@ -16,6 +16,13 @@ icon = "icons/the_lost_cities.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
+[[versions]]
+version = "0.1.1"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "ae8b3ab10fb9992b7a54d738e93fd79a356bf57508b1339701171ed367929777"
+changelog = """This version adds the first city chunk generator: one street part and its palette decoded clean-room from the jar's private `parts`/`palettes` schema, written into the mod's own dimension at y=90. The R11 gate was measured — registering a generator on the mod's own level needs no `level_reset` manifest key, so the block remains limited to replacing vanilla's levels. Proven by filling 136 palette-authored slabs in the modded dimension where the vanilla-noise control fills none, with an unmodded control reporting an unknown dimension and an inverted selftest ending exit one. The other 207 parts remain blocked rather than being invented."""
 
 [[versions]]
 version = "0.1.0"
