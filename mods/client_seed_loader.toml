@@ -1,0 +1,53 @@
+id = "client_seed_loader"
+kind = "native-mod"
+name = "Client Seed Loader"
+summary = "Far terrain (LODs) on multiplayer servers, generated locally from a seed you know."
+description = """
+Horizon's far terrain on servers only shows chunks you've already visited. Client Seed Loader fills in the rest from a seed you know, using Horizon's own world generator.
+
+**Use**
+
+- `/lodseed set <seed> [dimension]` saves a seed for current server.
+- `/lodseed clear [dimension]` forgets it.
+- `/lodseed radius <chunks>` limits generation around you.
+- `/lodseed status` shows seed, checks and chunk count.
+
+Far terrain must be on in Video Settings.
+
+**What it does**
+
+- Real chunks from server always win over generated ones.
+- Checks your seed against server's seed hash. On a mismatch, it compares a few generated chunks with real ones and tells you if terrain matches.
+- Caches generated chunks on disk, so they load instantly next time.
+
+**What it doesn't do**
+
+- Sends nothing to server and makes no network requests.
+- Builds and other changes to world only show once server sends those chunks.
+- Writes only to `config/client_seed_loader.toml` and `horizon-mod-data/client_seed_loader/`."""
+authors = ["Daniel Tsivkovski"]
+owners = ["dtsivkovski"]
+owner_ids = [89223402]
+license = "MIT"
+source = "https://github.com/dtsivkovski/horizon-client-seedloader"
+icon = "icons/client_seed_loader.png"
+# minisign public key. Every later version must be signed with matching secret key.
+key = "RWRT3SlabG4f0WdIqSEuwySN5kOKvBX2P0owbMDtXJwk/YbmKOOr60wq"
+categories = ["utility", "worldgen"]
+tags = ["lod", "far-terrain", "seed", "multiplayer", "client-side"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "client_seed_loader.hmod"
+# sha256sum of release asset, not a local rebuild.
+sha256 = "8c23d5e86ecc6b6e81cf2eb1ebd9f0d2fed7fed8da7567adae9ae98c19f7647d"
+# Whole client_seed_loader.hmod.minisig.
+signature = """
+untrusted comment: signature from minisign secret key
+RURT3SlabG4f0QD85R3pas9FMY+OkFYqoubJDlr/Qn/aPq7BDAPxnqxRFQGNffzDvGA1nl3sCUlr7mmlMsv0KvE+adNxrxYDKAc=
+trusted comment: timestamp:1795507600	file:client_seed_loader.hmod	hashed
+CGfZ8UpXtHbwExEDElOb0eut1zeMeqwv2o0kyyHXZgkD4IzmWAB5BorKcTx5Ik/nWgs88KSiKWsTavHuGDd0Bg==
+"""
+changelog = "First release. Built with exact-build SDK f1bb66f for game 26.3."
