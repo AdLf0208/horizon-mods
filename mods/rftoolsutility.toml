@@ -28,6 +28,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.19"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsutility.hmod"
+sha256 = "7a13f87dcf1804dfee0d72971a02603ad2611deb060dd3f59b71d0be20fae612"
+changelog = """This version adds the environmental controller with its first module. The effect surfaces were measured as stamped before any code — entity lookup, effect key, living effect reads and writes — so no effect command was invented. The artefact's volume and RF formulas were carried, including its default volume of three hundred and twenty-two thousand rather than a naive circle area. Proven in game by a parsed readout showing regeneration at amplifier zero with the energy falling by exactly the displayed rate over the replies' own tick window, while no-power, disabled, out-of-radius and no-module cases all read no effect. Two load-time defects found on the first run were fixed at the root."""
+
+[[versions]]
 version = "0.2.18"
 published = "2026-11-24"
 game = "26.3"
