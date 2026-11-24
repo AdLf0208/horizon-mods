@@ -43,6 +43,14 @@ categories = ["technology"]
 tags = ["port", "building", "automation"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsbuilder.hmod"
+sha256 = "de192fadf0fd60fef23fadeb5a8db84ef4e08ae989937702838003c92447c5f6"
+changelog = """This version adds the void card, the seventh card type the jar declares and the one that removes what it scans without collecting anything. Its cost is half a normal quarry's, read from the configuration rather than guessed, and its HUD says what it is. One difference from the reference is recorded: the reference leaves the cell as air, while this port reuses the quarry's tested void path and writes the builder's replacement block, so the cell afterwards differs but nothing is collected either way. Proven against a normal quarry card on the same rig: the void card leaves a chest's total entirely unchanged across twenty-seven cells while the ordinary card gains all twenty-seven, every cell reads the configured replacement block, and the inverted assertions fail at the counts they should."""
+
+[[versions]]
 version = "0.2.3"
 published = "2026-11-23"
 game = "26.3"
