@@ -43,6 +43,14 @@ categories = ["technology"]
 tags = ["port", "building", "automation"]
 
 [[versions]]
+version = "0.2.8"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsbuilder.hmod"
+sha256 = "3b27c182f1ed48ffc1e1bae46342be5bf9b1849f9e9d8318954682fd3e9b81d1"
+changelog = """This version applies the already-proved filter to the quarry path as well. The artefact's two filter sites collapse to one call in this port because drops are inserted directly: a denied block stays in place with no drops rolled and costs the same fifty FE skip. Proven in game with eighteen denied stone cells and nine allowed dirt cells — the status shows nine quarried and eighteen skipped, the energy line shows 3,600 FE spent, and the chest holds only dirt; a filterless quarry on the same rig collects all twenty-seven. The earlier shaped, quarry, void, energy and chunk-load numbers stay green."""
+
+[[versions]]
 version = "0.2.7"
 published = "2026-11-24"
 game = "26.3"
