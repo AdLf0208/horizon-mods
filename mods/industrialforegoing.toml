@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "industrialforegoing.hmod"
+sha256 = "da80ff40c706c1ad96127f54fcbfe6d4bc87aafd2c1024e52dcc5c4b37966886"
+changelog = """This version adds the plant fertilizer, the natural consumer of the fertilizer the sewage chain makes. The artefact's config fields corrected its own stale comments — fifty ticks and one thousand FE rather than one hundred and four hundred — so the field values were carried. Proven in game by a cocoa plant advancing exactly one age, one fertilizer consumed, one thousand FE spent and the progress bar landing in the expected twelve-tick branch; a no-fertilizer box leaves the crop and buffer untouched. The brief's data-get age command is refused at this pin for a block without an entity, so crop age is read from the block state instead. The earlier sewage, machine and recipe legs stay green."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
