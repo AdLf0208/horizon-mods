@@ -1,5 +1,5 @@
 id = "underground_villages"
-kind = "native-mod"
+kind = "mod"
 name = "Underground Villages Mod"
 summary = "A Horizon port of underground_villages."
 description = """
