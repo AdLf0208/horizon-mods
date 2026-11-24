@@ -37,6 +37,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.17"
+published = "2026-11-24"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "b47e28b71fece1334f0c9cdca3459b725744bb19165f53c1e636da018341e3db"
+changelog = """This version adds the two smelting rows the jar can actually support here: gold and iron ingots from their dusts. The other nine of the jar's nineteen rows are recorded as blocked with the exact missing tag or result — copper and netherite dust tags, and the iesnium and silver ingots the package never declares — rather than inventing an ingredient or a use. Proven in a real furnace: each of the ten carried rows produces its declared id and count with the declared experience, the input is consumed, and a fuel-less furnace or wrong input makes nothing. The evidence-only full-id-set build that previously carried this version string was never published, so this is the first 0.2.17 release."""
+
+[[versions]]
 version = "0.2.16"
 published = "2026-11-24"
 game = "26.3"
