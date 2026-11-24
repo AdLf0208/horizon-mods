@@ -30,6 +30,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.4"
+published = "2026-11-24"
+game = "26.3"
+file = "torchmaster.hmod"
+sha256 = "e894d0818a85c8101d13694cd49dbda94e119045eed3967869c405e3606ae3fb"
+changelog = """This version adds the frozen pearl, which clears the torchmaster's residual invisible lights in a cube around the player and wears one charge per light removed. The artefact exposed an upstream defect: its config declares 1024 durability but the item never applies wear, so the shipped pearl is unbreakable; the port implements the stated behaviour and records the deviation that wear is written through equipment because the use-item site has no break result. Proven in game by three lights going to zero with damage rising to three of 1024, while a vanilla-lit cell 160 blocks away is untouched with damage unchanged. Four prior recipe families and three loot tables stay green."""
+
+[[versions]]
 version = "0.2.3"
 published = "2026-11-24"
 game = "26.3"
