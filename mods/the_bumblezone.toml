@@ -16,6 +16,13 @@ icon = "icons/the_bumblezone.png"
 categories = ["utility"]
 tags = ["port", "horizon"]
 
+[[versions]]
+version = "0.1.1"
+published = "2026-11-24"
+game = "26.3"
+file = "the_bumblezone.hmod"
+sha256 = "d9b8f63c7d5438fe6b719af08efa5eb33aab87d34e1801c910e360385a046907"
+changelog = """This version carries the biome definitions and layer stack so the registered biome source answers the mod's own biomes instead of vanilla stand-ins. The artefact corrected the brief: there are nine biome files and seven layer classes, not ten and nine. A carry defect was found and fixed — empty carver objects made the world refuse to open, so the generator now emits an empty list. All nine biomes are authored from value contracts with zero jar-derived asset bytes, and the monogram icon and LGPL text remain. Proven in game by a parsed readout naming the_bumblezone:sugar_water_floor with seven layers, while an unmodded control reports an unknown command and the inverted self-test exits one."""
 
 [[versions]]
 version = "0.1.0"
