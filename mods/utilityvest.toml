@@ -1,0 +1,26 @@
+id = "utilityvest"
+kind = "native-mod"
+name = "Utility vest"
+summary = "A Horizon port of utilityvest."
+description = """
+A port of [utilityvest](https://github.com/Satherov/Utility-Vest) by Satherov.
+
+A first port of Utility Vest for Horizon 26.3. Curios has no pin surface, so the vest binds to the vanilla body equipment slot and item-container capability instead: all five tiers craft, a worn vest holds thirty-two items across its banks, a saved hotbar stack reloads, and restocking respects the filter exclusion. Proven with parsed ctl inventory and state reads, a plain-stick control that refuses the action, and an inverted self-test ending exit one. Keybinds are routed through commands and the radial GUI is deferred; the pin fits gate was re-run on the delivered bytes after the first evidence set used the moving nightly build.
+"""
+authors = ["Satherov, AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "LGPL-3.0-only"
+source = "https://github.com/AdLf0208/utilityvest"
+icon = "icons/utilityvest.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-24"
+game = "26.3"
+file = "utilityvest.hmod"
+sha256 = "3bf6bcab49cc88d2dbedd4864f51df219da47618b6723be7d7e33a5272a3d36b"
+changelog = """A first port of Utility Vest for Horizon 26.3. Curios has no pin surface, so the vest binds to the vanilla body equipment slot and item-container capability instead: all five tiers craft, a worn vest holds thirty-two items across its banks, a saved hotbar stack reloads, and restocking respects the filter exclusion. Proven with parsed ctl inventory and state reads, a plain-stick control that refuses the action, and an inverted self-test ending exit one. Keybinds are routed through commands and the radial GUI is deferred; the pin fits gate was re-run on the delivered bytes after the first evidence set used the moving nightly build."""
