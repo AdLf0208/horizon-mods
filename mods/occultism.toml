@@ -37,6 +37,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.16"
+published = "2026-11-24"
+game = "26.3"
+file = "occultism.hmod"
+sha256 = "7ad8d4ac3c4c2baad3c55bfdf0477ec6d789475b9677a32ed8d175198b742ecc"
+changelog = """This version closes the parity gap the previous one left: every one of the thirty-two carried stonecutting recipes is now cut in a real stonecutter, not just the two raw-stone slabs sampled before. Each result id and count is read from the guarded menu and the input is consumed, across the otherstone, otherrock, polished and cobble families; vanilla stone offers no occultism result as the differential, and the inverted count assertion fails at one rather than two. No new data or Rust was needed — the only change was the harness that walks the full recipe set."""
+
+[[versions]]
 version = "0.2.15"
 published = "2026-11-24"
 game = "26.3"
