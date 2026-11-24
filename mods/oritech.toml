@@ -29,6 +29,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "oritech.hmod"
+sha256 = "9357dc1224c55f646d4fd075fdc993eb84632f5cc5aa19c21ad8f1beb7c2091c"
+changelog = """This version adds the Fragment Forge, which grinds ore into the raw nickel that the furnace already turns into ingots. The artefact corrected the brief's block id — there is no grinder_block; the block is fragment_forge_block and grinder is its recipe type. Every number is read from the reference: fifty thousand energy capacity, two hundred and fifty-six a tick, a one-in three-out container and a seven-core assembly; iron ore takes forty ticks and ten thousand two hundred and forty energy and produces two raw iron plus one raw nickel, which the powered furnace then smelts in a hundred ticks for three thousand two hundred. Proven on all seventeen grinder recipes with exact outputs, consumed inputs and a zero buffer, with the seven-core assembly and the differential showing no nickel when the package is absent."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-23"
 game = "26.3"
