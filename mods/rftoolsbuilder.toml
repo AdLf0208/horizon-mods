@@ -43,6 +43,14 @@ categories = ["technology"]
 tags = ["port", "building", "automation"]
 
 [[versions]]
+version = "0.2.6"
+published = "2026-11-24"
+game = "26.3"
+file = "rftoolsbuilder.hmod"
+sha256 = "a7161ca6521683986586859a6fe60a45ebfa79bce0f17ffa1a4c3a0761b17a92"
+changelog = """This version gives the builder an energy buffer and a per-cell cost, which the earlier slices deliberately deferred. The numbers are read from the reference bytecode: a million energy capacity, three hundred per quarried cell, five hundred per operation with a half factor for the void card, and fifty for a skipped cell, alongside the existing nine-thousand-energy quarry pass. Two conflicting jar readings were found for the void factor — a cast to zero and a weaker cost applied to the quarry figure — and the port adopts the config comment's stated meaning, proved in game. An uncharged rig stalls at zero quarried, and both the quarry and void costs are read from parsed replies."""
+
+[[versions]]
 version = "0.2.5"
 published = "2026-11-24"
 game = "26.3"
