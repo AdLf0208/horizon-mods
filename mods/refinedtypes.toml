@@ -30,6 +30,14 @@ categories = ["technology"]
 tags = ["port"]
 
 [[versions]]
+version = "0.1.5"
+published = "2026-11-23"
+game = "26.3"
+file = "refinedtypes.hmod"
+sha256 = "8058cf2166ea2c9e5eef07ea90c9614830da26a68c8c698f6581a13acbf29ad3"
+changelog = """This version makes the storage disks and storage blocks survive lava, as the reference declares them to. The interesting part is that the obvious field does not exist in this game version: there is no fire-resistant key on any of the one thousand six hundred and fifty-eight vanilla items, because the property now travels as damage resistance against the fire damage type, which is exactly how vanilla's own netherite items say it. So the port uses the field this version actually has, and proves the behaviour rather than the key. One thing the brief had too broad is fixed on the artefact's evidence: only the disks and the storage blocks are fireproof upstream, while the crafting parts and the energizer are not, so sixty of the eighty-eight declarations carry it and twenty-eight deliberately do not. Proven by dropping one of each into lava and waiting sixty ticks: the three disk families and the storage block survive, the part and a diamond are gone, and the inventory the red run used shows all six alive before the drop. A generator rule now derives the component from the item's own kind, so a future item cannot acquire immunity by being listed."""
+
+[[versions]]
 version = "0.1.4"
 published = "2026-11-23"
 game = "26.3"
