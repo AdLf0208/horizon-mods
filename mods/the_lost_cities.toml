@@ -17,6 +17,14 @@ categories = ["utility"]
 tags = ["port", "horizon"]
 
 [[versions]]
+version = "0.1.6"
+published = "2026-11-24"
+game = "26.3"
+file = "the_lost_cities.hmod"
+sha256 = "21b6f29c68148e6834cdc6ba01b5f1a329f83003f67171371ec9948b466ac6c9"
+changelog = """This version decodes the descending rail, the sixth part, at the lowest height. The artefact's palette was verified before the carry, the part is embedded byte-identically, and its two ascending shapes are written by no earlier part. Proven in game by twenty-one ascending-east rails authored in the modded dimension where vanilla noise writes none, with an inverted self-test ending exit one. A harness regex was also corrected to accept the 26.3 single-item loot phrasing while still refusing zero drops. Six parts are decoded; two hundred and two remain blocked rather than claimed."""
+
+[[versions]]
 version = "0.1.5"
 published = "2026-11-24"
 game = "26.3"
