@@ -39,6 +39,14 @@ categories = ["utility"]
 tags = ["port", "backups"]
 
 [[versions]]
+version = "0.2.7"
+published = "2026-11-24"
+game = "26.3"
+file = "simplebackups.hmod"
+sha256 = "f02f1aa1786e5b0d141ec4bed2e94535498a60c4bc600e4dc1a2a4af595f9656"
+changelog = """This version adds incremental backups, closing the chains half of the last coverage gap. The chain format comes from the reference: a flat archive's manifest names its base, kind, changed entries and length, thresholds persist beside the world, and a child includes a file only when its modification time is strictly newer than the saved threshold. A defect surfaced while proving it — the threshold was advanced at the current backup's start, so a child compared against its own time and missed the changed file; moving the write to after plan computation fixed it. Proven across a full chain: base then changed-only child, chain two, both named by list, merge, and a fresh world still starting at chain one. Regex ignores stay unported because a faithful pattern needs a crate the registry refuses."""
+
+[[versions]]
 version = "0.2.6"
 published = "2026-11-24"
 game = "26.3"
