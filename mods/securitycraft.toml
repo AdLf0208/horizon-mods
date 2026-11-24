@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.15"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "6a85007bead03709ab190021a5cca7f9db0b239d288f70f10131d31eb30c35bb"
+changelog = """This version adds the universal block modifier. All 1,905 jar models were scanned first — the remover, reinforcer and carried cube models are static meshes, with no entity-renderer blocker. The artefact's inverse conversion tables copy every property the target also has, and refuse to change a block owned by a stranger. Proven in game by a reinforced iron block converting to vanilla iron while owner and code survive, the reinforcer restoring it, a plain stone block staying unchanged, and a control game refusing the tools. Owner checks and state retention are unit-pinned; the keypad chest remains blocked on its renderer."""
+
+[[versions]]
 version = "0.2.14"
 published = "2026-11-24"
 game = "26.3"
