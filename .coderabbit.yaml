@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# CodeRabbit reviews mod registry pull requests and comments only.
+# REVIEWING.md and MOD-POLICY.md stay the single source of truth.
+reviews:
+  high_level_summary: false
+  review_status: false
+  auto_approvals:
+    enabled: false
+  auto_review:
+    enabled: true
+    # Keep quota for new submissions instead of re-reviewing every fix-up push.
+    # Comment `@coderabbitai review` to ask for another look.
+    auto_incremental_review: false
+  slop_detection:
+    enabled: false
+  finishing_touches:
+    unit_tests:
+      enabled: false
+    autofix:
+      enabled: false
+    fix_ci:
+      enabled: false
+    resolve_merge_conflict:
+      enabled: false
+  path_filters:
+    - "!archive/**"
+    - "!icons/**"
+    - "!screenshots/**"
+    - "!**/*.png"
+    - "!**/*.jpg"
+    - "!**/*.webp"
+  path_instructions:
+    - path: "{mods/**,native/**}"
+      instructions: >-
+        Hold submissions strictly to REVIEWING.md and MOD-POLICY.md. Only flag
+        items on REVIEWING.md's blocking list (harmful code, hidden network/data
+        access, licence/copyright attribution, Mojang data, MOD-POLICY cheat
+        rules, hash/staging integrity, broken packaging or missing native build
+        proof). Bugs and polish notes are non-blocking comments only.
+    - path: "{scripts/**,tools/**,.github/**}"
+      instructions: >-
+        Review registry tooling and workflows for correctness, security, and
+        integrity of hash/staging checks.
+knowledge_base:
+  code_guidelines:
+    filePatterns:
+      - files: "REVIEWING.md,MOD-POLICY.md"
+        applyTo: "{mods/**,native/**}"
