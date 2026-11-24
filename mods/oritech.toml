@@ -1,6 +1,6 @@
 id = "oritech"
 kind = "native-mod"
-name = "oritech"
+name = "Oritech"
 summary = "A Horizon port of oritech."
 description = """
 A port of [Oritech](https://github.com/Rearth/Oritech) by Rearth for Horizon — slice 1, the **Basic Generator and the Pulverizer**.
