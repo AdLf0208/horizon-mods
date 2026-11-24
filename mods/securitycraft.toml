@@ -31,6 +31,14 @@ categories = ["game-mechanics", "utility"]
 tags = ["port", "security", "keypad", "door", "redstone"]
 
 [[versions]]
+version = "0.2.9"
+published = "2026-11-24"
+game = "26.3"
+file = "securitycraft.hmod"
+sha256 = "b9f614efd830c11a0e1b3416736ec841ea148ea37855cb84cc7fa208b410b880"
+changelog = """This version adds the disguise module, the fifth and last module in that family. The surface check found that this pin can read a block entity's saved state on the client, which is exactly what the disguise needs — unlike the player-held stack that blocks another port's preview. A block tint callback cannot see block entities, so the colour is drawn in the block-entity submit path using a concrete block's model. Proven on one keypad photographed before and after from the same camera: plain grey turns green-dominant, and the inverted assertion fails when it does not. The deny-before-allow order, smart-module gate and salted digest are unchanged."""
+
+[[versions]]
 version = "0.2.8"
 published = "2026-11-24"
 game = "26.3"
